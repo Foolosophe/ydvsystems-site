@@ -20,7 +20,7 @@ export default function MentionsLegalesPage() {
             </p>
             <ul className="mt-2 space-y-1">
               <li>
-                <strong className="text-slate-300">Nom :</strong> Yohann [nom de famille]
+                <strong className="text-slate-300">Nom :</strong> Yohann Dandeville
               </li>
               <li>
                 <strong className="text-slate-300">Statut :</strong> Auto-entrepreneur
@@ -29,7 +29,7 @@ export default function MentionsLegalesPage() {
                 <strong className="text-slate-300">Nom commercial :</strong> YdvSystems
               </li>
               <li>
-                <strong className="text-slate-300">SIRET :</strong> [numéro SIRET]
+                <strong className="text-slate-300">SIRET :</strong> 534 080 783 00028
               </li>
               <li>
                 <strong className="text-slate-300">Email :</strong>{" "}
@@ -50,20 +50,20 @@ export default function MentionsLegalesPage() {
             </p>
             <ul className="mt-2 space-y-1">
               <li>
-                <strong className="text-slate-300">Hébergeur :</strong> Vercel Inc.
+                <strong className="text-slate-300">Hébergeur :</strong> Hetzner Online GmbH
               </li>
               <li>
-                <strong className="text-slate-300">Adresse :</strong> 340 Pine Street, Suite 701, San Francisco, CA 94104, USA
+                <strong className="text-slate-300">Adresse :</strong> Industriestr. 25, 91710 Gunzenhausen, Allemagne
               </li>
               <li>
                 <strong className="text-slate-300">Site :</strong>{" "}
                 <a
-                  href="https://vercel.com"
+                  href="https://www.hetzner.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-400 hover:text-indigo-300 transition-colors"
                 >
-                  vercel.com
+                  hetzner.com
                 </a>
               </li>
             </ul>
@@ -98,7 +98,7 @@ export default function MentionsLegalesPage() {
             </h2>
             <p>
               L&apos;ensemble du contenu de ce site (textes, code, design) est la propriété
-              exclusive de YdvSystems — Yohann, sauf mention contraire.
+              exclusive de YdvSystems — Yohann Dandeville, sauf mention contraire.
               Toute reproduction est interdite sans autorisation préalable.
             </p>
           </section>
