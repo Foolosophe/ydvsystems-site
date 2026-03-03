@@ -1,0 +1,103 @@
+import type { Metadata } from "next"
+import { Link } from "@/i18n/navigation"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, Calendar, Clock } from "lucide-react"
+import { getTranslations } from "next-intl/server"
+import { getLocale } from "next-intl/server"
+import { BLOG_SLUGS, BLOG_DATES } from "./data"
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("blog.meta")
+  return {
+    title: t("title"),
+    description: t("description"),
+  }
+}
+
+export default async function BlogPage() {
+  const t = await getTranslations("blog")
+  const ta = await getTranslations("data.blogArticles")
+  const locale = await getLocale()
+
+  return (
+    <main className="min-h-screen pt-24 pb-20">
+      {/* Header */}
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="section-tag">{t("header.tag")}</p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
+            {t("header.title")}
+          </h1>
+          <p className="text-lg text-secondary-foreground max-w-2xl mx-auto">
+            {t("header.description")}
+          </p>
+        </div>
+      </section>
+
+      {/* Articles */}
+      <section className="pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-6">
+            {BLOG_SLUGS.map((slug) => {
+              const date = BLOG_DATES[slug]
+              const formattedDate = new Date(date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+
+              return (
+                <Link key={slug} href={`/blog/${slug}`} className="block group">
+                  <Card className="bg-white border-border hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs">
+                          {ta(`${slug}.category`)}
+                        </Badge>
+                        <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                          <Calendar size={12} />
+                          {formattedDate}
+                        </span>
+                        <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                          <Clock size={12} />
+                          {ta(`${slug}.readTime`)}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {ta(`${slug}.title`)}
+                      </h3>
+                      <p className="text-sm text-secondary-foreground leading-relaxed mb-3">
+                        {ta(`${slug}.excerpt`)}
+                      </p>
+                      <span className="inline-flex items-center gap-1.5 text-sm text-primary font-semibold group-hover:gap-2.5 transition-all">
+                        {t("readArticle")}
+                        <ArrowRight size={14} />
+                      </span>
+                    </CardContent>
+                  </Card>
+                </Link>
+              )
+            })}
+          </div>
+
+          {/* Newsletter CTA */}
+          <div className="text-center mt-12 p-8 bg-secondary border border-border rounded-xl">
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              {t("newsletter.title")}
+            </h3>
+            <p className="text-sm text-secondary-foreground mb-4">
+              {t("newsletter.description")}
+            </p>
+            <Link
+              href="/contact"
+              className="text-sm text-primary hover:text-(--accent-hover) font-semibold transition-colors"
+            >
+              {t("newsletter.link")} &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}

@@ -1,0 +1,588 @@
+{
+  "common": {
+    "nav": {
+      "prestations": "Services",
+      "solutions": "Products",
+      "pricing": "Pricing",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "footer": {
+      "description": "Web development, AI integration & SaaS platforms for the social services and training sector.",
+      "solutions": "Products",
+      "prestations": "Services",
+      "ressources": "Resources",
+      "customDev": "Custom development",
+      "iaIntegration": "AI integration",
+      "workshops": "Workshops & training",
+      "iaAudit": "AI audit",
+      "pricing": "Pricing",
+      "blog": "Blog",
+      "contact": "Contact",
+      "legal": "Legal notice",
+      "copyright": "YdvSystems — Yohann Dandeville · Sole Proprietor",
+      "siret": "Reg. 534 080 783 00028"
+    },
+    "accessibility": {
+      "skipToContent": "Skip to main content",
+      "scrollToTop": "Back to top",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    }
+  },
+  "home": {
+    "hero": {
+      "tag": "Freelance Developer · SaaS Products",
+      "title1": "Custom ",
+      "titleHighlight1": "development",
+      "title2": " & ",
+      "titleHighlight2": "AI integration",
+      "subtitle": "Full-stack freelance developer. I help organizations build custom tools, integrate AI and train their teams. Founder of YdvSystems, a SaaS publisher for the social services sector.",
+      "ctaSolutions": "Our SaaS products",
+      "ctaFreelance": "Explore my services",
+      "scrollHint": "Explore"
+    },
+    "stats": {
+      "projects": "Projects delivered",
+      "tests": "Automated tests",
+      "sectors": "Industries served",
+      "platforms": "Platforms supported"
+    },
+    "solutions": {
+      "tag": "Our products",
+      "title": "Business software for the social sector",
+      "description": "Each product is standalone, fully featured and independently deployable. Cross-product integration is an optional bonus.",
+      "statusProd": "Live",
+      "statusSoon": "Coming soon",
+      "learnMore": "Learn more",
+      "allPricing": "View all pricing"
+    },
+    "freelance": {
+      "tag": "Freelance services",
+      "title": "Web development & technical consulting",
+      "description": "Short-term missions or long-term projects — from custom development to AI workshops, across all industries.",
+      "allServices": "View all services"
+    },
+    "cta": {
+      "title": "Have a project? Let's talk.",
+      "description": "Whether it's a freelance mission, a product demo or a quick question — I respond within 24 hours.",
+      "ctaContact": "Get in touch",
+      "ctaServices": "View services"
+    }
+  },
+  "prestations": {
+    "meta": {
+      "title": "Freelance Services — YdvSystems",
+      "description": "Full-stack freelance developer. Custom business applications, AI integration, corporate workshops, AI maturity audits, workflow automation."
+    },
+    "hero": {
+      "tag": "Freelance services",
+      "title1": "Web development, ",
+      "titleHighlight": "AI",
+      "title2": " & technical consulting",
+      "subtitle": "Short-term missions or long-term projects. From prototype to production, across all industries. I respond within 24 hours.",
+      "cta": "Contact me"
+    },
+    "services": {
+      "tag": "Services",
+      "title": "What I can do for you",
+      "description": "8 types of missions, from custom development to AI training."
+    },
+    "portfolio": {
+      "tag": "Portfolio",
+      "title": "Completed projects",
+      "description": "Real projects, in production or deployed — not demos.",
+      "visit": "Visit {title}"
+    },
+    "about": {
+      "tag": "About",
+      "title": "Full-stack developer & entrepreneur",
+      "bio1": "I'm Yohann, a full-stack developer based in France, founder of YdvSystems. I build complete business applications, SaaS platforms, games and AI-powered tools.",
+      "bio2": "My approach: clean code, scalable architecture, zero over-engineering. I work solo, which means I'm fast, responsive and deliver exactly what's needed — no unnecessary meetings.",
+      "stackTitle": "Tech stack"
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "description": "Describe your project and I'll get back to you within 24 hours with a concrete proposal.",
+      "button": "Contact me"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact — YdvSystems | Freelance mission or product demo",
+      "description": "Contact YdvSystems for a freelance development mission, a demo of our SaaS products (Insertion, Formation, Coaching, Manager) or an AI workshop. Response within 24 hours."
+    },
+    "header": {
+      "tag": "Contact",
+      "title": "Let's discuss your project",
+      "description": "Freelance mission, product demo, or quick question — I respond within 24 hours."
+    },
+    "cards": {
+      "freelanceTitle": "Freelance mission",
+      "freelanceDescription": "Web development, AI integration, corporate training workshops, workflow automation, AI maturity audits.",
+      "demoTitle": "Product demo",
+      "demoDescription": "Discover YDV Insertion, Formation, Coaching or Manager. 1-month free trial, no commitment.",
+      "meetingHighlight": "Let's take 30 minutes",
+      "meetingText": " to discuss your project. I'll ask a few questions to fully understand your needs, then propose a concrete approach."
+    },
+    "form": {
+      "nameLabel": "Name *",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "projectTypeLabel": "Project type",
+      "projectTypePlaceholder": "Select...",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "Describe your project, your needs, or ask a question...",
+      "submit": "Send message",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Message sent!",
+      "description": "I'll get back to you within 24 hours.",
+      "another": "Send another message"
+    },
+    "error": {
+      "message": "Sending failed. Contact directly at"
+    },
+    "projectTypes": {
+      "dev": "Development mission",
+      "ia-integration": "AI integration",
+      "atelier-ia": "AI workshop / Training",
+      "audit-ia": "AI maturity audit",
+      "automatisation": "Workflow automation (N8N)",
+      "demo-insertion": "Demo YDV Insertion",
+      "demo-formation": "Demo YDV Formation",
+      "demo-autre": "Demo other product",
+      "autre": "Other"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing — SaaS Solutions | YdvSystems",
+      "description": "Transparent pricing for our SaaS products: YDV Insertion, Formation, Coaching, Manager. No commitment, no hidden fees."
+    },
+    "header": {
+      "tag": "Pricing",
+      "title": "Transparent pricing, no surprises",
+      "description": "Each product has its own pricing. No hidden fees, no commitment."
+    },
+    "toggle": {
+      "annual": "Annual",
+      "monthly": "Monthly",
+      "discount": "-20%"
+    },
+    "card": {
+      "recommended": "Recommended",
+      "statusProd": "Available",
+      "statusSoon": "Coming soon",
+      "perMonth": "/mo",
+      "perYear": "/yr",
+      "annualTotal": "i.e. {total} €/yr",
+      "monthlyStrike": "{price} €/mo",
+      "monthlyHint": "{price} €/mo with annual plan (-20%)",
+      "learnMore": "Learn more",
+      "preRegistration": "Pre-register"
+    },
+    "commonFeatures": {
+      "tag": "Included with every product",
+      "title": "Standard features",
+      "features": [
+        "Intuitive, mobile-first interface",
+        "Built-in AI (summaries, suggestions, document generation)",
+        "Multi-user with role-based access",
+        "PDF / Excel exports",
+        "Email support",
+        "Updates included",
+        "GDPR compliant",
+        "Secure EU hosting"
+      ]
+    },
+    "faq": {
+      "tag": "FAQ",
+      "title": "Pricing FAQ",
+      "items": [
+        {
+          "question": "Is there a minimum commitment?",
+          "answer": "No. All subscriptions are commitment-free. You can cancel at any time."
+        },
+        {
+          "question": "Can I try before subscribing?",
+          "answer": "Yes. YDV Insertion offers a free 1-month trial, no credit card required. Other products will offer the same at launch."
+        },
+        {
+          "question": "Can I use multiple products?",
+          "answer": "Yes. Each product is independent with its own subscription. A single account gives you access to all your products."
+        },
+        {
+          "question": "Do prices include VAT?",
+          "answer": "Prices shown are excl. VAT (EUR). French VAT (20%) applies for customers based in France. International clients may be subject to their local tax regulations."
+        },
+        {
+          "question": "What's the difference between monthly and annual billing?",
+          "answer": "The annual plan saves you 20% compared to monthly billing. You're billed once a year, with no renewal commitment."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Questions about pricing?",
+      "description": "Contact us for a custom quote or a free demo.",
+      "button": "Get in touch"
+    }
+  },
+  "solutionsIndex": {
+    "meta": {
+      "title": "Our SaaS Products — YdvSystems",
+      "description": "Business software for the social services and training sector. Beneficiary tracking, training organization management, skills assessment, CRM/ERP."
+    },
+    "hero": {
+      "tag": "Our products",
+      "title": "Business software for the social sector",
+      "description": "Each product is standalone, fully featured and independently deployable. Built for professionals in social integration, training and coaching."
+    },
+    "statusProd": "Live",
+    "statusSoon": "Coming soon",
+    "learnMore": "Learn more",
+    "cta": {
+      "title": "Questions about our products?",
+      "description": "Request a free demo or contact us to learn more.",
+      "contact": "Get in touch",
+      "pricing": "View all pricing"
+    }
+  },
+  "solutions": {
+    "common": {
+      "inProduction": "In production",
+      "comingSoon": "Coming soon",
+      "requestDemo": "Request a demo",
+      "preRegistration": "Pre-register for free",
+      "notifiedAtLaunch": "Be notified at launch",
+      "featuresTag": "Features",
+      "featuresTitle": "Everything you need",
+      "timelineTag": "Estimated timeline",
+      "timelineTitle": "Roadmap",
+      "earlyAccessTitle": "Be among the first users",
+      "earlyAccessDescription": "Sign up for early access to the beta and benefit from a preferential launch price.",
+      "pricingTag": "Pricing",
+      "allSolutions": "All products",
+      "comparePricing": "Compare pricing",
+      "notFound": "Product not found"
+    },
+    "timeline": {
+      "coaching": [
+        { "step": "Design & architecture", "date": "Q2 2026" },
+        { "step": "Private beta", "date": "Q4 2026" },
+        { "step": "Public launch", "date": "Q1 2027" }
+      ],
+      "manager": [
+        { "step": "Design & architecture", "date": "Q3 2026" },
+        { "step": "Private beta", "date": "Q1 2027" },
+        { "step": "Public launch", "date": "Q2 2027" }
+      ]
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog & Resources — YdvSystems",
+      "description": "Articles on web development, AI, the social services sector and training organization management."
+    },
+    "header": {
+      "tag": "Blog",
+      "title": "Blog & Resources",
+      "description": "Articles on web development, AI, the social services sector and training organization management."
+    },
+    "readArticle": "Read article",
+    "newsletter": {
+      "title": "Stay updated on new articles",
+      "description": "Sign up to receive new articles by email.",
+      "link": "Contact me to get notified"
+    },
+    "article": {
+      "backToBlog": "Back to blog",
+      "allArticles": "All articles",
+      "readTime": "read",
+      "contactCta": "Questions? Get in touch",
+      "authorRole": "Full-stack developer & founder of YdvSystems",
+      "notFound": "Article not found",
+      "breadcrumbHome": "Home",
+      "breadcrumbBlog": "Blog"
+    }
+  },
+  "legal": {
+    "meta": {
+      "title": "Legal Notice — YdvSystems",
+      "description": "Legal notice for YdvSystems — Yohann Dandeville, sole proprietor. Publisher, Hetzner hosting, personal data, GDPR, intellectual property."
+    },
+    "title": "Legal Notice",
+    "editor": {
+      "title": "Website publisher",
+      "intro": "The website ydvsystems.com is published by:",
+      "name": "Name:",
+      "nameValue": "Yohann Dandeville",
+      "status": "Legal status:",
+      "statusValue": "Sole Proprietor (French Auto-entrepreneur)",
+      "tradeName": "Trade name:",
+      "tradeNameValue": "YdvSystems",
+      "siret": "Business registration:",
+      "siretValue": "534 080 783 00028",
+      "email": "Email:"
+    },
+    "hosting": {
+      "title": "Hosting",
+      "intro": "This website is hosted by:",
+      "host": "Host:",
+      "hostValue": "Hetzner Online GmbH",
+      "address": "Address:",
+      "addressValue": "Industriestr. 25, 91710 Gunzenhausen, Germany",
+      "website": "Website:"
+    },
+    "privacy": {
+      "title": "Personal data",
+      "paragraph1": "This website does not collect personal data for commercial purposes. The contact form only transmits the information you provide (name, email, message) to the publisher's email address via the Resend service, in order to respond to your inquiry.",
+      "paragraph2": "No analytics or tracking cookies are used on this website. In compliance with the GDPR, you have the right to access, rectify and delete your data by contacting"
+    },
+    "intellectual": {
+      "title": "Intellectual property",
+      "content": "All content on this website (text, code, design) is the exclusive property of YdvSystems — Yohann Dandeville, unless otherwise stated. Reproduction is prohibited without prior authorization."
+    },
+    "backHome": "Back to homepage"
+  },
+  "data": {
+    "solutions": {
+      "insertion": {
+        "subtitle": "Case management for social enterprises",
+        "description": "Beneficiary tracking, interviews, reports, built-in AI. Designed by an employment counselor, for employment counselors.",
+        "price": "From €59",
+        "priceUnit": "/mo"
+      },
+      "formation": {
+        "subtitle": "Training organization management",
+        "description": "Course catalog, agreements, digital attendance, Qualiopi compliance. All-in-one for France's 70,000+ training organizations.",
+        "price": "From €49",
+        "priceUnit": "/mo"
+      },
+      "coaching": {
+        "subtitle": "Skills assessment & coaching",
+        "description": "Structured pathways, assessments, automated reports. For career counseling centers and professional coaches.",
+        "price": "From €39",
+        "priceUnit": "/mo"
+      },
+      "manager": {
+        "subtitle": "CRM / ERP for SaaS publishers",
+        "description": "Client management, subscriptions, billing, analytics. Built for SaaS publishers and freelancers.",
+        "price": "From €29",
+        "priceUnit": "/mo"
+      }
+    },
+    "services": {
+      "dev-sur-mesure": {
+        "title": "Custom development",
+        "description": "Business applications, SaaS platforms, web apps. From prototype to production.",
+        "price": "From €450/day"
+      },
+      "integration-ia": {
+        "title": "AI integration",
+        "description": "Integrate Claude, GPT-4 or Gemini into your existing tools. Multi-provider architecture.",
+        "price": "From €500/day"
+      },
+      "atelier-ia": {
+        "title": "AI workshop / Training",
+        "description": "Hands-on workshops for your team: prompt engineering, AI tools, business use cases.",
+        "price": "From €800/workshop"
+      },
+      "audit-ia": {
+        "title": "AI maturity audit",
+        "description": "Assessment of your AI readiness, personalized recommendations, implementation roadmap.",
+        "price": "From €1,500"
+      },
+      "automatisation": {
+        "title": "Workflow automation",
+        "description": "Automate your processes with n8n, Supabase, Brevo, Stripe. Zero-code or low-code.",
+        "price": "From €400/day"
+      },
+      "cross-platform": {
+        "title": "Cross-platform apps",
+        "description": "Desktop (Tauri/Electron) and mobile (Capacitor). One codebase, all platforms.",
+        "price": "Custom quote"
+      },
+      "jeux-narratifs": {
+        "title": "Narrative games & interactive fiction",
+        "description": "Text-based games, interactive fiction, gamification. Web, desktop and mobile.",
+        "price": "Custom quote"
+      },
+      "accessibilite": {
+        "title": "Accessibility & inclusion",
+        "description": "Accessibility audit, WCAG compliance, team training.",
+        "price": "From €500/day"
+      }
+    },
+    "portfolio": {
+      "ydv-systems": {
+        "type": "SaaS Platform",
+        "title": "YDV Insertion (CIP Platform)",
+        "description": "Complete beneficiary tracking platform for work integration social enterprises (WISE) in France. Built-in AI, 4,253 automated tests, multi-site support."
+      },
+      "moteur-jeu": {
+        "type": "Game engine",
+        "title": "Narrative game engine",
+        "description": "Full-featured engine for text-based games and interactive fiction. React, Tauri, Capacitor. Web Audio API for immersive soundscapes."
+      },
+      "prompt-parfait": {
+        "type": "Application",
+        "title": "Le Prompt Parfait",
+        "description": "Cross-platform application for crafting optimized AI prompts. Electron + Capacitor, available on web, desktop and mobile."
+      },
+      "audit-ia-entreprise": {
+        "type": "Internal tool",
+        "title": "Enterprise AI Audit",
+        "description": "AI maturity assessment tool for businesses. Adaptive questionnaire, personalized report, AI-powered recommendations."
+      },
+      "blog-parkinson": {
+        "type": "Accessible blog",
+        "title": "Les Mots de Marilyn",
+        "description": "Personal blog for a person living with Parkinson's disease. 'Zero Stress' interface, AI voice transcription, WCAG AAA compliant, designed for difficult days."
+      }
+    },
+    "stack": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "databases": "Databases",
+      "ai": "Artificial intelligence",
+      "devops": "DevOps & hosting",
+      "crossPlatform": "Cross-platform",
+      "tools": "Tools & integrations"
+    },
+    "solutionPages": {
+      "insertion": {
+        "tagline": "The software for social integration professionals",
+        "heroTitle": "The complete platform for work integration social enterprises",
+        "heroSubtitle": "Beneficiary tracking, interviews, reports, built-in AI. Designed by an employment counselor, for employment counselors.",
+        "features": [
+          { "title": "Beneficiary management", "description": "Complete profiles, personalized pathways, attached documents, full history." },
+          { "title": "Interviews & appointments", "description": "Scheduling, automatic summaries, reminders, attendance tracking." },
+          { "title": "Built-in AI", "description": "Automatic summaries, pathway suggestions, predictive analysis, document generation." },
+          { "title": "Reports & statistics", "description": "Real-time dashboards, ASP/ESF exports (French public service reporting), Qualiopi indicators, PDF reports." },
+          { "title": "RBAC & multi-site", "description": "Granular role-based permissions, multi-site support, complete audit trail, GDPR compliant." },
+          { "title": "Documents & exports", "description": "Automatic document generation (CERFA forms, reports, agreements), Excel/PDF exports." }
+        ],
+        "pricingPrice": "From €59",
+        "pricingUnit": "/mo",
+        "pricingTrial": "1-month free trial, no credit card",
+        "testimonialQuote": "YDV Insertion allowed us to centralize all our beneficiary tracking in a single tool. The AI saves us considerable time on reports.",
+        "testimonialAuthor": "Structure IDEAL",
+        "testimonialRole": "First pilot user"
+      },
+      "formation": {
+        "tagline": "Complete management for training organizations",
+        "heroTitle": "Training organizations: manage your entire activity from A to Z",
+        "heroSubtitle": "Course catalog, agreements, attendance, financial reports, Qualiopi compliance. All-in-one, designed for France's 70,000+ training organizations.",
+        "features": [
+          { "title": "Course catalog", "description": "Create and manage your catalog, programs, learning objectives, delivery methods." },
+          { "title": "Agreements & quotes", "description": "Automatic generation of training agreements, quotes, and contracts." },
+          { "title": "Digital attendance", "description": "Electronic signatures, digital attendance sheets, QR code check-in." },
+          { "title": "Qualiopi compliance", "description": "Built-in Qualiopi indicators, documentary evidence, audit preparation." }
+        ],
+        "pricingPrice": "From €49",
+        "pricingUnit": "/mo",
+        "pricingTrial": "1-month free trial, no credit card"
+      },
+      "coaching": {
+        "tagline": "Skills assessment and individual coaching",
+        "heroTitle": "Skills assessment, RPL and coaching: a dedicated tool",
+        "heroSubtitle": "Structured pathways, assessments, automated reports. For career counseling centers and professional coaches.",
+        "features": [
+          { "title": "Assessment pathways", "description": "Compliant skills assessment templates, customizable steps." },
+          { "title": "Evaluations", "description": "Tests, interest questionnaires, competency grids, self-assessments." },
+          { "title": "Automated reports", "description": "AI-generated summaries, debriefing documents, PDF exports." },
+          { "title": "Session tracking", "description": "Scheduling, session notes, hour tracking, billing." }
+        ],
+        "pricingPrice": "From €39",
+        "pricingUnit": "/mo",
+        "pricingTrial": "Pre-registration open"
+      },
+      "manager": {
+        "tagline": "CRM / ERP for SaaS publishers and freelancers",
+        "heroTitle": "Manage your clients, subscriptions and billing in one tool",
+        "heroSubtitle": "Built for SaaS publishers and freelancers. Independent from other YDV products, sold standalone.",
+        "features": [
+          { "title": "Client management", "description": "Client profiles, interaction history, segmentation, notes." },
+          { "title": "Subscriptions & billing", "description": "Subscription tracking, automated billing, payment reminders." },
+          { "title": "Analytics", "description": "MRR, churn, LTV, cohorts. Real-time dashboards." },
+          { "title": "API connectors", "description": "Stripe, Brevo, Slack, webhooks. Integration with your existing tools." }
+        ],
+        "pricingPrice": "From €29",
+        "pricingUnit": "/mo",
+        "pricingTrial": "Pre-registration open"
+      }
+    },
+    "blogArticles": {
+      "ia-suivi-beneficiaires-siae": {
+        "title": "How AI is transforming beneficiary tracking in social enterprises",
+        "category": "AI & Social integration",
+        "excerpt": "Automatic summaries, pathway suggestions, dropout risk detection: a practical overview of AI use cases in work integration social enterprises.",
+        "readTime": "6 min",
+        "content": [
+          "Artificial intelligence is no longer reserved for big tech companies. In the work integration social enterprise (WISE) sector — organizations in France that employ people facing social and professional difficulties — AI is starting to concretely transform the work of employment counselors.",
+          "## Practical use cases",
+          "### 1. Automatic interview summaries",
+          "After each interview, the counselor writes a summary. This is a time-consuming task that can take 15 to 30 minutes. With AI, the counselor can dictate or note key points, and the AI generates a structured summary in seconds.",
+          "### 2. Personalized pathway suggestions",
+          "By analyzing the beneficiary's profile (skills, barriers, aspirations), AI can suggest suitable pathway options. The counselor retains final decision-making authority, but saves time on the analysis phase.",
+          "### 3. Early dropout risk detection",
+          "AI can identify weak signals: repeated absences, stagnation in progress, declining engagement. The counselor is alerted before the situation deteriorates.",
+          "### 4. Document generation",
+          "Reports, public service documents (ASP/ESF), correspondence: AI can generate drafts from existing data, which the counselor then validates and adjusts.",
+          "## The YDV Insertion approach",
+          "In YDV Insertion, AI is natively integrated with a multi-provider pattern (Claude, GPT-4, Gemini). The counselor chooses when and how to use AI. Nothing is automated without human validation.",
+          "## What AI doesn't replace",
+          "AI doesn't replace the human relationship. The trust between a counselor and a beneficiary cannot be automated. AI is a tool that frees up time to focus on what truly matters: personal support."
+        ]
+      },
+      "qualiopi-2026-changements": {
+        "title": "Qualiopi 2026: what's changing for training organizations in France",
+        "category": "Training",
+        "excerpt": "New certification requirements, strengthened indicators, and how dedicated software can simplify compliance with France's mandatory Qualiopi quality label.",
+        "readTime": "5 min",
+        "content": [
+          "The Qualiopi framework — France's mandatory quality certification for training organizations — is evolving in 2026 with new requirements. These changes aim to strengthen training quality and transparency for funders.",
+          "## Key changes",
+          "### Strengthened indicators",
+          "Several framework indicators are being reinforced, particularly around outcome tracking and learner satisfaction. Organizations must now provide more detailed evidence of their quality approach.",
+          "### Digital attendance",
+          "Digital attendance tracking is becoming the standard. Paper-based attendance sheets are increasingly rejected during audits. A reliable electronic attendance system is now virtually essential.",
+          "### Post-training follow-up",
+          "Learner follow-up after training is reinforced. Organizations must demonstrate that they measure the medium-term impact of their training programs.",
+          "## How software can help",
+          "A dedicated management platform like YDV Formation allows you to centralize all documentary evidence, automate indicator collection, and prepare for audits with confidence.",
+          "Key features: structured course catalog, automatically generated agreements, digital attendance with QR codes, and real-time Qualiopi dashboards.",
+          "## Prepare now",
+          "Don't wait until the last moment to bring your processes into compliance. YDV Formation will be available soon — sign up to be notified at launch."
+        ]
+      },
+      "multi-provider-ia-architecture": {
+        "title": "Multi-provider AI: Claude, GPT-4 and Gemini in a single app",
+        "category": "Technical",
+        "excerpt": "Architecture of a multi-provider AI routing system with automatic fallback. Lessons learned from CIP Platform.",
+        "readTime": "8 min",
+        "content": [
+          "When integrating AI into a business application, relying on a single provider is risky. Outages, pricing changes, rate limits: there are many reasons to want a multi-provider system.",
+          "## Why multi-provider?",
+          "### Resilience",
+          "If Claude goes down, the application automatically falls back to GPT-4. If GPT-4 is overloaded, Gemini takes over. The user notices nothing.",
+          "### Cost optimization",
+          "Different models are better suited to different tasks. Claude excels at synthesis and reasoning, GPT-4 performs well at code generation, Gemini offers excellent value for simple tasks.",
+          "### Independence",
+          "Not depending on a single provider is a sound software architecture practice.",
+          "## The chosen architecture",
+          "The system relies on a common `AIProvider` interface that each provider implements:",
+          "```typescript\ninterface AIProvider {\n  generate(prompt: string, options?: AIOptions): Promise<AIResponse>\n  isAvailable(): Promise<boolean>\n}\n```",
+          "A central router handles provider selection based on the task, availability and user preferences.",
+          "## The fallback pattern",
+          "The fallback works in cascade: primary provider → secondary provider → tertiary provider. Each failure is logged, and the system learns to temporarily avoid unstable providers.",
+          "## Lessons learned",
+          "On CIP Platform (the platform behind YDV Systems), this pattern has been in production for over a year. It has absorbed several API outages with zero user impact, and optimized AI costs by 30% by routing simple tasks to less expensive models."
+        ]
+      }
+    }
+  }
+}

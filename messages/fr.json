@@ -1,0 +1,588 @@
+{
+  "common": {
+    "nav": {
+      "prestations": "Prestations",
+      "solutions": "Solutions",
+      "pricing": "Prix",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "footer": {
+      "description": "Développement web, IA & logiciels SaaS pour le secteur social et la formation.",
+      "solutions": "Solutions",
+      "prestations": "Prestations",
+      "ressources": "Ressources",
+      "customDev": "Développement sur mesure",
+      "iaIntegration": "Intégration IA",
+      "workshops": "Ateliers & formation",
+      "iaAudit": "Audit IA",
+      "pricing": "Tarifs",
+      "blog": "Blog",
+      "contact": "Contact",
+      "legal": "Mentions légales",
+      "copyright": "YdvSystems — Yohann Dandeville · Auto-entrepreneur",
+      "siret": "SIRET 534 080 783 00028"
+    },
+    "accessibility": {
+      "skipToContent": "Aller au contenu principal",
+      "scrollToTop": "Retour en haut de page",
+      "openMenu": "Ouvrir le menu",
+      "closeMenu": "Fermer le menu"
+    }
+  },
+  "home": {
+    "hero": {
+      "tag": "Développeur freelance · Logiciels SaaS",
+      "title1": "Développement ",
+      "titleHighlight1": "sur mesure",
+      "title2": " et ",
+      "titleHighlight2": "intégration IA",
+      "subtitle": "Développeur full-stack freelance, j'accompagne les entreprises dans la création d'outils sur mesure, l'intégration de l'IA et la formation. Fondateur de YdvSystems, éditeur de logiciels SaaS pour le secteur social.",
+      "ctaSolutions": "Nos logiciels SaaS",
+      "ctaFreelance": "Découvrir mes prestations",
+      "scrollHint": "Explorer"
+    },
+    "stats": {
+      "projects": "Projets livrés",
+      "tests": "Tests automatisés",
+      "sectors": "Secteurs couverts",
+      "platforms": "Plateformes supportées"
+    },
+    "solutions": {
+      "tag": "Nos solutions",
+      "title": "Logiciels métier pour le secteur social",
+      "description": "Chaque logiciel est autonome, complet et vendable seul. L'interconnexion entre solutions est un bonus optionnel.",
+      "statusProd": "En prod",
+      "statusSoon": "Bientôt",
+      "learnMore": "En savoir plus",
+      "allPricing": "Voir tous les tarifs"
+    },
+    "freelance": {
+      "tag": "Prestations freelance",
+      "title": "Développement web & conseil technique",
+      "description": "Missions ponctuelles ou projets longs — du développement sur mesure à la formation IA, tout secteur.",
+      "allServices": "Voir toutes les prestations"
+    },
+    "cta": {
+      "title": "Un projet ? Parlons-en.",
+      "description": "Que ce soit pour une mission freelance, une démo de nos logiciels ou une simple question — je réponds sous 24h.",
+      "ctaContact": "Nous contacter",
+      "ctaServices": "Voir les prestations"
+    }
+  },
+  "prestations": {
+    "meta": {
+      "title": "Prestations freelance — YdvSystems",
+      "description": "Développeur full-stack freelance. Applications métier, intégration IA, ateliers de formation, audit maturité IA, automatisation de workflows."
+    },
+    "hero": {
+      "tag": "Prestations freelance",
+      "title1": "Développement web, ",
+      "titleHighlight": "IA",
+      "title2": " & conseil technique",
+      "subtitle": "Missions ponctuelles ou projets longs. Du prototype à la production, tout secteur. Je réponds sous 24h.",
+      "cta": "Me contacter"
+    },
+    "services": {
+      "tag": "Services",
+      "title": "Ce que je peux faire pour vous",
+      "description": "8 types de missions, du développement sur mesure à la formation IA."
+    },
+    "portfolio": {
+      "tag": "Portfolio",
+      "title": "Projets réalisés",
+      "description": "Des projets concrets, en production ou déployés — pas des démos.",
+      "visit": "Visiter {title}"
+    },
+    "about": {
+      "tag": "À propos",
+      "title": "Développeur full-stack & entrepreneur",
+      "bio1": "Je suis Yohann, développeur full-stack basé en France, fondateur de YdvSystems. Je conçois des logiciels métier complets, des SaaS, des jeux et des outils IA.",
+      "bio2": "Mon approche : code propre, architecture évolutive, zéro over-engineering. Je travaille seul, ce qui me permet d'être rapide, réactif et de livrer ce qui est demandé — sans réunion inutile.",
+      "stackTitle": "Stack maîtrisée"
+    },
+    "cta": {
+      "title": "Prêt à démarrer ?",
+      "description": "Décrivez votre projet et je vous réponds sous 24h avec une proposition concrète.",
+      "button": "Me contacter"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact — YdvSystems | Mission freelance ou démo logiciel",
+      "description": "Contactez YdvSystems pour une mission de développement freelance, une démo de nos logiciels SaaS (Insertion, Formation, Coaching, Manager) ou un atelier IA. Réponse sous 24h."
+    },
+    "header": {
+      "tag": "Contact",
+      "title": "Parlons de votre projet",
+      "description": "Mission freelance, démo logiciel, ou simple question — je réponds sous 24h."
+    },
+    "cards": {
+      "freelanceTitle": "Mission freelance",
+      "freelanceDescription": "Développement web, intégration IA, atelier formation, automatisation de workflows, audit maturité IA.",
+      "demoTitle": "Démo logiciel",
+      "demoDescription": "Découvrez YDV Insertion, Formation, Coaching ou Manager. Essai gratuit 1 mois, sans engagement.",
+      "meetingHighlight": "Prenons 30 min",
+      "meetingText": " pour parler de votre projet. Je vous pose quelques questions pour bien comprendre votre besoin, et je vous propose une approche concrète."
+    },
+    "form": {
+      "nameLabel": "Nom *",
+      "namePlaceholder": "Votre nom",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "votre@email.com",
+      "projectTypeLabel": "Type de projet",
+      "projectTypePlaceholder": "Choisir...",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "Décrivez votre projet, votre besoin, ou posez votre question...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Message envoyé !",
+      "description": "Je vous réponds sous 24h.",
+      "another": "Envoyer un autre message"
+    },
+    "error": {
+      "message": "Erreur d'envoi. Contactez directement"
+    },
+    "projectTypes": {
+      "dev": "Mission de développement",
+      "ia-integration": "Intégration IA",
+      "atelier-ia": "Atelier IA / Formation",
+      "audit-ia": "Audit maturité IA",
+      "automatisation": "Automatisation N8N",
+      "demo-insertion": "Démo YDV Insertion",
+      "demo-formation": "Démo YDV Formation",
+      "demo-autre": "Démo autre solution",
+      "autre": "Autre"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Tarifs — Solutions SaaS | YdvSystems",
+      "description": "Tarifs transparents pour nos logiciels SaaS : YDV Insertion, Formation, Coaching, Manager. Sans engagement, sans frais cachés."
+    },
+    "header": {
+      "tag": "Tarifs",
+      "title": "Tarifs transparents, sans surprise",
+      "description": "Chaque logiciel a son propre tarif. Pas de frais cachés, pas d'engagement."
+    },
+    "toggle": {
+      "annual": "Annuel",
+      "monthly": "Mensuel",
+      "discount": "-20%"
+    },
+    "card": {
+      "recommended": "Recommandé",
+      "statusProd": "Dispo",
+      "statusSoon": "Bientôt",
+      "perMonth": "/mois",
+      "perYear": "/an",
+      "annualTotal": "soit {total} €/an",
+      "monthlyStrike": "{price} €/mois",
+      "monthlyHint": "{price} €/mois en annuel (-20%)",
+      "learnMore": "En savoir plus",
+      "preRegistration": "Pré-inscription"
+    },
+    "commonFeatures": {
+      "tag": "Inclus dans toutes les solutions",
+      "title": "Le socle commun",
+      "features": [
+        "Interface intuitive, mobile-first",
+        "IA intégrée (synthèses, suggestions, génération)",
+        "Multi-utilisateurs avec rôles",
+        "Exports PDF / Excel",
+        "Support par email",
+        "Mises à jour incluses",
+        "Conformité RGPD",
+        "Hébergement sécurisé (UE)"
+      ]
+    },
+    "faq": {
+      "tag": "Questions fréquentes",
+      "title": "FAQ Tarifs",
+      "items": [
+        {
+          "question": "Y a-t-il un engagement de durée ?",
+          "answer": "Non. Tous nos abonnements sont sans engagement. Vous pouvez annuler à tout moment."
+        },
+        {
+          "question": "Puis-je tester avant de m'engager ?",
+          "answer": "Oui. YDV Insertion propose un essai gratuit de 1 mois, sans carte bancaire. Les autres solutions proposeront la même offre à leur lancement."
+        },
+        {
+          "question": "Puis-je utiliser plusieurs solutions ?",
+          "answer": "Oui. Chaque solution est indépendante avec son propre abonnement. Un compte unique vous donne accès à toutes vos solutions."
+        },
+        {
+          "question": "Les tarifs incluent-ils la TVA ?",
+          "answer": "Les tarifs affichés sont HT. La TVA française (20%) s'applique pour les clients basés en France."
+        },
+        {
+          "question": "Quelle est la différence entre mensuel et annuel ?",
+          "answer": "L'abonnement annuel vous fait économiser 20% par rapport au tarif mensuel. Vous êtes facturé une fois par an, sans engagement de renouvellement."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Des questions sur les tarifs ?",
+      "description": "Contactez-nous pour un devis personnalisé ou une démo gratuite.",
+      "button": "Nous contacter"
+    }
+  },
+  "solutionsIndex": {
+    "meta": {
+      "title": "Nos solutions SaaS — YdvSystems",
+      "description": "Logiciels métier pour le secteur social et la formation. Suivi des bénéficiaires, gestion d'organismes de formation, bilan de compétences, CRM/ERP."
+    },
+    "hero": {
+      "tag": "Nos solutions",
+      "title": "Logiciels métier pour le secteur social",
+      "description": "Chaque logiciel est autonome, complet et vendable seul. Conçus pour les professionnels de l'insertion, de la formation et du coaching."
+    },
+    "statusProd": "En prod",
+    "statusSoon": "Bientôt",
+    "learnMore": "En savoir plus",
+    "cta": {
+      "title": "Des questions sur nos solutions ?",
+      "description": "Demandez une démo gratuite ou contactez-nous pour en savoir plus.",
+      "contact": "Nous contacter",
+      "pricing": "Voir tous les tarifs"
+    }
+  },
+  "solutions": {
+    "common": {
+      "inProduction": "En production",
+      "comingSoon": "Bientôt disponible",
+      "requestDemo": "Demander une démo",
+      "preRegistration": "Pré-inscription gratuite",
+      "notifiedAtLaunch": "Soyez prévenu dès le lancement",
+      "featuresTag": "Fonctionnalités",
+      "featuresTitle": "Tout ce dont vous avez besoin",
+      "timelineTag": "Calendrier prévisionnel",
+      "timelineTitle": "Feuille de route",
+      "earlyAccessTitle": "Soyez parmi les premiers utilisateurs",
+      "earlyAccessDescription": "Inscrivez-vous pour accéder à la beta en avant-première et bénéficier d'un tarif préférentiel au lancement.",
+      "pricingTag": "Tarif",
+      "allSolutions": "Toutes les solutions",
+      "comparePricing": "Comparer les tarifs",
+      "notFound": "Solution introuvable"
+    },
+    "timeline": {
+      "coaching": [
+        { "step": "Conception & architecture", "date": "T2 2026" },
+        { "step": "Beta privée", "date": "T4 2026" },
+        { "step": "Lancement public", "date": "T1 2027" }
+      ],
+      "manager": [
+        { "step": "Conception & architecture", "date": "T3 2026" },
+        { "step": "Beta privée", "date": "T1 2027" },
+        { "step": "Lancement public", "date": "T2 2027" }
+      ]
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog & Ressources — YdvSystems",
+      "description": "Articles sur le développement web, l'IA, le secteur social et la gestion d'organismes de formation."
+    },
+    "header": {
+      "tag": "Blog",
+      "title": "Blog & Ressources",
+      "description": "Articles sur le développement web, l'IA, le secteur social et la gestion d'organismes de formation."
+    },
+    "readArticle": "Lire l'article",
+    "newsletter": {
+      "title": "Soyez prévenu des nouveaux articles",
+      "description": "Inscrivez-vous pour recevoir les prochains articles par email.",
+      "link": "Me contacter pour être notifié"
+    },
+    "article": {
+      "backToBlog": "Retour au blog",
+      "allArticles": "Tous les articles",
+      "readTime": "de lecture",
+      "contactCta": "Une question ? Contactez-moi",
+      "authorRole": "Développeur full-stack & fondateur de YdvSystems",
+      "notFound": "Article introuvable",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbBlog": "Blog"
+    }
+  },
+  "legal": {
+    "meta": {
+      "title": "Mentions légales — YdvSystems",
+      "description": "Mentions légales de YdvSystems — Yohann Dandeville, auto-entrepreneur. Éditeur, hébergement Hetzner, données personnelles, RGPD, propriété intellectuelle."
+    },
+    "title": "Mentions légales",
+    "editor": {
+      "title": "Éditeur du site",
+      "intro": "Le site ydvsystems.com est édité par :",
+      "name": "Nom :",
+      "nameValue": "Yohann Dandeville",
+      "status": "Statut :",
+      "statusValue": "Auto-entrepreneur",
+      "tradeName": "Nom commercial :",
+      "tradeNameValue": "YdvSystems",
+      "siret": "SIRET :",
+      "siretValue": "534 080 783 00028",
+      "email": "Email :"
+    },
+    "hosting": {
+      "title": "Hébergement",
+      "intro": "Ce site est hébergé par :",
+      "host": "Hébergeur :",
+      "hostValue": "Hetzner Online GmbH",
+      "address": "Adresse :",
+      "addressValue": "Industriestr. 25, 91710 Gunzenhausen, Allemagne",
+      "website": "Site :"
+    },
+    "privacy": {
+      "title": "Données personnelles",
+      "paragraph1": "Ce site ne collecte pas de données personnelles à des fins commerciales. Le formulaire de contact transmet uniquement les informations saisies (nom, email, message) à l'adresse email de l'éditeur via le service Resend pour permettre une réponse à votre demande.",
+      "paragraph2": "Aucun cookie analytique ou de tracking n'est utilisé sur ce site. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant"
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content": "L'ensemble du contenu de ce site (textes, code, design) est la propriété exclusive de YdvSystems — Yohann Dandeville, sauf mention contraire. Toute reproduction est interdite sans autorisation préalable."
+    },
+    "backHome": "Retour à l'accueil"
+  },
+  "data": {
+    "solutions": {
+      "insertion": {
+        "subtitle": "Logiciel de suivi pour l'IAE",
+        "description": "Suivi des bénéficiaires, entretiens, bilans, IA intégrée. Conçu par un CIP, pour les CIP.",
+        "price": "À partir de 59 €",
+        "priceUnit": "/mois"
+      },
+      "formation": {
+        "subtitle": "Gestion des organismes de formation",
+        "description": "Catalogue, conventions, émargement digital, conformité Qualiopi. Tout en un pour les 70 000 OF de France.",
+        "price": "À partir de 49 €",
+        "priceUnit": "/mois"
+      },
+      "coaching": {
+        "subtitle": "Bilan de compétences & coaching",
+        "description": "Parcours structurés, évaluations, rapports automatisés. Pour les centres de bilan et les coachs.",
+        "price": "À partir de 39 €",
+        "priceUnit": "/mois"
+      },
+      "manager": {
+        "subtitle": "CRM / ERP pour éditeurs SaaS",
+        "description": "Gestion clients, abonnements, facturation, analytics. Conçu pour les éditeurs SaaS et les freelances.",
+        "price": "À partir de 29 €",
+        "priceUnit": "/mois"
+      }
+    },
+    "services": {
+      "dev-sur-mesure": {
+        "title": "Développement sur mesure",
+        "description": "Applications métier, SaaS, plateformes web. Du prototype à la production.",
+        "price": "À partir de 450 €/jour"
+      },
+      "integration-ia": {
+        "title": "Intégration IA",
+        "description": "Intégrez Claude, GPT-4 ou Gemini dans vos outils existants. Architecture multi-provider.",
+        "price": "À partir de 500 €/jour"
+      },
+      "atelier-ia": {
+        "title": "Atelier IA / Formation",
+        "description": "Ateliers pratiques pour vos équipes : prompt engineering, outils IA, cas d'usage métier.",
+        "price": "À partir de 800 €/atelier"
+      },
+      "audit-ia": {
+        "title": "Audit maturité IA",
+        "description": "Évaluation de votre maturité IA, recommandations personnalisées, feuille de route.",
+        "price": "À partir de 1 500 €"
+      },
+      "automatisation": {
+        "title": "Automatisation de workflows",
+        "description": "Automatisez vos processus avec n8n, Supabase, Brevo, Stripe. Zéro code ou low-code.",
+        "price": "À partir de 400 €/jour"
+      },
+      "cross-platform": {
+        "title": "Applications cross-platform",
+        "description": "Desktop (Tauri/Electron) et mobile (Capacitor). Une base de code, toutes les plateformes.",
+        "price": "Sur devis"
+      },
+      "jeux-narratifs": {
+        "title": "Jeux narratifs & interactifs",
+        "description": "Jeux textuels, fiction interactive, gamification. Web, desktop et mobile.",
+        "price": "Sur devis"
+      },
+      "accessibilite": {
+        "title": "Accessibilité & inclusion",
+        "description": "Audit d'accessibilité, mise en conformité RGAA/WCAG, formation équipes.",
+        "price": "À partir de 500 €/jour"
+      }
+    },
+    "portfolio": {
+      "ydv-systems": {
+        "type": "Logiciel SaaS",
+        "title": "YDV Insertion (CIP Platform)",
+        "description": "Plateforme complète de suivi des bénéficiaires pour l'insertion par l'activité économique. IA intégrée, 4 253 tests, multi-structures."
+      },
+      "moteur-jeu": {
+        "type": "Moteur de jeu",
+        "title": "Moteur de jeu narratif",
+        "description": "Moteur complet pour jeux textuels et fiction interactive. React, Tauri, Capacitor. Web Audio API pour l'ambiance sonore."
+      },
+      "prompt-parfait": {
+        "type": "Application",
+        "title": "Le Prompt Parfait",
+        "description": "Application multi-plateforme pour créer des prompts IA optimisés. Electron + Capacitor, disponible sur web, desktop et mobile."
+      },
+      "audit-ia-entreprise": {
+        "type": "Outil interne",
+        "title": "Audit IA Entreprise",
+        "description": "Outil d'évaluation de la maturité IA des entreprises. Questionnaire adaptatif, rapport personnalisé, recommandations IA."
+      },
+      "blog-parkinson": {
+        "type": "Blog accessible",
+        "title": "Les Mots de Marilyn",
+        "description": "Blog personnel pour une personne atteinte de Parkinson. Interface « Zéro Stress », transcription vocale IA, conformité WCAG AAA, design adapté aux jours difficiles."
+      }
+    },
+    "stack": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "databases": "Bases de données",
+      "ai": "Intelligence artificielle",
+      "devops": "DevOps & hébergement",
+      "crossPlatform": "Cross-platform",
+      "tools": "Outils & intégrations"
+    },
+    "solutionPages": {
+      "insertion": {
+        "tagline": "Le logiciel des professionnels de l'insertion",
+        "heroTitle": "Le logiciel complet pour l'insertion par l'activité économique",
+        "heroSubtitle": "Suivi des bénéficiaires, entretiens, bilans, IA intégrée. Conçu par un CIP, pour les CIP.",
+        "features": [
+          { "title": "Gestion des bénéficiaires", "description": "Fiches complètes, parcours personnalisés, documents rattachés, historique complet." },
+          { "title": "Entretiens & rendez-vous", "description": "Planification, comptes-rendus automatiques, relances, suivi des présences." },
+          { "title": "IA intégrée", "description": "Synthèses automatiques, suggestions de parcours, analyse prédictive, génération de documents." },
+          { "title": "Bilans & statistiques", "description": "Tableaux de bord temps réel, exports ASP/FSE, indicateurs Qualiopi, rapports PDF." },
+          { "title": "RBAC & multi-structures", "description": "Permissions granulaires par rôle, multi-sites, audit trail complet, conformité RGPD." },
+          { "title": "Documents & exports", "description": "Génération automatique de documents (CERFA, bilans, conventions), exports Excel/PDF." }
+        ],
+        "pricingPrice": "À partir de 59 €",
+        "pricingUnit": "/mois",
+        "pricingTrial": "Essai 1 mois gratuit, sans CB",
+        "testimonialQuote": "YDV Insertion nous a permis de centraliser tout le suivi de nos bénéficiaires en un seul outil. L'IA nous fait gagner un temps considérable sur les bilans.",
+        "testimonialAuthor": "Structure IDEAL",
+        "testimonialRole": "Premier utilisateur pilote"
+      },
+      "formation": {
+        "tagline": "La gestion complète des organismes de formation",
+        "heroTitle": "Organismes de formation : pilotez votre activité de A à Z",
+        "heroSubtitle": "Catalogue, conventions, émargement, BPF, conformité Qualiopi. Tout en un, pensé pour les 70 000 OF de France.",
+        "features": [
+          { "title": "Catalogue de formations", "description": "Création et gestion du catalogue, programmes, objectifs pédagogiques, modalités." },
+          { "title": "Conventions & devis", "description": "Génération automatique des conventions, devis, contrats de formation." },
+          { "title": "Émargement digital", "description": "Signature électronique, feuilles de présence dématérialisées, QR code." },
+          { "title": "Conformité Qualiopi", "description": "Indicateurs Qualiopi intégrés, preuves documentaires, préparation audit." }
+        ],
+        "pricingPrice": "À partir de 49 €",
+        "pricingUnit": "/mois",
+        "pricingTrial": "Essai 1 mois gratuit, sans CB"
+      },
+      "coaching": {
+        "tagline": "Bilan de compétences et accompagnement individuel",
+        "heroTitle": "Bilan de compétences, VAE et coaching : un outil dédié",
+        "heroSubtitle": "Parcours structurés, évaluations, rapports automatisés. Pour les centres de bilan et les coachs.",
+        "features": [
+          { "title": "Parcours bilan", "description": "Modèles de parcours bilan de compétences conformes, étapes personnalisables." },
+          { "title": "Évaluations", "description": "Tests, questionnaires d'intérêts, grilles de compétences, auto-évaluations." },
+          { "title": "Rapports automatisés", "description": "Synthèses générées par IA, documents de restitution, exports PDF." },
+          { "title": "Suivi des séances", "description": "Planification, comptes-rendus, suivi des heures, facturation." }
+        ],
+        "pricingPrice": "À partir de 39 €",
+        "pricingUnit": "/mois",
+        "pricingTrial": "Pré-inscription ouverte"
+      },
+      "manager": {
+        "tagline": "CRM / ERP pour éditeurs SaaS et freelances",
+        "heroTitle": "Gérez vos clients, abonnements et facturation en un seul outil",
+        "heroSubtitle": "Conçu pour les éditeurs SaaS et les freelances. Indépendant des autres solutions YDV, vendable seul.",
+        "features": [
+          { "title": "Gestion clients", "description": "Fiches clients, historique des interactions, segmentation, notes." },
+          { "title": "Abonnements & facturation", "description": "Suivi des abonnements, facturation automatique, relances impayés." },
+          { "title": "Analytics", "description": "MRR, churn, LTV, cohortes. Tableaux de bord en temps réel." },
+          { "title": "Connecteurs API", "description": "Stripe, Brevo, Slack, webhooks. Intégration avec vos outils existants." }
+        ],
+        "pricingPrice": "À partir de 29 €",
+        "pricingUnit": "/mois",
+        "pricingTrial": "Pré-inscription ouverte"
+      }
+    },
+    "blogArticles": {
+      "ia-suivi-beneficiaires-siae": {
+        "title": "Comment l'IA transforme le suivi des bénéficiaires en SIAE",
+        "category": "IA & Insertion",
+        "excerpt": "Synthèses automatiques, suggestions de parcours, détection des risques de décrochage : tour d'horizon des usages concrets de l'IA dans l'insertion.",
+        "readTime": "6 min",
+        "content": [
+          "L'intelligence artificielle n'est plus réservée aux grandes entreprises tech. Dans le secteur de l'insertion par l'activité économique (IAE), elle commence à transformer concrètement le travail des conseillers en insertion professionnelle (CIP).",
+          "## Les cas d'usage concrets",
+          "### 1. Synthèses automatiques d'entretiens",
+          "Après chaque entretien, le CIP rédige un compte-rendu. C'est une tâche chronophage qui peut prendre 15 à 30 minutes. Avec l'IA, le conseiller peut dicter ou noter les points clés, et l'IA génère une synthèse structurée en quelques secondes.",
+          "### 2. Suggestions de parcours personnalisés",
+          "En analysant le profil du bénéficiaire (compétences, freins, aspirations), l'IA peut suggérer des pistes de parcours adaptées. Le conseiller garde la main sur la décision finale, mais gagne du temps sur la phase d'analyse.",
+          "### 3. Détection précoce des risques de décrochage",
+          "L'IA peut identifier des signaux faibles : absence répétée aux rendez-vous, stagnation dans le parcours, baisse d'engagement. Le conseiller est alerté avant que la situation ne se dégrade.",
+          "### 4. Génération de documents",
+          "Bilans, rapports ASP/FSE, courriers : l'IA peut générer des brouillons à partir des données existantes, que le conseiller valide et ajuste.",
+          "## L'approche YDV Insertion",
+          "Dans YDV Insertion, l'IA est intégrée nativement avec un pattern multi-provider (Claude, GPT-4, Gemini). Le conseiller choisit quand et comment utiliser l'IA. Rien n'est automatisé sans validation humaine.",
+          "## Ce que l'IA ne remplace pas",
+          "L'IA ne remplace pas la relation humaine. Le lien de confiance entre un CIP et un bénéficiaire ne peut pas être automatisé. L'IA est un outil qui libère du temps pour se concentrer sur ce qui compte vraiment : l'accompagnement."
+        ]
+      },
+      "qualiopi-2026-changements": {
+        "title": "Qualiopi 2026 : ce qui change pour les organismes de formation",
+        "category": "Formation",
+        "excerpt": "Nouvelles exigences du référentiel, indicateurs renforcés, et comment un logiciel dédié peut simplifier la conformité.",
+        "readTime": "5 min",
+        "content": [
+          "Le référentiel Qualiopi évolue en 2026 avec de nouvelles exigences pour les organismes de formation. Ces changements visent à renforcer la qualité des formations et la transparence envers les financeurs.",
+          "## Les principaux changements",
+          "### Indicateurs renforcés",
+          "Plusieurs indicateurs du référentiel sont renforcés, notamment sur le suivi des résultats et la satisfaction des apprenants. Les organismes doivent désormais fournir des preuves plus détaillées de leur démarche qualité.",
+          "### Émargement dématérialisé",
+          "L'émargement digital devient la norme. Les feuilles de présence papier sont de moins en moins acceptées lors des audits. Un système d'émargement électronique fiable est désormais quasi-indispensable.",
+          "### Suivi post-formation",
+          "Le suivi des apprenants après la formation est renforcé. Les organismes doivent démontrer qu'ils mesurent l'impact de leurs formations à moyen terme.",
+          "## Comment un logiciel peut aider",
+          "Un logiciel de gestion dédié comme YDV Formation permet de centraliser toutes les preuves documentaires, automatiser la collecte des indicateurs, et préparer les audits sereinement.",
+          "Les fonctionnalités clés : catalogue de formations structuré, conventions générées automatiquement, émargement digital avec QR code, et tableaux de bord Qualiopi en temps réel.",
+          "## Préparez-vous dès maintenant",
+          "N'attendez pas le dernier moment pour mettre en conformité vos processus. YDV Formation sera disponible prochainement — inscrivez-vous pour être prévenu du lancement."
+        ]
+      },
+      "multi-provider-ia-architecture": {
+        "title": "Multi-provider IA : Claude, GPT-4 et Gemini dans une même app",
+        "category": "Technique",
+        "excerpt": "Architecture d'un système de routage IA multi-provider avec fallback automatique. Retour d'expérience sur CIP Platform.",
+        "readTime": "8 min",
+        "content": [
+          "Quand on intègre l'IA dans une application métier, se reposer sur un seul fournisseur est risqué. Pannes, changements de tarifs, limites de rate : les raisons de vouloir un système multi-provider sont nombreuses.",
+          "## Pourquoi multi-provider ?",
+          "### Résilience",
+          "Si Claude est en panne, l'application bascule automatiquement sur GPT-4. Si GPT-4 est surchargé, Gemini prend le relais. L'utilisateur ne remarque rien.",
+          "### Optimisation des coûts",
+          "Certains modèles sont plus adaptés à certaines tâches. Claude excelle en synthèse et en raisonnement, GPT-4 est performant en génération de code, Gemini offre un excellent rapport qualité/prix pour les tâches simples.",
+          "### Indépendance",
+          "Ne pas dépendre d'un seul fournisseur est une bonne pratique d'architecture logicielle.",
+          "## L'architecture retenue",
+          "Le système repose sur une interface commune `AIProvider` que chaque provider implémente :",
+          "```typescript\ninterface AIProvider {\n  generate(prompt: string, options?: AIOptions): Promise<AIResponse>\n  isAvailable(): Promise<boolean>\n}\n```",
+          "Un routeur central gère la sélection du provider en fonction de la tâche, de la disponibilité et des préférences utilisateur.",
+          "## Le pattern fallback",
+          "Le fallback fonctionne en cascade : provider principal → provider secondaire → provider tertiaire. Chaque échec est logé, et le système apprend à éviter temporairement les providers instables.",
+          "## Retour d'expérience",
+          "Sur CIP Platform (la plateforme derrière YDV Systems), ce pattern est en production depuis plus d'un an. Il a permis d'absorber plusieurs pannes d'API sans impact utilisateur, et d'optimiser les coûts IA de 30% en routant les tâches simples vers des modèles moins coûteux."
+        ]
+      }
+    }
+  }
+}

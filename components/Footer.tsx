@@ -1,65 +1,92 @@
-import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 import { Github, Linkedin } from "lucide-react"
 
-const FOOTER_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Produits", href: "#produits" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Contact", href: "#contact" },
-  { label: "Mentions légales", href: "/mentions-legales" },
-]
-
 export function Footer() {
+  const t = useTranslations("common.footer")
+
+  const FOOTER_SECTIONS = {
+    [t("prestations")]: [
+      { label: t("customDev"), href: "/prestations" as const },
+      { label: t("iaIntegration"), href: "/prestations" as const },
+      { label: t("workshops"), href: "/prestations" as const },
+      { label: t("iaAudit"), href: "/prestations" as const },
+    ],
+    [t("solutions")]: [
+      { label: "YDV Insertion", href: "/solutions/insertion" as const },
+      { label: "YDV Formation", href: "/solutions/formation" as const },
+      { label: "YDV Coaching", href: "/solutions/coaching" as const },
+      { label: "YDV Manager", href: "/solutions/manager" as const },
+    ],
+    [t("ressources")]: [
+      { label: t("pricing"), href: "/prix" as const },
+      { label: t("blog"), href: "/blog" as const },
+      { label: t("contact"), href: "/contact" as const },
+      { label: t("legal"), href: "/mentions-legales" as const },
+    ],
+  }
+
   return (
-    <footer className="border-t border-slate-800 bg-slate-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col items-center gap-6">
-          {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-white">
-            Ydv<span className="text-indigo-400">Systems</span>
-          </Link>
-
-          <p className="text-sm text-slate-500 text-center">
-            Développement web, IA &amp; SaaS sur mesure
-          </p>
-
-          {/* Nav links */}
-          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {FOOTER_LINKS.map((link) => (
+    <footer className="border-t border-border bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link href="/" className="text-xl font-bold text-foreground">
+              Ydv<span className="text-primary">Systems</span>
+            </Link>
+            <p className="text-sm font-medium text-muted-foreground mt-3 leading-relaxed">
+              {t("description")}
+            </p>
+            <div className="flex items-center gap-4 mt-4">
               <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
+                href="https://github.com/foolosophe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="GitHub"
               >
-                {link.label}
+                <Github size={18} />
               </a>
-            ))}
-          </nav>
-
-          {/* Social */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/foolosophe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-white transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-white transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
+              <a
+                href="https://www.linkedin.com/in/yohann-dandeville/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+            </div>
           </div>
 
-          <p className="text-xs text-slate-600">
-            © {new Date().getFullYear()} YdvSystems — Yohann · Auto-entrepreneur
+          {/* Link columns */}
+          {Object.entries(FOOTER_SECTIONS).map(([title, links]) => (
+            <div key={title}>
+              <h3 className="text-sm font-semibold text-foreground mb-3">{title}</h3>
+              <ul className="space-y-2">
+                {links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} {t("copyright")}
+          </p>
+          <p className="text-xs text-muted-foreground">
+            {t("siret")}
           </p>
         </div>
       </div>
