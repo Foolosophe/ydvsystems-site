@@ -31,7 +31,8 @@ export default async function PortfolioPage() {
           <AnimateOnScroll>
             <p className="section-tag">{t("hero.tag")}</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 leading-tight tracking-tight">
-              {t("hero.title")}
+              <span className="text-primary">Y</span>ohann{" "}
+              <span className="text-primary">D</span>ande<span className="text-primary">v</span>ille
             </h1>
             <p className="text-lg text-secondary-foreground max-w-2xl mx-auto leading-relaxed">
               {t("hero.description")}
