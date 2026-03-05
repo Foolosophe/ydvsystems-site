@@ -37,6 +37,7 @@ export default function ContactPage() {
     email: "",
     projectType: "",
     message: "",
+    website: "", // honeypot
   })
   const t = useTranslations("contact")
 
@@ -55,7 +56,7 @@ export default function ContactPage() {
 
       if (res.ok) {
         setFormState("success")
-        setForm({ name: "", email: "", projectType: "", message: "" })
+        setForm({ name: "", email: "", projectType: "", message: "", website: "" })
       } else {
         setFormState("error")
       }
@@ -156,9 +157,9 @@ export default function ContactPage() {
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5" aria-describedby={formState === "error" ? "form-error" : undefined}>
                 {formState === "error" && (
-                  <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-600">
+                  <div id="form-error" role="alert" className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-600">
                     <AlertCircle size={16} className="shrink-0" />
                     <span>
                       {t("error.message")}{" "}
@@ -228,6 +229,20 @@ export default function ContactPage() {
                     required
                     rows={5}
                     className="bg-white border-border text-foreground placeholder:text-muted-foreground focus:border-primary resize-none"
+                  />
+                </div>
+
+                {/* Honeypot — hidden from real users, filled by bots */}
+                <div className="sr-only" aria-hidden="true">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.website}
+                    onChange={(e) => setForm({ ...form, website: e.target.value })}
                   />
                 </div>
 

@@ -38,6 +38,8 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
   const langRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null)
   const pathname = usePathname()
   const i18nPathname = useI18nPathname()
   const locale = useLocale()
@@ -74,6 +76,14 @@ export function Header() {
       return () => document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [langOpen])
+
+  // Focus management for mobile menu
+  useEffect(() => {
+    if (menuOpen) {
+      // Small delay to let the menu animate open
+      requestAnimationFrame(() => firstMobileLinkRef.current?.focus())
+    }
+  }, [menuOpen])
 
   const pathWithoutLocale = pathname.replace(/^\/(fr|en)/, "") || "/"
   const solutionMatch = pathWithoutLocale.match(/^\/solutions\/([a-z-]+)/)
@@ -118,6 +128,7 @@ export function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    aria-current={isActive ? "page" : undefined}
                     className={`relative text-sm transition-colors py-1 ${
                       isActive
                         ? "text-foreground font-medium"
@@ -145,6 +156,7 @@ export function Header() {
                   className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors px-2.5 py-1.5 rounded-lg border border-border hover:bg-secondary"
                   aria-expanded={langOpen}
                   aria-haspopup="listbox"
+                  aria-label={t("accessibility.languageSelector")}
                 >
                   {currentConfig.flag}
                   <span>{currentConfig.label}</span>
@@ -194,9 +206,11 @@ export function Header() {
             </div>
 
             <button
+              ref={menuButtonRef}
               className="md:hidden text-(--text-tertiary) hover:text-foreground transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? t("accessibility.closeMenu") : t("accessibility.openMenu")}
+              aria-expanded={menuOpen}
             >
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -208,19 +222,24 @@ export function Header() {
             }`}
           >
             <div className="border-t border-border py-4 space-y-3">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`block text-sm py-1 transition-colors ${
-                    link.href.split("/")[1] === pathWithoutLocale.split("/")[1]
-                      ? "text-foreground font-medium"
-                      : "text-(--text-tertiary) hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {NAV_LINKS.map((link, i) => {
+                const isMobileActive = link.href.split("/")[1] === pathWithoutLocale.split("/")[1]
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    ref={i === 0 ? firstMobileLinkRef : undefined}
+                    aria-current={isMobileActive ? "page" : undefined}
+                    className={`block text-sm py-1 transition-colors ${
+                      isMobileActive
+                        ? "text-foreground font-medium"
+                        : "text-(--text-tertiary) hover:text-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
 
               {/* Mobile language selector */}
               <div className="flex items-center gap-2 pt-2 border-t border-border">

@@ -29,7 +29,8 @@
       "skipToContent": "Aller au contenu principal",
       "scrollToTop": "Retour en haut de page",
       "openMenu": "Ouvrir le menu",
-      "closeMenu": "Fermer le menu"
+      "closeMenu": "Fermer le menu",
+      "languageSelector": "Sélecteur de langue"
     }
   },
   "home": {

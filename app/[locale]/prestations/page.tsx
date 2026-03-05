@@ -44,6 +44,34 @@ export default async function PrestationsPage() {
 
   return (
     <main className="min-h-screen pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "YdvSystems",
+            url: "https://ydvsystems.com",
+            provider: {
+              "@type": "Person",
+              name: "Yohann Dandeville",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: t("services.title"),
+              itemListElement: SERVICE_IDS.map((id) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: tSrv(`${id}.title`),
+                  description: tSrv(`${id}.description`),
+                },
+              })),
+            },
+          }),
+        }}
+      />
+
       {/* Hero */}
       <section className="pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -23,6 +23,28 @@ export default async function BlogPage() {
 
   return (
     <main className="min-h-screen pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: t("header.title"),
+            description: t("header.description"),
+            url: `https://ydvsystems.com/${locale}/blog`,
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: BLOG_SLUGS.map((slug, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `https://ydvsystems.com/${locale}/blog/${slug}`,
+                name: ta(`${slug}.title`),
+              })),
+            },
+          }),
+        }}
+      />
+
       {/* Header */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

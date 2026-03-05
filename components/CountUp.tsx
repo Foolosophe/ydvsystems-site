@@ -62,7 +62,7 @@ export function CountUp({
   const formatted = value.toLocaleString("fr-FR")
 
   return (
-    <span ref={ref}>
+    <span ref={ref} aria-live="polite" aria-atomic="true">
       {formatted}{suffix}
     </span>
   )

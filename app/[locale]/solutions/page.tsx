@@ -22,6 +22,24 @@ export default async function SolutionsPage() {
 
   return (
     <main className="min-h-screen pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: t("hero.title"),
+            description: t("hero.description"),
+            itemListElement: SOLUTIONS.map((solution, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://ydvsystems.com/solutions/${solution.slug}`,
+              name: solution.name,
+            })),
+          }),
+        }}
+      />
+
       {/* Hero */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
