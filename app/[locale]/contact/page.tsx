@@ -202,7 +202,7 @@ export default function ContactPage() {
                     value={form.projectType}
                     onValueChange={(v) => setForm({ ...form, projectType: v })}
                   >
-                    <SelectTrigger className="bg-white border-border text-foreground focus:border-primary">
+                    <SelectTrigger className="bg-white border-border text-foreground focus:border-primary" aria-label={t("form.projectTypeLabel")}>
                       <SelectValue placeholder={t("form.projectTypePlaceholder")} />
                     </SelectTrigger>
                     <SelectContent className="bg-white border-border">
