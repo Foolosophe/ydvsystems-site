@@ -14,6 +14,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card"
 import { Send, CheckCircle2, AlertCircle, Mail, Code2, Monitor } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 
 type FormState = "idle" | "loading" | "success" | "error"
 
@@ -66,6 +67,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen pt-24 pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll>
         <div className="text-center mb-14">
           <p className="section-tag">{t("header.tag")}</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -75,12 +77,15 @@ export default function ContactPage() {
             {t("header.description")}
           </p>
         </div>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <Card className="bg-white border-border shadow-(--shadow-card)">
+            <AnimateOnScroll>
+            <Card className="bg-white border-border overflow-hidden shadow-(--shadow-card) group">
+              <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
               <CardContent className="p-6 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center shrink-0 solution-icon-box">
                   <Code2 size={20} />
                 </div>
                 <div>
@@ -91,10 +96,13 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
+            </AnimateOnScroll>
 
-            <Card className="bg-white border-border shadow-(--shadow-card)">
+            <AnimateOnScroll delay={100}>
+            <Card className="bg-white border-border overflow-hidden shadow-(--shadow-card) group">
+              <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
               <CardContent className="p-6 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center shrink-0 solution-icon-box">
                   <Monitor size={20} />
                 </div>
                 <div>
@@ -105,7 +113,9 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
+            </AnimateOnScroll>
 
+            <AnimateOnScroll delay={200}>
             <div className="flex items-center gap-3 text-secondary-foreground">
               <div className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center shrink-0">
                 <Mail size={16} className="text-primary" />
@@ -124,8 +134,10 @@ export default function ContactPage() {
                 {t("cards.meetingText")}
               </p>
             </div>
+            </AnimateOnScroll>
           </div>
 
+          <AnimateOnScroll delay={200}>
           <div className="bg-white border border-border rounded-xl p-6 sm:p-8 shadow-(--shadow-card)">
             {formState === "success" ? (
               <div className="flex flex-col items-center justify-center py-8 text-center gap-4">
@@ -239,6 +251,7 @@ export default function ContactPage() {
               </form>
             )}
           </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </main>

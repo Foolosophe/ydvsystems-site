@@ -9,4 +9,4 @@ export const SOLUTION_FEATURE_ICONS: Record<string, string[]> = {
 
 export const SOLUTION_SLUGS = ["insertion", "formation", "coaching", "manager"] as const
 
-export const SOLUTIONS_WITH_TESTIMONIAL: readonly string[] = ["insertion"]
+export const SOLUTIONS_WITH_TESTIMONIAL: readonly string[] = []

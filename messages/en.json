@@ -4,6 +4,7 @@
       "prestations": "Services",
       "solutions": "Products",
       "pricing": "Pricing",
+      "portfolio": "Portfolio",
       "blog": "Blog",
       "contact": "Contact"
     },
@@ -18,6 +19,7 @@
       "iaAudit": "AI audit",
       "pricing": "Pricing",
       "blog": "Blog",
+      "portfolio": "Portfolio",
       "contact": "Contact",
       "legal": "Legal notice",
       "copyright": "YdvSystems — Yohann Dandeville · Sole Proprietor",
@@ -68,6 +70,12 @@
       "description": "Whether it's a freelance mission, a product demo or a quick question — I respond within 24 hours.",
       "ctaContact": "Get in touch",
       "ctaServices": "View services"
+    },
+    "portfolio": {
+      "tag": "Portfolio",
+      "title": "Real projects, in production",
+      "description": "A selection of delivered projects — SaaS platforms, AI tools, accessible applications.",
+      "allProjects": "View full portfolio"
     }
   },
   "prestations": {
@@ -88,22 +96,36 @@
       "title": "What I can do for you",
       "description": "8 types of missions, from custom development to AI training."
     },
-    "portfolio": {
-      "tag": "Portfolio",
-      "title": "Completed projects",
-      "description": "Real projects, in production or deployed — not demos.",
-      "visit": "Visit {title}"
+    "cta": {
+      "title": "Ready to get started?",
+      "description": "Describe your project and I'll get back to you within 24 hours with a concrete proposal.",
+      "button": "Contact me",
+      "portfolioButton": "View my work"
+    }
+  },
+  "portfolio": {
+    "meta": {
+      "title": "Portfolio — YdvSystems | Completed projects",
+      "description": "Projects built by YdvSystems: SaaS platforms, AI applications, game engines, accessible tools. From prototype to production."
     },
+    "hero": {
+      "tag": "Portfolio",
+      "title": "Portfolio",
+      "description": "Real projects, in production or deployed — not demos."
+    },
+    "projectsTag": "Projects",
+    "visit": "Visit {title}",
     "about": {
       "tag": "About",
       "title": "Full-stack developer & entrepreneur",
       "bio1": "I'm Yohann, a full-stack developer based in France, founder of YdvSystems. I build complete business applications, SaaS platforms, games and AI-powered tools.",
       "bio2": "My approach: clean code, scalable architecture, zero over-engineering. I work solo, which means I'm fast, responsive and deliver exactly what's needed — no unnecessary meetings.",
-      "stackTitle": "Tech stack"
+      "stackTitle": "Tech stack",
+      "photoAlt": "Yohann Dandeville — Founder of YdvSystems"
     },
     "cta": {
-      "title": "Ready to get started?",
-      "description": "Describe your project and I'll get back to you within 24 hours with a concrete proposal.",
+      "title": "Have a project in mind?",
+      "description": "Describe your needs and I'll get back to you within 24 hours with a concrete proposal.",
       "button": "Contact me"
     }
   },
@@ -450,7 +472,38 @@
       "ai": "Artificial intelligence",
       "devops": "DevOps & hosting",
       "crossPlatform": "Cross-platform",
-      "tools": "Tools & integrations"
+      "tools": "Tools & integrations",
+      "tooltips": {
+        "React": "JavaScript library for building interactive user interfaces.",
+        "Nextjs": "React framework with server-side rendering, routing and built-in optimizations.",
+        "TypeScript": "JavaScript superset with static typing for more reliable code.",
+        "Tailwind CSS": "Utility-first CSS framework for fast and customizable design.",
+        "shadcn-ui": "Accessible and customizable UI components for React.",
+        "Threejs": "JavaScript library for creating interactive 3D scenes in the browser.",
+        "Nodejs": "Server-side JavaScript runtime environment.",
+        "tRPC": "End-to-end typesafe APIs between client and server, no REST schema needed.",
+        "Prisma": "Modern Node.js ORM with type generation and automatic migrations.",
+        "REST API": "Standard architecture for communication between web services.",
+        "Express": "Minimalist framework for building web servers with Node.js.",
+        "PostgreSQL": "Robust and high-performance relational database.",
+        "SQLite": "Lightweight, embedded, serverless database.",
+        "Redis": "In-memory key-value store, ultra-fast for caching.",
+        "Claude (Anthropic)": "Advanced conversational AI model by Anthropic.",
+        "GPT-4": "OpenAI's language model for text generation and reasoning.",
+        "Gemini": "Google DeepMind's multimodal AI model.",
+        "Multi-provider": "Architecture enabling seamless switching between multiple AI providers.",
+        "Docker": "Application containerization for reproducible deployments.",
+        "Hetzner": "Affordable and performant European cloud hosting.",
+        "GitHub Actions": "CI/CD built into GitHub for automating tests and deployments.",
+        "PM2": "Node.js process manager for production environments.",
+        "Electron": "Framework for building desktop applications with web technologies.",
+        "Tauri": "Lightweight Electron alternative for performant desktop apps.",
+        "Capacitor (iOS-Android)": "Bridge for deploying web apps natively on mobile.",
+        "n8n": "Open-source workflow automation platform.",
+        "Supabase": "Open-source Firebase alternative powered by PostgreSQL.",
+        "Brevo": "Transactional and marketing email platform.",
+        "Stripe": "Online payment solution for businesses."
+      }
     },
     "solutionPages": {
       "insertion": {

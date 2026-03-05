@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from "next-intl"
 import { Link, usePathname as useI18nPathname } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown } from "lucide-react"
+import { SOLUTIONS } from "@/lib/data"
 
 const LOCALE_CONFIG: Record<string, { flag: React.ReactNode; label: string }> = {
   fr: {
@@ -46,6 +47,7 @@ export function Header() {
     { label: t("nav.prestations"), href: "/prestations" as const },
     { label: t("nav.solutions"), href: "/solutions" as const },
     { label: t("nav.pricing"), href: "/prix" as const },
+    { label: t("nav.portfolio"), href: "/portfolio" as const },
     { label: t("nav.blog"), href: "/blog" as const },
   ]
 
@@ -74,6 +76,10 @@ export function Header() {
   }, [langOpen])
 
   const pathWithoutLocale = pathname.replace(/^\/(fr|en)/, "") || "/"
+  const solutionMatch = pathWithoutLocale.match(/^\/solutions\/([a-z-]+)/)
+  const activeSolutionColor = solutionMatch
+    ? SOLUTIONS.find((s) => s.slug === solutionMatch[1])?.color ?? null
+    : null
   const currentConfig = LOCALE_CONFIG[locale] || LOCALE_CONFIG.fr
   const locales = ["fr", "en"] as const
 
@@ -96,7 +102,12 @@ export function Header() {
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2 group">
               <span className="text-xl font-bold text-foreground">
-                Ydv<span className="text-primary">Systems</span>
+                Ydv<span
+                    className="solution-brand-gradient"
+                    style={{ "--solution-color": activeSolutionColor || "#00bcd4" } as React.CSSProperties}
+                  >
+                    Systems
+                  </span>
               </span>
             </Link>
 
@@ -110,12 +121,16 @@ export function Header() {
                     className={`relative text-sm transition-colors py-1 ${
                       isActive
                         ? "text-foreground font-medium"
-                        : "text-(--text-tertiary) hover:text-foreground"
+                        : "text-(--text-tertiary) hover:text-foreground nav-link-hover"
                     }`}
+                    style={{ "--solution-color": activeSolutionColor || "var(--primary)" } as React.CSSProperties}
                   >
                     {link.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-primary rounded-full" />
+                      <span
+                        className="absolute bottom-0 left-0 right-0 h-[1.5px] rounded-full solution-brand-underline"
+                        style={{ "--solution-color": activeSolutionColor || "#00bcd4" } as React.CSSProperties}
+                      />
                     )}
                   </Link>
                 )
@@ -168,7 +183,12 @@ export function Header() {
                 </div>
               </div>
 
-              <Button asChild size="sm" className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold">
+              <Button
+                asChild
+                size="sm"
+                className={`text-foreground font-semibold ${activeSolutionColor ? "" : "bg-primary hover:bg-(--accent-hover)"}`}
+                style={activeSolutionColor ? { backgroundColor: activeSolutionColor } : undefined}
+              >
                 <Link href="/contact">{t("nav.contact")}</Link>
               </Button>
             </div>
@@ -225,7 +245,12 @@ export function Header() {
                 })}
               </div>
 
-              <Button asChild size="sm" className="w-full bg-primary hover:bg-(--accent-hover) text-foreground font-semibold">
+              <Button
+                asChild
+                size="sm"
+                className={`w-full text-foreground font-semibold ${activeSolutionColor ? "" : "bg-primary hover:bg-(--accent-hover)"}`}
+                style={activeSolutionColor ? { backgroundColor: activeSolutionColor } : undefined}
+              >
                 <Link href="/contact">{t("nav.contact")}</Link>
               </Button>
             </div>

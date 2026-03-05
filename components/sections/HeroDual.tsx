@@ -2,9 +2,18 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, ArrowDown } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
+import { CountUp } from "@/components/CountUp"
 import { STATS } from "@/lib/data"
 
 const STAT_KEYS = ["projects", "tests", "sectors", "platforms"] as const
+
+// Parse stat values for CountUp: "10+" → { num: 10, suffix: "+" }, "4 253" → { num: 4253, suffix: "" }
+function parseStat(value: string) {
+  const clean = value.replace(/\s/g, "")
+  const match = clean.match(/^(\d+)(.*)$/)
+  if (!match) return { num: 0, suffix: value }
+  return { num: parseInt(match[1], 10), suffix: match[2] }
+}
 
 export function HeroDual() {
   const t = useTranslations("home.hero")
@@ -76,7 +85,7 @@ export function HeroDual() {
               className="bg-white border border-border rounded-xl p-4 shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200"
             >
               <div className="text-2xl sm:text-3xl font-bold text-foreground mb-1">
-                {stat.value}
+                <CountUp end={parseStat(stat.value).num} suffix={parseStat(stat.value).suffix} />
               </div>
               <div className="text-sm font-medium text-muted-foreground">{ts(STAT_KEYS[i])}</div>
             </div>

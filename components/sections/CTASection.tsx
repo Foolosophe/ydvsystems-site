@@ -10,7 +10,7 @@ export function CTASection() {
   const t = useTranslations("home.cta")
 
   return (
-    <section className="py-20 sm:py-28 bg-secondary">
+    <section className="py-20 sm:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimateOnScroll>
           <div className="w-16 h-1 pearl-gradient animate-gradient-shift rounded-full mx-auto mb-8" style={{ backgroundSize: "200% 100%" }} />
@@ -26,7 +26,7 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold px-8 gap-2"
+              className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold px-8 gap-2 btn-glow"
             >
               <Link href="/contact">
                 {t("ctaContact")}

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle2, Clock } from "lucide-react"
 import { getTranslations } from "next-intl/server"
+import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { SOLUTIONS } from "@/lib/data"
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,13 +25,15 @@ export default async function SolutionsPage() {
       {/* Hero */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-tag">{t("hero.tag")}</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 leading-tight tracking-tight">
-            {t("hero.title")}
-          </h1>
-          <p className="text-lg text-secondary-foreground max-w-2xl mx-auto leading-relaxed">
-            {t("hero.description")}
-          </p>
+          <AnimateOnScroll>
+            <p className="section-tag">{t("hero.tag")}</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 leading-tight tracking-tight">
+              {t("hero.title")}
+            </h1>
+            <p className="text-lg text-secondary-foreground max-w-2xl mx-auto leading-relaxed">
+              {t("hero.description")}
+            </p>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -38,14 +41,17 @@ export default async function SolutionsPage() {
       <section className="py-16 bg-secondary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {SOLUTIONS.map((solution) => {
+            {SOLUTIONS.map((solution, i) => {
               const isProd = solution.status === "prod"
               return (
+                <AnimateOnScroll key={solution.slug} delay={i * 100}>
                 <Card
-                  key={solution.slug}
                   className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-200 group h-full"
                 >
-                  <div className="h-1 w-full" style={{ background: solution.color }} />
+                  <div
+                    className="h-1 w-full solution-brand-underline"
+                    style={{ "--solution-color": solution.color } as React.CSSProperties}
+                  />
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-3">
                       <div>
@@ -55,11 +61,11 @@ export default async function SolutionsPage() {
                         </p>
                       </div>
                       <Badge
-                        className={
+                        className={`badge-pulse ${
                           isProd
                             ? "bg-teal-50 text-teal-700 border-teal-200"
                             : "bg-secondary text-muted-foreground border-border"
-                        }
+                        }`}
                       >
                         {isProd ? (
                           <span className="flex items-center gap-1">
@@ -98,6 +104,7 @@ export default async function SolutionsPage() {
                     </div>
                   </CardContent>
                 </Card>
+                </AnimateOnScroll>
               )
             })}
           </div>
@@ -107,10 +114,11 @@ export default async function SolutionsPage() {
       {/* CTA */}
       <section className="py-16">
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimateOnScroll>
           <h2 className="text-2xl font-bold text-foreground mb-4">{t("cta.title")}</h2>
           <p className="text-secondary-foreground mb-6">{t("cta.description")}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold gap-2">
+            <Button asChild className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold gap-2 btn-glow">
               <Link href="/contact">
                 {t("cta.contact")}
                 <ArrowRight size={16} />
@@ -123,6 +131,7 @@ export default async function SolutionsPage() {
               {t("cta.pricing")} &rarr;
             </Link>
           </div>
+          </AnimateOnScroll>
         </div>
       </section>
     </main>

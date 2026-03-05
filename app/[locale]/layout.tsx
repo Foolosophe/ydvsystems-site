@@ -8,6 +8,7 @@ import "../globals.css"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -149,12 +150,14 @@ export default async function LocaleLayout({
           {t("skipToContent")}
         </a>
         <NextIntlClientProvider>
-          <Header />
-          <div id="main-content">
-            {children}
-          </div>
-          <Footer />
-          <ScrollToTop />
+          <TooltipProvider delayDuration={200}>
+            <Header />
+            <div id="main-content">
+              {children}
+            </div>
+            <Footer />
+            <ScrollToTop />
+          </TooltipProvider>
         </NextIntlClientProvider>
       </body>
     </html>

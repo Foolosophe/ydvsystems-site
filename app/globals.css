@@ -175,6 +175,120 @@
   background-clip: text;
 }
 
+/* Solution-specific animated gradient for brand text */
+.solution-brand-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--solution-color),
+    color-mix(in srgb, var(--solution-color), white 30%),
+    var(--solution-color),
+    color-mix(in srgb, var(--solution-color), black 20%),
+    var(--solution-color)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: solutionGradientShift 4s ease-in-out infinite;
+}
+
+.solution-brand-underline {
+  background: linear-gradient(
+    90deg,
+    var(--solution-color),
+    color-mix(in srgb, var(--solution-color), white 30%),
+    var(--solution-color),
+    color-mix(in srgb, var(--solution-color), black 20%),
+    var(--solution-color)
+  );
+  background-size: 300% 100%;
+  animation: solutionGradientShift 4s ease-in-out infinite;
+}
+
+@keyframes solutionGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solution-brand-gradient {
+    animation: none;
+    background-size: 100% 100%;
+  }
+  .solution-icon-box,
+  .card-tilt {
+    animation: none;
+    transition: none;
+  }
+  .badge-pulse {
+    animation: none;
+  }
+  .solution-brand-underline {
+    animation: none;
+  }
+  .nav-link-hover::after {
+    transition: none;
+  }
+  .btn-glow {
+    transition: none;
+  }
+}
+
+/* Feature icon: rotate + scale on card hover */
+.solution-icon-box {
+  transition: transform 0.35s ease-out;
+}
+
+.group:hover .solution-icon-box {
+  transform: rotate(8deg) scale(1.15);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Button glow on hover */
+.btn-glow {
+  transition: box-shadow 0.3s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px var(--btn-glow-color, rgba(0, 188, 212, 0.25));
+}
+
+/* Nav link underline slide on hover */
+.nav-link-hover {
+  position: relative;
+}
+.nav-link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 1.5px;
+  border-radius: 9999px;
+  background: var(--solution-color, var(--primary));
+  transition: left 0.3s ease, right 0.3s ease;
+}
+.nav-link-hover:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/* Badge pulse */
+.badge-pulse {
+  animation: badgePulse 3s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Portfolio card tilt 3D */
+.card-tilt {
+  transition: transform 0.3s ease;
+}
+.card-tilt:hover {
+  transform: perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+}
+
 .section-tag {
   display: inline-block;
   font-size: 13px;

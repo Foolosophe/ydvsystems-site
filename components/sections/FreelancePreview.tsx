@@ -37,9 +37,10 @@ export function FreelancePreview() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {SERVICE_PREVIEW_IDS.map((id, i) => (
             <AnimateOnScroll key={id} delay={i * 100}>
-              <Card className="bg-white border-border hover:border-primary/40 transition-all duration-200 hover:shadow-(--shadow-card-hover) hover:-translate-y-1 group h-full">
+              <Card className="bg-white border-border overflow-hidden hover:border-primary/40 transition-all duration-200 hover:shadow-(--shadow-card-hover) hover:-translate-y-1 group h-full">
+                <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
                 <CardHeader className="pb-3">
-                  <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-colors solution-icon-box">
                     {ICONS[SERVICE_ICONS[id]]}
                   </div>
                   <h3 className="font-semibold text-foreground text-base leading-snug">

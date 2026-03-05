@@ -153,7 +153,7 @@ export default async function SolutionPage({
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Badge
-            className="mb-4"
+            className="mb-4 badge-pulse"
             style={{
               backgroundColor: `${solution.color}15`,
               color: solution.color,
@@ -206,7 +206,7 @@ export default async function SolutionPage({
       <section className="py-16 bg-secondary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="section-tag">{t("featuresTag")}</p>
+            <p className="section-tag" style={{ color: solution.color }}>{t("featuresTag")}</p>
             <h2 className="text-3xl font-bold text-foreground">
               {t("featuresTitle")}
             </h2>
@@ -214,10 +214,10 @@ export default async function SolutionPage({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, idx) => (
-              <Card key={feature.title} className="bg-white border-border hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200">
+              <Card key={feature.title} className="bg-white border-border hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200 group">
                 <CardContent className="p-6">
                   <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
+                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 solution-icon-box"
                     style={{ backgroundColor: `${solution.color}15`, color: solution.color }}
                   >
                     {ICONS[featureIcons[idx]] ?? <CheckCircle2 size={24} />}
@@ -236,7 +236,7 @@ export default async function SolutionPage({
         <section className="py-16">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <p className="section-tag">{t("timelineTag")}</p>
+              <p className="section-tag" style={{ color: solution.color }}>{t("timelineTag")}</p>
               <h2 className="text-2xl font-bold text-foreground">
                 {t("timelineTitle")}
               </h2>
@@ -288,7 +288,7 @@ export default async function SolutionPage({
       {/* Pricing */}
       <section className={`py-16 ${!isProd && timeline ? "bg-secondary" : ""}`}>
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-tag">{t("pricingTag")}</p>
+          <p className="section-tag" style={{ color: solution.color }}>{t("pricingTag")}</p>
           <div className="bg-white border-2 rounded-2xl p-8 shadow-(--shadow-card)" style={{ borderColor: `${solution.color}40` }}>
             <h3 className="text-lg font-semibold text-foreground mb-4">{solution.name}</h3>
             <div className="flex items-baseline justify-center gap-1 mb-2">
@@ -331,7 +331,7 @@ export default async function SolutionPage({
             <ArrowLeft size={14} />
             {t("allSolutions")}
           </Link>
-          <Link href="/prix" className="inline-flex items-center gap-2 text-sm text-primary hover:text-(--accent-hover) transition-colors font-semibold">
+          <Link href="/prix" className="inline-flex items-center gap-2 text-sm transition-colors font-semibold hover:opacity-80" style={{ color: solution.color }}>
             {t("comparePricing")}
             <ArrowRight size={14} />
           </Link>

@@ -1,9 +1,20 @@
+"use client"
+
 import { useTranslations } from "next-intl"
+import { usePathname } from "next/navigation"
 import { Link } from "@/i18n/navigation"
 import { Github, Linkedin } from "lucide-react"
+import { SOLUTIONS } from "@/lib/data"
 
 export function Footer() {
   const t = useTranslations("common.footer")
+  const pathname = usePathname()
+
+  const pathWithoutLocale = pathname.replace(/^\/(fr|en)/, "") || "/"
+  const solutionMatch = pathWithoutLocale.match(/^\/solutions\/([a-z-]+)/)
+  const activeSolutionColor = solutionMatch
+    ? SOLUTIONS.find((s) => s.slug === solutionMatch[1])?.color ?? null
+    : null
 
   const FOOTER_SECTIONS = {
     [t("prestations")]: [
@@ -21,6 +32,7 @@ export function Footer() {
     [t("ressources")]: [
       { label: t("pricing"), href: "/prix" as const },
       { label: t("blog"), href: "/blog" as const },
+      { label: t("portfolio"), href: "/portfolio" as const },
       { label: t("contact"), href: "/contact" as const },
       { label: t("legal"), href: "/mentions-legales" as const },
     ],
@@ -33,7 +45,10 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="text-xl font-bold text-foreground">
-              Ydv<span className="text-primary">Systems</span>
+              Ydv<span
+                style={activeSolutionColor ? { color: activeSolutionColor } : undefined}
+                className={activeSolutionColor ? undefined : "text-primary"}
+              >Systems</span>
             </Link>
             <p className="text-sm font-medium text-muted-foreground mt-3 leading-relaxed">
               {t("description")}

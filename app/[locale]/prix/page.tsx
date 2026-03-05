@@ -88,7 +88,7 @@ export default function PrixPage() {
                     }`}
                     style={isProd ? { borderColor: `${solution.color}60` } : undefined}
                   >
-                    <div className="h-1 w-full" style={{ background: solution.color }} />
+                    <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": solution.color } as React.CSSProperties} />
 
                     {isProd && (
                       <div className="bg-linear-to-r from-teal-50 to-transparent px-6 py-1.5">

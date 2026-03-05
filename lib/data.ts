@@ -97,6 +97,8 @@ export const PORTFOLIO_IDS = [
   "blog-parkinson",
 ] as const
 
+export const PORTFOLIO_PREVIEW_IDS = PORTFOLIO_IDS.slice(0, 3)
+
 export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null; urlLabel: string | null }> = {
   "ydv-systems": {
     tags: ["Next.js", "tRPC", "Prisma", "PostgreSQL", "IA"],
@@ -138,7 +140,7 @@ export const STACK_CATEGORY_KEYS = [
 ] as const
 
 export const STACK_TECHS: Record<string, string[]> = {
-  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Three.js"],
   backend: ["Node.js", "tRPC", "Prisma", "REST API", "Express"],
   databases: ["PostgreSQL", "SQLite", "Redis"],
   ai: ["Claude (Anthropic)", "GPT-4", "Gemini", "Multi-provider"],

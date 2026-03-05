@@ -31,7 +31,7 @@ export function SolutionsGrid() {
           {SOLUTIONS.map((solution, i) => (
             <AnimateOnScroll key={solution.slug} delay={i * 100}>
               <Card className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-200 group h-full">
-                <div className="h-1 w-full" style={{ background: solution.color }} />
+                <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": solution.color } as React.CSSProperties} />
 
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-3">
@@ -40,11 +40,11 @@ export function SolutionsGrid() {
                       <p className="text-sm font-medium text-muted-foreground">{td(`${solution.slug}.subtitle`)}</p>
                     </div>
                     <Badge
-                      className={
+                      className={`badge-pulse ${
                         solution.status === "prod"
                           ? "bg-teal-50 text-teal-700 border-teal-200"
                           : "bg-secondary text-muted-foreground border-border"
-                      }
+                      }`}
                     >
                       {solution.status === "prod" ? (
                         <span className="flex items-center gap-1">

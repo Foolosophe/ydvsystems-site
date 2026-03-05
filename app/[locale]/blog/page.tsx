@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Calendar, Clock } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { getLocale } from "next-intl/server"
+import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { BLOG_SLUGS, BLOG_DATES } from "./data"
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,13 +26,15 @@ export default async function BlogPage() {
       {/* Header */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-tag">{t("header.tag")}</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
-            {t("header.title")}
-          </h1>
-          <p className="text-lg text-secondary-foreground max-w-2xl mx-auto">
-            {t("header.description")}
-          </p>
+          <AnimateOnScroll>
+            <p className="section-tag">{t("header.tag")}</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
+              {t("header.title")}
+            </h1>
+            <p className="text-lg text-secondary-foreground max-w-2xl mx-auto">
+              {t("header.description")}
+            </p>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -39,7 +42,7 @@ export default async function BlogPage() {
       <section className="pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
-            {BLOG_SLUGS.map((slug) => {
+            {BLOG_SLUGS.map((slug, i) => {
               const date = BLOG_DATES[slug]
               const formattedDate = new Date(date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", {
                 year: "numeric",
@@ -48,8 +51,10 @@ export default async function BlogPage() {
               })
 
               return (
-                <Link key={slug} href={`/blog/${slug}`} className="block group">
-                  <Card className="bg-white border-border hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200">
+                <AnimateOnScroll key={slug} delay={i * 80}>
+                <Link href={`/blog/${slug}`} className="block group">
+                  <Card className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200">
+                    <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-3">
                         <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs">
@@ -77,11 +82,13 @@ export default async function BlogPage() {
                     </CardContent>
                   </Card>
                 </Link>
+                </AnimateOnScroll>
               )
             })}
           </div>
 
           {/* Newsletter CTA */}
+          <AnimateOnScroll>
           <div className="text-center mt-12 p-8 bg-secondary border border-border rounded-xl">
             <h3 className="text-lg font-semibold text-foreground mb-2">
               {t("newsletter.title")}
@@ -96,6 +103,7 @@ export default async function BlogPage() {
               {t("newsletter.link")} &rarr;
             </Link>
           </div>
+          </AnimateOnScroll>
         </div>
       </section>
     </main>
