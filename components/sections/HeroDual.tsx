@@ -20,7 +20,7 @@ export function HeroDual() {
   const ts = useTranslations("home.stats")
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden pt-24">
       {/* Decorative blobs */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
