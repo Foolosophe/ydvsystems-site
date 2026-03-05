@@ -41,7 +41,7 @@ export function HeroDual() {
         />
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 text-center">
         <p className="section-tag animate-fade-in-up">{t("tag")}</p>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight animate-fade-in-up delay-1">
