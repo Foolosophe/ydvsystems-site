@@ -54,7 +54,7 @@ export function HeroDual() {
           {t("subtitle")}
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up delay-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in-up delay-3">
           <Button
             asChild
             size="lg"
