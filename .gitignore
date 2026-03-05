@@ -12,6 +12,12 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
+
+# serwist (generated service worker)
+public/sw.js
+public/sw.js.map
 
 # next.js
 /.next/

@@ -58,9 +58,10 @@ export async function generateMetadata({
           "AI audit",
           "workflow automation",
         ],
+    manifest: "/manifest.json",
     icons: {
       icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-      apple: "/favicon.svg",
+      apple: "/icons/icon-192.png",
     },
     openGraph: {
       title,
@@ -117,6 +118,15 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={outfit.variable}>
+      <head>
+        {process.env.NEXT_PUBLIC_UMAMI_URL && (
+          <script
+            defer
+            src={`${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+          />
+        )}
+      </head>
       <body className="antialiased">
         <script
           type="application/ld+json"

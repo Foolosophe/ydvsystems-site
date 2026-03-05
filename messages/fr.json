@@ -362,7 +362,7 @@
     "privacy": {
       "title": "Données personnelles",
       "paragraph1": "Ce site ne collecte pas de données personnelles à des fins commerciales. Le formulaire de contact transmet uniquement les informations saisies (nom, email, message) à l'adresse email de l'éditeur via le service Resend pour permettre une réponse à votre demande.",
-      "paragraph2": "Aucun cookie analytique ou de tracking n'est utilisé sur ce site. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant"
+      "paragraph2": "Ce site utilise Umami, un outil d'analyse open-source auto-hébergé, qui ne dépose aucun cookie et ne collecte aucune donnée personnelle identifiable. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant"
     },
     "intellectual": {
       "title": "Propriété intellectuelle",

@@ -362,7 +362,7 @@
     "privacy": {
       "title": "Personal data",
       "paragraph1": "This website does not collect personal data for commercial purposes. The contact form only transmits the information you provide (name, email, message) to the publisher's email address via the Resend service, in order to respond to your inquiry.",
-      "paragraph2": "No analytics or tracking cookies are used on this website. In compliance with the GDPR, you have the right to access, rectify and delete your data by contacting"
+      "paragraph2": "This website uses Umami, a self-hosted open-source analytics tool that does not use cookies or collect any personally identifiable data. In compliance with the GDPR, you have the right to access, rectify and delete your data by contacting"
     },
     "intellectual": {
       "title": "Intellectual property",
