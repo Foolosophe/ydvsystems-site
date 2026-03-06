@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/app/\[locale\]/test-loading/
 /test-results/
 /playwright-report/
 

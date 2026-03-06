@@ -9,6 +9,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { LoadingScreenWrapper } from "@/components/LoadingScreenWrapper"
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -128,6 +129,7 @@ export default async function LocaleLayout({
         )}
       </head>
       <body className="antialiased">
+        <LoadingScreenWrapper />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
