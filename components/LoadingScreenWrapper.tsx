@@ -15,7 +15,6 @@ export function LoadingScreenWrapper() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    document.getElementById("__splash")?.remove()
     setMounted(true)
   }, [])
 

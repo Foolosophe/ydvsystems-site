@@ -277,6 +277,8 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
   }
 
   useEffect(() => {
+    document.getElementById("__splash")?.remove()
+
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
     if (prefersReducedMotion) {
