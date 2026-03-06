@@ -12,19 +12,21 @@ const LoadingScreen = dynamic(
   { ssr: false }
 )
 
+// Persists across client-side navigations, resets on full page reload
+let hasSkippedOnce = false
+
 export function LoadingScreenWrapper() {
   const [mounted, setMounted] = useState(false)
   const [skip, setSkip] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
-    const alreadyLoaded = localStorage.getItem("ydv_loaded") === "1"
     const isBlogArticle = /\/blog\/.+/.test(pathname)
     const isAdmin = /\/admin/.test(pathname)
 
-    if (alreadyLoaded || isBlogArticle || isAdmin) {
+    if (isBlogArticle || isAdmin || hasSkippedOnce) {
       document.getElementById("__splash")?.remove()
-      localStorage.setItem("ydv_loaded", "1")
+      if (isBlogArticle || isAdmin) hasSkippedOnce = true
       setSkip(true)
     }
     setMounted(true)
