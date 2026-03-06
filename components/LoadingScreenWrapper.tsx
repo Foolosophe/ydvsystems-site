@@ -22,6 +22,8 @@ export function LoadingScreenWrapper() {
   useEffect(() => {
     if (skipLoader) {
       document.getElementById("__splash")?.remove()
+      // Mark as loaded so the loader won't play on subsequent navigations
+      localStorage.setItem("ydv_loaded", "1")
     }
     setMounted(true)
   }, [skipLoader])
