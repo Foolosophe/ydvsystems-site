@@ -40,6 +40,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
   const masterTimeline = useRef<gsap.core.Timeline | null>(null)
   const isCompleting   = useRef(false)
+  const isMobile       = useRef(false)
 
   const handleAnimationComplete = useCallback(() => {
     if (isCompleting.current) return
@@ -67,7 +68,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
   function spawnParticles() {
     const c = particleContainerRef.current
     if (!c) return
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
+    for (let i = 0; i < (isMobile.current ? 20 : PARTICLE_COUNT); i++) {
       const el   = document.createElement("div")
       const size = gsap.utils.random(3, 8)
       el.style.cssText = `position:absolute;width:${size}px;height:${size}px;border-radius:50%;background:${CYAN};top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;opacity:0.9;`
@@ -200,8 +201,8 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         gsap.set(letters, { opacity: 1 })
         gsap.set(wrap, { width: "auto" })
         targetWidth = wrap.offsetWidth
-        gsap.set(wrap, { width: 0 })
-        gsap.set(letters, { opacity: 0 })
+        gsap.set(wrap, { width: 0, opacity: 1 })
+        if (!isMobile.current) gsap.set(letters, { opacity: 0 })
       }
 
       const sWidth = textS1Ref.current?.offsetWidth ?? 30
@@ -227,18 +228,23 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           const s2 = textS2Ref.current
           if (!t8 || !s1 || !s2) return
 
-          const blur8 = Math.min(8 / (1.001 - p) - 8, 100)
-          t8.style.filter  = `blur(${blur8}px)`
-          t8.style.opacity = String(Math.pow(1 - p, 0.4))
+          const mobile = isMobile.current
 
-          const blurS      = Math.min(8 / (p + 0.001) - 8, 100)
+          t8.style.opacity = String(Math.pow(1 - p, 0.4))
+          if (!mobile) {
+            const blur8 = Math.min(8 / (1.001 - p) - 8, 100)
+            t8.style.filter = `blur(${blur8}px)`
+          }
+
           const punchScale = 1 + 0.15 * Math.pow(1 - p, 2)
-          s1.style.filter    = `blur(${blurS}px)`
           s1.style.opacity   = String(Math.pow(p, 0.4))
           s1.style.transform = `translate(-50%, -50%) scale(${punchScale})`
-
-          s2.style.filter  = `blur(${blurS}px)`
-          s2.style.opacity = String(Math.pow(p, 0.4))
+          s2.style.opacity   = String(Math.pow(p, 0.4))
+          if (!mobile) {
+            const blurS = Math.min(8 / (p + 0.001) - 8, 100)
+            s1.style.filter = `blur(${blurS}px)`
+            s2.style.filter = `blur(${blurS}px)`
+          }
 
           let s2Sep: number
           let s2Scale: number
@@ -255,19 +261,28 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
           if (wrap) {
             const bP = Math.max(0, (p - 0.4) / 0.6)
-            wrap.style.width = `${targetWidth * bP}px`
-            letters.forEach((letter, i) => {
-              const step  = 0.6 / letters.length
-              const start = 0.4 + i * step
-              const lp    = Math.max(0, Math.min(1, (p - start) / step))
-              letter.style.opacity = String(Math.pow(lp, 0.4))
-            })
+            if (mobile) {
+              wrap.style.opacity = String(bP)
+              if (bP >= 1) wrap.style.width = `${targetWidth}px`
+            } else {
+              wrap.style.width = `${targetWidth * bP}px`
+              letters.forEach((letter, i) => {
+                const step  = 0.6 / letters.length
+                const start = 0.4 + i * step
+                const lp    = Math.max(0, Math.min(1, (p - start) / step))
+                letter.style.opacity = String(Math.pow(lp, 0.4))
+              })
+            }
           }
         },
         onComplete() {
           if (textS1Ref.current) textS1Ref.current.style.transform = "translate(-50%, -50%)"
           if (textS2Ref.current) textS2Ref.current.style.opacity   = "0"
           gsap.set(s2Ref.current, { opacity: 1, scale: 1 })
+          if (isMobile.current && ystemWrapRef.current) {
+            ystemWrapRef.current.style.width   = "auto"
+            ystemWrapRef.current.style.opacity = "1"
+          }
         },
       })
     }, 6.9)
@@ -278,6 +293,10 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
   useEffect(() => {
     document.getElementById("__splash")?.remove()
+
+    isMobile.current = window.innerWidth < 768
+    if (isMobile.current && morphWrapRef.current)
+      morphWrapRef.current.style.filter = "none"
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
