@@ -3,7 +3,7 @@
   "short_name": "YdvSystems",
   "description": "Développement web, IA & logiciels SaaS",
   "start_url": "/fr",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#ffffff",
   "theme_color": "#00bcd4",
   "icons": [
