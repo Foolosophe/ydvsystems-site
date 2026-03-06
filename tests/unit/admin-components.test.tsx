@@ -71,7 +71,7 @@ describe("SocialPlatformCard", () => {
         onRegenerate={() => {}}
       />
     )
-    expect(screen.getByText("Partager")).toBeDefined()
+    expect(screen.getByText("Copier & ouvrir")).toBeDefined()
   })
 
   it("does not display share button for Instagram", () => {
@@ -83,6 +83,6 @@ describe("SocialPlatformCard", () => {
         onRegenerate={() => {}}
       />
     )
-    expect(screen.queryByText("Partager")).toBeNull()
+    expect(screen.queryByText("Copier & ouvrir")).toBeNull()
   })
 })
