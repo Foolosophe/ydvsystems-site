@@ -140,7 +140,7 @@ export const STACK_CATEGORY_KEYS = [
 ] as const
 
 export const STACK_TECHS: Record<string, string[]> = {
-  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Three.js"],
+  frontend: ["HTML", "CSS", "React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Three.js", "GSAP"],
   backend: ["Node.js", "tRPC", "Prisma", "REST API", "Express"],
   databases: ["PostgreSQL", "SQLite", "Redis"],
   ai: ["Claude (Anthropic)", "GPT-4", "Gemini", "Multi-provider"],

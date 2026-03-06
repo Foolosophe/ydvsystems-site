@@ -475,6 +475,9 @@
       "crossPlatform": "Cross-platform",
       "tools": "Outils & intégrations",
       "tooltips": {
+        "HTML": "Langage de balisage standard pour structurer le contenu des pages web.",
+        "CSS": "Langage de style pour mettre en forme et animer les interfaces web.",
+        "GSAP": "Bibliothèque d'animation JavaScript haute performance pour des effets fluides et complexes.",
         "React": "Bibliothèque JavaScript pour construire des interfaces utilisateur interactives.",
         "Nextjs": "Framework React avec rendu serveur, routing et optimisations intégrées.",
         "TypeScript": "Superset de JavaScript avec typage statique pour un code plus fiable.",

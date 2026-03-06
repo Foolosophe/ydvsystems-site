@@ -475,6 +475,9 @@
       "crossPlatform": "Cross-platform",
       "tools": "Tools & integrations",
       "tooltips": {
+        "HTML": "Standard markup language for structuring web page content.",
+        "CSS": "Style language for designing and animating web interfaces.",
+        "GSAP": "High-performance JavaScript animation library for smooth and complex effects.",
         "React": "JavaScript library for building interactive user interfaces.",
         "Nextjs": "React framework with server-side rendering, routing and built-in optimizations.",
         "TypeScript": "JavaScript superset with static typing for more reliable code.",
