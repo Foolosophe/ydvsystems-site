@@ -201,8 +201,8 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         gsap.set(letters, { opacity: 1 })
         gsap.set(wrap, { width: "auto" })
         targetWidth = wrap.offsetWidth
-        gsap.set(wrap, { width: 0, opacity: 1 })
-        if (!isMobile.current) gsap.set(letters, { opacity: 0 })
+        gsap.set(wrap, { width: 0 })
+        gsap.set(letters, { opacity: 0 })
       }
 
       const sWidth = textS1Ref.current?.offsetWidth ?? 30
@@ -261,28 +261,19 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
           if (wrap) {
             const bP = Math.max(0, (p - 0.4) / 0.6)
-            if (mobile) {
-              wrap.style.opacity = String(bP)
-              if (bP >= 1) wrap.style.width = `${targetWidth}px`
-            } else {
-              wrap.style.width = `${targetWidth * bP}px`
-              letters.forEach((letter, i) => {
-                const step  = 0.6 / letters.length
-                const start = 0.4 + i * step
-                const lp    = Math.max(0, Math.min(1, (p - start) / step))
-                letter.style.opacity = String(Math.pow(lp, 0.4))
-              })
-            }
+            wrap.style.width = `${targetWidth * bP}px`
+            letters.forEach((letter, i) => {
+              const step  = 0.6 / letters.length
+              const start = 0.4 + i * step
+              const lp    = Math.max(0, Math.min(1, (p - start) / step))
+              letter.style.opacity = String(Math.pow(lp, 0.4))
+            })
           }
         },
         onComplete() {
           if (textS1Ref.current) textS1Ref.current.style.transform = "translate(-50%, -50%)"
           if (textS2Ref.current) textS2Ref.current.style.opacity   = "0"
           gsap.set(s2Ref.current, { opacity: 1, scale: 1 })
-          if (isMobile.current && ystemWrapRef.current) {
-            ystemWrapRef.current.style.width   = "auto"
-            ystemWrapRef.current.style.opacity = "1"
-          }
         },
       })
     }, 6.9)
