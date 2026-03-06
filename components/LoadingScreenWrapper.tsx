@@ -14,20 +14,22 @@ const LoadingScreen = dynamic(
 
 export function LoadingScreenWrapper() {
   const [mounted, setMounted] = useState(false)
+  const [skip, setSkip] = useState(false)
   const pathname = usePathname()
 
-  // Disable loader on blog and admin pages
-  const skipLoader = /\/blog\/.+/.test(pathname) || /\/admin/.test(pathname)
-
   useEffect(() => {
-    if (skipLoader) {
+    const alreadyLoaded = localStorage.getItem("ydv_loaded") === "1"
+    const isBlogArticle = /\/blog\/.+/.test(pathname)
+    const isAdmin = /\/admin/.test(pathname)
+
+    if (alreadyLoaded || isBlogArticle || isAdmin) {
       document.getElementById("__splash")?.remove()
-      // Mark as loaded so the loader won't play on subsequent navigations
       localStorage.setItem("ydv_loaded", "1")
+      setSkip(true)
     }
     setMounted(true)
-  }, [skipLoader])
+  }, [pathname])
 
-  if (!mounted || skipLoader) return null
+  if (!mounted || skip) return null
   return <LoadingScreen />
 }
