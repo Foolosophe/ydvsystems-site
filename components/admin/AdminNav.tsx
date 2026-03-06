@@ -2,12 +2,15 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { LayoutDashboard, FileText, PenSquare, LogOut, ArrowLeft } from "lucide-react"
+import { LayoutDashboard, FileText, PenSquare, CalendarDays, BarChart3, Settings, LogOut, ArrowLeft } from "lucide-react"
 
 const NAV_ITEMS = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/articles", label: "Articles", icon: FileText },
   { href: "/admin/articles/new", label: "Nouvel article", icon: PenSquare },
+  { href: "/admin/calendar", label: "Calendrier", icon: CalendarDays },
+  { href: "/admin/analytics", label: "Analytics IA", icon: BarChart3 },
+  { href: "/admin/settings", label: "Reglages", icon: Settings },
 ]
 
 export default function AdminNav() {

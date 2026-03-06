@@ -7,6 +7,7 @@ import { getTranslations, getLocale } from "next-intl/server"
 import { prisma } from "@/lib/db"
 import { calculateReadTime } from "@/lib/blog/readTime"
 import { ViewCounter } from "./view-counter"
+import { ABTitle } from "./ab-title"
 
 export const dynamic = "force-dynamic"
 
@@ -19,7 +20,7 @@ export async function generateMetadata({
 
   const article = await prisma.article.findUnique({
     where: { slug, status: "PUBLISHED" },
-    select: { title: true, excerpt: true, publishedAt: true },
+    select: { title: true, excerpt: true, publishedAt: true, metaDescription: true, keywords: true, coverImage: true },
   })
 
   if (!article) {
@@ -27,16 +28,20 @@ export async function generateMetadata({
     return { title: t("notFound") }
   }
 
+  const description = article.metaDescription || article.excerpt
+
   return {
     title: `${article.title} — Blog YdvSystems`,
-    description: article.excerpt,
+    description,
+    keywords: article.keywords || undefined,
     openGraph: {
       title: article.title,
-      description: article.excerpt,
+      description,
       type: "article",
       publishedTime: article.publishedAt?.toISOString(),
       url: `https://ydvsystems.com/blog/${slug}`,
       siteName: "YdvSystems",
+      ...(article.coverImage ? { images: [{ url: article.coverImage }] } : {}),
     },
   }
 }
@@ -112,13 +117,21 @@ export default async function BlogArticlePage({
           {t("backToBlog")}
         </Link>
 
+        {article.coverImage && (
+          <div className="mb-8 -mx-4 sm:mx-0">
+            <img
+              src={article.coverImage}
+              alt={article.title}
+              className="w-full h-64 sm:h-80 object-cover rounded-none sm:rounded-xl"
+            />
+          </div>
+        )}
+
         <header className="mb-10">
           <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs mb-4">
             {article.category}
           </Badge>
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 leading-tight tracking-tight">
-            {article.title}
-          </h1>
+          <ABTitle articleId={article.id} fallbackTitle={article.title} />
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <Calendar size={14} />

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { requireAdmin } from "@/lib/auth/helpers"
 import { generateOutline, generateArticleFromOutline, generateArticle } from "@/lib/ai/article"
+import { researchTopic } from "@/lib/ai/research"
 import { z } from "zod"
 
 const OutlineSectionSchema = z.object({
@@ -17,7 +18,7 @@ const BriefSchema = z.object({
   tone: z.string().optional(),
   length: z.enum(["short", "medium", "long"]),
   category: z.string().min(1),
-  action: z.enum(["outline", "article"]),
+  action: z.enum(["outline", "article", "research"]),
   outline: z.array(OutlineSectionSchema).optional(),
 })
 
@@ -35,6 +36,17 @@ export async function POST(req: NextRequest) {
 
   try {
     const body = await req.json()
+
+    // Recherche autonome
+    if (body.action === "research") {
+      const subject = body.subject
+      const angle = body.angle
+      if (!subject || typeof subject !== "string") {
+        return NextResponse.json({ error: "Sujet requis" }, { status: 400 })
+      }
+      const research = await researchTopic(subject, angle)
+      return NextResponse.json({ data: research })
+    }
 
     // Nouveau flow (brief + action)
     if (body.action === "outline" || body.action === "article") {

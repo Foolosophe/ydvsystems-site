@@ -18,7 +18,7 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
 
     const article = await prisma.article.findUnique({
       where: { id: articleId },
-      include: { drafts: true, socialPosts: true },
+      include: { drafts: true, socialPosts: true, sectionVersions: true },
     })
 
     if (!article) {

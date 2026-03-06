@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-export const ARTICLE_STATUSES = ["DRAFT", "PUBLISHED", "ARCHIVED"] as const
+export const ARTICLE_STATUSES = ["DRAFT", "REVIEW", "PUBLISHED", "ARCHIVED"] as const
 export const PLATFORMS = ["FACEBOOK", "INSTAGRAM", "TWITTER", "LINKEDIN", "EMAIL"] as const
 
 export const ARTICLE_CATEGORIES = [
@@ -39,6 +39,10 @@ export const UpdateArticleSchema = z.object({
   content: z.string().min(10).optional(),
   excerpt: z.string().min(10).max(300).optional(),
   category: z.string().min(1).optional(),
+  metaDescription: z.string().max(160).nullable().optional(),
+  keywords: z.string().max(500).nullable().optional(),
+  coverImage: z.string().url().nullable().optional(),
+  scheduledAt: z.string().datetime().nullable().optional(),
 })
 
 export const SaveDraftSchema = z.object({

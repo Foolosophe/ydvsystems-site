@@ -21,6 +21,12 @@ vi.mock("@/lib/db", () => ({
         })
       ),
     },
+    setting: {
+      findMany: vi.fn(() => Promise.resolve([])),
+    },
+    aiUsage: {
+      create: vi.fn(() => Promise.resolve()),
+    },
   },
 }))
 

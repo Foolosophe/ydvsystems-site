@@ -8,7 +8,9 @@ import AiAssistPanel from "@/components/admin/AiAssistPanel"
 import AiGenerateForm from "@/components/admin/AiGenerateForm"
 import DraftAutoSave from "@/components/admin/DraftAutoSave"
 import PublishButton from "@/components/admin/PublishButton"
-import { Save, Loader2, CheckCircle2 } from "lucide-react"
+import ArticlePreview from "@/components/admin/ArticlePreview"
+import QualityScorePanel from "@/components/admin/QualityScorePanel"
+import { Save, Loader2, CheckCircle2, Eye, EyeOff } from "lucide-react"
 import { ARTICLE_CATEGORIES } from "@/lib/schemas/blog"
 
 export default function NewArticlePage() {
@@ -24,6 +26,7 @@ export default function NewArticlePage() {
   const [error, setError] = useState("")
   const [aiGenerated, setAiGenerated] = useState(false)
   const [showAssist, setShowAssist] = useState(false)
+  const [preview, setPreview] = useState(false)
 
   async function handleSave() {
     setSaving(true)
@@ -87,16 +90,29 @@ export default function NewArticlePage() {
         </div>
         <div className="flex items-center gap-3">
           {content && (
-            <button
-              onClick={() => setShowAssist(!showAssist)}
-              className={`px-4 py-2 text-xs font-medium rounded-lg border transition-all duration-200 ${
-                showAssist
-                  ? "border-primary text-primary bg-primary/5"
-                  : "border-border text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
-            >
-              Assistance IA
-            </button>
+            <>
+              <button
+                onClick={() => setPreview(!preview)}
+                className={`flex items-center gap-1.5 px-4 py-2 text-xs font-medium rounded-lg border transition-all duration-200 ${
+                  preview
+                    ? "border-primary text-primary bg-primary/5"
+                    : "border-border text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                {preview ? <EyeOff size={14} /> : <Eye size={14} />}
+                Apercu
+              </button>
+              <button
+                onClick={() => setShowAssist(!showAssist)}
+                className={`px-4 py-2 text-xs font-medium rounded-lg border transition-all duration-200 ${
+                  showAssist
+                    ? "border-primary text-primary bg-primary/5"
+                    : "border-border text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                Assistance IA
+              </button>
+            </>
           )}
           <button
             onClick={handleSave}
@@ -125,80 +141,88 @@ export default function NewArticlePage() {
       ) : null}
 
       {(mode !== "genere" || content) && (
-        <div className={`grid gap-6 ${mode === "assiste" || showAssist ? "grid-cols-[1fr_320px]" : ""}`}>
-          <div className="space-y-4">
-            {aiGenerated && (
-              <div className="flex items-center justify-between p-4 rounded-xl border border-green-200 bg-green-50">
-                <div className="flex items-center gap-2 text-green-800">
-                  <CheckCircle2 size={18} />
-                  <span className="text-sm font-medium">Article genere avec succes. Relisez, modifiez si besoin, puis sauvegardez.</span>
+        preview ? (
+          <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-8">
+            <ArticlePreview title={title} content={content} category={category} excerpt={excerpt} />
+          </div>
+        ) : (
+          <div className={`grid gap-6 ${mode === "assiste" || showAssist ? "grid-cols-[1fr_320px]" : ""}`}>
+            <div className="space-y-4">
+              {aiGenerated && (
+                <div className="flex items-center justify-between p-4 rounded-xl border border-green-200 bg-green-50">
+                  <div className="flex items-center gap-2 text-green-800">
+                    <CheckCircle2 size={18} />
+                    <span className="text-sm font-medium">Article genere avec succes. Relisez, modifiez si besoin, puis sauvegardez.</span>
+                  </div>
+                  <button
+                    onClick={handleSave}
+                    disabled={saving || !title || !content || !excerpt || !category}
+                    className="flex items-center gap-2 px-5 py-2 rounded-xl bg-primary text-white text-sm font-medium hover:bg-(--accent-hover) transition-colors disabled:opacity-50 shadow-sm btn-glow"
+                  >
+                    <span key={saving ? "loading" : "idle"}>
+                      {saving ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
+                    </span>
+                    Sauvegarder
+                  </button>
                 </div>
-                <button
-                  onClick={handleSave}
-                  disabled={saving || !title || !content || !excerpt || !category}
-                  className="flex items-center gap-2 px-5 py-2 rounded-xl bg-primary text-white text-sm font-medium hover:bg-(--accent-hover) transition-colors disabled:opacity-50 shadow-sm btn-glow"
-                >
-                  <span key={saving ? "loading" : "idle"}>
-                    {saving ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
-                  </span>
-                  Sauvegarder
-                </button>
-              </div>
-            )}
+              )}
 
-            <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-6 space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">Titre</label>
-                <input
-                  type="text"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                  placeholder="Titre de l'article"
+              <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-6 space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1.5">Titre</label>
+                  <input
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    className="w-full px-4 py-2.5 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                    placeholder="Titre de l'article"
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1.5">Categorie</label>
+                    <select
+                      value={category}
+                      onChange={(e) => setCategory(e.target.value)}
+                      className="w-full px-4 py-2.5 rounded-xl bg-secondary border border-border text-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                    >
+                      <option value="">Choisir une categorie</option>
+                      {ARTICLE_CATEGORIES.map((cat) => (
+                        <option key={cat} value={cat}>{cat}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1.5">Extrait</label>
+                    <input
+                      type="text"
+                      value={excerpt}
+                      onChange={(e) => setExcerpt(e.target.value)}
+                      className="w-full px-4 py-2.5 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                      placeholder="Description courte (max 300 chars)"
+                      maxLength={300}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-6">
+                <ArticleEditor
+                  content={content}
+                  onChange={setContent}
+                  onSelectionChange={setSelectedText}
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Categorie</label>
-                  <select
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-secondary border border-border text-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                  >
-                    <option value="">Choisir une categorie</option>
-                    {ARTICLE_CATEGORIES.map((cat) => (
-                      <option key={cat} value={cat}>{cat}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Extrait</label>
-                  <input
-                    type="text"
-                    value={excerpt}
-                    onChange={(e) => setExcerpt(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                    placeholder="Description courte (max 300 chars)"
-                    maxLength={300}
-                  />
-                </div>
-              </div>
+              <QualityScorePanel content={content} />
             </div>
 
-            <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-6">
-              <ArticleEditor
-                content={content}
-                onChange={setContent}
-                onSelectionChange={setSelectedText}
-              />
-            </div>
+            {(mode === "assiste" || showAssist) && (
+              <AiAssistPanel selectedText={selectedText} content={content} onInsert={handleInsertAi} onTitleChange={setTitle} />
+            )}
           </div>
-
-          {(mode === "assiste" || showAssist) && (
-            <AiAssistPanel selectedText={selectedText} content={content} onInsert={handleInsertAi} onTitleChange={setTitle} />
-          )}
-        </div>
+        )
       )}
 
       <DraftAutoSave

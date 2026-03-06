@@ -10,6 +10,15 @@ import {
   type OutlineSection,
 } from "./prompts/article"
 import { extractJson, safeParseJson } from "./utils"
+import { getToneContext } from "./tone"
+import { trackUsage } from "./tracking"
+
+function trackGemini(action: string, result: { response: { usageMetadata?: { promptTokenCount?: number; candidatesTokenCount?: number } } }) {
+  const meta = result.response.usageMetadata
+  if (meta) {
+    trackUsage(action, MODEL, meta.promptTokenCount || 0, meta.candidatesTokenCount || 0)
+  }
+}
 
 const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
   allowedTags: sanitizeHtml.defaults.allowedTags.concat(["h1", "h2", "h3", "pre", "code"]),
@@ -22,9 +31,11 @@ const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
 
 /** Genere un plan structure a partir d'un brief */
 export async function generateOutline(brief: ArticleBrief): Promise<OutlineSection[]> {
-  const prompt = buildOutlinePrompt(brief)
+  const tone = await getToneContext()
+  const prompt = buildOutlinePrompt(brief) + tone
   const model = getGemini().getGenerativeModel({ model: MODEL })
   const result = await model.generateContent(prompt)
+  trackGemini("outline", result)
   const text = extractJson(result.response.text())
 
   const sections = safeParseJson<OutlineSection[]>(text, "generateOutline")
@@ -47,9 +58,11 @@ export async function generateArticleFromOutline(
   brief: ArticleBrief,
   outline: OutlineSection[],
 ): Promise<{ title: string; content: string; excerpt: string }> {
-  const prompt = buildArticleFromOutlinePrompt(brief, outline)
+  const tone = await getToneContext()
+  const prompt = buildArticleFromOutlinePrompt(brief, outline) + tone
   const model = getGemini().getGenerativeModel({ model: MODEL })
   const result = await model.generateContent(prompt)
+  trackGemini("article_from_outline", result)
   const text = extractJson(result.response.text())
 
   const parsed = safeParseJson<{ title: string; content: string; excerpt: string }>(text, "generateArticleFromOutline")
@@ -72,9 +85,11 @@ export async function generateArticle(
   category: string,
   keywords?: string,
 ): Promise<{ title: string; content: string; excerpt: string }> {
-  const prompt = buildGenerateArticlePrompt(subject, length, category, keywords)
+  const tone = await getToneContext()
+  const prompt = buildGenerateArticlePrompt(subject, length, category, keywords) + tone
   const model = getGemini().getGenerativeModel({ model: MODEL })
   const result = await model.generateContent(prompt)
+  trackGemini("article_legacy", result)
   const text = extractJson(result.response.text())
 
   const parsed = safeParseJson<{ title: string; content: string; excerpt: string }>(text, "generateArticle")
@@ -94,6 +109,7 @@ export async function generateTitles(text: string): Promise<string[]> {
   const prompt = buildTitlesPrompt(text)
   const model = getGemini().getGenerativeModel({ model: MODEL })
   const result = await model.generateContent(prompt)
+  trackGemini("titles", result)
   const raw = extractJson(result.response.text())
 
   const titles = safeParseJson<string[]>(raw, "generateTitles")
@@ -109,8 +125,10 @@ export async function assistText(
   action: "reformulate" | "complete" | "shorten" | "expand",
   text: string,
 ): Promise<string> {
-  const prompt = buildAssistPrompt(action, text)
+  const tone = await getToneContext()
+  const prompt = buildAssistPrompt(action, text) + tone
   const model = getGemini().getGenerativeModel({ model: MODEL })
   const result = await model.generateContent(prompt)
+  trackGemini("assist_" + action, result)
   return result.response.text().trim()
 }

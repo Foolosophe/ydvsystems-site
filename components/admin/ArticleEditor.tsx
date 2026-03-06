@@ -16,6 +16,7 @@ import {
   Undo,
   Redo,
 } from "lucide-react"
+import { countWords, readingTime } from "@/lib/blog/wordCount"
 
 interface ArticleEditorProps {
   content: string
@@ -94,6 +95,11 @@ export default function ArticleEditor({
         editor={editor}
         className="prose max-w-none p-4 min-h-[300px] focus-within:outline-none [&_.tiptap]:outline-none [&_.tiptap]:min-h-[280px]"
       />
+      <div className="flex items-center gap-3 px-4 py-2 border-t border-border bg-secondary text-xs text-muted-foreground">
+        <span>{countWords(editor.getHTML())} mots</span>
+        <span className="text-border">|</span>
+        <span>{readingTime(countWords(editor.getHTML()))} min de lecture</span>
+      </div>
     </div>
   )
 }

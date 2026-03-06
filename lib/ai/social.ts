@@ -2,6 +2,8 @@ import { getGemini, MODEL } from "./gemini"
 import { buildSocialPrompt } from "./prompts/social"
 import { prisma } from "@/lib/db"
 import { extractJson, safeParseJson } from "./utils"
+import { getToneContext } from "./tone"
+import { trackUsage } from "./tracking"
 
 type SocialContent = string | { subject: string; body: string }
 
@@ -19,10 +21,13 @@ export async function generateSocialPosts(
   if (!article) throw new Error("Article introuvable")
 
   const articleUrl = `${siteUrl}/${locale}/blog/${article.slug}`
-  const prompt = buildSocialPrompt(platforms, article.title, article.excerpt, articleUrl)
+  const tone = await getToneContext()
+  const prompt = buildSocialPrompt(platforms, article.title, article.excerpt, articleUrl) + tone
 
   const model = getGemini().getGenerativeModel({ model: MODEL })
   const result = await model.generateContent(prompt)
+  const meta = result.response.usageMetadata
+  if (meta) trackUsage("social", MODEL, meta.promptTokenCount || 0, meta.candidatesTokenCount || 0)
   const text = extractJson(result.response.text())
 
   const parsed = safeParseJson<Record<string, SocialContent>>(text, "generateSocialPosts")
