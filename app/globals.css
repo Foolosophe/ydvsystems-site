@@ -160,7 +160,6 @@
     @apply bg-background text-foreground antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #060608; /* évite le flash blanc avant hydration du loader */
   }
 
   ::selection {
