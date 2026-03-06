@@ -3,6 +3,9 @@ import { getToneContext } from "./tone"
 import { trackUsage } from "./tracking"
 import sanitizeHtml from "sanitize-html"
 
+// Re-export client-safe functions
+export { extractSections, replaceSection } from "./section-utils"
+
 function trackGemini(action: string, result: { response: { usageMetadata?: { promptTokenCount?: number; candidatesTokenCount?: number } } }) {
   const meta = result.response.usageMetadata
   if (meta) {
@@ -17,25 +20,6 @@ const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
     code: ["class"],
     pre: ["class"],
   },
-}
-
-/** Extrait les sections h2 d'un HTML */
-export function extractSections(html: string): { heading: string; content: string }[] {
-  const sections: { heading: string; content: string }[] = []
-  // Split par h2, en gardant le h2
-  const parts = html.split(/(?=<h2[^>]*>)/i)
-
-  for (const part of parts) {
-    const headingMatch = part.match(/<h2[^>]*>(.*?)<\/h2>/i)
-    if (headingMatch) {
-      sections.push({
-        heading: headingMatch[1].replace(/<[^>]*>/g, "").trim(),
-        content: part,
-      })
-    }
-  }
-
-  return sections
 }
 
 /** Regenere une section h2 isolement */
@@ -77,28 +61,4 @@ ${tone}`
   text = text.replace(/^```html?\n?/i, "").replace(/\n?```$/i, "").trim()
 
   return sanitizeHtml(text, SANITIZE_OPTIONS)
-}
-
-/** Remplace une section dans le HTML complet */
-export function replaceSection(
-  fullHtml: string,
-  oldHeading: string,
-  newSectionHtml: string,
-): string {
-  const sections = fullHtml.split(/(?=<h2[^>]*>)/i)
-  const result: string[] = []
-
-  for (const part of sections) {
-    const headingMatch = part.match(/<h2[^>]*>(.*?)<\/h2>/i)
-    if (headingMatch) {
-      const heading = headingMatch[1].replace(/<[^>]*>/g, "").trim()
-      if (heading === oldHeading) {
-        result.push(newSectionHtml)
-        continue
-      }
-    }
-    result.push(part)
-  }
-
-  return result.join("")
 }

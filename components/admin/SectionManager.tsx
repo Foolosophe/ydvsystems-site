@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { extractSections, replaceSection } from "@/lib/ai/section"
+import { extractSections, replaceSection } from "@/lib/ai/section-utils"
 import { RefreshCw, Loader2, History } from "lucide-react"
 
 interface SectionManagerProps {
