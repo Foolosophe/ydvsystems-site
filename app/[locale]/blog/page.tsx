@@ -6,7 +6,10 @@ import { ArrowRight, Calendar, Clock } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { getLocale } from "next-intl/server"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
-import { BLOG_SLUGS, BLOG_DATES } from "./data"
+import { prisma } from "@/lib/db"
+import { calculateReadTime } from "@/lib/blog/readTime"
+
+export const dynamic = "force-dynamic"
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("blog.meta")
@@ -18,8 +21,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function BlogPage() {
   const t = await getTranslations("blog")
-  const ta = await getTranslations("data.blogArticles")
   const locale = await getLocale()
+
+  const articles = await prisma.article.findMany({
+    where: { status: "PUBLISHED" },
+    orderBy: { publishedAt: "desc" },
+    select: {
+      title: true,
+      slug: true,
+      excerpt: true,
+      category: true,
+      content: true,
+      publishedAt: true,
+    },
+  })
 
   return (
     <main className="min-h-screen pt-24 pb-20">
@@ -34,11 +49,11 @@ export default async function BlogPage() {
             url: `https://ydvsystems.com/${locale}/blog`,
             mainEntity: {
               "@type": "ItemList",
-              itemListElement: BLOG_SLUGS.map((slug, i) => ({
+              itemListElement: articles.map((article, i) => ({
                 "@type": "ListItem",
                 position: i + 1,
-                url: `https://ydvsystems.com/${locale}/blog/${slug}`,
-                name: ta(`${slug}.title`),
+                url: `https://ydvsystems.com/${locale}/blog/${article.slug}`,
+                name: article.title,
               })),
             },
           }),
@@ -64,23 +79,25 @@ export default async function BlogPage() {
       <section className="pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
-            {BLOG_SLUGS.map((slug, i) => {
-              const date = BLOG_DATES[slug]
-              const formattedDate = new Date(date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
+            {articles.map((article, i) => {
+              const formattedDate = article.publishedAt
+                ? new Date(article.publishedAt).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : ""
+              const readTime = calculateReadTime(article.content)
 
               return (
-                <AnimateOnScroll key={slug} delay={i * 80}>
-                <Link href={`/blog/${slug}`} className="block group">
+                <AnimateOnScroll key={article.slug} delay={i * 80}>
+                <Link href={`/blog/${article.slug}`} className="block group">
                   <Card className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200">
                     <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-3">
                         <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs">
-                          {ta(`${slug}.category`)}
+                          {article.category}
                         </Badge>
                         <span className="flex items-center gap-1 text-xs text-muted-foreground">
                           <Calendar size={12} />
@@ -88,14 +105,14 @@ export default async function BlogPage() {
                         </span>
                         <span className="flex items-center gap-1 text-xs text-muted-foreground">
                           <Clock size={12} />
-                          {ta(`${slug}.readTime`)}
+                          {readTime} min
                         </span>
                       </div>
                       <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {ta(`${slug}.title`)}
+                        {article.title}
                       </h3>
                       <p className="text-sm text-secondary-foreground leading-relaxed mb-3">
-                        {ta(`${slug}.excerpt`)}
+                        {article.excerpt}
                       </p>
                       <span className="inline-flex items-center gap-1.5 text-sm text-primary font-semibold group-hover:gap-2.5 transition-all">
                         {t("readArticle")}

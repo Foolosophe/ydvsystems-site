@@ -575,7 +575,7 @@
     "blogArticles": {
       "ia-suivi-beneficiaires-siae": {
         "title": "Comment l'IA transforme le suivi des bénéficiaires en SIAE",
-        "category": "IA & Insertion",
+        "category": "IA & Automatisation",
         "excerpt": "Synthèses automatiques, suggestions de parcours, détection des risques de décrochage : tour d'horizon des usages concrets de l'IA dans l'insertion.",
         "readTime": "6 min",
         "content": [
@@ -597,7 +597,7 @@
       },
       "qualiopi-2026-changements": {
         "title": "Qualiopi 2026 : ce qui change pour les organismes de formation",
-        "category": "Formation",
+        "category": "Formation & Qualiopi",
         "excerpt": "Nouvelles exigences du référentiel, indicateurs renforcés, et comment un logiciel dédié peut simplifier la conformité.",
         "readTime": "5 min",
         "content": [
@@ -618,7 +618,7 @@
       },
       "multi-provider-ia-architecture": {
         "title": "Multi-provider IA : Claude, GPT-4 et Gemini dans une même app",
-        "category": "Technique",
+        "category": "Developpement Web",
         "excerpt": "Architecture d'un système de routage IA multi-provider avec fallback automatique. Retour d'expérience sur CIP Platform.",
         "readTime": "8 min",
         "content": [

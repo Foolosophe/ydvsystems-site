@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest"
 import { SOLUTIONS } from "@/lib/data"
 import { SERVICE_IDS } from "@/lib/data"
 import { BLOG_SLUGS } from "@/app/[locale]/blog/data"
+import { parseArticleId } from "@/lib/schemas/blog"
 
 describe("JSON-LD schema: ProfessionalService (prestations)", () => {
   it("generates valid structure with all services", () => {
@@ -89,5 +90,22 @@ describe("JSON-LD schema: CollectionPage (blog)", () => {
       expect(item["@type"]).toBe("ListItem")
       expect(item.url).toContain("/blog/")
     }
+  })
+})
+
+describe("parseArticleId", () => {
+  it("parse un ID numerique valide", () => {
+    expect(parseArticleId("1")).toBe(1)
+    expect(parseArticleId("42")).toBe(42)
+  })
+
+  it("retourne null pour un ID non numerique", () => {
+    expect(parseArticleId("abc")).toBeNull()
+    expect(parseArticleId("")).toBeNull()
+  })
+
+  it("retourne null pour un ID negatif ou zero", () => {
+    expect(parseArticleId("0")).toBeNull()
+    expect(parseArticleId("-1")).toBeNull()
   })
 })

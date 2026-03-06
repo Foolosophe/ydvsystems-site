@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next"
 import { SOLUTION_SLUGS } from "./[locale]/solutions/data"
-import { BLOG_SLUGS } from "./[locale]/blog/data"
 import { routing } from "@/i18n/routing"
+import { prisma } from "@/lib/db"
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://ydvsystems.com"
   const lastUpdated = new Date("2026-03-03")
   const locales = routing.locales
@@ -39,8 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     localizedEntry(`/solutions/${slug}`, { changeFrequency: "monthly", priority: 0.8 }),
   )
 
-  const blogPages: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) =>
-    localizedEntry(`/blog/${slug}`, { changeFrequency: "monthly", priority: 0.5 }),
+  const articles = await prisma.article.findMany({
+    where: { status: "PUBLISHED" },
+    select: { slug: true },
+  })
+
+  const blogPages: MetadataRoute.Sitemap = articles.map((a) =>
+    localizedEntry(`/blog/${a.slug}`, { changeFrequency: "monthly", priority: 0.5 }),
   )
 
   return [...staticPages, ...solutionPages, ...blogPages]

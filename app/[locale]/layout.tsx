@@ -1,21 +1,13 @@
 import type { Metadata } from "next"
-import { Outfit } from "next/font/google"
 import { NextIntlClientProvider, hasLocale } from "next-intl"
 import { setRequestLocale, getTranslations } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
-import "../globals.css"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { LoadingScreenWrapper } from "@/components/LoadingScreenWrapper"
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  display: "swap",
-})
 
 export async function generateMetadata({
   params,
@@ -118,61 +110,56 @@ export default async function LocaleLayout({
     : "Web development, AI & SaaS platforms for the social services and training sector."
 
   return (
-    <html lang={locale} className={outfit.variable}>
-      <head>
-        {process.env.NEXT_PUBLIC_UMAMI_URL && (
-          <script
-            defer
-            src={`${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`}
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-          />
-        )}
-      </head>
-      <body className="antialiased">
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e)})()` }} />
-        <LoadingScreenWrapper />
+    <>
+      <script dangerouslySetInnerHTML={{ __html: `(function(){document.documentElement.lang="${locale}";var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e)})()` }} />
+      <LoadingScreenWrapper />
+      {process.env.NEXT_PUBLIC_UMAMI_URL && (
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "YdvSystems",
-              url: "https://ydvsystems.com",
-              logo: "https://ydvsystems.com/images/og-image.png",
-              description: orgDescription,
-              founder: {
-                "@type": "Person",
-                name: "Yohann Dandeville",
-              },
-              contactPoint: {
-                "@type": "ContactPoint",
-                email: "contact@ydvsystems.com",
-                contactType: "customer service",
-                availableLanguage: ["French", "English"],
-              },
-              sameAs: ["https://github.com/foolosophe"],
-            }),
-          }}
+          defer
+          src={`${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
         />
-        {/* Skip to content */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:bg-primary focus:text-foreground focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:shadow-lg"
-        >
-          {t("skipToContent")}
-        </a>
-        <NextIntlClientProvider>
-          <TooltipProvider delayDuration={200}>
-            <Header />
-            <div id="main-content">
-              {children}
-            </div>
-            <Footer />
-            <ScrollToTop />
-          </TooltipProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "YdvSystems",
+            url: "https://ydvsystems.com",
+            logo: "https://ydvsystems.com/images/og-image.png",
+            description: orgDescription,
+            founder: {
+              "@type": "Person",
+              name: "Yohann Dandeville",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              email: "contact@ydvsystems.com",
+              contactType: "customer service",
+              availableLanguage: ["French", "English"],
+            },
+            sameAs: ["https://github.com/foolosophe"],
+          }),
+        }}
+      />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:bg-primary focus:text-foreground focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:shadow-lg"
+      >
+        {t("skipToContent")}
+      </a>
+      <NextIntlClientProvider>
+        <TooltipProvider delayDuration={200}>
+          <Header />
+          <div id="main-content">
+            {children}
+          </div>
+          <Footer />
+          <ScrollToTop />
+        </TooltipProvider>
+      </NextIntlClientProvider>
+    </>
   )
 }

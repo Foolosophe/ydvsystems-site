@@ -575,7 +575,7 @@
     "blogArticles": {
       "ia-suivi-beneficiaires-siae": {
         "title": "How AI is transforming beneficiary tracking in social enterprises",
-        "category": "AI & Social integration",
+        "category": "IA & Automatisation",
         "excerpt": "Automatic summaries, pathway suggestions, dropout risk detection: a practical overview of AI use cases in work integration social enterprises.",
         "readTime": "6 min",
         "content": [
@@ -597,7 +597,7 @@
       },
       "qualiopi-2026-changements": {
         "title": "Qualiopi 2026: what's changing for training organizations in France",
-        "category": "Training",
+        "category": "Formation & Qualiopi",
         "excerpt": "New certification requirements, strengthened indicators, and how dedicated software can simplify compliance with France's mandatory Qualiopi quality label.",
         "readTime": "5 min",
         "content": [
@@ -618,7 +618,7 @@
       },
       "multi-provider-ia-architecture": {
         "title": "Multi-provider AI: Claude, GPT-4 and Gemini in a single app",
-        "category": "Technical",
+        "category": "Developpement Web",
         "excerpt": "Architecture of a multi-provider AI routing system with automatic fallback. Lessons learned from CIP Platform.",
         "readTime": "8 min",
         "content": [
