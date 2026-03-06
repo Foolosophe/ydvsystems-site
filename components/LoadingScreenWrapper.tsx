@@ -14,7 +14,10 @@ const LoadingScreen = dynamic(
 export function LoadingScreenWrapper() {
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => { setMounted(true) }, [])
+  useEffect(() => {
+    document.getElementById("__splash")?.remove()
+    setMounted(true)
+  }, [])
 
   if (!mounted) return null
   return <LoadingScreen />

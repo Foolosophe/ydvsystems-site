@@ -129,6 +129,7 @@ export default async function LocaleLayout({
         )}
       </head>
       <body className="antialiased">
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e)})()` }} />
         <LoadingScreenWrapper />
         <script
           type="application/ld+json"
