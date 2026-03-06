@@ -175,7 +175,8 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         gsap.set(ystemLetters, { opacity: 0 })
       }
       const finalLogoW      = ydvW + s1W + ystemW + s2W
-      const finalYdvCenterX = window.innerWidth / 2 - finalLogoW / 2 + ydvW / 2
+      const vw = document.documentElement.clientWidth
+      const finalYdvCenterX = vw / 2 - finalLogoW / 2 + ydvW / 2
       const dx              = finalYdvCenterX - stampCenterX
 
       gsap.set(frameEl, { opacity: 0 })
