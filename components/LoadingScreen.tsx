@@ -91,6 +91,10 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
     const highlightEls    = HIGHLIGHT_INDICES.map(i => chars[i]).filter(Boolean)
     const nonHighlightEls = chars.filter((_, i) => !HIGHLIGHT_INDICES.includes(i))
 
+    // Calibre morphWrap à la largeur réelle du S dès le départ → pas de snap en fin de morph
+    if (textS1Ref.current && morphWrapRef.current)
+      gsap.set(morphWrapRef.current, { width: textS1Ref.current.offsetWidth })
+
     // ======== PHASE 1 : Le Tampon ========
 
     tl.to(chars, { opacity: 1, duration: 0.08, stagger: 0.085, ease: "power1.out" }, 0)
@@ -261,8 +265,6 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           }
         },
         onComplete() {
-          const charW = textS1Ref.current?.offsetWidth ?? 30
-          gsap.set(morphWrapRef.current, { width: charW })
           if (textS1Ref.current) textS1Ref.current.style.transform = "translate(-50%, -50%)"
           if (textS2Ref.current) textS2Ref.current.style.opacity   = "0"
           gsap.set(s2Ref.current, { opacity: 1, scale: 1 })
@@ -271,7 +273,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
     }, 6.9)
 
     // logo complet "YdvSystems" — pause — fade-out
-    tl.to(overlayRef.current, { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 9.4)
+    tl.to(overlayRef.current, { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 10.4)
   }
 
   useEffect(() => {
