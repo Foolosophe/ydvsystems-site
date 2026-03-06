@@ -183,6 +183,7 @@ export default function EditArticlePage() {
             selectedText={selectedText}
             content={content}
             onInsert={(text) => setContent((prev) => prev + text)}
+            onTitleChange={setTitle}
           />
         )}
       </div>

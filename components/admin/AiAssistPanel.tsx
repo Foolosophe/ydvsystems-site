@@ -7,6 +7,7 @@ interface AiAssistPanelProps {
   selectedText: string
   content: string
   onInsert: (text: string) => void
+  onTitleChange?: (title: string) => void
 }
 
 const ACTIONS = [
@@ -17,14 +18,16 @@ const ACTIONS = [
   { id: "titles", label: "Suggerer 3 titres" },
 ] as const
 
-export default function AiAssistPanel({ selectedText, content, onInsert }: AiAssistPanelProps) {
+export default function AiAssistPanel({ selectedText, content, onInsert, onTitleChange }: AiAssistPanelProps) {
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState("")
+  const [lastAction, setLastAction] = useState("")
 
   async function handleAction(action: string) {
     if (action === "titles" ? !content : !selectedText) return
     setLoading(true)
     setResult("")
+    setLastAction(action)
 
     try {
       const res = await fetch("/api/admin/ai/assist", {
@@ -85,7 +88,25 @@ export default function AiAssistPanel({ selectedText, content, onInsert }: AiAss
         </div>
       )}
 
-      {result && (
+      {result && lastAction === "titles" && onTitleChange ? (
+        <div className="space-y-2">
+          <p className="text-xs text-muted-foreground font-medium">Cliquez sur un titre pour l&apos;appliquer :</p>
+          {result.split("\n").filter(l => l.trim()).map((line, i) => {
+            const clean = line.replace(/^\d+[\.\)]\s*/, "").replace(/^[""]|[""]$/g, "").trim()
+            if (!clean) return null
+            return (
+              <button
+                key={i}
+                type="button"
+                onClick={() => onTitleChange(clean)}
+                className="w-full text-left p-3 rounded-lg bg-secondary border border-border text-sm text-foreground hover:border-primary hover:bg-primary/5 transition-colors"
+              >
+                {clean}
+              </button>
+            )
+          })}
+        </div>
+      ) : result ? (
         <div className="space-y-2">
           <div className="p-3 rounded-lg bg-secondary border border-border text-sm text-foreground whitespace-pre-wrap">
             {result}
@@ -98,7 +119,7 @@ export default function AiAssistPanel({ selectedText, content, onInsert }: AiAss
             Inserer dans l&apos;editeur
           </button>
         </div>
-      )}
+      ) : null}
     </div>
   )
 }

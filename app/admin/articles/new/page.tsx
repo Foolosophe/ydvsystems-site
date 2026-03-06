@@ -23,6 +23,7 @@ export default function NewArticlePage() {
   const [savedId, setSavedId] = useState<number | null>(null)
   const [error, setError] = useState("")
   const [aiGenerated, setAiGenerated] = useState(false)
+  const [showAssist, setShowAssist] = useState(false)
 
   async function handleSave() {
     setSaving(true)
@@ -85,6 +86,18 @@ export default function NewArticlePage() {
           <p className="text-sm text-muted-foreground mt-1">Choisissez votre mode de redaction</p>
         </div>
         <div className="flex items-center gap-3">
+          {content && (
+            <button
+              onClick={() => setShowAssist(!showAssist)}
+              className={`px-4 py-2 text-xs font-medium rounded-lg border transition-all duration-200 ${
+                showAssist
+                  ? "border-primary text-primary bg-primary/5"
+                  : "border-border text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              Assistance IA
+            </button>
+          )}
           <button
             onClick={handleSave}
             disabled={saving || !title || !content || !excerpt || !category}
@@ -112,7 +125,7 @@ export default function NewArticlePage() {
       ) : null}
 
       {(mode !== "genere" || content) && (
-        <div className={`grid gap-6 ${mode === "assiste" ? "grid-cols-[1fr_320px]" : ""}`}>
+        <div className={`grid gap-6 ${mode === "assiste" || showAssist ? "grid-cols-[1fr_320px]" : ""}`}>
           <div className="space-y-4">
             {aiGenerated && (
               <div className="flex items-center justify-between p-4 rounded-xl border border-green-200 bg-green-50">
@@ -182,8 +195,8 @@ export default function NewArticlePage() {
             </div>
           </div>
 
-          {mode === "assiste" && (
-            <AiAssistPanel selectedText={selectedText} content={content} onInsert={handleInsertAi} />
+          {(mode === "assiste" || showAssist) && (
+            <AiAssistPanel selectedText={selectedText} content={content} onInsert={handleInsertAi} onTitleChange={setTitle} />
           )}
         </div>
       )}
