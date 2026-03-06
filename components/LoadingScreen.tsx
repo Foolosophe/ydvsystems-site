@@ -370,7 +370,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         {/* Phase 1 */}
         <div
           ref={nameContainerRef}
-          style={{ fontSize: "clamp(1.5rem, 5vw, 3rem)", whiteSpace: "nowrap", position: "absolute" }}
+          style={{ fontSize: "clamp(2rem, 6vw, 4rem)", whiteSpace: "nowrap", position: "absolute" }}
         >
           {FULL_NAME.split("").map((char, i) => (
             <span
@@ -387,7 +387,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           ref={stampFrameRef}
           style={{
             opacity: 0, position: "absolute",
-            width: "clamp(80px, 14vw, 120px)", height: "clamp(40px, 7vw, 52px)",
+            width: "clamp(100px, 18vw, 160px)", height: "clamp(50px, 9vw, 70px)",
             border: `2.5px solid ${CYAN}`, borderRadius: "5px",
             boxShadow: `inset 0 0 0 3px ${BG_COLOR}, inset 0 0 0 4px ${CYAN}44`,
             pointerEvents: "none",
@@ -402,7 +402,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
             left: "50%", top: "50%", transform: "translate(-50%, -50%)",
             display: "flex", alignItems: "center",
             whiteSpace: "nowrap",
-            fontSize: "clamp(1.8rem, 5vw, 3rem)", fontWeight: 700,
+            fontSize: "clamp(2rem, 6vw, 4rem)", fontWeight: 700,
           }}
         >
           <span ref={ydvTextRef} style={{ color: WHITE, opacity: 0, flexShrink: 0 }}>Ydv</span>
