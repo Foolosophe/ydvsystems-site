@@ -16,7 +16,7 @@ import { NextRequest } from "next/server"
 import { requireAdmin } from "@/lib/auth/helpers"
 
 function makeRequest(url: string, options?: RequestInit) {
-  return new NextRequest(new URL(url, "http://localhost:3000"), options)
+  return new NextRequest(new URL(url, "http://localhost:3000"), options as never)
 }
 
 describe("requireAdmin", () => {

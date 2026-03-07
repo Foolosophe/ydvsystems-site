@@ -60,14 +60,14 @@ vi.mock("@/lib/db", () => {
           return Promise.resolve(allArticles)
         }),
         findUnique: vi.fn(
-          ({ where }: { where: { slug?: string; id?: number } }) => {
+          ({ where }: { where: Record<string, unknown> }) => {
             const article = allArticles.find(
               (a) =>
                 (where.slug && a.slug === where.slug && (!where.status || a.status === where.status)) ||
                 (where.id && a.id === where.id)
             )
             // For public route: filter by status if provided in where
-            if (where.slug && (where as Record<string, unknown>).status === "PUBLISHED") {
+            if (where.slug && where.status === "PUBLISHED") {
               const found = publishedArticles.find((a) => a.slug === where.slug)
               return Promise.resolve(found || null)
             }
@@ -122,7 +122,7 @@ import { POST as postDraft } from "@/app/api/admin/drafts/route"
 import { requireAdmin } from "@/lib/auth/helpers"
 
 function makeRequest(url: string, options?: RequestInit) {
-  return new NextRequest(new URL(url, "http://localhost:3000"), options)
+  return new NextRequest(new URL(url, "http://localhost:3000"), options as never)
 }
 
 function makeParams<T>(value: T): { params: Promise<T> } {
