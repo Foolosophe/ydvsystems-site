@@ -113,10 +113,10 @@ export default async function LocaleLayout({
     <>
       <script dangerouslySetInnerHTML={{ __html: `(function(){document.documentElement.lang="${locale}";var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e)})()` }} />
       <LoadingScreenWrapper />
-      {process.env.NEXT_PUBLIC_UMAMI_URL && (
+      {process.env.NEXT_PUBLIC_UMAMI_ID && (
         <script
           defer
-          src={`${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`}
+          src="/stats/script.js"
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
         />
       )}
