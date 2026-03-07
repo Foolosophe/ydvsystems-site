@@ -133,7 +133,7 @@ export default async function BlogArticlePage({
             {article.category}
           </Badge>
           <ABTitle articleId={article.id} fallbackTitle={article.title} />
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <Calendar size={14} />
               {formattedDate}
@@ -146,13 +146,13 @@ export default async function BlogArticlePage({
         </header>
 
         <div
-          className="prose-custom space-y-5 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-secondary-foreground [&_p]:leading-relaxed [&_pre]:bg-secondary [&_pre]:border [&_pre]:border-border [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_code]:text-sm [&_code]:text-foreground [&_code]:font-mono"
+          className="prose-custom space-y-5 overflow-hidden [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-secondary-foreground [&_p]:leading-relaxed [&_p]:wrap-break-word [&_pre]:bg-secondary [&_pre]:border [&_pre]:border-border [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_code]:text-sm [&_code]:text-foreground [&_code]:font-mono [&_img]:max-w-full [&_img]:h-auto"
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
 
-        <div className="mt-14 pt-8 border-t border-border flex items-center justify-between">
+        <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg shrink-0">
               YD
             </div>
             <div>
@@ -165,7 +165,7 @@ export default async function BlogArticlePage({
           <ShareButtons title={article.title} slug={slug} />
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border flex items-center justify-between">
+        <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"

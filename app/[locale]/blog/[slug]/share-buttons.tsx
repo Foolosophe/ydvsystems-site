@@ -60,7 +60,7 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
   }
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
       {links.map(({ label, icon: Icon, href, color }) => (
         <a
           key={label}
