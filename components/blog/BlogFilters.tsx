@@ -1,15 +1,16 @@
 "use client"
 
 import { useState, useMemo } from "react"
-import { Search, X } from "lucide-react"
+import { Search, X, ArrowRight, Calendar, Clock } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+import Link from "next/link"
 
 interface Article {
   title: string
   slug: string
   excerpt: string
   category: string
-  content: string
   publishedAt: string | null
   coverImage: string | null
   readTime: number
@@ -24,12 +25,13 @@ interface Props {
     allCategories: string
     noResults: string
     readArticle: string
+    loadMore: string
   }
   perPage: number
-  children: (filteredArticles: Article[], showMore: () => void, hasMore: boolean) => React.ReactNode
+  locale: string
 }
 
-export default function BlogFilters({ articles, categories, translations: t, perPage, children }: Props) {
+export default function BlogFilters({ articles, categories, translations: t, perPage, locale }: Props) {
   const [search, setSearch] = useState("")
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const [visibleCount, setVisibleCount] = useState(perPage)
@@ -130,11 +132,63 @@ export default function BlogFilters({ articles, categories, translations: t, per
         </p>
       )}
 
-      {/* Articles or empty state */}
+      {/* Articles grid or empty state */}
       {filtered.length === 0 ? (
         <p className="text-center text-muted-foreground py-12">{t.noResults}</p>
       ) : (
-        children(visible, showMore, hasMore)
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {visible.map((article) => (
+              <Link key={article.slug} href={`/${locale}/blog/${article.slug}`} className="block group h-full">
+                <Card className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200 h-full flex flex-col">
+                  <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
+                  {article.coverImage && (
+                    <div className="h-44 overflow-hidden">
+                      <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover" />
+                    </div>
+                  )}
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center gap-3 mb-3 flex-wrap">
+                      <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs">
+                        {article.category}
+                      </Badge>
+                      <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                        <Calendar size={12} />
+                        {article.formattedDate}
+                      </span>
+                      <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                        <Clock size={12} />
+                        {article.readTime} min
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-sm text-secondary-foreground leading-relaxed mb-3 flex-1">
+                      {article.excerpt}
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-sm text-primary font-semibold group-hover:gap-2.5 transition-all">
+                      {t.readArticle}
+                      <ArrowRight size={14} />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          {/* Load more */}
+          {hasMore && (
+            <div className="text-center mt-8">
+              <button
+                onClick={showMore}
+                className="px-6 py-2.5 rounded-lg border border-border text-sm font-medium text-secondary-foreground hover:text-foreground hover:bg-secondary transition-colors"
+              >
+                {t.loadMore}
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   )
