@@ -9,6 +9,11 @@ import { calculateReadTime } from "@/lib/blog/readTime"
 import { ViewCounter } from "./view-counter"
 import { ABTitle } from "./ab-title"
 import { ShareButtons } from "./share-buttons"
+import { RelatedArticles } from "@/components/blog/RelatedArticles"
+import ReadingProgressBar from "@/components/blog/ReadingProgressBar"
+import { TableOfContents, addHeadingIds } from "@/components/blog/TableOfContents"
+import CodeHighlight from "@/components/blog/CodeHighlight"
+import "./prism-theme.css"
 
 export const dynamic = "force-dynamic"
 
@@ -63,6 +68,17 @@ export default async function BlogArticlePage({
   const t = await getTranslations("blog.article")
   const locale = await getLocale()
 
+  const relatedArticles = await prisma.article.findMany({
+    where: {
+      status: "PUBLISHED",
+      slug: { not: slug },
+      category: article.category,
+    },
+    orderBy: { publishedAt: "desc" },
+    take: 3,
+    select: { title: true, slug: true, excerpt: true, category: true, coverImage: true },
+  })
+
   const readTime = calculateReadTime(article.content)
 
   const formattedDate = article.publishedAt
@@ -102,11 +118,13 @@ export default async function BlogArticlePage({
 
   return (
     <main className="min-h-screen pt-24 pb-20">
+      <ReadingProgressBar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([articleJsonLd, breadcrumbJsonLd]) }}
       />
 
+      <CodeHighlight />
       <ViewCounter slug={slug} />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -145,9 +163,11 @@ export default async function BlogArticlePage({
           </div>
         </header>
 
+        <TableOfContents content={article.content} title={t("toc")} />
+
         <div
           className="prose-custom space-y-5 overflow-hidden [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-secondary-foreground [&_p]:leading-relaxed [&_p]:wrap-break-word [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:opacity-80 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:text-secondary-foreground [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:text-secondary-foreground [&_li]:leading-relaxed [&_li]:mb-1 [&_blockquote]:border-l-4 [&_blockquote]:border-primary/30 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-muted-foreground [&_hr]:border-border [&_hr]:my-8 [&_pre]:bg-secondary [&_pre]:border [&_pre]:border-border [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_code]:text-sm [&_code]:text-foreground [&_code]:font-mono [&_img]:max-w-full [&_img]:h-auto"
-          dangerouslySetInnerHTML={{ __html: article.content.replace(/<a /g, '<a target="_blank" rel="noopener noreferrer" ') }}
+          dangerouslySetInnerHTML={{ __html: addHeadingIds(article.content).replace(/<a /g, '<a target="_blank" rel="noopener noreferrer" ') }}
         />
 
         <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -164,6 +184,12 @@ export default async function BlogArticlePage({
           </div>
           <ShareButtons title={article.title} slug={slug} />
         </div>
+
+        <RelatedArticles
+          articles={relatedArticles}
+          title={t("relatedArticles")}
+          readArticleLabel={t("readMore")}
+        />
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <Link

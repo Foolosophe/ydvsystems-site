@@ -98,6 +98,15 @@ model Setting {
   updatedAt DateTime @updatedAt
 }
 
+model Subscriber {
+  id             Int       @id @default(autoincrement())
+  email          String    @unique
+  token          String    @unique
+  confirmedAt    DateTime?
+  unsubscribedAt DateTime?
+  createdAt      DateTime  @default(now())
+}
+
 model TitleVariant {
   id        Int      @id @default(autoincrement())
   articleId Int

@@ -79,6 +79,9 @@ export async function generateMetadata({
         fr: "https://ydvsystems.com/fr",
         en: "https://ydvsystems.com/en",
       },
+      types: {
+        "application/rss+xml": "https://ydvsystems.com/feed.xml",
+      },
     },
   }
 }

@@ -315,10 +315,20 @@
       "description": "Articles sur le développement web, l'IA, le secteur social et la gestion d'organismes de formation."
     },
     "readArticle": "Lire l'article",
+    "filters": {
+      "searchPlaceholder": "Rechercher un article...",
+      "allCategories": "Toutes",
+      "noResults": "Aucun article ne correspond a votre recherche.",
+      "loadMore": "Voir plus d'articles"
+    },
     "newsletter": {
-      "title": "Soyez prévenu des nouveaux articles",
+      "title": "Soyez prevenu des nouveaux articles",
       "description": "Inscrivez-vous pour recevoir les prochains articles par email.",
-      "link": "Me contacter pour être notifié"
+      "placeholder": "votre@email.com",
+      "button": "S'inscrire",
+      "success": "Un email de confirmation vous a ete envoye. Verifiez votre boite de reception.",
+      "alreadySubscribed": "Vous etes deja inscrit a la newsletter.",
+      "error": "Une erreur est survenue. Veuillez reessayer."
     },
     "article": {
       "backToBlog": "Retour au blog",
@@ -328,7 +338,10 @@
       "authorRole": "Développeur full-stack & fondateur de YdvSystems",
       "notFound": "Article introuvable",
       "breadcrumbHome": "Accueil",
-      "breadcrumbBlog": "Blog"
+      "breadcrumbBlog": "Blog",
+      "relatedArticles": "Articles similaires",
+      "readMore": "Lire",
+      "toc": "Sommaire"
     }
   },
   "legal": {
@@ -361,7 +374,7 @@
     },
     "privacy": {
       "title": "Données personnelles",
-      "paragraph1": "Ce site ne collecte pas de données personnelles à des fins commerciales. Le formulaire de contact transmet uniquement les informations saisies (nom, email, message) à l'adresse email de l'éditeur via le service Resend pour permettre une réponse à votre demande.",
+      "paragraph1": "Ce site ne collecte pas de données personnelles à des fins commerciales. Le formulaire de contact transmet uniquement les informations saisies (nom, email, message) à l'adresse email de l'éditeur via le service Resend pour permettre une réponse à votre demande. La newsletter du blog permet de s'inscrire avec son email pour recevoir les nouveaux articles. L'inscription utilise un double opt-in (confirmation par email). Vous pouvez vous desinscrire a tout moment via le lien present dans chaque email. Les adresses email des abonnes sont stockees dans la base de donnees du site et ne sont partagees avec aucun tiers.",
       "paragraph2": "Ce site utilise Umami, un outil d'analyse open-source auto-hébergé, qui ne dépose aucun cookie et ne collecte aucune donnée personnelle identifiable. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant"
     },
     "intellectual": {

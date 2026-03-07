@@ -14,6 +14,7 @@ import ReviewChecklist from "@/components/admin/ReviewChecklist"
 import SectionManager from "@/components/admin/SectionManager"
 import TranslateButton from "@/components/admin/TranslateButton"
 import ABTestPanel from "@/components/admin/ABTestPanel"
+import NotifySubscribersButton from "@/components/admin/NotifySubscribersButton"
 import { Save, Loader2, ArrowLeft, Share2, CheckCircle2, Eye, EyeOff } from "lucide-react"
 import Link from "next/link"
 import { ARTICLE_CATEGORIES } from "@/lib/schemas/blog"
@@ -147,13 +148,16 @@ export default function EditArticlePage() {
             {saved ? "Sauvegarde !" : "Sauvegarder"}
           </button>
           {article.status === "PUBLISHED" && (
-            <Link
-              href={`/admin/articles/${article.id}/share`}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm text-secondary-foreground hover:text-primary hover:bg-secondary transition-colors"
-            >
-              <Share2 size={16} />
-              <span>Partager</span>
-            </Link>
+            <>
+              <NotifySubscribersButton articleId={article.id} />
+              <Link
+                href={`/admin/articles/${article.id}/share`}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm text-secondary-foreground hover:text-primary hover:bg-secondary transition-colors"
+              >
+                <Share2 size={16} />
+                <span>Partager</span>
+              </Link>
+            </>
           )}
           <PublishButton articleId={article.id} status={article.status} checklistProgress={checklistProg} />
         </div>

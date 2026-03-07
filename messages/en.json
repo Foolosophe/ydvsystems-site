@@ -315,10 +315,20 @@
       "description": "Articles on web development, AI, the social services sector and training organization management."
     },
     "readArticle": "Read article",
+    "filters": {
+      "searchPlaceholder": "Search articles...",
+      "allCategories": "All",
+      "noResults": "No articles match your search.",
+      "loadMore": "Load more articles"
+    },
     "newsletter": {
       "title": "Stay updated on new articles",
       "description": "Sign up to receive new articles by email.",
-      "link": "Contact me to get notified"
+      "placeholder": "your@email.com",
+      "button": "Subscribe",
+      "success": "A confirmation email has been sent. Check your inbox.",
+      "alreadySubscribed": "You are already subscribed to the newsletter.",
+      "error": "An error occurred. Please try again."
     },
     "article": {
       "backToBlog": "Back to blog",
@@ -328,7 +338,10 @@
       "authorRole": "Full-stack developer & founder of YdvSystems",
       "notFound": "Article not found",
       "breadcrumbHome": "Home",
-      "breadcrumbBlog": "Blog"
+      "breadcrumbBlog": "Blog",
+      "relatedArticles": "Related articles",
+      "readMore": "Read",
+      "toc": "Table of contents"
     }
   },
   "legal": {
@@ -361,7 +374,7 @@
     },
     "privacy": {
       "title": "Personal data",
-      "paragraph1": "This website does not collect personal data for commercial purposes. The contact form only transmits the information you provide (name, email, message) to the publisher's email address via the Resend service, in order to respond to your inquiry.",
+      "paragraph1": "This website does not collect personal data for commercial purposes. The contact form only transmits the information you provide (name, email, message) to the publisher's email address via the Resend service, in order to respond to your inquiry. The blog newsletter allows you to subscribe with your email to receive new articles. Subscription uses double opt-in (email confirmation). You can unsubscribe at any time via the link included in every email. Subscriber email addresses are stored in the website's database and are not shared with any third party.",
       "paragraph2": "This website uses Umami, a self-hosted open-source analytics tool that does not use cookies or collect any personally identifiable data. In compliance with the GDPR, you have the right to access, rectify and delete your data by contacting"
     },
     "intellectual": {
