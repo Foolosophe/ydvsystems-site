@@ -116,6 +116,14 @@
     },
     "projectsTag": "Projects",
     "visit": "Visit {title}",
+    "playOnline": "Play online",
+    "play": {
+      "launchGame": "Launch game",
+      "backToPortfolio": "Back to portfolio",
+      "fullscreen": "Full screen recommended for the best experience.",
+      "metaTitle": "{title} — Play online | YdvSystems",
+      "metaDescription": "Play {title} directly in your browser. Built by YdvSystems."
+    },
     "about": {
       "tag": "About",
       "title": "Full-stack developer & entrepreneur",
@@ -472,6 +480,11 @@
         "type": "Internal tool",
         "title": "Enterprise AI Audit",
         "description": "AI maturity assessment tool for businesses. Adaptive questionnaire, personalized report, AI-powered recommendations."
+      },
+      "pills-stadium": {
+        "type": "3D Game",
+        "title": "Pills Stadium",
+        "description": "Browser-based 3D kart racing game with AI opponents, power-ups and dynamic tracks. Three.js, WebGL, real-time physics."
       },
       "blog-parkinson": {
         "type": "Accessible blog",

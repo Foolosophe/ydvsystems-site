@@ -116,6 +116,14 @@
     },
     "projectsTag": "Réalisations",
     "visit": "Visiter {title}",
+    "playOnline": "Jouer en ligne",
+    "play": {
+      "launchGame": "Lancer le jeu",
+      "backToPortfolio": "Retour au portfolio",
+      "fullscreen": "Plein écran recommandé pour une meilleure expérience.",
+      "metaTitle": "{title} — Jouer en ligne | YdvSystems",
+      "metaDescription": "Jouez à {title} directement dans votre navigateur. Développé par YdvSystems."
+    },
     "about": {
       "tag": "À propos",
       "title": "Développeur full-stack & entrepreneur",
@@ -472,6 +480,11 @@
         "type": "Outil interne",
         "title": "Audit IA Entreprise",
         "description": "Outil d'évaluation de la maturité IA des entreprises. Questionnaire adaptatif, rapport personnalisé, recommandations IA."
+      },
+      "pills-stadium": {
+        "type": "Jeu 3D",
+        "title": "Pills Stadium",
+        "description": "Jeu de kart 3D en navigateur avec IA adversaire, power-ups et circuits dynamiques. Three.js, WebGL, physique temps réel."
       },
       "blog-parkinson": {
         "type": "Blog accessible",

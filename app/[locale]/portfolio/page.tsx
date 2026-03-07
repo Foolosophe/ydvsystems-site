@@ -4,10 +4,10 @@ import { Link } from "@/i18n/navigation"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, ExternalLink, Gamepad2 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
-import { PORTFOLIO_IDS, PORTFOLIO_TECH } from "@/lib/data"
+import { PORTFOLIO_IDS, PORTFOLIO_TECH, GAME_URLS } from "@/lib/data"
 import { StatsGrid } from "@/components/StatsGrid"
 import { TechStack } from "@/components/TechStack"
 
@@ -137,17 +137,30 @@ export default async function PortfolioPage() {
                           </Badge>
                         ))}
                       </div>
-                      {tech.urlLabel && (
-                        <a
-                          href={tech.url!}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-(--accent-hover) transition-colors"
-                        >
-                          {tech.urlLabel}
-                          <ExternalLink size={12} />
-                        </a>
-                      )}
+                      <div className="flex flex-wrap items-center gap-3">
+                        {tech.urlLabel && (
+                          <a
+                            href={tech.url!}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-(--accent-hover) transition-colors"
+                          >
+                            {tech.urlLabel}
+                            <ExternalLink size={12} />
+                          </a>
+                        )}
+                        {GAME_URLS[id] && (
+                          <a
+                            href={GAME_URLS[id]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-primary hover:bg-(--accent-hover) px-3 py-1.5 rounded-md transition-colors"
+                          >
+                            <Gamepad2 size={14} />
+                            {t("playOnline")}
+                          </a>
+                        )}
+                      </div>
                     </CardContent>
                   </Card>
                 </AnimateOnScroll>

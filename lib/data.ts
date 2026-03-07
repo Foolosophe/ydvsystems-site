@@ -92,12 +92,18 @@ export const SERVICE_PREVIEW_IDS = SERVICE_IDS.slice(0, 4)
 export const PORTFOLIO_IDS = [
   "ydv-systems",
   "moteur-jeu",
+  "pills-stadium",
   "prompt-parfait",
   "audit-ia-entreprise",
   "blog-parkinson",
 ] as const
 
 export const PORTFOLIO_PREVIEW_IDS = PORTFOLIO_IDS.slice(0, 3)
+
+export const GAME_URLS: Record<string, string> = {
+  "moteur-jeu": "https://dracula.ydvsystems.com",
+  "pills-stadium": "https://kart.ydvsystems.com",
+}
 
 export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null; urlLabel: string | null }> = {
   "ydv-systems": {
@@ -107,8 +113,13 @@ export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null
   },
   "moteur-jeu": {
     tags: ["React", "TypeScript", "Tauri", "Capacitor", "Web Audio API"],
-    url: null,
-    urlLabel: null,
+    url: "https://dracula.ydvsystems.com",
+    urlLabel: "dracula.ydvsystems.com",
+  },
+  "pills-stadium": {
+    tags: ["Three.js", "JavaScript", "WebGL", "Node.js"],
+    url: "https://kart.ydvsystems.com",
+    urlLabel: "kart.ydvsystems.com",
   },
   "prompt-parfait": {
     tags: ["Electron", "Capacitor", "JavaScript", "PWA"],

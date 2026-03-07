@@ -107,7 +107,30 @@ certbot certificates        # Voir les certificats
 | coaching | 46.225.71.188 | CIP Platform (bientot) |
 | manager | 46.225.71.188 | CIP Platform (bientot) |
 | lesmotsdemarilyn | 46.225.71.188 | Blog Parkinson |
+| dracula | 46.225.71.188 | Jeu Le Chateau de Dracula |
+| kart | 46.225.71.188 | Jeu Pills Stadium |
 | n8n | 46.224.181.128 | Automatisation n8n (VPS separe) |
+
+## Jeux en ligne (sous-domaines statiques)
+
+| Jeu | Sous-domaine | Dossier serveur | Source locale |
+|-----|-------------|-----------------|--------------|
+| Le Chateau de Dracula | dracula.ydvsystems.com | /var/www/games/dracula/ | dist/ (Vite build) |
+| Pills Stadium | kart.ydvsystems.com | /var/www/games/kart/ | public/ (pas de build) |
+
+### Mise a jour d'un jeu
+
+```bash
+# Dracula — apres modification du jeu
+cd "E:\YdvSystemsProd\Le chateau de Dracula\le_chateau_de_dracula"
+npm run build
+scp -r dist/* root@46.225.71.188:/var/www/games/dracula/
+
+# Kart — apres modification du jeu
+scp -r "E:\YdvSystemsProd\jeu_kart\pills-stadium\public\*" root@46.225.71.188:/var/www/games/kart/
+```
+
+Aucun restart serveur necessaire — Nginx sert des fichiers statiques.
 
 ## Troubleshooting
 
