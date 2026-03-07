@@ -33,6 +33,7 @@ export default async function BlogPage() {
       category: true,
       content: true,
       publishedAt: true,
+      coverImage: true,
     },
   })
 
@@ -77,8 +78,8 @@ export default async function BlogPage() {
 
       {/* Articles */}
       <section className="pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {articles.map((article, i) => {
               const formattedDate = article.publishedAt
                 ? new Date(article.publishedAt).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", {
@@ -91,11 +92,20 @@ export default async function BlogPage() {
 
               return (
                 <AnimateOnScroll key={article.slug} delay={i * 80}>
-                <Link href={`/blog/${article.slug}`} className="block group">
-                  <Card className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200">
+                <Link href={`/blog/${article.slug}`} className="block group h-full">
+                  <Card className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 transition-all duration-200 h-full flex flex-col">
                     <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-3">
+                    {article.coverImage && (
+                      <div className="h-44 overflow-hidden">
+                        <img
+                          src={article.coverImage}
+                          alt={article.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
+                    <CardContent className="p-6 flex-1 flex flex-col">
+                      <div className="flex items-center gap-3 mb-3 flex-wrap">
                         <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs">
                           {article.category}
                         </Badge>
@@ -111,7 +121,7 @@ export default async function BlogPage() {
                       <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                         {article.title}
                       </h3>
-                      <p className="text-sm text-secondary-foreground leading-relaxed mb-3">
+                      <p className="text-sm text-secondary-foreground leading-relaxed mb-3 flex-1">
                         {article.excerpt}
                       </p>
                       <span className="inline-flex items-center gap-1.5 text-sm text-primary font-semibold group-hover:gap-2.5 transition-all">
