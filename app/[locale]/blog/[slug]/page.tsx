@@ -146,7 +146,7 @@ export default async function BlogArticlePage({
         </header>
 
         <div
-          className="prose-custom space-y-5 overflow-hidden [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-secondary-foreground [&_p]:leading-relaxed [&_p]:wrap-break-word [&_pre]:bg-secondary [&_pre]:border [&_pre]:border-border [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_code]:text-sm [&_code]:text-foreground [&_code]:font-mono [&_img]:max-w-full [&_img]:h-auto"
+          className="prose-custom space-y-5 overflow-hidden [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-secondary-foreground [&_p]:leading-relaxed [&_p]:wrap-break-word [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:opacity-80 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:text-secondary-foreground [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:text-secondary-foreground [&_li]:leading-relaxed [&_li]:mb-1 [&_blockquote]:border-l-4 [&_blockquote]:border-primary/30 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-muted-foreground [&_hr]:border-border [&_hr]:my-8 [&_pre]:bg-secondary [&_pre]:border [&_pre]:border-border [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_code]:text-sm [&_code]:text-foreground [&_code]:font-mono [&_img]:max-w-full [&_img]:h-auto"
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
 
