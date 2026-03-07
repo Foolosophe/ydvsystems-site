@@ -13,15 +13,50 @@ interface UsageSummary {
 
 export default function AnalyticsPage() {
   const [data, setData] = useState<UsageSummary | null>(null)
+  const [parkinson, setParkinson] = useState<UsageSummary | null>(null)
   const [days, setDays] = useState(30)
+  const [activeTab, setActiveTab] = useState<"all" | "ydv" | "parkinson">("all")
 
   useEffect(() => {
     fetch(`/api/admin/analytics?days=${days}`)
       .then((r) => r.json())
       .then((json) => {
         if (json.data) setData(json.data)
+        if (json.parkinson) setParkinson(json.parkinson)
       })
   }, [days])
+
+  // Fusionner les deux sources pour le mode "all"
+  function getMergedData(): UsageSummary | null {
+    if (activeTab === "ydv") return data
+    if (activeTab === "parkinson") return parkinson
+    if (!data && !parkinson) return null
+    if (!data) return parkinson
+    if (!parkinson) return data
+
+    const mergedByAction: Record<string, { count: number; cost: number }> = {}
+    for (const [action, stats] of Object.entries(data.byAction)) {
+      mergedByAction[action] = { ...stats }
+    }
+    for (const [action, stats] of Object.entries(parkinson.byAction)) {
+      if (mergedByAction[action]) {
+        mergedByAction[action].count += stats.count
+        mergedByAction[action].cost += stats.cost
+      } else {
+        mergedByAction[action] = { ...stats }
+      }
+    }
+
+    return {
+      totalCalls: data.totalCalls + parkinson.totalCalls,
+      totalTokensIn: data.totalTokensIn + parkinson.totalTokensIn,
+      totalTokensOut: data.totalTokensOut + parkinson.totalTokensOut,
+      totalCost: data.totalCost + parkinson.totalCost,
+      byAction: mergedByAction,
+    }
+  }
+
+  const displayData = getMergedData()
 
   return (
     <div className="space-y-6">
@@ -41,27 +76,67 @@ export default function AnalyticsPage() {
         </select>
       </div>
 
-      {!data ? (
-        <p className="text-muted-foreground">Chargement...</p>
+      {/* Tabs pour filtrer par source */}
+      <div className="flex gap-2">
+        {(["all", "ydv", "parkinson"] as const).map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 ${
+              activeTab === tab
+                ? "border-primary bg-primary/5 text-primary shadow-sm"
+                : "border-border text-secondary-foreground hover:border-primary/30 hover:bg-secondary"
+            }`}
+          >
+            {tab === "all" ? "Tous les blogs" : tab === "ydv" ? "YdvSystems" : "Blog Parkinson"}
+            {tab === "parkinson" && !parkinson && (
+              <span className="ml-1 text-muted-foreground text-xs">(offline)</span>
+            )}
+          </button>
+        ))}
+      </div>
+
+      {!displayData ? (
+        <p className="text-muted-foreground">
+          {activeTab === "parkinson" && !parkinson
+            ? "Le blog Parkinson ne repond pas ou n'a pas encore de donnees d'usage IA."
+            : "Chargement..."}
+        </p>
       ) : (
         <>
           <div className="grid grid-cols-4 gap-4">
-            <StatCard icon={Hash} label="Appels IA" value={String(data.totalCalls)} />
-            <StatCard icon={Zap} label="Tokens entree" value={formatNumber(data.totalTokensIn)} />
-            <StatCard icon={BarChart3} label="Tokens sortie" value={formatNumber(data.totalTokensOut)} />
-            <StatCard icon={DollarSign} label="Cout estime" value={`$${data.totalCost.toFixed(4)}`} />
+            <StatCard icon={Hash} label="Appels IA" value={String(displayData.totalCalls)} />
+            <StatCard icon={Zap} label="Tokens entree" value={formatNumber(displayData.totalTokensIn)} />
+            <StatCard icon={BarChart3} label="Tokens sortie" value={formatNumber(displayData.totalTokensOut)} />
+            <StatCard icon={DollarSign} label="Cout estime" value={`$${displayData.totalCost.toFixed(4)}`} />
           </div>
+
+          {/* Comparaison cote a cote si "all" */}
+          {activeTab === "all" && data && parkinson && (
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-4">
+                <h3 className="text-xs font-semibold text-muted-foreground mb-1">YdvSystems</h3>
+                <p className="text-lg font-bold text-foreground">${data.totalCost.toFixed(4)}</p>
+                <p className="text-xs text-muted-foreground">{data.totalCalls} appels</p>
+              </div>
+              <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-4">
+                <h3 className="text-xs font-semibold text-muted-foreground mb-1">Blog Parkinson</h3>
+                <p className="text-lg font-bold text-foreground">${parkinson.totalCost.toFixed(4)}</p>
+                <p className="text-xs text-muted-foreground">{parkinson.totalCalls} appels</p>
+              </div>
+            </div>
+          )}
 
           <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-6">
             <h2 className="text-sm font-semibold text-foreground mb-4">Usage par type d&apos;action</h2>
-            {Object.keys(data.byAction).length === 0 ? (
+            {Object.keys(displayData.byAction).length === 0 ? (
               <p className="text-sm text-muted-foreground">Aucune donnee pour cette periode</p>
             ) : (
               <div className="space-y-3">
-                {Object.entries(data.byAction)
+                {Object.entries(displayData.byAction)
                   .sort(([, a], [, b]) => b.count - a.count)
                   .map(([action, stats]) => {
-                    const pct = data.totalCalls > 0 ? (stats.count / data.totalCalls) * 100 : 0
+                    const pct = displayData.totalCalls > 0 ? (stats.count / displayData.totalCalls) * 100 : 0
                     return (
                       <div key={action} className="space-y-1">
                         <div className="flex items-center justify-between text-xs">
@@ -108,6 +183,7 @@ function formatNumber(n: number): string {
 
 function formatAction(action: string): string {
   const map: Record<string, string> = {
+    // YdvSystems actions
     outline: "Generation plan",
     article_from_outline: "Generation article",
     article_legacy: "Generation simple",
@@ -121,6 +197,14 @@ function formatAction(action: string): string {
     translate: "Traduction",
     research: "Recherche",
     section_regen: "Regeneration section",
+    // Parkinson blog actions
+    reformulate: "Reformulation (Parkinson)",
+    generate: "Generation paragraphe (Parkinson)",
+    generate_retry: "Generation retry (Parkinson)",
+    expand: "Expansion texte (Parkinson)",
+    expand_retry: "Expansion retry (Parkinson)",
+    theme_assist: "Assistance thematique (Parkinson)",
+    transcribe: "Transcription vocale (Parkinson)",
   }
   return map[action] || action
 }
