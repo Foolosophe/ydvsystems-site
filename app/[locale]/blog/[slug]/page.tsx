@@ -15,9 +15,9 @@ export const dynamic = "force-dynamic"
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { slug, locale } = await params
 
   const article = await prisma.article.findUnique({
     where: { slug, status: "PUBLISHED" },
@@ -40,7 +40,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime: article.publishedAt?.toISOString(),
-      url: `https://ydvsystems.com/blog/${slug}`,
+      url: `https://ydvsystems.com/${locale}/blog/${slug}`,
       siteName: "YdvSystems",
       ...(article.coverImage ? { images: [{ url: article.coverImage }] } : {}),
     },
@@ -95,8 +95,8 @@ export default async function BlogArticlePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://ydvsystems.com" },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbBlog"), item: "https://ydvsystems.com/blog" },
-      { "@type": "ListItem", position: 3, name: article.title, item: `https://ydvsystems.com/blog/${slug}` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbBlog"), item: `https://ydvsystems.com/${locale}/blog` },
+      { "@type": "ListItem", position: 3, name: article.title, item: `https://ydvsystems.com/${locale}/blog/${slug}` },
     ],
   }
 
