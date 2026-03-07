@@ -13,6 +13,7 @@ import { RelatedArticles } from "@/components/blog/RelatedArticles"
 import ReadingProgressBar from "@/components/blog/ReadingProgressBar"
 import { TableOfContents, addHeadingIds } from "@/components/blog/TableOfContents"
 import CodeHighlight from "@/components/blog/CodeHighlight"
+import NewsletterForm from "@/components/NewsletterForm"
 import "./prism-theme.css"
 
 export const dynamic = "force-dynamic"
@@ -66,6 +67,7 @@ export default async function BlogArticlePage({
   if (!article) notFound()
 
   const t = await getTranslations("blog.article")
+  const tBlog = await getTranslations("blog")
   const locale = await getLocale()
 
   const relatedArticles = await prisma.article.findMany({
@@ -189,6 +191,18 @@ export default async function BlogArticlePage({
           articles={relatedArticles}
           title={t("relatedArticles")}
           readArticleLabel={t("readMore")}
+        />
+
+        <NewsletterForm
+          translations={{
+            title: tBlog("newsletter.title"),
+            description: tBlog("newsletter.description"),
+            placeholder: tBlog("newsletter.placeholder"),
+            button: tBlog("newsletter.button"),
+            success: tBlog("newsletter.success"),
+            alreadySubscribed: tBlog("newsletter.alreadySubscribed"),
+            error: tBlog("newsletter.error"),
+          }}
         />
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
