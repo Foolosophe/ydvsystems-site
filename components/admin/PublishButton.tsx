@@ -81,19 +81,19 @@ export default function PublishButton({ articleId, status, checklistProgress = 1
     )
   }
 
-  // DRAFT
+  // DRAFT — publier directement
   return (
     <div className="flex items-center gap-2">
       {error && <span className="text-xs text-destructive">{error}</span>}
       <button
-        onClick={() => handleAction("REVIEW")}
+        onClick={() => handleAction("PUBLISHED")}
         disabled={loading}
-        className="px-4 py-2 rounded-xl border-2 border-primary text-primary text-sm font-medium hover:bg-primary/5 transition-colors disabled:opacity-50 flex items-center gap-2"
+        className="px-4 py-2 rounded-xl bg-primary text-white text-sm font-medium hover:bg-(--accent-hover) transition-colors disabled:opacity-50 flex items-center gap-2 shadow-sm btn-glow"
       >
         <span key={loading ? "loading" : "idle"}>
-          {loading ? <Loader2 size={16} className="animate-spin" /> : <ClipboardCheck size={16} />}
+          {loading ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
         </span>
-        Mettre en relecture
+        Publier
       </button>
     </div>
   )
