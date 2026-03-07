@@ -10,6 +10,7 @@ import DraftAutoSave from "@/components/admin/DraftAutoSave"
 import PublishButton from "@/components/admin/PublishButton"
 import ArticlePreview from "@/components/admin/ArticlePreview"
 import QualityScorePanel from "@/components/admin/QualityScorePanel"
+import CoverImagePicker from "@/components/admin/CoverImagePicker"
 import { Save, Loader2, CheckCircle2, Eye, EyeOff } from "lucide-react"
 import { ARTICLE_CATEGORIES } from "@/lib/schemas/blog"
 
@@ -20,6 +21,7 @@ export default function NewArticlePage() {
   const [content, setContent] = useState("")
   const [excerpt, setExcerpt] = useState("")
   const [category, setCategory] = useState("")
+  const [coverImage, setCoverImage] = useState("")
   const [selectedText, setSelectedText] = useState("")
   const [saving, setSaving] = useState(false)
   const [savedId, setSavedId] = useState<number | null>(null)
@@ -37,7 +39,7 @@ export default function NewArticlePage() {
         const res = await fetch(`/api/admin/articles/${savedId}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ title, content, excerpt, category }),
+          body: JSON.stringify({ title, content, excerpt, category, coverImage }),
         })
         if (!res.ok) {
           const json = await res.json()
@@ -52,6 +54,7 @@ export default function NewArticlePage() {
             content,
             excerpt,
             category,
+            coverImage,
             aiAssisted: mode !== "libre",
           }),
         })
@@ -146,7 +149,7 @@ export default function NewArticlePage() {
             <ArticlePreview title={title} content={content} category={category} excerpt={excerpt} />
           </div>
         ) : (
-          <div className={`grid gap-6 ${mode === "assiste" || showAssist ? "grid-cols-[1fr_320px]" : ""}`}>
+          <div className="grid gap-6 grid-cols-[1fr_320px]">
             <div className="space-y-4">
               {aiGenerated && (
                 <div className="flex items-center justify-between p-4 rounded-xl border border-green-200 bg-green-50">
@@ -218,9 +221,17 @@ export default function NewArticlePage() {
               <QualityScorePanel content={content} />
             </div>
 
-            {(mode === "assiste" || showAssist) && (
-              <AiAssistPanel selectedText={selectedText} content={content} onInsert={handleInsertAi} onTitleChange={setTitle} />
-            )}
+            <div className="space-y-4">
+              <CoverImagePicker
+                title={title}
+                excerpt={excerpt}
+                coverImage={coverImage}
+                onSelect={setCoverImage}
+              />
+              {(mode === "assiste" || showAssist) && (
+                <AiAssistPanel selectedText={selectedText} content={content} onInsert={handleInsertAi} onTitleChange={setTitle} />
+              )}
+            </div>
           </div>
         )
       )}
