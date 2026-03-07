@@ -63,14 +63,27 @@ export async function GET(req: NextRequest) {
   try {
     const token = await getToken()
 
-    const [stats, pages] = await Promise.all([
+    const [rawStats, rawPages] = await Promise.all([
       umamiGet(token, `/websites/${WEBSITE_ID}/stats`, params),
       umamiGet(token, `/websites/${WEBSITE_ID}/metrics`, {
         ...params,
-        type: "url",
+        type: "path",
         limit: "10",
       }),
     ])
+
+    // Normalize Umami v2 flat format → { value, prev } format
+    const comp = rawStats.comparison || {}
+    const stats = {
+      pageviews: { value: rawStats.pageviews ?? 0, prev: comp.pageviews ?? 0 },
+      visitors: { value: rawStats.visitors ?? 0, prev: comp.visitors ?? 0 },
+      visits: { value: rawStats.visits ?? 0, prev: comp.visits ?? 0 },
+      bounces: { value: rawStats.bounces ?? 0, prev: comp.bounces ?? 0 },
+      totaltime: { value: rawStats.totaltime ?? 0, prev: comp.totaltime ?? 0 },
+    }
+
+    // Normalize metrics: Umami v2 uses { x, y } already
+    const pages = rawPages.map((p: { x: string; y: number }) => ({ x: p.x, y: p.y }))
 
     return NextResponse.json({ stats, pages, period })
   } catch (err) {
