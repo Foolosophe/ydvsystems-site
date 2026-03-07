@@ -8,6 +8,7 @@ import { prisma } from "@/lib/db"
 import { calculateReadTime } from "@/lib/blog/readTime"
 import { ViewCounter } from "./view-counter"
 import { ABTitle } from "./ab-title"
+import { ShareButtons } from "./share-buttons"
 
 export const dynamic = "force-dynamic"
 
@@ -149,7 +150,7 @@ export default async function BlogArticlePage({
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
 
-        <div className="mt-14 pt-8 border-t border-border">
+        <div className="mt-14 pt-8 border-t border-border flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
               YD
@@ -161,6 +162,7 @@ export default async function BlogArticlePage({
               </p>
             </div>
           </div>
+          <ShareButtons title={article.title} slug={slug} />
         </div>
 
         <div className="mt-10 pt-6 border-t border-border flex items-center justify-between">
