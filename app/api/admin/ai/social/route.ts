@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { articleId, platforms } = result.data
-    const siteUrl = new URL(req.url).origin
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ydvsystems.com"
     const posts = await generateSocialPosts(articleId, platforms, siteUrl)
 
     // Persister les posts en DB

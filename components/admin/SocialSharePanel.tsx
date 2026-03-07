@@ -18,7 +18,7 @@ export default function SocialSharePanel({ articleId, articleSlug }: SocialShare
   const [regenerating, setRegenerating] = useState<string | null>(null)
   const [error, setError] = useState("")
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (typeof window !== "undefined" ? window.location.origin : "")
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ydvsystems.com"
   const articleUrl = `${siteUrl}/fr/blog/${articleSlug}`
 
   function togglePlatform(platform: string) {
