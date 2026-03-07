@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useCallback } from "react"
 
 export function CountUp({
   end,
@@ -12,58 +12,61 @@ export function CountUp({
   duration?: number
 }) {
   const ref = useRef<HTMLSpanElement>(null)
-  const [value, setValue] = useState(0)
-  const [started, setStarted] = useState(false)
+  const rafId = useRef<number>(0)
+  const hasRun = useRef(false)
 
-  useEffect(() => {
+  const animate = useCallback(() => {
     const el = ref.current
-    if (!el) return
+    if (!el || hasRun.current) return
+    hasRun.current = true
 
-    // Skip animation for reduced motion
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setValue(end)
+      el.textContent = end.toLocaleString("fr-FR") + suffix
       return
     }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStarted(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.3 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [end])
-
-  useEffect(() => {
-    if (!started) return
 
     const startTime = performance.now()
 
     function tick(now: number) {
       const elapsed = now - startTime
       const progress = Math.min(elapsed / duration, 1)
-      // ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3)
-      setValue(Math.round(eased * end))
-
+      const value = Math.round(eased * end)
+      if (ref.current) {
+        ref.current.textContent = value.toLocaleString("fr-FR") + suffix
+      }
       if (progress < 1) {
-        requestAnimationFrame(tick)
+        rafId.current = requestAnimationFrame(tick)
       }
     }
 
-    requestAnimationFrame(tick)
-  }, [started, end, duration])
+    rafId.current = requestAnimationFrame(tick)
+  }, [end, suffix, duration])
 
-  // Format with space thousands separator (French style)
-  const formatted = value.toLocaleString("fr-FR")
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          animate()
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+
+    return () => {
+      observer.disconnect()
+      if (rafId.current) cancelAnimationFrame(rafId.current)
+    }
+  }, [animate])
 
   return (
-    <span ref={ref} aria-live="polite" aria-atomic="true">
-      {formatted}{suffix}
+    <span ref={ref} translate="no" className="notranslate" aria-live="polite" aria-atomic="true">
+      0{suffix}
     </span>
   )
 }

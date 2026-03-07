@@ -347,6 +347,8 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
       onClick={handleSkip}
       role="status"
       aria-label="Loading"
+      translate="no"
+      className="notranslate"
       style={{
         position: "fixed", inset: 0, zIndex: 9999,
         backgroundColor: BG_COLOR,

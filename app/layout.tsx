@@ -13,8 +13,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={outfit.variable}>
-      <body className="antialiased">{children}</body>
+    <html lang="fr" className={outfit.variable} translate="no">
+      <head>
+        <meta name="google" content="notranslate" />
+      </head>
+      <body className="antialiased notranslate">{children}</body>
     </html>
   )
 }
