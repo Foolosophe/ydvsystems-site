@@ -30,6 +30,7 @@ public/sw.js.map
 # misc
 .DS_Store
 *.pem
+CREDENTIALS.md
 
 # debug
 npm-debug.log*

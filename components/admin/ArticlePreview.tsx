@@ -9,9 +9,10 @@ interface ArticlePreviewProps {
   content: string
   category: string
   excerpt: string
+  coverImage?: string
 }
 
-export default function ArticlePreview({ title, content, category, excerpt }: ArticlePreviewProps) {
+export default function ArticlePreview({ title, content, category, excerpt, coverImage }: ArticlePreviewProps) {
   const words = countWords(content)
   const readTime = readingTime(words)
   const today = new Date().toLocaleDateString("fr-FR", {
@@ -27,6 +28,13 @@ export default function ArticlePreview({ title, content, category, excerpt }: Ar
       </div>
 
       <article>
+        {coverImage && (
+          <img
+            src={coverImage}
+            alt={title || "Couverture"}
+            className="w-full h-64 object-cover rounded-xl mb-8"
+          />
+        )}
         <header className="mb-10">
           <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs mb-4">
             {category || "Categorie"}

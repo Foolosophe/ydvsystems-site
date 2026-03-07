@@ -60,7 +60,8 @@ export default function NewArticlePage() {
         })
         const json = await res.json()
         if (res.ok) {
-          setSavedId(json.data.id)
+          router.push(`/admin/articles/${json.data.id}`)
+          return
         } else {
           setError(json.error || "Erreur de sauvegarde")
         }
@@ -146,7 +147,7 @@ export default function NewArticlePage() {
       {(mode !== "genere" || content) && (
         preview ? (
           <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-8">
-            <ArticlePreview title={title} content={content} category={category} excerpt={excerpt} />
+            <ArticlePreview title={title} content={content} category={category} excerpt={excerpt} coverImage={coverImage} />
           </div>
         ) : (
           <div className="grid gap-6 grid-cols-[1fr_320px]">

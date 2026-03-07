@@ -163,7 +163,7 @@ export default function EditArticlePage() {
 
       {preview ? (
         <div className="bg-white rounded-xl border border-border shadow-(--shadow-card) p-8">
-          <ArticlePreview title={title} content={content} category={category} excerpt={excerpt} />
+          <ArticlePreview title={title} content={content} category={category} excerpt={excerpt} coverImage={coverImage} />
         </div>
       ) : (
         <div className={`grid gap-6 ${showAssist ? "grid-cols-[1fr_320px]" : ""}`}>
