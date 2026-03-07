@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import { Linkedin, Twitter, Facebook, LinkIcon, Check } from "lucide-react"
+import { useEffect, useState } from "react"
+import { Linkedin, Twitter, Facebook, LinkIcon, Check, Share2 } from "lucide-react"
 
 interface ShareButtonsProps {
   title: string
@@ -10,10 +10,23 @@ interface ShareButtonsProps {
 
 export function ShareButtons({ title, slug }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false)
+  const [canNativeShare, setCanNativeShare] = useState(false)
 
   const url = `https://ydvsystems.com/blog/${slug}`
   const encodedUrl = encodeURIComponent(url)
   const encodedTitle = encodeURIComponent(title)
+
+  useEffect(() => {
+    setCanNativeShare(typeof navigator !== "undefined" && !!navigator.share)
+  }, [])
+
+  async function handleNativeShare() {
+    try {
+      await navigator.share({ title, url })
+    } catch {
+      // L'utilisateur a annule le partage
+    }
+  }
 
   const links = [
     {
@@ -67,6 +80,15 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
       >
         {copied ? <Check size={16} className="text-green-500" /> : <LinkIcon size={16} />}
       </button>
+      {canNativeShare && (
+        <button
+          onClick={handleNativeShare}
+          aria-label="Partager"
+          className="p-2 rounded-lg border border-border text-muted-foreground hover:text-primary hover:bg-secondary transition-all"
+        >
+          <Share2 size={16} />
+        </button>
+      )}
     </div>
   )
 }
