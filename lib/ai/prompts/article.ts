@@ -95,7 +95,7 @@ ${brief.angle ? `- Angle / These : ${brief.angle}` : ""}
 - Public cible : ${audienceDesc}
 - Ton : ${toneDesc}
 - Categorie : ${brief.category}
-${brief.sources ? `\n**SOURCES A INTEGRER :**\n${brief.sources}\nIntegre ces sources naturellement dans le texte avec des citations (<blockquote>) ou des references en gras.` : ""}
+${brief.sources ? `\n**SOURCES A INTEGRER :**\n${brief.sources}\nIntegre ces sources naturellement dans le texte avec des citations (<blockquote>) ou des references en gras.\nTermine l'article par une section <h2>Sources et references</h2> listant toutes les sources utilisees sous forme de liens cliquables (<a href="...">). Si une source n'a pas d'URL, cite-la en texte. Ne genere PAS cette section si aucune source n'a ete fournie.` : ""}
 
 **PLAN A SUIVRE (dans cet ordre exact) :**
 ${outlineStr}
