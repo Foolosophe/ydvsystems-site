@@ -29,7 +29,7 @@ export default async function middleware(req: NextRequest) {
   }
 
   // i18n middleware for non-admin, non-api routes
-  if (!pathname.startsWith("/admin") && !pathname.startsWith("/api")) {
+  if (!pathname.startsWith("/admin") && !pathname.startsWith("/api") && !pathname.startsWith("/a/")) {
     return intlMiddleware(req)
   }
 
