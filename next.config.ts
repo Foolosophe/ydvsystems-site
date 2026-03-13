@@ -21,11 +21,11 @@ const nextConfig: NextConfig = {
     if (!umamiUrl) return []
     return [
       {
-        source: "/stats/script.js",
+        source: "/a/x.js",
         destination: `${umamiUrl}/script.js`,
       },
       {
-        source: "/api/send",
+        source: "/a/e",
         destination: `${umamiUrl}/api/send`,
       },
     ]
