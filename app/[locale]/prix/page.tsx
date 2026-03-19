@@ -11,9 +11,13 @@ import { SOLUTIONS } from "@/lib/data"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 
 export default function PrixPage() {
-  const [isAnnual, setIsAnnual] = useState(true)
+  const [billing, setBilling] = useState<"annual" | "quarterly" | "monthly">("annual")
   const t = useTranslations("pricing")
   const td = useTranslations("data.solutions")
+
+  const multiplier = billing === "annual" ? 0.8 : billing === "quarterly" ? 0.9 : 1
+  const discountLabel = billing === "annual" ? t("toggle.discountAnnual") : billing === "quarterly" ? t("toggle.discountQuarterly") : null
+  const calcPrice = (base: number) => Math.round(base * multiplier)
 
   const TIERS = ["solo", "starter", "pro", "business"] as const
   const FAQ = t.raw("faq.items") as { question: string; answer: string }[]
@@ -56,29 +60,26 @@ export default function PrixPage() {
             {t("header.description")}
           </p>
 
-          {/* Toggle mensuel / annuel */}
+          {/* Toggle mensuel / trimestriel / annuel */}
           <div className="inline-flex items-center gap-1 bg-secondary border border-border rounded-full p-1">
-            <button
-              onClick={() => setIsAnnual(true)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                isAnnual
-                  ? "bg-white text-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-secondary-foreground"
-              }`}
-            >
-              {t("toggle.annual")}
-              {isAnnual && <span className="ml-1.5 text-xs text-primary font-semibold">{t("toggle.discountAnnual")}</span>}
-            </button>
-            <button
-              onClick={() => setIsAnnual(false)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                !isAnnual
-                  ? "bg-white text-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-secondary-foreground"
-              }`}
-            >
-              {t("toggle.monthly")}
-            </button>
+            {(["annual", "quarterly", "monthly"] as const).map((period) => {
+              const isActive = billing === period
+              const discount = period === "annual" ? t("toggle.discountAnnual") : period === "quarterly" ? t("toggle.discountQuarterly") : null
+              return (
+                <button
+                  key={period}
+                  onClick={() => setBilling(period)}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    isActive
+                      ? "bg-white text-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-secondary-foreground"
+                  }`}
+                >
+                  {t(`toggle.${period}`)}
+                  {isActive && discount && <span className="ml-1.5 text-xs text-primary font-semibold">{discount}</span>}
+                </button>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -88,7 +89,7 @@ export default function PrixPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SOLUTIONS.map((solution, i) => {
-              const displayPrice = isAnnual ? solution.priceValue : solution.priceMonthly
+              const displayPrice = calcPrice(solution.priceMonthly)
               return (
                 <AnimateOnScroll key={solution.slug} delay={i * 80}>
                   <Card
@@ -120,14 +121,14 @@ export default function PrixPage() {
                           <span className="text-3xl font-bold text-foreground">{displayPrice} &euro;</span>
                           <span className="text-sm text-muted-foreground">{t("perMonth")}</span>
                         </div>
-                        {isAnnual && (
+                        {billing !== "monthly" && (
                           <p className="text-xs text-muted-foreground mt-1">
-                            {t("toggle.discountAnnual")} &middot; <span className="line-through">{solution.priceMonthly} &euro;{t("perMonth")}</span>
+                            {discountLabel} &middot; <span className="line-through">{solution.priceMonthly} &euro;{t("perMonth")}</span>
                           </p>
                         )}
-                        {!isAnnual && (
+                        {billing === "monthly" && (
                           <p className="text-xs text-primary mt-1 font-medium">
-                            {solution.priceValue} &euro;{t("perMonth")} en annuel ({t("toggle.discountAnnual")})
+                            {solution.priceValue} &euro;{t("perMonth")} {t("toggle.annual")} ({t("toggle.discountAnnual")})
                           </p>
                         )}
                       </div>
@@ -224,12 +225,12 @@ export default function PrixPage() {
                         </td>
                         {TIERS.map((tier) => {
                           const base = Number(t(`${slugKey}.${tier}`))
-                          const price = isAnnual ? Math.round(base * 0.8) : base
+                          const price = calcPrice(base)
                           return (
                             <td key={tier} className="py-3 px-4 text-center">
                               <span className="font-bold" style={{ color: solution.color }}>{price} &euro;</span>
                               <span className="text-xs text-muted-foreground">{t("perMonth")}</span>
-                              {isAnnual && (
+                              {billing !== "monthly" && (
                                 <p className="text-[10px] text-muted-foreground line-through">{base} &euro;</p>
                               )}
                             </td>
@@ -266,12 +267,12 @@ export default function PrixPage() {
                     <div className="flex gap-4 flex-wrap">
                       {TIERS.map((tier) => {
                         const base = Number(combo[tier])
-                        const price = isAnnual ? Math.round(base * 0.8) : base
+                        const price = calcPrice(base)
                         return (
                           <div key={tier} className="text-center min-w-17.5">
                             <p className="text-[10px] text-muted-foreground uppercase">{tier}</p>
                             <p className="font-bold text-foreground">{price} &euro;</p>
-                            {isAnnual && (
+                            {billing !== "monthly" && (
                               <p className="text-[10px] text-muted-foreground line-through">{base} &euro;</p>
                             )}
                           </div>
@@ -303,13 +304,13 @@ export default function PrixPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {TIERS.map((tier) => {
                 const base = Number(t(`packUltime.${tier}`))
-                const price = isAnnual ? Math.round(base * 0.8) : base
+                const price = calcPrice(base)
                 return (
                   <div key={tier} className="bg-white border-2 border-amber-200 rounded-xl p-4 text-center">
                     <p className="text-xs text-muted-foreground uppercase font-semibold mb-1">{tier}</p>
                     <p className="text-2xl font-bold text-foreground">{price} &euro;</p>
                     <p className="text-xs text-muted-foreground">{t("packUltime.perMonth")}</p>
-                    {isAnnual && (
+                    {billing !== "monthly" && (
                       <p className="text-xs text-muted-foreground mt-1 line-through">{base} &euro;</p>
                     )}
                   </div>
