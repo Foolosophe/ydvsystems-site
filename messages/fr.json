@@ -54,10 +54,10 @@
     "solutions": {
       "tag": "Nos solutions",
       "title": "Logiciels métier pour le secteur social",
-      "description": "Chaque logiciel est autonome, complet et vendable seul. L'interconnexion entre solutions est un bonus optionnel.",
+      "description": "Chaque logiciel est autonome, complet et vendable seul. Socle de 14 modules inclus dans tout abonnement.",
       "statusProd": "En prod",
-      "statusSoon": "Bientôt",
       "learnMore": "En savoir plus",
+      "freeTrial": "Essai gratuit",
       "allPricing": "Voir tous les tarifs"
     },
     "freelance": {
@@ -152,7 +152,7 @@
       "freelanceTitle": "Mission freelance",
       "freelanceDescription": "Développement web, intégration IA, atelier formation, automatisation de workflows, audit maturité IA.",
       "demoTitle": "Démo logiciel",
-      "demoDescription": "Découvrez YDV Insertion, Formation, Coaching ou Manager. Essai gratuit 1 mois, sans engagement.",
+      "demoDescription": "Découvrez YDV Insertion, Formation, Coaching ou Manager. Essai gratuit 30 jours, sans engagement.",
       "meetingHighlight": "Prenons 30 min",
       "meetingText": " pour parler de votre projet. Je vous pose quelques questions pour bien comprendre votre besoin, et je vous propose une approche concrète."
     },
@@ -191,67 +191,253 @@
   "pricing": {
     "meta": {
       "title": "Tarifs — Solutions SaaS | YdvSystems",
-      "description": "Tarifs transparents pour nos logiciels SaaS : YDV Insertion, Formation, Coaching, Manager. Sans engagement, sans frais cachés."
+      "description": "Tarifs transparents pour nos logiciels SaaS : YDV Insertion, Formation, Coaching, Manager. Socle de 14 modules inclus, packs métier, multi-solutions, addons."
     },
     "header": {
       "tag": "Tarifs",
-      "title": "Tarifs transparents, sans surprise",
-      "description": "Chaque logiciel a son propre tarif. Pas de frais cachés, pas d'engagement."
+      "title": "Des prix transparents, adaptés à votre taille",
+      "description": "Socle de 14 modules inclus dans tout abonnement. Choisissez votre pack métier et votre taille de structure."
     },
     "toggle": {
       "annual": "Annuel",
+      "quarterly": "Trimestriel",
       "monthly": "Mensuel",
-      "discount": "-20%"
+      "discountAnnual": "-20%",
+      "discountQuarterly": "-10%"
     },
-    "card": {
-      "recommended": "Recommandé",
-      "statusProd": "Dispo",
-      "statusSoon": "Bientôt",
+    "socle": {
+      "tag": "Le socle commun",
+      "title": "14 modules inclus dans tout abonnement",
+      "description": "Pour ceux qui ont besoin du socle seul, sans pack métier.",
+      "modules": [
+        "Bénéficiaires — Dossiers 360°, suivi individuel, timeline, documents",
+        "Dashboard — Tableau de bord intelligent adapté au rôle",
+        "Agenda — Calendrier partagé, rendez-vous, rappels automatiques",
+        "Messages — Chat en temps réel et visioconférence Jitsi",
+        "Entretiens — Planification, compte-rendu, objectifs SMART",
+        "Alertes — Notifications automatiques, règles de déclenchement",
+        "Contacts — CRM entreprises et partenaires, historique",
+        "Prospection — Pipeline commercial, suivi candidatures, relances",
+        "Échanges — Journal des échanges (appels, emails, visites)",
+        "Rapports — Rapports d'activité, exports Word/PDF",
+        "Enquêtes — Enquêtes de satisfaction, NPS, templates",
+        "Évaluations — Campagnes d'évaluation, compétences, progression",
+        "Matrice compétences — Radar, référentiels ROME",
+        "Savoir-être — Soft skills, référentiel transversal"
+      ],
+      "solo": "39",
+      "starter": "69",
+      "pro": "129",
+      "business": "249"
+    },
+    "packs": {
+      "tag": "Packs Solutions",
+      "title": "Choisissez votre pack métier",
+      "description": "Chaque pack ajoute des modules spécifiques au socle commun.",
+      "modules": "modules",
       "perMonth": "/mois",
-      "perYear": "/an",
-      "annualTotal": "soit {total} €/an",
-      "monthlyStrike": "{price} €/mois",
-      "monthlyHint": "{price} €/mois en annuel (-20%)",
+      "freeTrial": "Essai gratuit 30 jours",
       "learnMore": "En savoir plus",
-      "preRegistration": "Pré-inscription"
+      "insertion": {
+        "name": "YDV Insertion",
+        "modules": "19 modules (14 + 5)",
+        "specifics": "DREETS, ESMS, Tripartite, Encadrant, Accès salarié",
+        "solo": "79",
+        "starter": "159",
+        "pro": "299",
+        "business": "549"
+      },
+      "formation": {
+        "name": "YDV Formation",
+        "modules": "17 modules (14 + 2 + Qualiopi)",
+        "specifics": "Formations, BPF, Qualiopi natif (sans surcoût)",
+        "solo": "69",
+        "starter": "149",
+        "pro": "269",
+        "business": "499"
+      },
+      "coaching": {
+        "name": "YDV Coaching",
+        "modules": "17 modules (14 + 3)",
+        "specifics": "Sessions coaching, VAE, Bilan de compétences",
+        "solo": "59",
+        "starter": "119",
+        "pro": "229",
+        "business": "399"
+      }
     },
-    "commonFeatures": {
-      "tag": "Inclus dans toutes les solutions",
-      "title": "Le socle commun",
-      "features": [
-        "Interface intuitive, mobile-first",
-        "IA intégrée (synthèses, suggestions, génération)",
-        "Multi-utilisateurs avec rôles",
-        "Exports PDF / Excel",
-        "Support par email",
-        "Mises à jour incluses",
-        "Conformité RGPD",
-        "Hébergement sécurisé (UE)"
+    "manager": {
+      "tag": "YDV Manager",
+      "title": "CRM, facturation et gestion commerciale",
+      "description": "Application séparée sur manager.ydvsystems.com. Pour toute structure ayant besoin d'un outil de gestion commerciale.",
+      "features": "CRM, Devis & factures, Abonnements, Tickets support, Métriques, IA commerciale, Portail client, Exports",
+      "solo": "49",
+      "starter": "99",
+      "pro": "199",
+      "business": "349",
+      "perMonth": "/mois",
+      "freeTrial": "Essai gratuit 30 jours",
+      "learnMore": "En savoir plus"
+    },
+    "multiSolutions": {
+      "tag": "Multi-solutions",
+      "title": "Structures multi-activités",
+      "description": "Le socle est compté une seule fois. Vous ne payez que les modules spécifiques de chaque solution supplémentaire.",
+      "combos": [
+        { "name": "Insertion + Formation", "solo": "109", "starter": "239", "pro": "439", "business": "799" },
+        { "name": "Insertion + Coaching", "solo": "99", "starter": "209", "pro": "399", "business": "699" },
+        { "name": "Formation + Coaching", "solo": "89", "starter": "199", "pro": "369", "business": "649" },
+        { "name": "Les 3 solutions", "solo": "129", "starter": "269", "pro": "499", "business": "899" }
       ]
+    },
+    "packUltime": {
+      "tag": "Pack Ultime",
+      "title": "3 solutions + Manager",
+      "description": "L'offre la plus complète : les 3 solutions métier + YDV Manager. Remise de 30%.",
+      "discount": "-30%",
+      "solo": "125",
+      "starter": "258",
+      "pro": "489",
+      "business": "874",
+      "perMonth": "/mois"
+    },
+    "addons": {
+      "tag": "Addons premium",
+      "title": "2 addons, c'est tout",
+      "description": "Pas de jungle de modules payants. Seulement 2 addons optionnels.",
+      "items": [
+        {
+          "name": "IA Assistant",
+          "description": "Rédaction automatique, analyse de parcours, prédictions",
+          "solo": "19",
+          "starter": "29",
+          "pro": "49",
+          "business": "89"
+        },
+        {
+          "name": "Diagnostic territorial",
+          "description": "Marché emploi local, offres France Travail, référentiels ROME",
+          "solo": "19",
+          "starter": "29",
+          "pro": "49",
+          "business": "89"
+        }
+      ],
+      "perMonth": "/mois"
+    },
+    "credits": {
+      "tag": "Crédits IA",
+      "title": "Crédits IA inclus",
+      "description": "1 crédit = 1 action IA (compte-rendu, analyse, suggestion, etc.)",
+      "included": {
+        "solo": "50",
+        "starter": "200",
+        "pro": "500",
+        "business": "2 000",
+        "enterprise": "Illimité"
+      },
+      "perMonth": "crédits/mois",
+      "rechargeTitle": "Packs recharge",
+      "recharges": [
+        { "credits": "100", "price": "9" },
+        { "credits": "500", "price": "39" },
+        { "credits": "1 000", "price": "69" }
+      ],
+      "rechargeUnit": "crédits"
+    },
+    "tiers": {
+      "tag": "Tailles de structure",
+      "title": "Quelle taille vous correspond ?",
+      "headers": ["", "Solo", "Starter", "Pro", "Business", "Enterprise"],
+      "rows": [
+        { "label": "Utilisateurs", "values": ["1-2", "3-10", "11-30", "31-100", "100+"] },
+        { "label": "Bénéficiaires", "values": ["30", "100", "500", "2 000", "Illimité"] },
+        { "label": "Stockage", "values": ["10 Go", "50 Go", "100 Go", "500 Go", "Illimité"] },
+        { "label": "Crédits IA", "values": ["50", "200", "500", "2 000", "Illimité"] },
+        { "label": "Support", "values": ["Email 48h", "Email 24h", "Email 12h", "Tél + email 4h", "Dédié SLA"] },
+        { "label": "Inscription", "values": ["Self-service", "Self-service", "Demo", "Demo", "Demo"] }
+      ]
+    },
+    "options": {
+      "tag": "Options supplémentaires",
+      "title": "Besoin de plus ?",
+      "items": [
+        { "label": "+50 bénéficiaires", "price": "15 €/mois" },
+        { "label": "+5 utilisateurs", "price": "19 €/mois" },
+        { "label": "+1 utilisateur", "price": "7 €/mois" },
+        { "label": "+50 Go stockage", "price": "5 €/mois" },
+        { "label": "+100 Go stockage", "price": "9 €/mois" }
+      ]
+    },
+    "services": {
+      "tag": "Services premium",
+      "title": "Accompagnement sur mesure",
+      "items": [
+        { "label": "Onboarding assisté", "description": "Config + import + formation 2h visio", "price": "499 €" },
+        { "label": "Migration de données", "description": "Import depuis votre logiciel actuel", "price": "299–799 €" },
+        { "label": "Formation utilisateurs", "description": "Sessions de formation personnalisées", "price": "149 €/h" },
+        { "label": "SLA garanti", "description": "Temps de réponse garanti contractuellement", "price": "+20% du prix mensuel" }
+      ]
+    },
+    "discounts": {
+      "tag": "Politique de remise",
+      "title": "Remises disponibles",
+      "description": "Remises non cumulables : seule la plus avantageuse s'applique.",
+      "items": [
+        { "label": "Trimestriel", "value": "-10%", "detail": "Engagement 12 mois" },
+        { "label": "Annuel", "value": "-20%", "detail": "Paiement en une fois" },
+        { "label": "Multi-solution 2", "value": "-15%", "detail": "2 solutions combinées" },
+        { "label": "Multi-solution 3", "value": "-25%", "detail": "3 solutions combinées" },
+        { "label": "Pack Ultime", "value": "-30%", "detail": "3 solutions + Manager" },
+        { "label": "ESS", "value": "-10%", "detail": "Asso loi 1901, SIAE" },
+        { "label": "Volume 5-10 structures", "value": "-10%", "detail": "" },
+        { "label": "Volume 11-25", "value": "-15%", "detail": "" },
+        { "label": "Volume 26-50", "value": "-20%", "detail": "" },
+        { "label": "Volume 50+", "value": "Sur devis", "detail": "" }
+      ]
+    },
+    "trial": {
+      "tag": "Essai gratuit",
+      "title": "30 jours, accès complet",
+      "description": "Testez toutes les fonctionnalités sans restriction pendant 30 jours.",
+      "features": [
+        "Accès complet à tous les modules",
+        "20 crédits IA inclus",
+        "1 Go de stockage",
+        "10 bénéficiaires",
+        "Sans CB pour Solo/Starter",
+        "Avec CB ou demo pour Pro+"
+      ],
+      "earlyAdopter": "Early adopter : -30% à vie pour les 50 premiers clients par solution",
+      "cta": "Démarrer l'essai gratuit"
     },
     "faq": {
       "tag": "Questions fréquentes",
       "title": "FAQ Tarifs",
       "items": [
         {
-          "question": "Y a-t-il un engagement de durée ?",
-          "answer": "Non. Tous nos abonnements sont sans engagement. Vous pouvez annuler à tout moment."
+          "question": "Qu'est-ce que le socle ?",
+          "answer": "Le socle, ce sont 14 modules inclus dans tout abonnement : bénéficiaires, dashboard, agenda, messages, entretiens, alertes, contacts, prospection, échanges, rapports, enquêtes, évaluations, matrice compétences, savoir-être."
         },
         {
-          "question": "Puis-je tester avant de m'engager ?",
-          "answer": "Oui. YDV Insertion propose un essai gratuit de 1 mois, sans carte bancaire. Les autres solutions proposeront la même offre à leur lancement."
+          "question": "Qualiopi est-il en supplément ?",
+          "answer": "Non. La conformité Qualiopi est intégrée nativement dans le Pack Formation, sans surcoût."
         },
         {
-          "question": "Puis-je utiliser plusieurs solutions ?",
-          "answer": "Oui. Chaque solution est indépendante avec son propre abonnement. Un compte unique vous donne accès à toutes vos solutions."
+          "question": "Je fais insertion ET formation, je paie 2 fois le socle ?",
+          "answer": "Non. Le socle est compté une seule fois. Vous ne payez que les modules spécifiques de chaque solution supplémentaire."
         },
         {
-          "question": "Les tarifs incluent-ils la TVA ?",
-          "answer": "Les tarifs affichés sont HT. La TVA française (20%) s'applique pour les clients basés en France."
+          "question": "Que se passe-t-il si je dépasse mes crédits IA ?",
+          "answer": "L'IA se bloque, pas de facturation surprise. Achetez un pack recharge pour continuer."
         },
         {
-          "question": "Quelle est la différence entre mensuel et annuel ?",
-          "answer": "L'abonnement annuel vous fait économiser 20% par rapport au tarif mensuel. Vous êtes facturé une fois par an, sans engagement de renouvellement."
+          "question": "Puis-je changer de taille ?",
+          "answer": "Montée immédiate (prorata). Descente en fin de période en cours."
+        },
+        {
+          "question": "Où sont hébergées mes données ?",
+          "answer": "Hetzner (Allemagne, UE) pour les serveurs, Scaleway (Paris, France) pour le stockage fichiers. RGPD compliant, sauvegardes quotidiennes, chiffrement HTTPS, DPA disponible sur demande."
         }
       ]
     },
@@ -259,7 +445,9 @@
       "title": "Des questions sur les tarifs ?",
       "description": "Contactez-nous pour un devis personnalisé ou une démo gratuite.",
       "button": "Nous contacter"
-    }
+    },
+    "enterprise": "Sur devis",
+    "perMonth": "/mois"
   },
   "solutionsIndex": {
     "meta": {
@@ -272,8 +460,8 @@
       "description": "Chaque logiciel est autonome, complet et vendable seul. Conçus pour les professionnels de l'insertion, de la formation et du coaching."
     },
     "statusProd": "En prod",
-    "statusSoon": "Bientôt",
     "learnMore": "En savoir plus",
+    "freeTrial": "Essai gratuit 30 jours",
     "cta": {
       "title": "Des questions sur nos solutions ?",
       "description": "Demandez une démo gratuite ou contactez-nous pour en savoir plus.",
@@ -284,32 +472,14 @@
   "solutions": {
     "common": {
       "inProduction": "En production",
-      "comingSoon": "Bientôt disponible",
+      "freeTrial": "Essai gratuit 30 jours",
       "requestDemo": "Demander une démo",
-      "preRegistration": "Pré-inscription gratuite",
-      "notifiedAtLaunch": "Soyez prévenu dès le lancement",
       "featuresTag": "Fonctionnalités",
       "featuresTitle": "Tout ce dont vous avez besoin",
-      "timelineTag": "Calendrier prévisionnel",
-      "timelineTitle": "Feuille de route",
-      "earlyAccessTitle": "Soyez parmi les premiers utilisateurs",
-      "earlyAccessDescription": "Inscrivez-vous pour accéder à la beta en avant-première et bénéficier d'un tarif préférentiel au lancement.",
       "pricingTag": "Tarif",
       "allSolutions": "Toutes les solutions",
       "comparePricing": "Comparer les tarifs",
       "notFound": "Solution introuvable"
-    },
-    "timeline": {
-      "coaching": [
-        { "step": "Conception & architecture", "date": "T2 2026" },
-        { "step": "Beta privée", "date": "T4 2026" },
-        { "step": "Lancement public", "date": "T1 2027" }
-      ],
-      "manager": [
-        { "step": "Conception & architecture", "date": "T3 2026" },
-        { "step": "Beta privée", "date": "T1 2027" },
-        { "step": "Lancement public", "date": "T2 2027" }
-      ]
     }
   },
   "blog": {
@@ -394,27 +564,27 @@
   "data": {
     "solutions": {
       "insertion": {
-        "subtitle": "Logiciel de suivi pour l'IAE",
-        "description": "Suivi des bénéficiaires, entretiens, bilans, IA intégrée. Conçu par un CIP, pour les CIP.",
-        "price": "À partir de 59 €",
+        "subtitle": "Le logiciel des professionnels de l'insertion par l'activité économique",
+        "description": "Suivi des bénéficiaires, entretiens, reporting DREETS, IA intégrée. 19 modules pour les SIAE, missions locales, CHRS.",
+        "price": "À partir de 79 €",
         "priceUnit": "/mois"
       },
       "formation": {
-        "subtitle": "Gestion des organismes de formation",
-        "description": "Catalogue, conventions, émargement digital, conformité Qualiopi. Tout en un pour les 70 000 OF de France.",
-        "price": "À partir de 49 €",
+        "subtitle": "La gestion complète des organismes de formation, Qualiopi inclus",
+        "description": "Catalogue, sessions, émargement digital, BPF, conformité Qualiopi intégrée nativement. 17 modules pour les OF, CFA, prestataires CPF.",
+        "price": "À partir de 69 €",
         "priceUnit": "/mois"
       },
       "coaching": {
-        "subtitle": "Bilan de compétences & coaching",
-        "description": "Parcours structurés, évaluations, rapports automatisés. Pour les centres de bilan et les coachs.",
-        "price": "À partir de 39 €",
+        "subtitle": "Bilan de compétences, VAE et accompagnement individuel",
+        "description": "Parcours structurés en 3 phases, VAE complète, questionnaires, évaluations. 17 modules pour les cabinets de coaching et centres de bilan.",
+        "price": "À partir de 59 €",
         "priceUnit": "/mois"
       },
       "manager": {
-        "subtitle": "CRM / ERP pour éditeurs SaaS",
-        "description": "Gestion clients, abonnements, facturation, analytics. Conçu pour les éditeurs SaaS et les freelances.",
-        "price": "À partir de 29 €",
+        "subtitle": "CRM, facturation et gestion commerciale tout-en-un",
+        "description": "Prospects, clients, devis, factures, abonnements, tickets support, métriques MRR/ARR. Pour toute structure ayant besoin d'un outil de gestion commerciale.",
+        "price": "À partir de 49 €",
         "priceUnit": "/mois"
       }
     },
@@ -537,65 +707,85 @@
     },
     "solutionPages": {
       "insertion": {
-        "tagline": "Le logiciel des professionnels de l'insertion",
+        "tagline": "Le logiciel des professionnels de l'insertion par l'activité économique",
         "heroTitle": "Le logiciel complet pour l'insertion par l'activité économique",
-        "heroSubtitle": "Suivi des bénéficiaires, entretiens, bilans, IA intégrée. Conçu par un CIP, pour les CIP.",
+        "heroSubtitle": "19 modules pour les SIAE (AI, ACI, EI, ETTI), missions locales, CHRS. Suivi des bénéficiaires, entretiens, reporting DREETS, IA intégrée.",
         "features": [
-          { "title": "Gestion des bénéficiaires", "description": "Fiches complètes, parcours personnalisés, documents rattachés, historique complet." },
-          { "title": "Entretiens & rendez-vous", "description": "Planification, comptes-rendus automatiques, relances, suivi des présences." },
-          { "title": "IA intégrée", "description": "Synthèses automatiques, suggestions de parcours, analyse prédictive, génération de documents." },
-          { "title": "Bilans & statistiques", "description": "Tableaux de bord temps réel, exports ASP/FSE, indicateurs Qualiopi, rapports PDF." },
-          { "title": "RBAC & multi-structures", "description": "Permissions granulaires par rôle, multi-sites, audit trail complet, conformité RGPD." },
-          { "title": "Documents & exports", "description": "Génération automatique de documents (CERFA, bilans, conventions), exports Excel/PDF." }
+          { "title": "Gestion des bénéficiaires", "description": "Dossier 360°, freins, atouts, compétences, timeline, documents rattachés." },
+          { "title": "Entretiens structurés avec IA", "description": "Planification, compte-rendu automatique, suggestions, objectifs SMART." },
+          { "title": "Alertes automatiques", "description": "Notifications automatiques, suivi des échéances, règles de déclenchement." },
+          { "title": "ETP/ASP et reporting DREETS", "description": "Exports conformes, indicateurs DREETS, reporting automatisé." },
+          { "title": "Contrats d'insertion", "description": "CDDI et renouvellements, conventions tripartites, suivi des engagements." },
+          { "title": "RBAC & multi-structures", "description": "Permissions granulaires par rôle, isolation des données, audit trail, conformité RGPD." },
+          { "title": "Prospection entreprises", "description": "La Bonne Boîte intégrée, pipeline commercial, suivi candidatures, relances." },
+          { "title": "Clauses sociales", "description": "Marchés publics, affectations, pointage, bilans de clauses." },
+          { "title": "Rapports & exports", "description": "Rapports d'activité, exports Word/PDF, documents automatisés (CERFA, bilans, conventions)." },
+          { "title": "Encadrant & accès salarié", "description": "Interface encadrant technique, évaluation terrain, pointage. Portail salarié en insertion." }
         ],
-        "pricingPrice": "À partir de 59 €",
+        "pricingPrice": "À partir de 79 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 1 mois gratuit, sans CB",
+        "pricingTrial": "Essai 30 jours gratuit, sans CB",
         "testimonialQuote": "YDV Insertion nous a permis de centraliser tout le suivi de nos bénéficiaires en un seul outil. L'IA nous fait gagner un temps considérable sur les bilans.",
         "testimonialAuthor": "Structure IDEAL",
         "testimonialRole": "Premier utilisateur pilote"
       },
       "formation": {
-        "tagline": "La gestion complète des organismes de formation",
+        "tagline": "La gestion complète des organismes de formation, Qualiopi inclus",
         "heroTitle": "Organismes de formation : pilotez votre activité de A à Z",
-        "heroSubtitle": "Catalogue, conventions, émargement, BPF, conformité Qualiopi. Tout en un, pensé pour les 70 000 OF de France.",
+        "heroSubtitle": "17 modules pour les OF Qualiopi, CFA, prestataires CPF, centres de bilan. Catalogue, sessions, émargement, BPF, conformité Qualiopi intégrée nativement.",
         "features": [
           { "title": "Catalogue de formations", "description": "Création et gestion du catalogue, programmes, objectifs pédagogiques, modalités." },
-          { "title": "Conventions & devis", "description": "Génération automatique des conventions, devis, contrats de formation." },
-          { "title": "Émargement digital", "description": "Signature électronique, feuilles de présence dématérialisées, QR code." },
-          { "title": "Conformité Qualiopi", "description": "Indicateurs Qualiopi intégrés, preuves documentaires, préparation audit." }
+          { "title": "Sessions & planification", "description": "Calendrier, salles, formateurs, gestion des participants." },
+          { "title": "Émargement digital", "description": "QR code, signature tactile, feuilles de présence dématérialisées." },
+          { "title": "Suivi progression", "description": "Suivi des apprenants, évaluations, acquis, progression individuelle." },
+          { "title": "BPF", "description": "Bilan Pédagogique et Financier, déclaration annuelle automatisée." },
+          { "title": "Conformité Qualiopi", "description": "Intégrée nativement, indicateurs, preuves, audit trail. Sans surcoût." },
+          { "title": "Formateurs externes", "description": "Gestion des formateurs externes, planification, contrats." },
+          { "title": "Conventions automatisées", "description": "Génération automatique des conventions de formation, devis, contrats." },
+          { "title": "Financement OPCO/CPF", "description": "Suivi des financements, dossiers OPCO, CPF, prise en charge." },
+          { "title": "IA intégrée", "description": "Génération de programmes, analyse satisfaction, synthèses automatiques." }
+        ],
+        "pricingPrice": "À partir de 69 €",
+        "pricingUnit": "/mois",
+        "pricingTrial": "Essai 30 jours gratuit, sans CB"
+      },
+      "coaching": {
+        "tagline": "Bilan de compétences, VAE et accompagnement individuel",
+        "heroTitle": "Bilan de compétences, VAE et coaching : un outil dédié",
+        "heroSubtitle": "17 modules pour les cabinets de coaching, centres de bilan de compétences, accompagnateurs VAE.",
+        "features": [
+          { "title": "Bilan de compétences", "description": "Parcours structuré en 3 phases (préliminaire, investigation, conclusion)." },
+          { "title": "VAE complète", "description": "France VAE, livrets 1 et 2, jury, timeline complète d'accompagnement." },
+          { "title": "Questionnaires standardisés", "description": "RIASEC et autres questionnaires d'intérêts, résultats, analyses." },
+          { "title": "Évaluations de compétences", "description": "Campagnes d'évaluation, grilles de compétences, progression." },
+          { "title": "Séances de coaching", "description": "Gestion des séances, objectifs, notes, suivi du parcours." },
+          { "title": "Supervision", "description": "Analyse de pratique, supervision entre pairs." },
+          { "title": "Conventions tripartites", "description": "Génération automatique, suivi des engagements, signatures." },
+          { "title": "Portail financeur", "description": "Accès lecture seule pour les financeurs, suivi du parcours." },
+          { "title": "IA intégrée", "description": "Synthèse questionnaires, recommandations, génération de rapports." }
+        ],
+        "pricingPrice": "À partir de 59 €",
+        "pricingUnit": "/mois",
+        "pricingTrial": "Essai 30 jours gratuit, sans CB"
+      },
+      "manager": {
+        "tagline": "CRM, facturation et gestion commerciale tout-en-un",
+        "heroTitle": "Gérez vos prospects, clients, devis et factures en un seul outil",
+        "heroSubtitle": "Application séparée sur manager.ydvsystems.com. Pour toute structure ayant besoin d'un outil de gestion commerciale.",
+        "features": [
+          { "title": "CRM", "description": "Prospects, clients, pipeline commercial, segmentation, notes." },
+          { "title": "Gestion clients", "description": "Fiches clients, historique des interactions, documents, contrats." },
+          { "title": "Devis & factures", "description": "Numérotation auto, génération PDF, relances impayés." },
+          { "title": "Abonnements & licensing", "description": "Modules, quotas, métriques, suivi des licences." },
+          { "title": "Produits & modules", "description": "Catalogue produits, addons, configuration des offres." },
+          { "title": "Tickets support", "description": "SLA, portail client, suivi des demandes." },
+          { "title": "Portail client", "description": "Accès sécurisé, factures, tickets, documents." },
+          { "title": "Métriques", "description": "MRR, ARR, churn, dashboards en temps réel." },
+          { "title": "IA commerciale", "description": "Prédiction churn, génération emails, extraction données." }
         ],
         "pricingPrice": "À partir de 49 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 1 mois gratuit, sans CB"
-      },
-      "coaching": {
-        "tagline": "Bilan de compétences et accompagnement individuel",
-        "heroTitle": "Bilan de compétences, VAE et coaching : un outil dédié",
-        "heroSubtitle": "Parcours structurés, évaluations, rapports automatisés. Pour les centres de bilan et les coachs.",
-        "features": [
-          { "title": "Parcours bilan", "description": "Modèles de parcours bilan de compétences conformes, étapes personnalisables." },
-          { "title": "Évaluations", "description": "Tests, questionnaires d'intérêts, grilles de compétences, auto-évaluations." },
-          { "title": "Rapports automatisés", "description": "Synthèses générées par IA, documents de restitution, exports PDF." },
-          { "title": "Suivi des séances", "description": "Planification, comptes-rendus, suivi des heures, facturation." }
-        ],
-        "pricingPrice": "À partir de 39 €",
-        "pricingUnit": "/mois",
-        "pricingTrial": "Pré-inscription ouverte"
-      },
-      "manager": {
-        "tagline": "CRM / ERP pour éditeurs SaaS et freelances",
-        "heroTitle": "Gérez vos clients, abonnements et facturation en un seul outil",
-        "heroSubtitle": "Conçu pour les éditeurs SaaS et les freelances. Indépendant des autres solutions YDV, vendable seul.",
-        "features": [
-          { "title": "Gestion clients", "description": "Fiches clients, historique des interactions, segmentation, notes." },
-          { "title": "Abonnements & facturation", "description": "Suivi des abonnements, facturation automatique, relances impayés." },
-          { "title": "Analytics", "description": "MRR, churn, LTV, cohortes. Tableaux de bord en temps réel." },
-          { "title": "Connecteurs API", "description": "Stripe, Brevo, Slack, webhooks. Intégration avec vos outils existants." }
-        ],
-        "pricingPrice": "À partir de 29 €",
-        "pricingUnit": "/mois",
-        "pricingTrial": "Pré-inscription ouverte"
+        "pricingTrial": "Essai 30 jours gratuit, sans CB"
       }
     },
     "blogArticles": {

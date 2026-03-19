@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, CheckCircle2, Clock } from "lucide-react"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
 import { SOLUTIONS } from "@/lib/data"
@@ -39,24 +39,11 @@ export function SolutionsGrid() {
                       <h3 className="text-lg font-bold text-foreground">{solution.name}</h3>
                       <p className="text-sm font-medium text-muted-foreground">{td(`${solution.slug}.subtitle`)}</p>
                     </div>
-                    <Badge
-                      className={`badge-pulse ${
-                        solution.status === "prod"
-                          ? "bg-teal-50 text-teal-700 border-teal-200"
-                          : "bg-secondary text-muted-foreground border-border"
-                      }`}
-                    >
-                      {solution.status === "prod" ? (
-                        <span className="flex items-center gap-1">
-                          <CheckCircle2 size={12} />
-                          {t("statusProd")}
-                        </span>
-                      ) : (
-                        <span className="flex items-center gap-1">
-                          <Clock size={12} />
-                          {t("statusSoon")}
-                        </span>
-                      )}
+                    <Badge className="badge-pulse bg-teal-50 text-teal-700 border-teal-200">
+                      <span className="flex items-center gap-1">
+                        <CheckCircle2 size={12} />
+                        {t("statusProd")}
+                      </span>
                     </Badge>
                   </div>
 

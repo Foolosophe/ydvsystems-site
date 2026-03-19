@@ -54,10 +54,10 @@
     "solutions": {
       "tag": "Our products",
       "title": "Business software for the social sector",
-      "description": "Each product is standalone, fully featured and independently deployable. Cross-product integration is an optional bonus.",
+      "description": "Each product is standalone, fully featured and independently deployable. 14 core modules included in every subscription.",
       "statusProd": "Live",
-      "statusSoon": "Coming soon",
       "learnMore": "Learn more",
+      "freeTrial": "Free trial",
       "allPricing": "View all pricing"
     },
     "freelance": {
@@ -152,7 +152,7 @@
       "freelanceTitle": "Freelance mission",
       "freelanceDescription": "Web development, AI integration, corporate training workshops, workflow automation, AI maturity audits.",
       "demoTitle": "Product demo",
-      "demoDescription": "Discover YDV Insertion, Formation, Coaching or Manager. 1-month free trial, no commitment.",
+      "demoDescription": "Discover YDV Insertion, Formation, Coaching or Manager. 30-day free trial, no commitment.",
       "meetingHighlight": "Let's take 30 minutes",
       "meetingText": " to discuss your project. I'll ask a few questions to fully understand your needs, then propose a concrete approach."
     },
@@ -191,67 +191,253 @@
   "pricing": {
     "meta": {
       "title": "Pricing — SaaS Solutions | YdvSystems",
-      "description": "Transparent pricing for our SaaS products: YDV Insertion, Formation, Coaching, Manager. No commitment, no hidden fees."
+      "description": "Transparent pricing for our SaaS products: YDV Insertion, Formation, Coaching, Manager. 14 core modules included, business packs, multi-solutions, addons."
     },
     "header": {
       "tag": "Pricing",
-      "title": "Transparent pricing, no surprises",
-      "description": "Each product has its own pricing. No hidden fees, no commitment."
+      "title": "Transparent pricing, adapted to your size",
+      "description": "14 core modules included in every subscription. Choose your business pack and structure size."
     },
     "toggle": {
       "annual": "Annual",
+      "quarterly": "Quarterly",
       "monthly": "Monthly",
-      "discount": "-20%"
+      "discountAnnual": "-20%",
+      "discountQuarterly": "-10%"
     },
-    "card": {
-      "recommended": "Recommended",
-      "statusProd": "Available",
-      "statusSoon": "Coming soon",
+    "socle": {
+      "tag": "Core modules",
+      "title": "14 modules included in every subscription",
+      "description": "For those who only need the core, without a business pack.",
+      "modules": [
+        "Beneficiaries — 360° profiles, individual tracking, timeline, documents",
+        "Dashboard — Smart dashboard adapted to your role",
+        "Calendar — Shared calendar, appointments, automatic reminders",
+        "Messages — Real-time chat and Jitsi video conferencing",
+        "Interviews — Scheduling, summaries, SMART objectives",
+        "Alerts — Automatic notifications, trigger rules",
+        "Contacts — Company & partner CRM, history",
+        "Prospecting — Sales pipeline, application tracking, follow-ups",
+        "Exchanges — Exchange log (calls, emails, visits)",
+        "Reports — Activity reports, Word/PDF exports",
+        "Surveys — Satisfaction surveys, NPS, templates",
+        "Evaluations — Evaluation campaigns, skills, progression",
+        "Skills matrix — Radar, ROME frameworks",
+        "Soft skills — Soft skills, cross-functional framework"
+      ],
+      "solo": "39",
+      "starter": "69",
+      "pro": "129",
+      "business": "249"
+    },
+    "packs": {
+      "tag": "Solution packs",
+      "title": "Choose your business pack",
+      "description": "Each pack adds specific modules to the core.",
+      "modules": "modules",
       "perMonth": "/mo",
-      "perYear": "/yr",
-      "annualTotal": "i.e. {total} €/yr",
-      "monthlyStrike": "{price} €/mo",
-      "monthlyHint": "{price} €/mo with annual plan (-20%)",
+      "freeTrial": "30-day free trial",
       "learnMore": "Learn more",
-      "preRegistration": "Pre-register"
+      "insertion": {
+        "name": "YDV Insertion",
+        "modules": "19 modules (14 + 5)",
+        "specifics": "DREETS, ESMS, Tripartite, Supervisor, Employee access",
+        "solo": "79",
+        "starter": "159",
+        "pro": "299",
+        "business": "549"
+      },
+      "formation": {
+        "name": "YDV Formation",
+        "modules": "17 modules (14 + 2 + Qualiopi)",
+        "specifics": "Training, BPF, native Qualiopi (no extra cost)",
+        "solo": "69",
+        "starter": "149",
+        "pro": "269",
+        "business": "499"
+      },
+      "coaching": {
+        "name": "YDV Coaching",
+        "modules": "17 modules (14 + 3)",
+        "specifics": "Coaching sessions, RPL, Skills assessment",
+        "solo": "59",
+        "starter": "119",
+        "pro": "229",
+        "business": "399"
+      }
     },
-    "commonFeatures": {
-      "tag": "Included with every product",
-      "title": "Standard features",
-      "features": [
-        "Intuitive, mobile-first interface",
-        "Built-in AI (summaries, suggestions, document generation)",
-        "Multi-user with role-based access",
-        "PDF / Excel exports",
-        "Email support",
-        "Updates included",
-        "GDPR compliant",
-        "Secure EU hosting"
+    "manager": {
+      "tag": "YDV Manager",
+      "title": "CRM, billing and business management",
+      "description": "Standalone application on manager.ydvsystems.com. For any organization needing a business management tool.",
+      "features": "CRM, Quotes & invoices, Subscriptions, Support tickets, Metrics, Sales AI, Client portal, Exports",
+      "solo": "49",
+      "starter": "99",
+      "pro": "199",
+      "business": "349",
+      "perMonth": "/mo",
+      "freeTrial": "30-day free trial",
+      "learnMore": "Learn more"
+    },
+    "multiSolutions": {
+      "tag": "Multi-solutions",
+      "title": "Multi-activity organizations",
+      "description": "The core is counted only once. You only pay for the specific modules of each additional solution.",
+      "combos": [
+        { "name": "Insertion + Formation", "solo": "109", "starter": "239", "pro": "439", "business": "799" },
+        { "name": "Insertion + Coaching", "solo": "99", "starter": "209", "pro": "399", "business": "699" },
+        { "name": "Formation + Coaching", "solo": "89", "starter": "199", "pro": "369", "business": "649" },
+        { "name": "All 3 solutions", "solo": "129", "starter": "269", "pro": "499", "business": "899" }
       ]
+    },
+    "packUltime": {
+      "tag": "Ultimate Pack",
+      "title": "3 solutions + Manager",
+      "description": "The most comprehensive offer: all 3 business solutions + YDV Manager. 30% discount.",
+      "discount": "-30%",
+      "solo": "125",
+      "starter": "258",
+      "pro": "489",
+      "business": "874",
+      "perMonth": "/mo"
+    },
+    "addons": {
+      "tag": "Premium addons",
+      "title": "2 addons, that's it",
+      "description": "No maze of paid modules. Just 2 optional addons.",
+      "items": [
+        {
+          "name": "AI Assistant",
+          "description": "Automatic writing, pathway analysis, predictions",
+          "solo": "19",
+          "starter": "29",
+          "pro": "49",
+          "business": "89"
+        },
+        {
+          "name": "Territorial diagnosis",
+          "description": "Local job market, France Travail listings, ROME frameworks",
+          "solo": "19",
+          "starter": "29",
+          "pro": "49",
+          "business": "89"
+        }
+      ],
+      "perMonth": "/mo"
+    },
+    "credits": {
+      "tag": "AI Credits",
+      "title": "AI credits included",
+      "description": "1 credit = 1 AI action (summary, analysis, suggestion, etc.)",
+      "included": {
+        "solo": "50",
+        "starter": "200",
+        "pro": "500",
+        "business": "2,000",
+        "enterprise": "Unlimited"
+      },
+      "perMonth": "credits/mo",
+      "rechargeTitle": "Top-up packs",
+      "recharges": [
+        { "credits": "100", "price": "9" },
+        { "credits": "500", "price": "39" },
+        { "credits": "1,000", "price": "69" }
+      ],
+      "rechargeUnit": "credits"
+    },
+    "tiers": {
+      "tag": "Structure sizes",
+      "title": "Which size fits you?",
+      "headers": ["", "Solo", "Starter", "Pro", "Business", "Enterprise"],
+      "rows": [
+        { "label": "Users", "values": ["1-2", "3-10", "11-30", "31-100", "100+"] },
+        { "label": "Beneficiaries", "values": ["30", "100", "500", "2,000", "Unlimited"] },
+        { "label": "Storage", "values": ["10 GB", "50 GB", "100 GB", "500 GB", "Unlimited"] },
+        { "label": "AI Credits", "values": ["50", "200", "500", "2,000", "Unlimited"] },
+        { "label": "Support", "values": ["Email 48h", "Email 24h", "Email 12h", "Phone + email 4h", "Dedicated SLA"] },
+        { "label": "Sign-up", "values": ["Self-service", "Self-service", "Demo", "Demo", "Demo"] }
+      ]
+    },
+    "options": {
+      "tag": "Additional options",
+      "title": "Need more?",
+      "items": [
+        { "label": "+50 beneficiaries", "price": "€15/mo" },
+        { "label": "+5 users", "price": "€19/mo" },
+        { "label": "+1 user", "price": "€7/mo" },
+        { "label": "+50 GB storage", "price": "€5/mo" },
+        { "label": "+100 GB storage", "price": "€9/mo" }
+      ]
+    },
+    "services": {
+      "tag": "Premium services",
+      "title": "Custom support",
+      "items": [
+        { "label": "Assisted onboarding", "description": "Setup + import + 2h video training", "price": "€499" },
+        { "label": "Data migration", "description": "Import from your current software", "price": "€299–799" },
+        { "label": "User training", "description": "Custom training sessions", "price": "€149/h" },
+        { "label": "Guaranteed SLA", "description": "Contractual response time guarantee", "price": "+20% of monthly price" }
+      ]
+    },
+    "discounts": {
+      "tag": "Discount policy",
+      "title": "Available discounts",
+      "description": "Discounts are not stackable: only the most advantageous one applies.",
+      "items": [
+        { "label": "Quarterly", "value": "-10%", "detail": "12-month commitment" },
+        { "label": "Annual", "value": "-20%", "detail": "One-time payment" },
+        { "label": "Multi-solution 2", "value": "-15%", "detail": "2 combined solutions" },
+        { "label": "Multi-solution 3", "value": "-25%", "detail": "3 combined solutions" },
+        { "label": "Ultimate Pack", "value": "-30%", "detail": "3 solutions + Manager" },
+        { "label": "Social economy", "value": "-10%", "detail": "Non-profit organizations" },
+        { "label": "Volume 5-10 sites", "value": "-10%", "detail": "" },
+        { "label": "Volume 11-25", "value": "-15%", "detail": "" },
+        { "label": "Volume 26-50", "value": "-20%", "detail": "" },
+        { "label": "Volume 50+", "value": "Custom quote", "detail": "" }
+      ]
+    },
+    "trial": {
+      "tag": "Free trial",
+      "title": "30 days, full access",
+      "description": "Test all features without restrictions for 30 days.",
+      "features": [
+        "Full access to all modules",
+        "20 AI credits included",
+        "1 GB storage",
+        "10 beneficiaries",
+        "No credit card for Solo/Starter",
+        "Credit card or demo for Pro+"
+      ],
+      "earlyAdopter": "Early adopter: -30% for life for the first 50 clients per solution",
+      "cta": "Start free trial"
     },
     "faq": {
       "tag": "FAQ",
       "title": "Pricing FAQ",
       "items": [
         {
-          "question": "Is there a minimum commitment?",
-          "answer": "No. All subscriptions are commitment-free. You can cancel at any time."
+          "question": "What is the core?",
+          "answer": "The core consists of 14 modules included in every subscription: beneficiaries, dashboard, calendar, messages, interviews, alerts, contacts, prospecting, exchanges, reports, surveys, evaluations, skills matrix, soft skills."
         },
         {
-          "question": "Can I try before subscribing?",
-          "answer": "Yes. YDV Insertion offers a free 1-month trial, no credit card required. Other products will offer the same at launch."
+          "question": "Is Qualiopi an extra cost?",
+          "answer": "No. Qualiopi compliance is natively integrated in the Formation Pack, at no extra cost."
         },
         {
-          "question": "Can I use multiple products?",
-          "answer": "Yes. Each product is independent with its own subscription. A single account gives you access to all your products."
+          "question": "I do both insertion AND training, do I pay for the core twice?",
+          "answer": "No. The core is counted only once. You only pay for the specific modules of each additional solution."
         },
         {
-          "question": "Do prices include VAT?",
-          "answer": "Prices shown are excl. VAT (EUR). French VAT (20%) applies for customers based in France. International clients may be subject to their local tax regulations."
+          "question": "What happens if I exceed my AI credits?",
+          "answer": "AI is paused, no surprise billing. Purchase a top-up pack to continue."
         },
         {
-          "question": "What's the difference between monthly and annual billing?",
-          "answer": "The annual plan saves you 20% compared to monthly billing. You're billed once a year, with no renewal commitment."
+          "question": "Can I change my plan size?",
+          "answer": "Upgrade immediately (prorated). Downgrade at end of current period."
+        },
+        {
+          "question": "Where is my data hosted?",
+          "answer": "Hetzner (Germany, EU) for servers, Scaleway (Paris, France) for file storage. GDPR compliant, daily backups, HTTPS encryption, DPA available on request."
         }
       ]
     },
@@ -259,7 +445,9 @@
       "title": "Questions about pricing?",
       "description": "Contact us for a custom quote or a free demo.",
       "button": "Get in touch"
-    }
+    },
+    "enterprise": "Custom quote",
+    "perMonth": "/mo"
   },
   "solutionsIndex": {
     "meta": {
@@ -272,8 +460,8 @@
       "description": "Each product is standalone, fully featured and independently deployable. Built for professionals in social integration, training and coaching."
     },
     "statusProd": "Live",
-    "statusSoon": "Coming soon",
     "learnMore": "Learn more",
+    "freeTrial": "30-day free trial",
     "cta": {
       "title": "Questions about our products?",
       "description": "Request a free demo or contact us to learn more.",
@@ -284,32 +472,14 @@
   "solutions": {
     "common": {
       "inProduction": "In production",
-      "comingSoon": "Coming soon",
+      "freeTrial": "30-day free trial",
       "requestDemo": "Request a demo",
-      "preRegistration": "Pre-register for free",
-      "notifiedAtLaunch": "Be notified at launch",
       "featuresTag": "Features",
       "featuresTitle": "Everything you need",
-      "timelineTag": "Estimated timeline",
-      "timelineTitle": "Roadmap",
-      "earlyAccessTitle": "Be among the first users",
-      "earlyAccessDescription": "Sign up for early access to the beta and benefit from a preferential launch price.",
       "pricingTag": "Pricing",
       "allSolutions": "All products",
       "comparePricing": "Compare pricing",
       "notFound": "Product not found"
-    },
-    "timeline": {
-      "coaching": [
-        { "step": "Design & architecture", "date": "Q2 2026" },
-        { "step": "Private beta", "date": "Q4 2026" },
-        { "step": "Public launch", "date": "Q1 2027" }
-      ],
-      "manager": [
-        { "step": "Design & architecture", "date": "Q3 2026" },
-        { "step": "Private beta", "date": "Q1 2027" },
-        { "step": "Public launch", "date": "Q2 2027" }
-      ]
     }
   },
   "blog": {
@@ -394,27 +564,27 @@
   "data": {
     "solutions": {
       "insertion": {
-        "subtitle": "Case management for social enterprises",
-        "description": "Beneficiary tracking, interviews, reports, built-in AI. Designed by an employment counselor, for employment counselors.",
-        "price": "From €59",
+        "subtitle": "The software for work integration social enterprises",
+        "description": "Beneficiary tracking, interviews, DREETS reporting, built-in AI. 19 modules for social enterprises, local employment agencies, shelters.",
+        "price": "From €79",
         "priceUnit": "/mo"
       },
       "formation": {
-        "subtitle": "Training organization management",
-        "description": "Course catalog, agreements, digital attendance, Qualiopi compliance. All-in-one for France's 70,000+ training organizations.",
-        "price": "From €49",
+        "subtitle": "Complete training organization management, Qualiopi included",
+        "description": "Catalog, sessions, digital attendance, BPF, native Qualiopi compliance. 17 modules for training organizations, apprentice centers, CPF providers.",
+        "price": "From €69",
         "priceUnit": "/mo"
       },
       "coaching": {
-        "subtitle": "Skills assessment & coaching",
-        "description": "Structured pathways, assessments, automated reports. For career counseling centers and professional coaches.",
-        "price": "From €39",
+        "subtitle": "Skills assessment, RPL and individual coaching",
+        "description": "Structured 3-phase pathways, complete RPL, questionnaires, evaluations. 17 modules for coaching firms and career assessment centers.",
+        "price": "From €59",
         "priceUnit": "/mo"
       },
       "manager": {
-        "subtitle": "CRM / ERP for SaaS publishers",
-        "description": "Client management, subscriptions, billing, analytics. Built for SaaS publishers and freelancers.",
-        "price": "From €29",
+        "subtitle": "CRM, billing and business management all-in-one",
+        "description": "Prospects, clients, quotes, invoices, subscriptions, support tickets, MRR/ARR metrics. For any organization needing a business management tool.",
+        "price": "From €49",
         "priceUnit": "/mo"
       }
     },
@@ -537,65 +707,85 @@
     },
     "solutionPages": {
       "insertion": {
-        "tagline": "The software for social integration professionals",
+        "tagline": "The software for work integration social enterprises",
         "heroTitle": "The complete platform for work integration social enterprises",
-        "heroSubtitle": "Beneficiary tracking, interviews, reports, built-in AI. Designed by an employment counselor, for employment counselors.",
+        "heroSubtitle": "19 modules for social enterprises (AI, ACI, EI, ETTI), local employment agencies, shelters. Beneficiary tracking, interviews, DREETS reporting, built-in AI.",
         "features": [
-          { "title": "Beneficiary management", "description": "Complete profiles, personalized pathways, attached documents, full history." },
-          { "title": "Interviews & appointments", "description": "Scheduling, automatic summaries, reminders, attendance tracking." },
-          { "title": "Built-in AI", "description": "Automatic summaries, pathway suggestions, predictive analysis, document generation." },
-          { "title": "Reports & statistics", "description": "Real-time dashboards, ASP/ESF exports (French public service reporting), Qualiopi indicators, PDF reports." },
-          { "title": "RBAC & multi-site", "description": "Granular role-based permissions, multi-site support, complete audit trail, GDPR compliant." },
-          { "title": "Documents & exports", "description": "Automatic document generation (CERFA forms, reports, agreements), Excel/PDF exports." }
+          { "title": "Beneficiary management", "description": "360° profiles, barriers, strengths, skills, timeline, attached documents." },
+          { "title": "AI-powered interviews", "description": "Scheduling, automatic summaries, suggestions, SMART objectives." },
+          { "title": "Automatic alerts", "description": "Automatic notifications, deadline tracking, trigger rules." },
+          { "title": "FTE & DREETS reporting", "description": "Compliant exports, DREETS indicators, automated reporting." },
+          { "title": "Integration contracts", "description": "CDDI and renewals, tripartite agreements, commitment tracking." },
+          { "title": "RBAC & multi-site", "description": "Granular role-based permissions, data isolation, audit trail, GDPR compliant." },
+          { "title": "Company prospecting", "description": "La Bonne Boîte integration, sales pipeline, application tracking, follow-ups." },
+          { "title": "Social clauses", "description": "Public procurement, assignments, time tracking, clause reports." },
+          { "title": "Reports & exports", "description": "Activity reports, Word/PDF exports, automated documents (CERFA, reports, agreements)." },
+          { "title": "Supervisor & employee access", "description": "Technical supervisor interface, field evaluation, time tracking. Employee self-service portal." }
         ],
-        "pricingPrice": "From €59",
+        "pricingPrice": "From €79",
         "pricingUnit": "/mo",
-        "pricingTrial": "1-month free trial, no credit card",
+        "pricingTrial": "30-day free trial, no credit card",
         "testimonialQuote": "YDV Insertion allowed us to centralize all our beneficiary tracking in a single tool. The AI saves us considerable time on reports.",
         "testimonialAuthor": "Structure IDEAL",
         "testimonialRole": "First pilot user"
       },
       "formation": {
-        "tagline": "Complete management for training organizations",
+        "tagline": "Complete training organization management, Qualiopi included",
         "heroTitle": "Training organizations: manage your entire activity from A to Z",
-        "heroSubtitle": "Course catalog, agreements, attendance, financial reports, Qualiopi compliance. All-in-one, designed for France's 70,000+ training organizations.",
+        "heroSubtitle": "17 modules for Qualiopi-certified organizations, apprentice centers, CPF providers. Catalog, sessions, attendance, BPF, native Qualiopi compliance.",
         "features": [
           { "title": "Course catalog", "description": "Create and manage your catalog, programs, learning objectives, delivery methods." },
-          { "title": "Agreements & quotes", "description": "Automatic generation of training agreements, quotes, and contracts." },
-          { "title": "Digital attendance", "description": "Electronic signatures, digital attendance sheets, QR code check-in." },
-          { "title": "Qualiopi compliance", "description": "Built-in Qualiopi indicators, documentary evidence, audit preparation." }
+          { "title": "Sessions & scheduling", "description": "Calendar, rooms, trainers, participant management." },
+          { "title": "Digital attendance", "description": "QR code, touch signature, digital attendance sheets." },
+          { "title": "Progress tracking", "description": "Learner tracking, assessments, achievements, individual progression." },
+          { "title": "BPF", "description": "Pedagogical and Financial Report, automated annual declaration." },
+          { "title": "Qualiopi compliance", "description": "Natively integrated, indicators, evidence, audit trail. No extra cost." },
+          { "title": "External trainers", "description": "External trainer management, scheduling, contracts." },
+          { "title": "Automated agreements", "description": "Automatic generation of training agreements, quotes, contracts." },
+          { "title": "OPCO/CPF funding", "description": "Funding tracking, OPCO applications, CPF, coverage." },
+          { "title": "Built-in AI", "description": "Program generation, satisfaction analysis, automatic summaries." }
+        ],
+        "pricingPrice": "From €69",
+        "pricingUnit": "/mo",
+        "pricingTrial": "30-day free trial, no credit card"
+      },
+      "coaching": {
+        "tagline": "Skills assessment, RPL and individual coaching",
+        "heroTitle": "Skills assessment, RPL and coaching: a dedicated tool",
+        "heroSubtitle": "17 modules for coaching firms, career assessment centers, RPL practitioners.",
+        "features": [
+          { "title": "Skills assessment", "description": "Structured 3-phase pathway (preliminary, investigation, conclusion)." },
+          { "title": "Complete RPL", "description": "France VAE, booklets 1 and 2, jury, full support timeline." },
+          { "title": "Standardized questionnaires", "description": "RIASEC and other interest questionnaires, results, analyses." },
+          { "title": "Competency evaluations", "description": "Evaluation campaigns, competency grids, progression." },
+          { "title": "Coaching sessions", "description": "Session management, objectives, notes, pathway tracking." },
+          { "title": "Supervision", "description": "Practice analysis, peer supervision." },
+          { "title": "Tripartite agreements", "description": "Automatic generation, commitment tracking, signatures." },
+          { "title": "Funder portal", "description": "Read-only access for funders, pathway monitoring." },
+          { "title": "Built-in AI", "description": "Questionnaire synthesis, recommendations, report generation." }
+        ],
+        "pricingPrice": "From €59",
+        "pricingUnit": "/mo",
+        "pricingTrial": "30-day free trial, no credit card"
+      },
+      "manager": {
+        "tagline": "CRM, billing and business management all-in-one",
+        "heroTitle": "Manage your prospects, clients, quotes and invoices in one tool",
+        "heroSubtitle": "Standalone application on manager.ydvsystems.com. For any organization needing a business management tool.",
+        "features": [
+          { "title": "CRM", "description": "Prospects, clients, sales pipeline, segmentation, notes." },
+          { "title": "Client management", "description": "Client profiles, interaction history, documents, contracts." },
+          { "title": "Quotes & invoices", "description": "Auto-numbering, PDF generation, payment reminders." },
+          { "title": "Subscriptions & licensing", "description": "Modules, quotas, metrics, license tracking." },
+          { "title": "Products & modules", "description": "Product catalog, addons, offer configuration." },
+          { "title": "Support tickets", "description": "SLA, client portal, request tracking." },
+          { "title": "Client portal", "description": "Secure access, invoices, tickets, documents." },
+          { "title": "Metrics", "description": "MRR, ARR, churn, real-time dashboards." },
+          { "title": "Sales AI", "description": "Churn prediction, email generation, data extraction." }
         ],
         "pricingPrice": "From €49",
         "pricingUnit": "/mo",
-        "pricingTrial": "1-month free trial, no credit card"
-      },
-      "coaching": {
-        "tagline": "Skills assessment and individual coaching",
-        "heroTitle": "Skills assessment, RPL and coaching: a dedicated tool",
-        "heroSubtitle": "Structured pathways, assessments, automated reports. For career counseling centers and professional coaches.",
-        "features": [
-          { "title": "Assessment pathways", "description": "Compliant skills assessment templates, customizable steps." },
-          { "title": "Evaluations", "description": "Tests, interest questionnaires, competency grids, self-assessments." },
-          { "title": "Automated reports", "description": "AI-generated summaries, debriefing documents, PDF exports." },
-          { "title": "Session tracking", "description": "Scheduling, session notes, hour tracking, billing." }
-        ],
-        "pricingPrice": "From €39",
-        "pricingUnit": "/mo",
-        "pricingTrial": "Pre-registration open"
-      },
-      "manager": {
-        "tagline": "CRM / ERP for SaaS publishers and freelancers",
-        "heroTitle": "Manage your clients, subscriptions and billing in one tool",
-        "heroSubtitle": "Built for SaaS publishers and freelancers. Independent from other YDV products, sold standalone.",
-        "features": [
-          { "title": "Client management", "description": "Client profiles, interaction history, segmentation, notes." },
-          { "title": "Subscriptions & billing", "description": "Subscription tracking, automated billing, payment reminders." },
-          { "title": "Analytics", "description": "MRR, churn, LTV, cohorts. Real-time dashboards." },
-          { "title": "API connectors", "description": "Stripe, Brevo, Slack, webhooks. Integration with your existing tools." }
-        ],
-        "pricingPrice": "From €29",
-        "pricingUnit": "/mo",
-        "pricingTrial": "Pre-registration open"
+        "pricingTrial": "30-day free trial, no credit card"
       }
     },
     "blogArticles": {

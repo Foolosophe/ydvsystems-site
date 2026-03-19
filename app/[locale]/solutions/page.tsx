@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, CheckCircle2, Clock } from "lucide-react"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { SOLUTIONS } from "@/lib/data"
@@ -59,9 +59,7 @@ export default async function SolutionsPage() {
       <section className="py-16 bg-secondary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {SOLUTIONS.map((solution, i) => {
-              const isProd = solution.status === "prod"
-              return (
+            {SOLUTIONS.map((solution, i) => (
                 <AnimateOnScroll key={solution.slug} delay={i * 100}>
                 <Card
                   className="bg-white border-border overflow-hidden hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-200 group h-full"
@@ -78,24 +76,11 @@ export default async function SolutionsPage() {
                           {td(`${solution.slug}.subtitle`)}
                         </p>
                       </div>
-                      <Badge
-                        className={`badge-pulse ${
-                          isProd
-                            ? "bg-teal-50 text-teal-700 border-teal-200"
-                            : "bg-secondary text-muted-foreground border-border"
-                        }`}
-                      >
-                        {isProd ? (
-                          <span className="flex items-center gap-1">
-                            <CheckCircle2 size={12} />
-                            {t("statusProd")}
-                          </span>
-                        ) : (
-                          <span className="flex items-center gap-1">
-                            <Clock size={12} />
-                            {t("statusSoon")}
-                          </span>
-                        )}
+                      <Badge className="badge-pulse bg-teal-50 text-teal-700 border-teal-200">
+                        <span className="flex items-center gap-1">
+                          <CheckCircle2 size={12} />
+                          {t("statusProd")}
+                        </span>
                       </Badge>
                     </div>
 
@@ -123,8 +108,7 @@ export default async function SolutionsPage() {
                   </CardContent>
                 </Card>
                 </AnimateOnScroll>
-              )
-            })}
+              ))}
           </div>
         </div>
       </section>

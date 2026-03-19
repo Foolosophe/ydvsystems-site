@@ -8,7 +8,6 @@ import {
   ArrowRight,
   ArrowLeft,
   CheckCircle2,
-  Clock,
   Users,
   Calendar,
   Brain,
@@ -21,9 +20,22 @@ import {
   Target,
   ClipboardCheck,
   CreditCard,
-  Plug,
   Quote,
-  Mail,
+  MapPin,
+  Briefcase,
+  ClipboardList,
+  Building2,
+  TrendingUp,
+  UserCheck,
+  FileSignature,
+  Wallet,
+  GraduationCap,
+  Star,
+  Eye,
+  DoorOpen,
+  Receipt,
+  Package,
+  LifeBuoy,
 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { SOLUTION_FEATURE_ICONS, SOLUTION_SLUGS, SOLUTIONS_WITH_TESTIMONIAL } from "../data"
@@ -42,7 +54,21 @@ const ICONS: Record<string, React.ReactNode> = {
   Target: <Target size={24} />,
   ClipboardCheck: <ClipboardCheck size={24} />,
   CreditCard: <CreditCard size={24} />,
-  Plug: <Plug size={24} />,
+  MapPin: <MapPin size={24} />,
+  Briefcase: <Briefcase size={24} />,
+  ClipboardList: <ClipboardList size={24} />,
+  Building2: <Building2 size={24} />,
+  TrendingUp: <TrendingUp size={24} />,
+  UserCheck: <UserCheck size={24} />,
+  FileSignature: <FileSignature size={24} />,
+  Wallet: <Wallet size={24} />,
+  GraduationCap: <GraduationCap size={24} />,
+  Star: <Star size={24} />,
+  Eye: <Eye size={24} />,
+  DoorOpen: <DoorOpen size={24} />,
+  Receipt: <Receipt size={24} />,
+  Package: <Package size={24} />,
+  LifeBuoy: <LifeBuoy size={24} />,
 }
 
 export function generateStaticParams() {
@@ -86,14 +112,12 @@ export default async function SolutionPage({
 
   const t = await getTranslations("solutions.common")
   const td = await getTranslations("data.solutionPages")
-  const isProd = solution.status === "prod"
 
   const heroTitle = td(`${slug}.heroTitle`)
   const heroSubtitle = td(`${slug}.heroSubtitle`)
   const features = td.raw(`${slug}.features`) as { title: string; description: string }[]
   const pricingPrice = td(`${slug}.pricingPrice`)
   const pricingUnit = td(`${slug}.pricingUnit`)
-
   const pricingTrial = td(`${slug}.pricingTrial`)
 
   const hasTestimonial = SOLUTIONS_WITH_TESTIMONIAL.includes(slug)
@@ -102,17 +126,6 @@ export default async function SolutionPage({
   const testimonialRole = hasTestimonial ? td(`${slug}.testimonialRole`) : null
 
   const featureIcons = SOLUTION_FEATURE_ICONS[slug] || []
-
-  // Get timeline from translations
-  let timeline: { step: string; date: string }[] | null = null
-  if (!isProd) {
-    try {
-      const tt = await getTranslations("solutions.timeline")
-      timeline = tt.raw(slug) as { step: string; date: string }[]
-    } catch {
-      timeline = null
-    }
-  }
 
   const softwareJsonLd = {
     "@context": "https://schema.org",
@@ -126,9 +139,7 @@ export default async function SolutionPage({
       price: String(solution.priceValue),
       priceCurrency: "EUR",
       priceValidUntil: "2027-12-31",
-      availability: isProd
-        ? "https://schema.org/InStock"
-        : "https://schema.org/PreOrder",
+      availability: "https://schema.org/InStock",
     },
   }
 
@@ -160,11 +171,7 @@ export default async function SolutionPage({
               borderColor: `${solution.color}30`,
             }}
           >
-            {isProd ? (
-              <span className="flex items-center gap-1"><CheckCircle2 size={12} /> {t("inProduction")}</span>
-            ) : (
-              <span className="flex items-center gap-1"><Clock size={12} /> {t("comingSoon")}</span>
-            )}
+            <span className="flex items-center gap-1"><CheckCircle2 size={12} /> {t("inProduction")}</span>
           </Badge>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 leading-tight tracking-tight">
@@ -175,30 +182,22 @@ export default async function SolutionPage({
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {isProd ? (
-              <>
-                <Button asChild size="lg" className="text-foreground font-bold px-8 gap-2" style={{ backgroundColor: solution.color }}>
-                  <Link href="/contact">
-                    {t("requestDemo")}
-                    <ArrowRight size={18} />
-                  </Link>
-                </Button>
-                {pricingTrial && (
-                  <p className="text-sm text-muted-foreground">{pricingTrial}</p>
-                )}
-              </>
-            ) : (
-              <>
-                <Button asChild size="lg" className="text-foreground font-bold px-8 gap-2" style={{ backgroundColor: solution.color }}>
-                  <Link href="/contact">
-                    {t("preRegistration")}
-                    <ArrowRight size={18} />
-                  </Link>
-                </Button>
-                <p className="text-sm text-muted-foreground">{t("notifiedAtLaunch")}</p>
-              </>
-            )}
+            <Button asChild size="lg" className="text-foreground font-bold px-8 gap-2" style={{ backgroundColor: solution.color }}>
+              <a href={solution.url!} target="_blank" rel="noopener noreferrer">
+                {t("freeTrial")}
+                <ArrowRight size={18} />
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="font-bold px-8 gap-2">
+              <Link href="/contact">
+                {t("requestDemo")}
+                <ArrowRight size={18} />
+              </Link>
+            </Button>
           </div>
+          {pricingTrial && (
+            <p className="text-sm text-muted-foreground mt-4">{pricingTrial}</p>
+          )}
         </div>
       </section>
 
@@ -231,62 +230,8 @@ export default async function SolutionPage({
         </div>
       </section>
 
-      {/* Timeline (for "soon" solutions) */}
-      {!isProd && timeline && (
-        <section className="py-16">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <p className="section-tag" style={{ color: solution.color }}>{t("timelineTag")}</p>
-              <h2 className="text-2xl font-bold text-foreground">
-                {t("timelineTitle")}
-              </h2>
-            </div>
-
-            <div className="relative">
-              <div className="absolute left-5 top-2 bottom-2 w-px" style={{ backgroundColor: `${solution.color}30` }} />
-
-              <div className="space-y-8">
-                {timeline.map((item, i) => (
-                  <div key={item.step} className="flex items-start gap-4 relative">
-                    <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 text-sm font-bold text-foreground z-10"
-                      style={{ backgroundColor: `${solution.color}20`, color: solution.color }}
-                    >
-                      {i + 1}
-                    </div>
-                    <div className="pt-1.5">
-                      <p className="font-semibold text-foreground">{item.step}</p>
-                      <p className="text-sm text-muted-foreground">{item.date}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Pre-registration CTA */}
-              <div className="mt-12 bg-secondary border border-border rounded-xl p-6 text-center">
-                <div className="w-10 h-10 rounded-full mx-auto mb-3 flex items-center justify-center" style={{ backgroundColor: `${solution.color}15` }}>
-                  <Mail size={20} style={{ color: solution.color }} />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">
-                  {t("earlyAccessTitle")}
-                </h3>
-                <p className="text-sm text-secondary-foreground mb-4">
-                  {t("earlyAccessDescription")}
-                </p>
-                <Button asChild className="text-foreground font-bold gap-2" style={{ backgroundColor: solution.color }}>
-                  <Link href="/contact">
-                    {t("preRegistration")}
-                    <ArrowRight size={16} />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Pricing */}
-      <section className={`py-16 ${!isProd && timeline ? "bg-secondary" : ""}`}>
+      <section className="py-16">
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-tag" style={{ color: solution.color }}>{t("pricingTag")}</p>
           <div className="bg-white border-2 rounded-2xl p-8 shadow-(--shadow-card)" style={{ borderColor: `${solution.color}40` }}>
@@ -298,12 +243,20 @@ export default async function SolutionPage({
             {pricingTrial && (
               <p className="text-sm text-muted-foreground mb-6">{pricingTrial}</p>
             )}
-            <Button asChild className="w-full text-foreground font-bold gap-2" style={{ backgroundColor: solution.color }}>
-              <Link href="/contact">
-                {isProd ? t("requestDemo") : t("preRegistration")}
-                <ArrowRight size={16} />
-              </Link>
-            </Button>
+            <div className="flex flex-col gap-3">
+              <Button asChild className="w-full text-foreground font-bold gap-2" style={{ backgroundColor: solution.color }}>
+                <a href={solution.url!} target="_blank" rel="noopener noreferrer">
+                  {t("freeTrial")}
+                  <ArrowRight size={16} />
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="w-full font-bold gap-2">
+                <Link href="/contact">
+                  {t("requestDemo")}
+                  <ArrowRight size={16} />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
