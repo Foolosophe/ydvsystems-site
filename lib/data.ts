@@ -107,9 +107,9 @@ export const GAME_URLS: Record<string, string> = {
 
 export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null; urlLabel: string | null }> = {
   "ydv-systems": {
-    tags: ["Next.js", "tRPC", "Prisma", "PostgreSQL", "IA"],
-    url: "https://insertion.ydvsystems.com",
-    urlLabel: "insertion.ydvsystems.com",
+    tags: ["Next.js", "tRPC", "Prisma", "PostgreSQL", "IA", "RBAC"],
+    url: "https://ydvsystems.com/solutions",
+    urlLabel: "ydvsystems.com/solutions",
   },
   "moteur-jeu": {
     tags: ["React", "TypeScript", "Tauri", "Capacitor", "Web Audio API"],
@@ -164,7 +164,7 @@ export const STACK_TECHS: Record<string, string[]> = {
 
 export const STATS = [
   { value: "10+" },
-  { value: "4 253" },
+  { value: "7 000+" },
   { value: "9" },
   { value: "4" },
 ]

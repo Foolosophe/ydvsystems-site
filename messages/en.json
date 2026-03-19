@@ -632,9 +632,9 @@
     },
     "portfolio": {
       "ydv-systems": {
-        "type": "SaaS Platform",
-        "title": "YDV Insertion (CIP Platform)",
-        "description": "Complete beneficiary tracking platform for work integration social enterprises (WISE) in France. Built-in AI, 4,253 automated tests, multi-site support."
+        "type": "SaaS Suite",
+        "title": "YDV Platform — 4 business applications",
+        "description": "Suite of 4 SaaS applications (Insertion, Formation, Coaching, Manager). 14 core modules, multi-provider AI, 7,000+ automated tests, multi-site RBAC."
       },
       "moteur-jeu": {
         "type": "Game engine",

@@ -632,9 +632,9 @@
     },
     "portfolio": {
       "ydv-systems": {
-        "type": "Logiciel SaaS",
-        "title": "YDV Insertion (CIP Platform)",
-        "description": "Plateforme complète de suivi des bénéficiaires pour l'insertion par l'activité économique. IA intégrée, 4 253 tests, multi-structures."
+        "type": "Suite logicielle SaaS",
+        "title": "YDV Platform — 4 logiciels métier",
+        "description": "Suite de 4 logiciels SaaS (Insertion, Formation, Coaching, Manager). Socle de 14 modules, IA multi-provider, +7 000 tests automatisés, RBAC multi-structures."
       },
       "moteur-jeu": {
         "type": "Moteur de jeu",
