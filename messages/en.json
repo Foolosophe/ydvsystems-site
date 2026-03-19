@@ -566,25 +566,25 @@
       "insertion": {
         "subtitle": "The software for work integration social enterprises",
         "description": "Beneficiary tracking, interviews, DREETS reporting, built-in AI. 19 modules for social enterprises, local employment agencies, shelters.",
-        "price": "From €79",
+        "price": "From €63",
         "priceUnit": "/mo"
       },
       "formation": {
         "subtitle": "Complete training organization management, Qualiopi included",
         "description": "Catalog, sessions, digital attendance, BPF, native Qualiopi compliance. 17 modules for training organizations, apprentice centers, CPF providers.",
-        "price": "From €69",
+        "price": "From €55",
         "priceUnit": "/mo"
       },
       "coaching": {
         "subtitle": "Skills assessment, RPL and individual coaching",
         "description": "Structured 3-phase pathways, complete RPL, questionnaires, evaluations. 17 modules for coaching firms and career assessment centers.",
-        "price": "From €59",
+        "price": "From €47",
         "priceUnit": "/mo"
       },
       "manager": {
         "subtitle": "CRM, billing and business management all-in-one",
         "description": "Prospects, clients, quotes, invoices, subscriptions, support tickets, MRR/ARR metrics. For any organization needing a business management tool.",
-        "price": "From €49",
+        "price": "From €39",
         "priceUnit": "/mo"
       }
     },

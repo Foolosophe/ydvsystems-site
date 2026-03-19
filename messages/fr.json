@@ -566,25 +566,25 @@
       "insertion": {
         "subtitle": "Le logiciel des professionnels de l'insertion par l'activité économique",
         "description": "Suivi des bénéficiaires, entretiens, reporting DREETS, IA intégrée. 19 modules pour les SIAE, missions locales, CHRS.",
-        "price": "À partir de 79 €",
+        "price": "À partir de 63 €",
         "priceUnit": "/mois"
       },
       "formation": {
         "subtitle": "La gestion complète des organismes de formation, Qualiopi inclus",
         "description": "Catalogue, sessions, émargement digital, BPF, conformité Qualiopi intégrée nativement. 17 modules pour les OF, CFA, prestataires CPF.",
-        "price": "À partir de 69 €",
+        "price": "À partir de 55 €",
         "priceUnit": "/mois"
       },
       "coaching": {
         "subtitle": "Bilan de compétences, VAE et accompagnement individuel",
         "description": "Parcours structurés en 3 phases, VAE complète, questionnaires, évaluations. 17 modules pour les cabinets de coaching et centres de bilan.",
-        "price": "À partir de 59 €",
+        "price": "À partir de 47 €",
         "priceUnit": "/mois"
       },
       "manager": {
         "subtitle": "CRM, facturation et gestion commerciale tout-en-un",
         "description": "Prospects, clients, devis, factures, abonnements, tickets support, métriques MRR/ARR. Pour toute structure ayant besoin d'un outil de gestion commerciale.",
-        "price": "À partir de 49 €",
+        "price": "À partir de 39 €",
         "priceUnit": "/mois"
       }
     },
