@@ -38,8 +38,10 @@ export function CountUp({
       rafId.current = requestAnimationFrame(tick)
     }
 
+    let observer: IntersectionObserver | null = null
+
     function startObserving() {
-      const observer = new IntersectionObserver(
+      observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
             animate()
@@ -48,29 +50,21 @@ export function CountUp({
         { threshold: 0.1 }
       )
       observer.observe(el!)
-      return observer
     }
 
-    // Wait for loading screen to finish before observing
-    const splash = document.getElementById("__splash")
-    if (splash) {
-      const mo = new MutationObserver(() => {
-        if (!document.getElementById("__splash")) {
-          mo.disconnect()
-          startObserving()
-        }
-      })
-      mo.observe(document.body, { childList: true, subtree: true })
-      return () => {
-        mo.disconnect()
-        if (rafId.current) cancelAnimationFrame(rafId.current)
-      }
+    // Wait for loader to finish, then start observing viewport
+    const onLoaderDone = () => startObserving()
+    window.addEventListener("loaderDone", onLoaderDone, { once: true })
+
+    // If loader already done (navigations without reload), start immediately
+    if (!document.getElementById("__splash")) {
+      window.removeEventListener("loaderDone", onLoaderDone)
+      startObserving()
     }
 
-    // No loading screen — observe immediately
-    const observer = startObserving()
     return () => {
-      observer.disconnect()
+      window.removeEventListener("loaderDone", onLoaderDone)
+      observer?.disconnect()
       if (rafId.current) cancelAnimationFrame(rafId.current)
     }
   }, [end, suffix, duration])

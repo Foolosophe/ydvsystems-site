@@ -28,6 +28,7 @@ export function LoadingScreenWrapper() {
       document.getElementById("__splash")?.remove()
       if (isBlogArticle || isAdmin) hasSkippedOnce = true
       setSkip(true)
+      window.dispatchEvent(new Event("loaderDone"))
     }
     setMounted(true)
   }, [pathname])

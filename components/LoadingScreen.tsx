@@ -47,6 +47,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
     isCompleting.current = true
     localStorage.setItem(STORAGE_KEY, "1")
     setVisible(false)
+    window.dispatchEvent(new Event("loaderDone"))
     onComplete?.()
   }, [onComplete])
 
