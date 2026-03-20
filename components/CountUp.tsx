@@ -13,17 +13,12 @@ export function CountUp({
 }) {
   const ref = useRef<HTMLSpanElement>(null)
   const rafId = useRef<number>(0)
-  const hasRun = useRef(false)
 
   const animate = useCallback(() => {
     const el = ref.current
-    if (!el || hasRun.current) return
-    hasRun.current = true
+    if (!el) return
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.textContent = end.toLocaleString("fr-FR") + suffix
-      return
-    }
+    if (rafId.current) cancelAnimationFrame(rafId.current)
 
     const startTime = performance.now()
 
@@ -51,7 +46,8 @@ export function CountUp({
       ([entry]) => {
         if (entry.isIntersecting) {
           animate()
-          observer.disconnect()
+        } else if (ref.current) {
+          ref.current.textContent = "0" + suffix
         }
       },
       { threshold: 0.3 }
@@ -62,7 +58,7 @@ export function CountUp({
       observer.disconnect()
       if (rafId.current) cancelAnimationFrame(rafId.current)
     }
-  }, [animate])
+  }, [animate, suffix])
 
   return (
     <span ref={ref} translate="no" className="notranslate" aria-live="polite" aria-atomic="true">
