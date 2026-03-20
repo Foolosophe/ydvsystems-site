@@ -289,25 +289,6 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
     if (isMobile.current && morphWrapRef.current)
       morphWrapRef.current.style.filter = "none"
 
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-
-    if (prefersReducedMotion) {
-      if (logoContainerRef.current) gsap.set(logoContainerRef.current, { opacity: 1 })
-      if (ydvTextRef.current)       gsap.set(ydvTextRef.current,       { opacity: 1 })
-      if (textS1Ref.current)        gsap.set(textS1Ref.current,        { opacity: 1, filter: "none" })
-      if (ystemWrapRef.current)     gsap.set(ystemWrapRef.current,     { width: "auto" })
-      ystemRefs.current.forEach(el => { if (el) gsap.set(el, { opacity: 1 }) })
-      if (s2Ref.current)            gsap.set(s2Ref.current,            { opacity: 1, scale: 1 })
-      const timeout = setTimeout(() => {
-        if (overlayRef.current) {
-          gsap.to(overlayRef.current, { opacity: 0, duration: 0.5, onComplete: handleAnimationComplete })
-        } else {
-          handleAnimationComplete()
-        }
-      }, 800)
-      return () => clearTimeout(timeout)
-    }
-
     const start = async () => {
       await Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 500))])
       runAnimation()
