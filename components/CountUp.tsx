@@ -38,17 +38,37 @@ export function CountUp({
       rafId.current = requestAnimationFrame(tick)
     }
 
-    // Animate on mount + every time element scrolls into view
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          animate()
-        }
-      },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
+    function startObserving() {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            animate()
+          }
+        },
+        { threshold: 0.1 }
+      )
+      observer.observe(el!)
+      return observer
+    }
 
+    // Wait for loading screen to finish before observing
+    const splash = document.getElementById("__splash")
+    if (splash) {
+      const mo = new MutationObserver(() => {
+        if (!document.getElementById("__splash")) {
+          mo.disconnect()
+          startObserving()
+        }
+      })
+      mo.observe(document.body, { childList: true, subtree: true })
+      return () => {
+        mo.disconnect()
+        if (rafId.current) cancelAnimationFrame(rafId.current)
+      }
+    }
+
+    // No loading screen — observe immediately
+    const observer = startObserving()
     return () => {
       observer.disconnect()
       if (rafId.current) cancelAnimationFrame(rafId.current)
