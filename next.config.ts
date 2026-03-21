@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
         destination: `${umamiUrl}/script.js`,
       },
       {
-        source: "/a/e",
+        source: "/a/api/send",
         destination: `${umamiUrl}/api/send`,
       },
     ]
