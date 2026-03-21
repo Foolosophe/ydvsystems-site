@@ -2,7 +2,7 @@
 
 import { ExternalLink } from "lucide-react"
 
-const UMAMI_SHARE_URL = "https://analytics.ydvsystems.com/share/ydvstats2026/ydvsystems.com"
+const UMAMI_SHARE_URL = "https://u.ydvsystems.com/share/ydvstats2026/ydvsystems.com"
 
 export default function UmamiPage() {
   return (
