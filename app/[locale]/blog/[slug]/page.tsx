@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { Link } from "@/i18n/navigation"
 import { notFound } from "next/navigation"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Clock, Calendar } from "lucide-react"
+import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { getTranslations, getLocale } from "next-intl/server"
 import { prisma } from "@/lib/db"
 import { calculateReadTime } from "@/lib/blog/readTime"
@@ -192,6 +193,29 @@ export default async function BlogArticlePage({
           title={t("relatedArticles")}
           readArticleLabel={t("readMore")}
         />
+
+        {/* CTA contextuel */}
+        {(() => {
+          const cat = (article.category || "").toLowerCase()
+          let ctaKey = "blogCtaDefault"
+          let ctaHref = "/solutions"
+          if (cat.includes("insertion") || cat.includes("siae")) { ctaKey = "blogCtaInsertion"; ctaHref = "/solutions/insertion" }
+          else if (cat.includes("formation") || cat.includes("qualiopi")) { ctaKey = "blogCtaFormation"; ctaHref = "/solutions/formation" }
+          else if (cat.includes("coaching") || cat.includes("bilan")) { ctaKey = "blogCtaCoaching"; ctaHref = "/solutions/coaching" }
+          else if (cat.includes("ia") || cat.includes("ai")) { ctaKey = "blogCtaIA"; ctaHref = "/prestations" }
+          return (
+            <div className="mt-10 p-6 bg-secondary border border-border rounded-xl text-center">
+              <p className="text-sm font-semibold text-foreground mb-1">{t("blogCtaTitle")}</p>
+              <p className="text-sm text-secondary-foreground mb-4">{t(ctaKey)}</p>
+              <Button asChild size="sm" className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold gap-2">
+                <Link href={ctaHref as "/solutions"}>
+                  {t("blogCtaButton")}
+                  <ArrowRight size={14} />
+                </Link>
+              </Button>
+            </div>
+          )
+        })()}
 
         <NewsletterForm
           translations={{

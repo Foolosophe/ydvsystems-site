@@ -36,6 +36,9 @@ export function Footer() {
       { label: t("about"), href: "/a-propos" as const },
       { label: t("contact"), href: "/contact" as const },
       { label: t("legal"), href: "/mentions-legales" as const },
+      { label: t("cgv"), href: "/cgv" as const },
+      { label: t("cgu"), href: "/cgu" as const },
+      { label: t("privacyLink"), href: "/confidentialite" as const },
     ],
   }
 

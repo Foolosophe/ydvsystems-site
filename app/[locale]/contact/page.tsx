@@ -36,6 +36,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     projectType: "",
+    structureSize: "",
     message: "",
     website: "", // honeypot
   })
@@ -56,7 +57,7 @@ export default function ContactPage() {
 
       if (res.ok) {
         setFormState("success")
-        setForm({ name: "", email: "", projectType: "", message: "", website: "" })
+        setForm({ name: "", email: "", projectType: "", structureSize: "", message: "", website: "" })
       } else {
         setFormState("error")
       }
@@ -213,6 +214,29 @@ export default function ContactPage() {
                           className="text-secondary-foreground focus:bg-secondary focus:text-foreground"
                         >
                           {t(`projectTypes.${key}`)}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-sm text-secondary-foreground">{t("form.structureSizeLabel")}</label>
+                  <Select
+                    value={form.structureSize}
+                    onValueChange={(v) => setForm({ ...form, structureSize: v })}
+                  >
+                    <SelectTrigger className="bg-white border-border text-foreground focus:border-primary" aria-label={t("form.structureSizeLabel")}>
+                      <SelectValue placeholder={t("form.structureSizePlaceholder")} />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white border-border">
+                      {(["solo", "small", "medium", "large"] as const).map((key) => (
+                        <SelectItem
+                          key={key}
+                          value={key}
+                          className="text-secondary-foreground focus:bg-secondary focus:text-foreground"
+                        >
+                          {t(`structureSizes.${key}`)}
                         </SelectItem>
                       ))}
                     </SelectContent>

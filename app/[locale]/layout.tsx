@@ -128,14 +128,20 @@ export default async function LocaleLayout({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "ProfessionalService",
             name: "YdvSystems",
             url: "https://ydvsystems.com",
             logo: "https://ydvsystems.com/images/og-image.png",
+            image: "https://ydvsystems.com/images/og-image.png",
             description: orgDescription,
             founder: {
               "@type": "Person",
               name: "Yohann Dandeville",
+              jobTitle: "Développeur full-stack & fondateur",
+            },
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "FR",
             },
             contactPoint: {
               "@type": "ContactPoint",
@@ -143,7 +149,11 @@ export default async function LocaleLayout({
               contactType: "customer service",
               availableLanguage: ["French", "English"],
             },
-            sameAs: ["https://github.com/foolosophe"],
+            sameAs: [
+              "https://github.com/foolosophe",
+              "https://www.linkedin.com/in/yohann-dandeville-a6203b257",
+            ],
+            knowsAbout: ["Web Development", "Artificial Intelligence", "SaaS", "Social Services Software", "Training Management"],
           }),
         }}
       />

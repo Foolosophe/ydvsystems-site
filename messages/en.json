@@ -23,6 +23,9 @@
       "about": "About",
       "contact": "Contact",
       "legal": "Legal notice",
+      "cgv": "Terms of Sale",
+      "cgu": "Terms of Use",
+      "privacyLink": "Privacy",
       "copyright": "YdvSystems — Yohann Dandeville",
       "siret": "Reg. 534 080 783 00028"
     },
@@ -227,6 +230,8 @@
       "emailPlaceholder": "your@email.com",
       "projectTypeLabel": "Project type",
       "projectTypePlaceholder": "Select...",
+      "structureSizeLabel": "Organization size",
+      "structureSizePlaceholder": "Select...",
       "messageLabel": "Message *",
       "messagePlaceholder": "Describe your project, your needs, or ask a question...",
       "submit": "Send message",
@@ -250,6 +255,12 @@
       "demo-formation": "Demo YDV Formation",
       "demo-autre": "Demo other product",
       "autre": "Other"
+    },
+    "structureSizes": {
+      "solo": "Solo / Freelance",
+      "small": "1–10 employees",
+      "medium": "11–50 employees",
+      "large": "50+ employees"
     }
   },
   "pricing": {
@@ -580,6 +591,13 @@
       "allArticles": "All articles",
       "readTime": "read",
       "contactCta": "Questions? Get in touch",
+      "blogCtaTitle": "Want to go further?",
+      "blogCtaInsertion": "Discover YDV Insertion — the business software for social enterprises",
+      "blogCtaFormation": "Discover YDV Formation — native Qualiopi compliance",
+      "blogCtaCoaching": "Discover YDV Coaching — skills assessment and RPL",
+      "blogCtaIA": "Discover our AI and custom development services",
+      "blogCtaDefault": "Discover our business software for the social sector",
+      "blogCtaButton": "Learn more",
       "authorRole": "Full-stack developer & founder of YdvSystems",
       "notFound": "Article not found",
       "breadcrumbHome": "Home",
@@ -625,6 +643,175 @@
     "intellectual": {
       "title": "Intellectual property",
       "content": "All content on this website (text, code, design) is the exclusive property of YdvSystems — Yohann Dandeville, unless otherwise stated. Reproduction is prohibited without prior authorization."
+    },
+    "backHome": "Back to homepage"
+  },
+  "cgv": {
+    "meta": {
+      "title": "Terms of Sale — YdvSystems",
+      "description": "General terms of sale for YdvSystems — SaaS solutions and freelance services. Pricing, free trial, cancellation, intellectual property."
+    },
+    "title": "Terms of Sale",
+    "lastUpdate": "Last updated: March 23, 2026",
+    "scope": {
+      "title": "1. Purpose and scope",
+      "p1": "These Terms of Sale govern all commercial relationships between YdvSystems, a sole proprietorship operated by Yohann Dandeville (French business registration SIRET 534 080 783 00028), hereinafter referred to as \"the Provider\", and any individual or legal entity subscribing to its services, hereinafter referred to as \"the Client\".",
+      "p2": "Any order or subscription implies unreserved acceptance of these Terms of Sale. They apply to SaaS solutions offered on ydvsystems.com as well as to freelance development services."
+    },
+    "saas": {
+      "title": "2. SaaS solutions",
+      "p1": "YdvSystems offers four SaaS solutions: YDV Insertion (management for work integration organizations), YDV Formation (training organization management with Qualiopi compliance), YDV Bilan (skills assessment management) and YDV Manager (business management and invoicing for freelancers and small businesses).",
+      "p2": "Each solution is accessible via a web browser after creating an account. A 30-day free trial, with no commitment and no credit card required, provides full access to all features of the chosen solution.",
+      "p3": "At the end of the trial period, the Client may subscribe to a monthly, quarterly or annual plan. The subscription takes effect on the subscription date and renews automatically at each billing cycle, unless cancelled under the conditions set out in Section 6."
+    },
+    "freelance": {
+      "title": "3. Freelance services",
+      "p1": "Custom development, AI integration and consulting services are subject to a prior quotation detailing the scope, deliverables, timeline and amount. Quotations are valid for 30 days from the date of issue.",
+      "p2": "Unless otherwise agreed, a deposit of 30% of the total amount is required upon signing the quotation. The balance is invoiced upon delivery of the deliverables defined in the quotation. For long-term projects, an intermediate payment schedule may be agreed upon."
+    },
+    "pricing": {
+      "title": "4. Pricing and payment",
+      "p1": "Prices are quoted in euros, exclusive of tax (HT). In accordance with French micro-enterprise regulations, YdvSystems is not subject to VAT (Article 293 B of the French General Tax Code). The statement \"VAT not applicable, Article 293 B of the CGI\" appears on every invoice.",
+      "p2": "Payment is made by credit card or bank transfer. SaaS subscriptions are billed on a recurring basis according to the chosen frequency (monthly, quarterly or annual). Invoices are sent electronically to the Client's email address."
+    },
+    "trial": {
+      "title": "5. Free trial",
+      "p1": "The 30-day free trial provides access to all features of the chosen solution without any limitations. No credit card is required to start the trial. Upon expiration of the trial period, the account is suspended. The Client's data is retained for an additional 30 days, allowing time to subscribe or export data."
+    },
+    "duration": {
+      "title": "6. Duration and cancellation",
+      "p1": "The subscription is taken out for the duration chosen by the Client (monthly, quarterly or annual). The Client may cancel the subscription at any time from their account dashboard, with 30 days' notice. Cancellation takes effect at the end of the current billing period already invoiced. No pro-rata refund is provided.",
+      "p2": "After cancellation, the Client has 30 days to export all data from their account dashboard. After this period, data is permanently deleted from the servers."
+    },
+    "ip": {
+      "title": "7. Intellectual property",
+      "saasTitle": "SaaS solutions",
+      "saasContent": "The Client retains ownership of all data entered and stored on YdvSystems platforms. The source code, design, architecture and algorithms of the SaaS solutions remain the exclusive property of YdvSystems. A subscription grants only a non-exclusive, non-transferable right of use for the duration of the subscription.",
+      "freelanceTitle": "Freelance services",
+      "freelanceContent": "For custom development services, the Client receives the delivered source code and becomes its owner upon full payment. Internal tools, libraries, frameworks and reusable components developed by YdvSystems remain the property of the Provider, who grants the Client a license to use them within the scope of the delivered project."
+    },
+    "liability": {
+      "title": "8. Liability",
+      "p1": "YdvSystems commits to providing 99.5% uptime on its SaaS platforms, excluding planned maintenance. Scheduled maintenance is communicated at least 48 hours in advance by email or in-app notification.",
+      "p2": "YdvSystems shall not be held liable for indirect damages, such as loss of revenue, data or profits, resulting from the use or inability to use the services. In any event, YdvSystems' total liability is limited to the amounts paid by the Client during the preceding 12 months."
+    },
+    "force": {
+      "title": "9. Force majeure",
+      "p1": "Neither party shall be held liable for failure to fulfill its contractual obligations if such failure results from a force majeure event as defined under Article 1218 of the French Civil Code, including but not limited to: natural disasters, fire, internet network failures, cyberattacks, government decisions or any other unforeseeable, irresistible and external circumstances."
+    },
+    "law": {
+      "title": "10. Governing law and jurisdiction",
+      "p1": "These Terms of Sale are governed by French law. In the event of a dispute, the parties agree to seek an amicable resolution. Failing amicable agreement within 30 days, the dispute shall be brought before the competent court of Narbonne, France."
+    },
+    "backHome": "Back to homepage"
+  },
+  "cgu": {
+    "meta": {
+      "title": "Terms of Use — YdvSystems",
+      "description": "Terms of use for YdvSystems platforms. Registration, acceptable use, personal data, intellectual property."
+    },
+    "title": "Terms of Use",
+    "lastUpdate": "Last updated: March 23, 2026",
+    "purpose": {
+      "title": "1. Purpose",
+      "p1": "These Terms of Use govern access to and use of the SaaS platforms published by YdvSystems, a sole proprietorship operated by Yohann Dandeville (French business registration SIRET 534 080 783 00028). Using the platforms implies full and unreserved acceptance of these Terms of Use."
+    },
+    "access": {
+      "title": "2. Access and registration",
+      "p1": "Access to the platforms requires creating a personal account. Users must provide a valid email address and choose a secure password. Each account is strictly personal and the user is responsible for maintaining the confidentiality of their credentials.",
+      "p2": "Users agree to provide accurate and up-to-date information during registration. In the event of suspected fraudulent use of an account, YdvSystems reserves the right to suspend access immediately."
+    },
+    "usage": {
+      "title": "3. Acceptable use",
+      "p1": "Users agree to use the platforms in accordance with their intended purpose and in compliance with applicable laws. The following are strictly prohibited: scraping or automated data extraction, reverse engineering, decompilation or disassembly of the source code, any attempt at unauthorized access to systems, and any use for illegal purposes or purposes contrary to public order.",
+      "p2": "Users agree not to intentionally overload the servers, not to distribute malicious content (viruses, malware) and not to use the platforms to send spam or unsolicited communications."
+    },
+    "data": {
+      "title": "4. Data",
+      "p1": "Users retain ownership of all data they enter and store on the platforms. YdvSystems hosts and processes this data in accordance with the General Data Protection Regulation (GDPR) and its Privacy Policy. YdvSystems commits to not accessing Client data except for technical necessity (maintenance, support) and to never sharing it with third parties."
+    },
+    "availability": {
+      "title": "5. Availability",
+      "p1": "YdvSystems uses reasonable means to ensure platform availability. Access is provided on a best-effort basis. Planned maintenance is communicated at least 48 hours in advance by email or in-app notification. YdvSystems shall not be held liable for interruptions due to network failures, urgent security updates or force majeure events."
+    },
+    "ip": {
+      "title": "6. Intellectual property",
+      "p1": "The YdvSystems platforms, their source code, architecture, design and all associated content (text, images, logos) are the exclusive property of YdvSystems. A subscription grants a non-exclusive, non-transferable and non-assignable right of use, limited to the duration of the subscription. Any unauthorized reproduction, modification or redistribution is prohibited."
+    },
+    "suspension": {
+      "title": "7. Suspension and termination",
+      "p1": "In the event of non-compliance with these Terms of Use, YdvSystems reserves the right to suspend or terminate the user's account. Except in cases of emergency (security breach, illegal activity), a prior warning will be sent by email, giving the user 15 days to comply. In the event of termination for breach, no refund will be provided."
+    },
+    "changes": {
+      "title": "8. Changes to the Terms of Use",
+      "p1": "YdvSystems reserves the right to modify these Terms of Use at any time. Users will be notified of any substantial change at least 30 days before it takes effect, by email or in-app notification. Continued use of the platforms after the changes take effect constitutes acceptance of the updated Terms of Use."
+    },
+    "contact": {
+      "title": "9. Contact",
+      "p1": "For any questions regarding these Terms of Use, you can contact YdvSystems at"
+    },
+    "backHome": "Back to homepage"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy — YdvSystems",
+      "description": "YdvSystems privacy policy. Data collected, purposes, GDPR rights, subprocessors, cookies, security."
+    },
+    "title": "Privacy Policy",
+    "lastUpdate": "Last updated: March 23, 2026",
+    "controller": {
+      "title": "1. Data controller",
+      "p1": "The data controller is Yohann Dandeville, sole proprietor operating under the trade name YdvSystems (French business registration SIRET 534 080 783 00028), reachable at contact@ydvsystems.com."
+    },
+    "collected": {
+      "title": "2. Data collected",
+      "contactTitle": "Contact form",
+      "contactContent": "When you use the contact form on ydvsystems.com, we collect your name, email address and message content. This data is used solely to respond to your inquiry.",
+      "saasTitle": "SaaS platforms",
+      "saasContent": "When using our SaaS solutions, we collect the data necessary for creating and managing your account (name, email address, encrypted password) as well as the business data you enter in the application. This business data belongs to you and is processed in accordance with our service agreement.",
+      "analyticsTitle": "Analytics",
+      "analyticsContent": "We use Umami, an open-source analytics tool self-hosted on our own servers. Umami does not set any cookies, does not collect any personally identifiable data and is fully GDPR-compliant. The data collected is anonymized and aggregated (page views, session duration, country of origin)."
+    },
+    "purposes": {
+      "title": "3. Processing purposes",
+      "p1": "Your data is processed for the following purposes: performance of the service contract (account management, provision of platform features), improvement of our services (anonymous usage analysis via Umami), and communication (responding to your contact requests, sending account-related information)."
+    },
+    "basis": {
+      "title": "4. Legal basis",
+      "p1": "The processing of your data is based on the following legal grounds: contractual performance for data related to your account and platform usage, legitimate interest for anonymized audience analytics (service improvement), and consent for newsletter subscription."
+    },
+    "retention": {
+      "title": "5. Data retention",
+      "p1": "Account data is retained for the duration of the contract, plus 1 year after termination to allow for possible reactivation. Contact form data is retained for 3 years from the last exchange. Anonymized analytics data is retained for 26 months."
+    },
+    "subprocessors": {
+      "title": "6. Subprocessors",
+      "p1": "In the course of providing our services, we use the following subprocessors: Hetzner Online GmbH (server and data hosting, Falkenstein, Germany), Brevo (transactional emails and notifications), and Umami (analytics, self-hosted on our Hetzner servers). None of these subprocessors have access to your business data."
+    },
+    "transfers": {
+      "title": "7. Data transfers",
+      "p1": "All your data is hosted in Europe, on Hetzner servers located in Falkenstein, Germany. No data transfers outside the European Economic Area are made."
+    },
+    "rights": {
+      "title": "8. Your rights",
+      "p1": "Under the GDPR, you have the following rights regarding your personal data: right of access (obtain a copy of your data), right of rectification (correct inaccurate data), right of erasure (request deletion of your data), right to data portability (receive your data in a structured format), right to object (object to the processing of your data) and right to restriction of processing.",
+      "p2": "To exercise any of these rights, send your request by email to"
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "p1": "The ydvsystems.com website and SaaS platforms use only Umami for audience analytics. Umami does not set any tracking cookies and does not collect any personally identifiable data. We do not use any advertising cookies, social media cookies or third-party cookies. The only cookies that may be present are strictly necessary technical cookies for application functionality (authentication session)."
+    },
+    "security": {
+      "title": "10. Security",
+      "p1": "YdvSystems implements appropriate technical and organizational measures to protect your data: encrypted communications via HTTPS (TLS 1.3), encryption of data at rest, automated daily backups, server access restricted by SSH key and firewall, and passwords stored as secure hashes (bcrypt)."
+    },
+    "modifications": {
+      "title": "11. Policy changes",
+      "p1": "YdvSystems reserves the right to modify this privacy policy. In the event of a substantial change, users will be informed by email or by a notification on the website. The last updated date at the top of this page shall prevail."
+    },
+    "dpo": {
+      "title": "12. Contact — Data Protection Officer",
+      "p1": "For any questions regarding the protection of your personal data, you can contact the data controller at"
     },
     "backHome": "Back to homepage"
   },

@@ -23,6 +23,9 @@
       "about": "À propos",
       "contact": "Contact",
       "legal": "Mentions légales",
+      "cgv": "CGV",
+      "cgu": "CGU",
+      "privacyLink": "Confidentialité",
       "copyright": "YdvSystems — Yohann Dandeville",
       "siret": "SIRET 534 080 783 00028"
     },
@@ -227,6 +230,8 @@
       "emailPlaceholder": "votre@email.com",
       "projectTypeLabel": "Type de projet",
       "projectTypePlaceholder": "Choisir...",
+      "structureSizeLabel": "Taille de votre structure",
+      "structureSizePlaceholder": "Choisir...",
       "messageLabel": "Message *",
       "messagePlaceholder": "Décrivez votre projet, votre besoin, ou posez votre question...",
       "submit": "Envoyer le message",
@@ -250,6 +255,12 @@
       "demo-formation": "Démo YDV Formation",
       "demo-autre": "Démo autre solution",
       "autre": "Autre"
+    },
+    "structureSizes": {
+      "solo": "Indépendant / Freelance",
+      "small": "1–10 salariés",
+      "medium": "11–50 salariés",
+      "large": "50+ salariés"
     }
   },
   "pricing": {
@@ -580,6 +591,13 @@
       "allArticles": "Tous les articles",
       "readTime": "de lecture",
       "contactCta": "Une question ? Contactez-moi",
+      "blogCtaTitle": "Envie d'aller plus loin ?",
+      "blogCtaInsertion": "Decouvrez YDV Insertion — le logiciel metier pour les SIAE",
+      "blogCtaFormation": "Decouvrez YDV Formation — conforme Qualiopi nativement",
+      "blogCtaCoaching": "Decouvrez YDV Coaching — bilan de competences et VAE",
+      "blogCtaIA": "Decouvrez nos prestations IA et developpement sur mesure",
+      "blogCtaDefault": "Decouvrez nos logiciels metier pour le secteur social",
+      "blogCtaButton": "En savoir plus",
       "authorRole": "Développeur full-stack & fondateur de YdvSystems",
       "notFound": "Article introuvable",
       "breadcrumbHome": "Accueil",
@@ -625,6 +643,175 @@
     "intellectual": {
       "title": "Propriété intellectuelle",
       "content": "L'ensemble du contenu de ce site (textes, code, design) est la propriété exclusive de YdvSystems — Yohann Dandeville, sauf mention contraire. Toute reproduction est interdite sans autorisation préalable."
+    },
+    "backHome": "Retour à l'accueil"
+  },
+  "cgv": {
+    "meta": {
+      "title": "Conditions Générales de Vente — YdvSystems",
+      "description": "Conditions générales de vente de YdvSystems — solutions SaaS et prestations freelance. Tarifs, essai gratuit, résiliation, propriété intellectuelle."
+    },
+    "title": "Conditions Générales de Vente",
+    "lastUpdate": "Dernière mise à jour : 23 mars 2026",
+    "scope": {
+      "title": "1. Objet et champ d'application",
+      "p1": "Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble des relations commerciales entre YdvSystems, entreprise individuelle exploitée par Yohann Dandeville (SIRET 534 080 783 00028), ci-après « le Prestataire », et toute personne physique ou morale souscrivant à ses services, ci-après « le Client ».",
+      "p2": "Toute commande ou souscription implique l'acceptation sans réserve des présentes CGV. Elles s'appliquent aux solutions SaaS proposées sur ydvsystems.com ainsi qu'aux prestations de développement freelance."
+    },
+    "saas": {
+      "title": "2. Solutions SaaS",
+      "p1": "YdvSystems propose quatre solutions logicielles en mode SaaS : YDV Insertion (gestion des structures d'insertion par l'activité économique), YDV Formation (gestion des organismes de formation, conformité Qualiopi), YDV Bilan (gestion des bilans de compétences) et YDV Manager (gestion commerciale et facturation pour indépendants et TPE).",
+      "p2": "Chaque solution est accessible via un navigateur web après création d'un compte. Un essai gratuit de 30 jours, sans engagement et sans carte bancaire requise, donne accès à l'intégralité des fonctionnalités de la solution choisie.",
+      "p3": "À l'issue de la période d'essai, le Client peut souscrire un abonnement mensuel, trimestriel ou annuel. L'abonnement prend effet à la date de souscription et se renouvelle automatiquement à chaque échéance, sauf résiliation dans les conditions prévues à l'article 6."
+    },
+    "freelance": {
+      "title": "3. Prestations freelance",
+      "p1": "Les prestations de développement sur mesure, d'intégration IA et de conseil font l'objet d'un devis préalable détaillant le périmètre, les livrables, le calendrier et le montant. Le devis est valable 30 jours à compter de sa date d'émission.",
+      "p2": "Sauf accord contraire, un acompte de 30 % du montant total est exigé à la signature du devis. Le solde est facturé à la livraison des livrables définis dans le devis. Pour les projets de longue durée, un échéancier de paiement intermédiaire peut être convenu."
+    },
+    "pricing": {
+      "title": "4. Tarifs et paiement",
+      "p1": "Les prix sont indiqués en euros hors taxes (HT). Conformément aux dispositions relatives à la micro-entreprise, YdvSystems n'est pas assujetti à la TVA (article 293 B du Code Général des Impôts). La mention « TVA non applicable, article 293 B du CGI » figure sur chaque facture.",
+      "p2": "Le paiement s'effectue par carte bancaire ou par virement bancaire. Les abonnements SaaS sont facturés de manière récurrente selon la périodicité choisie (mensuelle, trimestrielle ou annuelle). Les factures sont transmises par voie électronique à l'adresse email du Client."
+    },
+    "trial": {
+      "title": "5. Essai gratuit",
+      "p1": "L'essai gratuit de 30 jours donne accès à l'ensemble des fonctionnalités de la solution choisie, sans limitation. Aucune carte bancaire n'est requise pour démarrer l'essai. À l'expiration de la période d'essai, le compte est suspendu. Les données du Client sont conservées pendant 30 jours supplémentaires, lui laissant le temps de souscrire un abonnement ou d'exporter ses données."
+    },
+    "duration": {
+      "title": "6. Durée et résiliation",
+      "p1": "L'abonnement est souscrit pour la durée choisie par le Client (mensuelle, trimestrielle ou annuelle). Le Client peut résilier son abonnement à tout moment depuis son espace client, avec un préavis de 30 jours. La résiliation prend effet à la fin de la période en cours déjà facturée. Aucun remboursement au prorata n'est effectué.",
+      "p2": "Après résiliation, le Client dispose de 30 jours pour exporter l'ensemble de ses données depuis son espace client. Passé ce délai, les données sont supprimées définitivement des serveurs."
+    },
+    "ip": {
+      "title": "7. Propriété intellectuelle",
+      "saasTitle": "Solutions SaaS",
+      "saasContent": "Le Client reste propriétaire de l'ensemble des données qu'il saisit et stocke sur les plateformes YdvSystems. Le code source, le design, l'architecture et les algorithmes des solutions SaaS demeurent la propriété exclusive de YdvSystems. La souscription à un abonnement confère uniquement un droit d'utilisation non exclusif et non cessible pour la durée de l'abonnement.",
+      "freelanceTitle": "Prestations freelance",
+      "freelanceContent": "Pour les prestations de développement sur mesure, le Client reçoit le code source livré et en devient propriétaire après paiement intégral. Les outils, bibliothèques internes, frameworks et composants réutilisables développés par YdvSystems restent la propriété du Prestataire, qui accorde au Client une licence d'utilisation dans le cadre du projet livré."
+    },
+    "liability": {
+      "title": "8. Responsabilité",
+      "p1": "YdvSystems s'engage à fournir un taux de disponibilité de 99,5 % sur ses plateformes SaaS, hors opérations de maintenance planifiée. Les maintenances programmées sont communiquées au moins 48 heures à l'avance par email ou notification dans l'application.",
+      "p2": "La responsabilité de YdvSystems ne saurait être engagée pour les dommages indirects, tels que les pertes de chiffre d'affaires, de données ou de bénéfices, résultant de l'utilisation ou de l'impossibilité d'utilisation des services. En tout état de cause, la responsabilité totale de YdvSystems est limitée au montant des sommes versées par le Client au cours des 12 derniers mois."
+    },
+    "force": {
+      "title": "9. Force majeure",
+      "p1": "Aucune des parties ne pourra être tenue responsable d'un manquement à ses obligations contractuelles si ce manquement résulte d'un événement de force majeure au sens de l'article 1218 du Code civil, notamment : catastrophe naturelle, incendie, panne de réseau internet, cyberattaque, décision gouvernementale ou toute autre circonstance imprévisible, irrésistible et extérieure aux parties."
+    },
+    "law": {
+      "title": "10. Droit applicable et juridiction compétente",
+      "p1": "Les présentes CGV sont soumises au droit français. En cas de litige, les parties s'engagent à rechercher une solution amiable. À défaut d'accord amiable dans un délai de 30 jours, le litige sera porté devant le tribunal compétent de Narbonne."
+    },
+    "backHome": "Retour à l'accueil"
+  },
+  "cgu": {
+    "meta": {
+      "title": "Conditions Générales d'Utilisation — YdvSystems",
+      "description": "Conditions générales d'utilisation des plateformes YdvSystems. Inscription, utilisation, données personnelles, propriété intellectuelle."
+    },
+    "title": "Conditions Générales d'Utilisation",
+    "lastUpdate": "Dernière mise à jour : 23 mars 2026",
+    "purpose": {
+      "title": "1. Objet",
+      "p1": "Les présentes Conditions Générales d'Utilisation (CGU) définissent les modalités d'accès et d'utilisation des plateformes SaaS éditées par YdvSystems, entreprise individuelle exploitée par Yohann Dandeville (SIRET 534 080 783 00028). L'utilisation des plateformes implique l'acceptation pleine et entière des présentes CGU."
+    },
+    "access": {
+      "title": "2. Accès et inscription",
+      "p1": "L'accès aux plateformes nécessite la création d'un compte personnel. L'utilisateur doit fournir une adresse email valide et choisir un mot de passe sécurisé. Chaque compte est strictement personnel et l'utilisateur est responsable de la confidentialité de ses identifiants.",
+      "p2": "L'utilisateur s'engage à fournir des informations exactes et à jour lors de son inscription. En cas de suspicion d'utilisation frauduleuse d'un compte, YdvSystems se réserve le droit de suspendre l'accès immédiatement."
+    },
+    "usage": {
+      "title": "3. Utilisation acceptable",
+      "p1": "L'utilisateur s'engage à utiliser les plateformes conformément à leur destination et dans le respect de la législation en vigueur. Sont notamment interdits : le scraping ou l'extraction automatisée de données, la rétro-ingénierie, la décompilation ou le désassemblage du code source, toute tentative d'accès non autorisé aux systèmes, et tout usage à des fins illégales ou contraires à l'ordre public.",
+      "p2": "L'utilisateur s'engage à ne pas surcharger intentionnellement les serveurs, à ne pas diffuser de contenu malveillant (virus, malware) et à ne pas utiliser les plateformes pour envoyer du spam ou des communications non sollicitées."
+    },
+    "data": {
+      "title": "4. Données",
+      "p1": "L'utilisateur reste propriétaire de l'ensemble des données qu'il saisit et stocke sur les plateformes. YdvSystems héberge et traite ces données conformément au Règlement Général sur la Protection des Données (RGPD) et à sa Politique de Confidentialité. YdvSystems s'engage à ne pas accéder aux données du Client sauf nécessité technique (maintenance, support) et à ne jamais les céder à des tiers."
+    },
+    "availability": {
+      "title": "5. Disponibilité",
+      "p1": "YdvSystems met en œuvre les moyens raisonnables pour assurer la disponibilité des plateformes. L'accès est fourni sur la base d'une obligation de moyens (« best effort »). Les opérations de maintenance planifiée sont communiquées au moins 48 heures à l'avance par email ou notification dans l'application. YdvSystems ne saurait être tenu responsable des interruptions liées à des pannes réseau, des mises à jour de sécurité urgentes ou des événements de force majeure."
+    },
+    "ip": {
+      "title": "6. Propriété intellectuelle",
+      "p1": "Les plateformes YdvSystems, leur code source, leur architecture, leur design et l'ensemble des contenus associés (textes, images, logos) sont la propriété exclusive de YdvSystems. La souscription d'un abonnement confère un droit d'utilisation non exclusif, non cessible et non transférable, limité à la durée de l'abonnement. Toute reproduction, modification ou redistribution non autorisée est interdite."
+    },
+    "suspension": {
+      "title": "7. Suspension et résiliation",
+      "p1": "En cas de non-respect des présentes CGU, YdvSystems se réserve le droit de suspendre ou de résilier le compte de l'utilisateur. Sauf cas d'urgence (atteinte à la sécurité des systèmes, activité illicite), un avertissement préalable sera adressé par email, laissant à l'utilisateur un délai de 15 jours pour se mettre en conformité. En cas de résiliation pour faute, aucun remboursement ne sera effectué."
+    },
+    "changes": {
+      "title": "8. Modifications des CGU",
+      "p1": "YdvSystems se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront notifiés de toute modification substantielle au moins 30 jours avant son entrée en vigueur, par email ou notification dans l'application. La poursuite de l'utilisation des plateformes après l'entrée en vigueur des modifications vaut acceptation des nouvelles CGU."
+    },
+    "contact": {
+      "title": "9. Contact",
+      "p1": "Pour toute question relative aux présentes CGU, vous pouvez contacter YdvSystems à l'adresse"
+    },
+    "backHome": "Retour à l'accueil"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de Confidentialité — YdvSystems",
+      "description": "Politique de confidentialité de YdvSystems. Données collectées, finalités, droits RGPD, sous-traitants, cookies, sécurité."
+    },
+    "title": "Politique de Confidentialité",
+    "lastUpdate": "Dernière mise à jour : 23 mars 2026",
+    "controller": {
+      "title": "1. Responsable du traitement",
+      "p1": "Le responsable du traitement des données personnelles est Yohann Dandeville, entrepreneur individuel exerçant sous le nom commercial YdvSystems (SIRET 534 080 783 00028), joignable à l'adresse contact@ydvsystems.com."
+    },
+    "collected": {
+      "title": "2. Données collectées",
+      "contactTitle": "Formulaire de contact",
+      "contactContent": "Lorsque vous utilisez le formulaire de contact du site ydvsystems.com, nous collectons votre nom, votre adresse email et le contenu de votre message. Ces données sont uniquement utilisées pour répondre à votre demande.",
+      "saasTitle": "Plateformes SaaS",
+      "saasContent": "Dans le cadre de l'utilisation de nos solutions SaaS, nous collectons les données nécessaires à la création et à la gestion de votre compte (nom, prénom, adresse email, mot de passe chiffré) ainsi que les données métier que vous saisissez dans l'application. Ces données métier vous appartiennent et sont traitées conformément au contrat qui nous lie.",
+      "analyticsTitle": "Analytics",
+      "analyticsContent": "Nous utilisons Umami, un outil d'analyse open-source auto-hébergé sur nos propres serveurs. Umami ne dépose aucun cookie, ne collecte aucune donnée personnelle identifiable et respecte pleinement le RGPD. Les données collectées sont anonymisées et agrégées (pages vues, durée de session, pays d'origine)."
+    },
+    "purposes": {
+      "title": "3. Finalités du traitement",
+      "p1": "Vos données sont traitées pour les finalités suivantes : exécution du contrat de service (gestion de votre compte, fourniture des fonctionnalités des plateformes), amélioration de nos services (analyse anonyme de l'utilisation via Umami), et communication (réponse à vos demandes de contact, envoi d'informations relatives à votre compte)."
+    },
+    "basis": {
+      "title": "4. Base légale",
+      "p1": "Le traitement de vos données repose sur les bases légales suivantes : l'exécution contractuelle pour les données liées à votre compte et à l'utilisation des plateformes, l'intérêt légitime pour les analyses d'audience anonymisées (amélioration des services), et le consentement pour l'inscription à la newsletter."
+    },
+    "retention": {
+      "title": "5. Durée de conservation",
+      "p1": "Les données liées à votre compte sont conservées pendant toute la durée du contrat, puis 1 an après la résiliation pour permettre une éventuelle réactivation. Les données issues du formulaire de contact sont conservées 3 ans à compter du dernier échange. Les données d'analytics anonymisées sont conservées 26 mois."
+    },
+    "subprocessors": {
+      "title": "6. Sous-traitants",
+      "p1": "Dans le cadre de la fourniture de nos services, nous faisons appel aux sous-traitants suivants : Hetzner Online GmbH (hébergement des serveurs et des données, Falkenstein, Allemagne), Brevo (envoi des emails transactionnels et des notifications), et Umami (analytics, auto-hébergé sur nos serveurs Hetzner). Aucun de ces sous-traitants n'a accès à vos données métier."
+    },
+    "transfers": {
+      "title": "7. Transferts de données",
+      "p1": "L'ensemble de vos données est hébergé en Europe, sur les serveurs Hetzner situés à Falkenstein, en Allemagne. Aucun transfert de données en dehors de l'Espace Économique Européen n'est effectué."
+    },
+    "rights": {
+      "title": "8. Vos droits",
+      "p1": "Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles : droit d'accès (obtenir une copie de vos données), droit de rectification (corriger des données inexactes), droit de suppression (demander l'effacement de vos données), droit à la portabilité (recevoir vos données dans un format structuré), droit d'opposition (vous opposer au traitement de vos données) et droit à la limitation du traitement.",
+      "p2": "Pour exercer l'un de ces droits, adressez votre demande par email à"
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "p1": "Le site ydvsystems.com et les plateformes SaaS utilisent uniquement Umami pour l'analyse d'audience. Umami ne dépose aucun cookie de tracking et ne collecte aucune donnée personnelle identifiable. Nous n'utilisons aucun cookie publicitaire, aucun cookie de réseaux sociaux et aucun cookie tiers. Les seuls cookies éventuellement présents sont les cookies techniques strictement nécessaires au fonctionnement de l'application (session d'authentification)."
+    },
+    "security": {
+      "title": "10. Sécurité",
+      "p1": "YdvSystems met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données : chiffrement des échanges via HTTPS (TLS 1.3), chiffrement des données au repos, sauvegardes quotidiennes automatisées, accès aux serveurs restreint par clé SSH et pare-feu, et mots de passe stockés sous forme de hash sécurisé (bcrypt)."
+    },
+    "modifications": {
+      "title": "11. Modifications de la politique",
+      "p1": "YdvSystems se réserve le droit de modifier la présente politique de confidentialité. En cas de modification substantielle, les utilisateurs seront informés par email ou par une notification sur le site. La date de dernière mise à jour figurant en haut de cette page fait foi."
+    },
+    "dpo": {
+      "title": "12. Contact — Délégué à la protection des données",
+      "p1": "Pour toute question relative à la protection de vos données personnelles, vous pouvez contacter le responsable du traitement à l'adresse"
     },
     "backHome": "Retour à l'accueil"
   },
