@@ -37,12 +37,12 @@ export default async function MentionsLegalesPage() {
               </li>
               <li>
                 <strong className="text-(--text-tertiary)">{t("editor.email")}</strong>{" "}
-                <a
-                  href="mailto:contact@ydvsystems.com"
+                <Link
+                  href="/contact"
                   className="text-primary hover:text-(--accent-hover) transition-colors"
                 >
                   contact@ydvsystems.com
-                </a>
+                </Link>
               </li>
             </ul>
           </section>
@@ -78,12 +78,12 @@ export default async function MentionsLegalesPage() {
             <p>{t("privacy.paragraph1")}</p>
             <p className="mt-3">
               {t("privacy.paragraph2")}{" "}
-              <a
-                href="mailto:contact@ydvsystems.com"
+              <Link
+                href="/contact"
                 className="text-primary hover:text-(--accent-hover) transition-colors"
               >
                 contact@ydvsystems.com
-              </a>.
+              </Link>.
             </p>
           </section>
 

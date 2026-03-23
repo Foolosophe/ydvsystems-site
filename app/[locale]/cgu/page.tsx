@@ -67,12 +67,12 @@ export default async function CGUPage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">{t("contact.title")}</h2>
             <p>
               {t("contact.p1")}{" "}
-              <a
-                href="mailto:contact@ydvsystems.com"
+              <Link
+                href="/contact"
                 className="text-primary hover:text-(--accent-hover) transition-colors"
               >
                 contact@ydvsystems.com
-              </a>.
+              </Link>.
             </p>
           </section>
         </div>

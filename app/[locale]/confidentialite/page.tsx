@@ -66,12 +66,12 @@ export default async function ConfidentialitePage() {
             <p>{t("rights.p1")}</p>
             <p className="mt-3">
               {t("rights.p2")}{" "}
-              <a
-                href="mailto:contact@ydvsystems.com"
+              <Link
+                href="/contact"
                 className="text-primary hover:text-(--accent-hover) transition-colors"
               >
                 contact@ydvsystems.com
-              </a>.
+              </Link>.
             </p>
           </section>
 
@@ -94,12 +94,12 @@ export default async function ConfidentialitePage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">{t("dpo.title")}</h2>
             <p>
               {t("dpo.p1")}{" "}
-              <a
-                href="mailto:contact@ydvsystems.com"
+              <Link
+                href="/contact"
                 className="text-primary hover:text-(--accent-hover) transition-colors"
               >
                 contact@ydvsystems.com
-              </a>.
+              </Link>.
             </p>
           </section>
         </div>
