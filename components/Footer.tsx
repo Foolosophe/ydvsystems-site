@@ -33,6 +33,7 @@ export function Footer() {
       { label: t("pricing"), href: "/prix" as const },
       { label: t("blog"), href: "/blog" as const },
       { label: t("portfolio"), href: "/portfolio" as const },
+      { label: t("about"), href: "/a-propos" as const },
       { label: t("contact"), href: "/contact" as const },
       { label: t("legal"), href: "/mentions-legales" as const },
     ],

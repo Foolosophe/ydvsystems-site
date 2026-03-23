@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import {
   ArrowRight,
   ArrowLeft,
+  AlertTriangle,
   CheckCircle2,
   Users,
   Calendar,
@@ -115,6 +116,7 @@ export default async function SolutionPage({
 
   const heroTitle = td(`${slug}.heroTitle`)
   const heroSubtitle = td(`${slug}.heroSubtitle`)
+  const painPoints = td.raw(`${slug}.painPoints`) as string[]
   const features = td.raw(`${slug}.features`) as { title: string; description: string }[]
   const pricingPrice = td(`${slug}.pricingPrice`)
   const pricingUnit = td(`${slug}.pricingUnit`)
@@ -201,8 +203,29 @@ export default async function SolutionPage({
         </div>
       </section>
 
-      {/* Features */}
+      {/* Pain points */}
       <section className="py-16 bg-secondary">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="section-tag" style={{ color: solution.color }}>{t("painPointsTag")}</p>
+            <h2 className="text-2xl font-bold text-foreground">{t("painPointsTitle")}</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            {painPoints.map((point) => (
+              <Card key={point} className="bg-white border-border">
+                <CardContent className="p-5 flex items-start gap-3">
+                  <AlertTriangle size={20} className="text-amber-500 shrink-0 mt-0.5" />
+                  <p className="text-sm text-secondary-foreground leading-relaxed">{point}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <p className="text-center text-primary font-semibold">{t("painPointsSolved")}</p>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="section-tag" style={{ color: solution.color }}>{t("featuresTag")}</p>

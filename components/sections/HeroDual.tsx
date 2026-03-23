@@ -60,8 +60,8 @@ export function HeroDual() {
             size="lg"
             className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold px-8 gap-2 shadow-(--shadow-glow) hover:shadow-none transition-all"
           >
-            <Link href="/prestations">
-              {t("ctaFreelance")}
+            <Link href="/solutions">
+              {t("ctaSolutions")}
               <ArrowRight size={18} />
             </Link>
           </Button>
@@ -71,10 +71,10 @@ export function HeroDual() {
             size="lg"
             className="border-border text-secondary-foreground hover:bg-secondary hover:text-foreground px-8 gap-2"
           >
-            <a href="#solutions">
-              {t("ctaSolutions")}
+            <Link href="/prestations">
+              {t("ctaFreelance")}
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </Button>
         </div>
 

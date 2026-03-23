@@ -98,6 +98,15 @@ export const PORTFOLIO_IDS = [
   "blog-parkinson",
 ] as const
 
+export const PORTFOLIO_CATEGORIES: Record<string, "pro" | "perso"> = {
+  "ydv-systems": "pro",
+  "prompt-parfait": "pro",
+  "audit-ia-entreprise": "pro",
+  "blog-parkinson": "pro",
+  "moteur-jeu": "perso",
+  "pills-stadium": "perso",
+}
+
 export const PORTFOLIO_PREVIEW_IDS = PORTFOLIO_IDS.slice(0, 3)
 
 export const GAME_URLS: Record<string, string> = {

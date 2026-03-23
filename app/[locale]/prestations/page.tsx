@@ -14,7 +14,6 @@ import {
   Heart,
   ArrowRight,
 } from "lucide-react"
-import { SectionHeader } from "@/components/SectionHeader"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { SERVICE_IDS, SERVICE_ICONS, SERVICE_TECH_TAGS } from "@/lib/data"
 import { getTranslations } from "next-intl/server"
@@ -38,9 +37,51 @@ const ICONS: Record<string, React.ReactNode> = {
   Heart: <Heart size={24} />,
 }
 
+const EXPERTISE_IDS = ["dev-sur-mesure", "integration-ia", "atelier-ia", "audit-ia", "automatisation"] as const
+const OTHER_IDS = ["cross-platform", "jeux-narratifs", "accessibilite"] as const
+
+function ServiceCard({ id, tSrv, large }: { id: string; tSrv: (key: string) => string; large?: boolean }) {
+  return (
+    <Card
+      className={`bg-white border-border overflow-hidden hover:border-primary/40 transition-all duration-200 hover:shadow-(--shadow-card-hover) hover:-translate-y-1 group h-full ${large ? "" : ""}`}
+    >
+      <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
+      <CardHeader className="pb-3">
+        <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-colors solution-icon-box">
+          {ICONS[SERVICE_ICONS[id]]}
+        </div>
+        <h3 className="font-semibold text-foreground text-base leading-snug">
+          {tSrv(`${id}.title`)}
+        </h3>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <p className="text-sm text-secondary-foreground leading-relaxed">
+          {tSrv(`${id}.description`)}
+        </p>
+        <div className="flex flex-wrap gap-1.5">
+          {(SERVICE_TECH_TAGS[id] || []).map((tag) => (
+            <Badge
+              key={tag}
+              variant="secondary"
+              className="bg-secondary text-muted-foreground border-0 text-xs px-2 py-0.5"
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+        <div className="pt-1">
+          <span className="text-sm font-semibold text-primary">{tSrv(`${id}.price`)}</span>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
 export default async function PrestationsPage() {
   const t = await getTranslations("prestations")
   const tSrv = await getTranslations("data.services")
+
+  const processSteps = t.raw("process.steps") as { title: string; description: string }[]
 
   return (
     <main className="min-h-screen pt-24 pb-20">
@@ -93,50 +134,68 @@ export default async function PrestationsPage() {
         </div>
       </section>
 
-      {/* Services grid */}
+      {/* Expertise metier */}
       <section className="py-20 bg-secondary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            tag={t("services.tag")}
-            title={t("services.title")}
-            description={t("services.description")}
-          />
+          <AnimateOnScroll>
+            <div className="text-center mb-10">
+              <p className="section-tag">{t("services.tag")}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-2">{t("expertiseTitle")}</h2>
+              <p className="text-secondary-foreground">{t("services.description")}</p>
+            </div>
+          </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {SERVICE_IDS.map((id, i) => (
-              <AnimateOnScroll key={id} delay={i * 100}>
-              <Card
-                className="bg-white border-border overflow-hidden hover:border-primary/40 transition-all duration-200 hover:shadow-(--shadow-card-hover) hover:-translate-y-1 group h-full"
-              >
-                <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
-                <CardHeader className="pb-3">
-                  <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-colors solution-icon-box">
-                    {ICONS[SERVICE_ICONS[id]]}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {EXPERTISE_IDS.map((id, i) => (
+              <AnimateOnScroll key={id} delay={i * 80}>
+                <ServiceCard id={id} tSrv={(key) => tSrv(key)} large />
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comment ca se passe */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll>
+            <div className="text-center mb-12">
+              <p className="section-tag">{t("process.tag")}</p>
+              <h2 className="text-2xl font-bold text-foreground">{t("process.title")}</h2>
+            </div>
+          </AnimateOnScroll>
+
+          <div className="space-y-6">
+            {processSteps.map((step, i) => (
+              <AnimateOnScroll key={step.title} delay={i * 80}>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center shrink-0 text-sm">
+                    {i + 1}
                   </div>
-                  <h3 className="font-semibold text-foreground text-base leading-snug">
-                    {tSrv(`${id}.title`)}
-                  </h3>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <p className="text-sm text-secondary-foreground leading-relaxed">
-                    {tSrv(`${id}.description`)}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {(SERVICE_TECH_TAGS[id] || []).map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="bg-secondary text-muted-foreground border-0 text-xs px-2 py-0.5"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">{step.title}</h3>
+                    <p className="text-sm text-secondary-foreground leading-relaxed">{step.description}</p>
                   </div>
-                  <div className="pt-1 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-primary">{tSrv(`${id}.price`)}</span>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Autres competences */}
+      <section className="py-16 bg-secondary">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll>
+            <div className="text-center mb-10">
+              <h2 className="text-xl font-bold text-foreground">{t("otherTitle")}</h2>
+            </div>
+          </AnimateOnScroll>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {OTHER_IDS.map((id, i) => (
+              <AnimateOnScroll key={id} delay={i * 80}>
+                <ServiceCard id={id} tSrv={(key) => tSrv(key)} />
               </AnimateOnScroll>
             ))}
           </div>

@@ -20,6 +20,7 @@
       "pricing": "Tarifs",
       "blog": "Blog",
       "portfolio": "Portfolio",
+      "about": "À propos",
       "contact": "Contact",
       "legal": "Mentions légales",
       "copyright": "YdvSystems — Yohann Dandeville",
@@ -35,14 +36,14 @@
   },
   "home": {
     "hero": {
-      "tag": "Développeur freelance · Logiciels SaaS",
-      "title1": "Développement ",
-      "titleHighlight1": "sur mesure",
-      "title2": " et ",
-      "titleHighlight2": "intégration IA",
-      "subtitle": "Développeur full-stack freelance, j'accompagne les entreprises dans la création d'outils sur mesure, l'intégration de l'IA et la formation. Fondateur de YdvSystems, éditeur de logiciels SaaS pour le secteur social.",
-      "ctaSolutions": "Nos logiciels SaaS",
-      "ctaFreelance": "Découvrir mes prestations",
+      "tag": "Développement sur mesure · IA · Logiciels métier",
+      "title1": "Logiciels métier & ",
+      "titleHighlight1": "IA",
+      "title2": " pour le social, la formation et ",
+      "titleHighlight2": "l'accompagnement",
+      "subtitle": "4 solutions SaaS prêtes à l'emploi pour l'insertion, la formation, le coaching et la gestion. Des prestations freelance sur mesure pour tous vos projets. Une expertise IA native.",
+      "ctaFreelance": "Besoin d'un développeur ?",
+      "ctaSolutions": "Découvrir nos logiciels",
       "scrollHint": "Explorer"
     },
     "stats": {
@@ -97,6 +98,19 @@
       "title": "Ce que je peux faire pour vous",
       "description": "8 types de missions, du développement sur mesure à la formation IA."
     },
+    "expertiseTitle": "Expertise metier",
+    "otherTitle": "Autres competences",
+    "process": {
+      "tag": "Processus",
+      "title": "Comment ca se passe",
+      "steps": [
+        { "title": "Appel decouverte", "description": "30 minutes pour comprendre votre besoin, votre contexte et vos contraintes. Gratuit, sans engagement." },
+        { "title": "Proposition technique", "description": "Sous 48h, vous recevez une proposition detaillee : approche technique, planning, devis transparent." },
+        { "title": "Developpement en sprints", "description": "Avancee iterative avec des points reguliers. Vous voyez le produit evoluer et pouvez ajuster au fur et a mesure." },
+        { "title": "Livraison & documentation", "description": "Code propre, teste, documente. Deploiement inclus. Vous etes autonome pour la suite." },
+        { "title": "Suivi post-livraison", "description": "Support apres livraison pour les ajustements. Je reste disponible si vous avez besoin d'evolutions." }
+      ]
+    },
     "cta": {
       "title": "Prêt à démarrer ?",
       "description": "Décrivez votre projet et je vous réponds sous 24h avec une proposition concrète.",
@@ -115,6 +129,8 @@
       "description": "Des projets concrets, en production ou déployés — pas des démos."
     },
     "projectsTag": "Réalisations",
+    "proTitle": "Produits & projets clients",
+    "persoTitle": "Projets personnels & R&D",
     "visit": "Visiter {title}",
     "playOnline": "Jouer en ligne",
     "play": {
@@ -136,6 +152,54 @@
       "title": "Un projet en tête ?",
       "description": "Décrivez votre besoin et je vous réponds sous 24h avec une proposition concrète.",
       "button": "Me contacter"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À propos — YdvSystems | Yohann Dandeville, développeur full-stack & fondateur",
+      "description": "Découvrez le parcours de Yohann Dandeville, développeur full-stack freelance et fondateur de YdvSystems. Logiciels métier, IA et développement sur mesure pour le secteur social et la formation."
+    },
+    "hero": {
+      "tag": "À propos",
+      "title": "Yohann Dandeville",
+      "role": "Développeur full-stack & fondateur de YdvSystems",
+      "intro": "Je conçois des logiciels métier pour le secteur social, la formation et l'accompagnement. Mon approche : code propre, architecture solide, et une obsession pour le produit fini."
+    },
+    "story": {
+      "tag": "Parcours",
+      "title": "Du code à l'impact terrain",
+      "p1": "Développeur full-stack depuis plus de 10 ans, j'ai travaillé dans des environnements variés — startups, ESN, projets open source. Mais c'est dans le secteur social et la formation que j'ai trouvé ma vocation technique.",
+      "p2": "En travaillant avec des structures d'insertion, des organismes de formation et des coachs en bilan de compétences, j'ai constaté un problème récurrent : des professionnels passionnés qui perdent un temps fou sur des outils inadaptés — Excel, papier, logiciels génériques qui ne comprennent pas leur métier.",
+      "p3": "C'est pour ça que j'ai créé YdvSystems : 4 logiciels métier pensés par un développeur qui connaît le terrain. Chaque fonctionnalité répond à un vrai problème, pas à une spécification abstraite.",
+      "p4": "En parallèle, je continue d'accompagner des entreprises de tous secteurs en tant que freelance — développement sur mesure, intégration IA, formation technique. Chaque mission nourrit les produits, et vice versa."
+    },
+    "values": {
+      "tag": "Valeurs",
+      "title": "Ce qui guide mon travail",
+      "items": [
+        {
+          "title": "Qualité sans compromis",
+          "description": "7 225 tests automatisés sur mes plateformes. Le code propre n'est pas un luxe, c'est la seule façon de livrer des produits fiables."
+        },
+        {
+          "title": "Transparence totale",
+          "description": "Tarifs affichés, code source auditable, pas de surprise. Vous savez exactement ce que vous payez et ce que vous obtenez."
+        },
+        {
+          "title": "Impact concret",
+          "description": "Chaque ligne de code doit résoudre un problème réel. Pas de fonctionnalités gadgets, pas d'over-engineering."
+        },
+        {
+          "title": "Réactivité",
+          "description": "Je travaille seul, ce qui me permet d'être rapide et réactif. Pas de réunion inutile, pas de couche de management entre vous et moi."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Un projet en tête ?",
+      "description": "Décrivez votre besoin et je vous réponds sous 24h avec une proposition concrète.",
+      "contact": "Me contacter",
+      "solutions": "Découvrir nos logiciels"
     }
   },
   "contact": {
@@ -474,6 +538,9 @@
       "inProduction": "En production",
       "freeTrial": "Essai gratuit 30 jours",
       "requestDemo": "Demander une démo",
+      "painPointsTag": "Vos defis au quotidien",
+      "painPointsTitle": "Vous vous reconnaissez ?",
+      "painPointsSolved": "C'est exactement ce que nous resolvons.",
       "featuresTag": "Fonctionnalités",
       "featuresTitle": "Tout ce dont vous avez besoin",
       "pricingTag": "Tarif",
@@ -710,6 +777,11 @@
         "tagline": "Le logiciel des professionnels de l'insertion par l'activité économique",
         "heroTitle": "Le logiciel complet pour l'insertion par l'activité économique",
         "heroSubtitle": "19 modules pour les SIAE (AI, ACI, EI, ETTI), missions locales, CHRS. Suivi des bénéficiaires, entretiens, reporting DREETS, IA intégrée.",
+        "painPoints": [
+          "Vous passez des heures sur vos rapports DREETS chaque trimestre",
+          "Le suivi de vos bénéficiaires est éclaté entre Excel, emails et papier",
+          "Vous n'avez aucune visibilité en temps réel sur les parcours d'insertion"
+        ],
         "features": [
           { "title": "Gestion des bénéficiaires", "description": "Dossier 360°, freins, atouts, compétences, timeline, documents rattachés." },
           { "title": "Entretiens structurés avec IA", "description": "Planification, compte-rendu automatique, suggestions, objectifs SMART." },
@@ -733,6 +805,11 @@
         "tagline": "La gestion complète des organismes de formation, Qualiopi inclus",
         "heroTitle": "Organismes de formation : pilotez votre activité de A à Z",
         "heroSubtitle": "17 modules pour les OF Qualiopi, CFA, prestataires CPF, centres de bilan. Catalogue, sessions, émargement, BPF, conformité Qualiopi intégrée nativement.",
+        "painPoints": [
+          "La préparation de votre audit Qualiopi vous prend un temps fou",
+          "L'émargement papier, les feuilles perdues, les relances sans fin...",
+          "Vos BPF et bilans sont faits à la main à chaque fin de session"
+        ],
         "features": [
           { "title": "Catalogue de formations", "description": "Création et gestion du catalogue, programmes, objectifs pédagogiques, modalités." },
           { "title": "Sessions & planification", "description": "Calendrier, salles, formateurs, gestion des participants." },
@@ -753,6 +830,11 @@
         "tagline": "Bilan de compétences, VAE et accompagnement individuel",
         "heroTitle": "Bilan de compétences, VAE et coaching : un outil dédié",
         "heroSubtitle": "17 modules pour les cabinets de coaching, centres de bilan de compétences, accompagnateurs VAE.",
+        "painPoints": [
+          "Vous gérez vos bilans de compétences sur Excel et ça devient ingérable",
+          "Les échanges avec les financeurs (OPCO) manquent de transparence",
+          "Vous n'avez pas de portail client pour vos bénéficiaires"
+        ],
         "features": [
           { "title": "Bilan de compétences", "description": "Parcours structuré en 3 phases (préliminaire, investigation, conclusion)." },
           { "title": "VAE complète", "description": "France VAE, livrets 1 et 2, jury, timeline complète d'accompagnement." },
@@ -772,6 +854,11 @@
         "tagline": "CRM, facturation et gestion commerciale tout-en-un",
         "heroTitle": "Gérez vos prospects, clients, devis et factures en un seul outil",
         "heroSubtitle": "Application séparée sur manager.ydvsystems.com. Pour toute structure ayant besoin d'un outil de gestion commerciale.",
+        "painPoints": [
+          "Votre facturation et votre CRM sont sur deux outils différents",
+          "Vous n'avez aucune visibilité sur votre MRR et votre pipeline commercial",
+          "Le support client passe par des emails désorganisés"
+        ],
         "features": [
           { "title": "CRM", "description": "Prospects, clients, pipeline commercial, segmentation, notes." },
           { "title": "Gestion clients", "description": "Fiches clients, historique des interactions, documents, contrats." },

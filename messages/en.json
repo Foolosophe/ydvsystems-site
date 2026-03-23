@@ -20,6 +20,7 @@
       "pricing": "Pricing",
       "blog": "Blog",
       "portfolio": "Portfolio",
+      "about": "About",
       "contact": "Contact",
       "legal": "Legal notice",
       "copyright": "YdvSystems — Yohann Dandeville",
@@ -35,14 +36,14 @@
   },
   "home": {
     "hero": {
-      "tag": "Freelance Developer · SaaS Products",
-      "title1": "Custom ",
-      "titleHighlight1": "development",
-      "title2": " & ",
-      "titleHighlight2": "AI integration",
-      "subtitle": "Full-stack freelance developer. I help organizations build custom tools, integrate AI and train their teams. Founder of YdvSystems, a SaaS publisher for the social services sector.",
-      "ctaSolutions": "Our SaaS products",
-      "ctaFreelance": "Explore my services",
+      "tag": "Custom development · AI · Business software",
+      "title1": "Business software & ",
+      "titleHighlight1": "AI",
+      "title2": " for social services, training & ",
+      "titleHighlight2": "coaching",
+      "subtitle": "4 ready-to-use SaaS solutions for social inclusion, training, coaching and management. Custom freelance development for all your projects. Native AI expertise.",
+      "ctaFreelance": "Need a developer?",
+      "ctaSolutions": "Explore our software",
       "scrollHint": "Explore"
     },
     "stats": {
@@ -97,6 +98,19 @@
       "title": "What I can do for you",
       "description": "8 types of missions, from custom development to AI training."
     },
+    "expertiseTitle": "Core expertise",
+    "otherTitle": "Other skills",
+    "process": {
+      "tag": "Process",
+      "title": "How it works",
+      "steps": [
+        { "title": "Discovery call", "description": "30 minutes to understand your needs, context and constraints. Free, no commitment." },
+        { "title": "Technical proposal", "description": "Within 48 hours, you receive a detailed proposal: technical approach, timeline, transparent quote." },
+        { "title": "Sprint-based development", "description": "Iterative progress with regular check-ins. You see the product evolve and can adjust along the way." },
+        { "title": "Delivery & documentation", "description": "Clean, tested, documented code. Deployment included. You're autonomous going forward." },
+        { "title": "Post-delivery support", "description": "Support after delivery for adjustments. I remain available if you need further changes." }
+      ]
+    },
     "cta": {
       "title": "Ready to get started?",
       "description": "Describe your project and I'll get back to you within 24 hours with a concrete proposal.",
@@ -115,6 +129,8 @@
       "description": "Real projects, in production or deployed — not demos."
     },
     "projectsTag": "Projects",
+    "proTitle": "Products & client projects",
+    "persoTitle": "Personal projects & R&D",
     "visit": "Visit {title}",
     "playOnline": "Play online",
     "play": {
@@ -136,6 +152,54 @@
       "title": "Have a project in mind?",
       "description": "Describe your needs and I'll get back to you within 24 hours with a concrete proposal.",
       "button": "Contact me"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About — YdvSystems | Yohann Dandeville, full-stack developer & founder",
+      "description": "Discover the journey of Yohann Dandeville, full-stack freelance developer and founder of YdvSystems. Business software, AI and custom development for the social services and training sector."
+    },
+    "hero": {
+      "tag": "About",
+      "title": "Yohann Dandeville",
+      "role": "Full-stack developer & founder of YdvSystems",
+      "intro": "I build business software for social services, training and coaching. My approach: clean code, solid architecture, and an obsession with the finished product."
+    },
+    "story": {
+      "tag": "Background",
+      "title": "From code to real-world impact",
+      "p1": "Full-stack developer for over 10 years, I've worked in various environments — startups, consulting firms, open source projects. But it's in the social services and training sector that I found my technical calling.",
+      "p2": "Working with social inclusion organizations, training centers and career coaches, I noticed a recurring problem: passionate professionals wasting time on inadequate tools — Excel, paper, generic software that doesn't understand their work.",
+      "p3": "That's why I created YdvSystems: 4 business applications designed by a developer who knows the field. Every feature solves a real problem, not an abstract specification.",
+      "p4": "In parallel, I continue helping companies across all sectors as a freelancer — custom development, AI integration, technical training. Each mission feeds the products, and vice versa."
+    },
+    "values": {
+      "tag": "Values",
+      "title": "What guides my work",
+      "items": [
+        {
+          "title": "Uncompromising quality",
+          "description": "7,225 automated tests across my platforms. Clean code isn't a luxury — it's the only way to deliver reliable products."
+        },
+        {
+          "title": "Full transparency",
+          "description": "Published pricing, auditable source code, no surprises. You know exactly what you're paying for and what you're getting."
+        },
+        {
+          "title": "Real-world impact",
+          "description": "Every line of code must solve a real problem. No gimmick features, no over-engineering."
+        },
+        {
+          "title": "Responsiveness",
+          "description": "I work solo, which means fast turnaround and direct communication. No unnecessary meetings, no management layer between you and me."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "description": "Describe your needs and I'll get back to you within 24 hours with a concrete proposal.",
+      "contact": "Contact me",
+      "solutions": "Explore our software"
     }
   },
   "contact": {
@@ -474,6 +538,9 @@
       "inProduction": "In production",
       "freeTrial": "30-day free trial",
       "requestDemo": "Request a demo",
+      "painPointsTag": "Your daily challenges",
+      "painPointsTitle": "Sound familiar?",
+      "painPointsSolved": "That's exactly what we solve.",
       "featuresTag": "Features",
       "featuresTitle": "Everything you need",
       "pricingTag": "Pricing",
@@ -710,6 +777,11 @@
         "tagline": "The software for work integration social enterprises",
         "heroTitle": "The complete platform for work integration social enterprises",
         "heroSubtitle": "19 modules for social enterprises (AI, ACI, EI, ETTI), local employment agencies, shelters. Beneficiary tracking, interviews, DREETS reporting, built-in AI.",
+        "painPoints": [
+          "You spend hours on DREETS reports every quarter",
+          "Beneficiary tracking is scattered across Excel, emails and paper",
+          "You have no real-time visibility on integration pathways"
+        ],
         "features": [
           { "title": "Beneficiary management", "description": "360° profiles, barriers, strengths, skills, timeline, attached documents." },
           { "title": "AI-powered interviews", "description": "Scheduling, automatic summaries, suggestions, SMART objectives." },
@@ -733,6 +805,11 @@
         "tagline": "Complete training organization management, Qualiopi included",
         "heroTitle": "Training organizations: manage your entire activity from A to Z",
         "heroSubtitle": "17 modules for Qualiopi-certified organizations, apprentice centers, CPF providers. Catalog, sessions, attendance, BPF, native Qualiopi compliance.",
+        "painPoints": [
+          "Preparing your Qualiopi audit takes forever",
+          "Paper attendance sheets, lost documents, endless follow-ups...",
+          "Your training reports are done manually at the end of every session"
+        ],
         "features": [
           { "title": "Course catalog", "description": "Create and manage your catalog, programs, learning objectives, delivery methods." },
           { "title": "Sessions & scheduling", "description": "Calendar, rooms, trainers, participant management." },
@@ -753,6 +830,11 @@
         "tagline": "Skills assessment, RPL and individual coaching",
         "heroTitle": "Skills assessment, RPL and coaching: a dedicated tool",
         "heroSubtitle": "17 modules for coaching firms, career assessment centers, RPL practitioners.",
+        "painPoints": [
+          "You manage your skills assessments on Excel and it's becoming unmanageable",
+          "Exchanges with funders (OPCO) lack transparency",
+          "You have no client portal for your beneficiaries"
+        ],
         "features": [
           { "title": "Skills assessment", "description": "Structured 3-phase pathway (preliminary, investigation, conclusion)." },
           { "title": "Complete RPL", "description": "France VAE, booklets 1 and 2, jury, full support timeline." },
@@ -772,6 +854,11 @@
         "tagline": "CRM, billing and business management all-in-one",
         "heroTitle": "Manage your prospects, clients, quotes and invoices in one tool",
         "heroSubtitle": "Standalone application on manager.ydvsystems.com. For any organization needing a business management tool.",
+        "painPoints": [
+          "Your billing and CRM are on two different tools",
+          "You have no visibility on your MRR and sales pipeline",
+          "Customer support goes through disorganized emails"
+        ],
         "features": [
           { "title": "CRM", "description": "Prospects, clients, sales pipeline, segmentation, notes." },
           { "title": "Client management", "description": "Client profiles, interaction history, documents, contracts." },
