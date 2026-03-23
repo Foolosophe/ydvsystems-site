@@ -480,8 +480,8 @@
         "20 crédits IA inclus",
         "1 Go de stockage",
         "10 bénéficiaires",
-        "Sans CB pour Solo/Starter",
-        "Avec CB ou demo pour Pro+"
+        "CB requise, aucun prélèvement pendant l'essai",
+        "Résiliation possible à tout moment"
       ],
       "earlyAdopter": "Early adopter : -30% à vie pour les 50 premiers clients par solution",
       "cta": "Démarrer l'essai gratuit"
@@ -661,7 +661,7 @@
     "saas": {
       "title": "2. Solutions SaaS",
       "p1": "YdvSystems propose quatre solutions logicielles en mode SaaS : YDV Insertion (gestion des structures d'insertion par l'activité économique), YDV Formation (gestion des organismes de formation, conformité Qualiopi), YDV Bilan (gestion des bilans de compétences) et YDV Manager (gestion commerciale et facturation pour indépendants et TPE).",
-      "p2": "Chaque solution est accessible via un navigateur web après création d'un compte. Un essai gratuit de 30 jours, sans engagement et sans carte bancaire requise, donne accès à l'intégralité des fonctionnalités de la solution choisie.",
+      "p2": "Chaque solution est accessible via un navigateur web après création d'un compte. Un essai gratuit de 30 jours est proposé avec saisie d'une carte bancaire valide (aucun prélèvement pendant l'essai). L'essai donne accès à l'intégralité des fonctionnalités de la solution choisie.",
       "p3": "À l'issue de la période d'essai, le Client peut souscrire un abonnement mensuel, trimestriel ou annuel. L'abonnement prend effet à la date de souscription et se renouvelle automatiquement à chaque échéance, sauf résiliation dans les conditions prévues à l'article 6."
     },
     "freelance": {
@@ -676,7 +676,7 @@
     },
     "trial": {
       "title": "5. Essai gratuit",
-      "p1": "L'essai gratuit de 30 jours donne accès à l'ensemble des fonctionnalités de la solution choisie, sans limitation. Aucune carte bancaire n'est requise pour démarrer l'essai. À l'expiration de la période d'essai, le compte est suspendu. Les données du Client sont conservées pendant 30 jours supplémentaires, lui laissant le temps de souscrire un abonnement ou d'exporter ses données."
+      "p1": "L'essai gratuit de 30 jours donne accès à l'ensemble des fonctionnalités de la solution choisie, sans limitation. Une carte bancaire valide est requise pour démarrer l'essai ; aucun prélèvement n'est effectué pendant la période d'essai. À l'expiration de la période d'essai, l'abonnement est automatiquement activé au tarif en vigueur, sauf résiliation avant la fin de l'essai. Les données du Client sont conservées conformément à la politique de conservation des données."
     },
     "duration": {
       "title": "6. Durée et résiliation",
@@ -983,7 +983,7 @@
         ],
         "pricingPrice": "À partir de 79 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, sans CB",
+        "pricingTrial": "Essai 30 jours gratuit, CB requise",
         "testimonialQuote": "YDV Insertion nous a permis de centraliser tout le suivi de nos bénéficiaires en un seul outil. L'IA nous fait gagner un temps considérable sur les bilans.",
         "testimonialAuthor": "Structure IDEAL",
         "testimonialRole": "Premier utilisateur pilote"
@@ -1011,7 +1011,7 @@
         ],
         "pricingPrice": "À partir de 69 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, sans CB"
+        "pricingTrial": "Essai 30 jours gratuit, CB requise"
       },
       "coaching": {
         "tagline": "Bilan de compétences, VAE et accompagnement individuel",
@@ -1035,7 +1035,7 @@
         ],
         "pricingPrice": "À partir de 59 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, sans CB"
+        "pricingTrial": "Essai 30 jours gratuit, CB requise"
       },
       "manager": {
         "tagline": "CRM, facturation et gestion commerciale tout-en-un",
@@ -1059,7 +1059,7 @@
         ],
         "pricingPrice": "À partir de 49 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, sans CB"
+        "pricingTrial": "Essai 30 jours gratuit, CB requise"
       }
     },
     "blogArticles": {

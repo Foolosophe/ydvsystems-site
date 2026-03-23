@@ -480,8 +480,8 @@
         "20 AI credits included",
         "1 GB storage",
         "10 beneficiaries",
-        "No credit card for Solo/Starter",
-        "Credit card or demo for Pro+"
+        "Card required, no charges during trial",
+        "Cancel anytime"
       ],
       "earlyAdopter": "Early adopter: -30% for life for the first 50 clients per solution",
       "cta": "Start free trial"
@@ -661,7 +661,7 @@
     "saas": {
       "title": "2. SaaS solutions",
       "p1": "YdvSystems offers four SaaS solutions: YDV Insertion (management for work integration organizations), YDV Formation (training organization management with Qualiopi compliance), YDV Bilan (skills assessment management) and YDV Manager (business management and invoicing for freelancers and small businesses).",
-      "p2": "Each solution is accessible via a web browser after creating an account. A 30-day free trial, with no commitment and no credit card required, provides full access to all features of the chosen solution.",
+      "p2": "Each solution is accessible via a web browser after creating an account. A 30-day free trial is offered with a valid credit card (no charges during the trial). The trial provides full access to all features of the chosen solution.",
       "p3": "At the end of the trial period, the Client may subscribe to a monthly, quarterly or annual plan. The subscription takes effect on the subscription date and renews automatically at each billing cycle, unless cancelled under the conditions set out in Section 6."
     },
     "freelance": {
@@ -676,7 +676,7 @@
     },
     "trial": {
       "title": "5. Free trial",
-      "p1": "The 30-day free trial provides access to all features of the chosen solution without any limitations. No credit card is required to start the trial. Upon expiration of the trial period, the account is suspended. The Client's data is retained for an additional 30 days, allowing time to subscribe or export data."
+      "p1": "The 30-day free trial provides access to all features of the chosen solution without any limitations. A valid credit card is required to start the trial; no charges are made during the trial period. Upon expiration of the trial period, the subscription is automatically activated at the current rate, unless cancelled before the end of the trial. The Client's data is retained in accordance with the data retention policy."
     },
     "duration": {
       "title": "6. Duration and cancellation",
@@ -983,7 +983,7 @@
         ],
         "pricingPrice": "From €79",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, no credit card",
+        "pricingTrial": "30-day free trial, card required",
         "testimonialQuote": "YDV Insertion allowed us to centralize all our beneficiary tracking in a single tool. The AI saves us considerable time on reports.",
         "testimonialAuthor": "Structure IDEAL",
         "testimonialRole": "First pilot user"
@@ -1011,7 +1011,7 @@
         ],
         "pricingPrice": "From €69",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, no credit card"
+        "pricingTrial": "30-day free trial, card required"
       },
       "coaching": {
         "tagline": "Skills assessment, RPL and individual coaching",
@@ -1035,7 +1035,7 @@
         ],
         "pricingPrice": "From €59",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, no credit card"
+        "pricingTrial": "30-day free trial, card required"
       },
       "manager": {
         "tagline": "CRM, billing and business management all-in-one",
@@ -1059,7 +1059,7 @@
         ],
         "pricingPrice": "From €49",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, no credit card"
+        "pricingTrial": "30-day free trial, card required"
       }
     },
     "blogArticles": {
