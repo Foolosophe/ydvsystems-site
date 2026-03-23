@@ -533,7 +533,7 @@ export default function PrixPage() {
                 <p className="text-sm text-primary font-semibold mb-6">{t("trial.earlyAdopter")}</p>
 
                 <Button asChild size="lg" className="bg-primary hover:bg-(--accent-hover) text-foreground font-bold px-8 gap-2">
-                  <Link href="/contact">
+                  <Link href="/solutions">
                     {t("trial.cta")}
                     <ArrowRight size={18} />
                   </Link>
