@@ -423,6 +423,12 @@
     "tiers": {
       "tag": "Tailles de structure",
       "title": "Quelle taille vous correspond ?",
+      "descriptions": {
+        "solo": "1-2 utilisateurs",
+        "starter": "3-10 utilisateurs",
+        "pro": "11-30 utilisateurs",
+        "business": "31-100 utilisateurs"
+      },
       "headers": ["", "Solo", "Starter", "Pro", "Business", "Enterprise"],
       "rows": [
         { "label": "Utilisateurs", "values": ["1-2", "3-10", "11-30", "31-100", "100+"] },

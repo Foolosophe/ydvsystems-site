@@ -423,6 +423,12 @@
     "tiers": {
       "tag": "Structure sizes",
       "title": "Which size fits you?",
+      "descriptions": {
+        "solo": "1-2 users",
+        "starter": "3-10 users",
+        "pro": "11-30 users",
+        "business": "31-100 users"
+      },
       "headers": ["", "Solo", "Starter", "Pro", "Business", "Enterprise"],
       "rows": [
         { "label": "Users", "values": ["1-2", "3-10", "11-30", "31-100", "100+"] },

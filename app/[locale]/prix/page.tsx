@@ -12,6 +12,7 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 
 export default function PrixPage() {
   const [billing, setBilling] = useState<"annual" | "quarterly" | "monthly">("annual")
+  const [tier, setTier] = useState<"solo" | "starter" | "pro" | "business">("solo")
   const t = useTranslations("pricing")
   const td = useTranslations("data.solutions")
 
@@ -81,6 +82,27 @@ export default function PrixPage() {
               )
             })}
           </div>
+
+          {/* Toggle taille de structure */}
+          <div className="mt-4 inline-flex items-center gap-1 bg-secondary border border-border rounded-full p-1">
+            {TIERS.map((t_tier) => {
+              const isActive = tier === t_tier
+              return (
+                <button
+                  key={t_tier}
+                  onClick={() => setTier(t_tier)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 flex flex-col items-center leading-tight ${
+                    isActive
+                      ? "bg-white text-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-secondary-foreground"
+                  }`}
+                >
+                  <span className="capitalize">{t_tier}</span>
+                  <span className="text-[10px] text-muted-foreground">{t(`tiers.descriptions.${t_tier}`)}</span>
+                </button>
+              )
+            })}
+          </div>
         </div>
       </section>
 
@@ -89,7 +111,11 @@ export default function PrixPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SOLUTIONS.map((solution, i) => {
-              const displayPrice = calcPrice(solution.priceMonthly)
+              const isManager = solution.slug === "manager"
+              const tierPriceKey = isManager ? `manager.${tier}` : `packs.${solution.slug}.${tier}`
+              const basePrice = Number(t(tierPriceKey))
+              const displayPrice = calcPrice(basePrice)
+              const annualPrice = Math.round(basePrice * 0.8)
               return (
                 <AnimateOnScroll key={solution.slug} delay={i * 80}>
                   <Card
@@ -123,12 +149,12 @@ export default function PrixPage() {
                         </div>
                         {billing !== "monthly" && (
                           <p className="text-xs text-muted-foreground mt-1">
-                            {discountLabel} &middot; <span className="line-through">{solution.priceMonthly} &euro;{t("perMonth")}</span>
+                            {discountLabel} &middot; <span className="line-through">{basePrice} &euro;{t("perMonth")}</span>
                           </p>
                         )}
                         {billing === "monthly" && (
                           <p className="text-xs text-primary mt-1 font-medium">
-                            {solution.priceValue} &euro;{t("perMonth")} {t("toggle.annual")} ({t("toggle.discountAnnual")})
+                            {annualPrice} &euro;{t("perMonth")} {t("toggle.annual")} ({t("toggle.discountAnnual")})
                           </p>
                         )}
                       </div>
