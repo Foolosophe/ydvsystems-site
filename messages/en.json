@@ -661,8 +661,8 @@
     "saas": {
       "title": "2. SaaS solutions",
       "p1": "YdvSystems offers four SaaS solutions: YDV Insertion (management for work integration organizations), YDV Formation (training organization management with Qualiopi compliance), YDV Bilan (skills assessment management) and YDV Manager (business management and invoicing for freelancers and small businesses).",
-      "p2": "Each solution is accessible via a web browser after creating an account. A 30-day free trial is offered with a valid credit card (no charges during the trial). The trial provides full access to all features of the chosen solution.",
-      "p3": "At the end of the trial period, the Client may subscribe to a monthly, quarterly or annual plan. The subscription takes effect on the subscription date and renews automatically at each billing cycle, unless cancelled under the conditions set out in Section 6."
+      "p2": "Each solution is accessible via a web browser after creating an account. A 30-day free trial is offered. A bank imprint of €1 is requested to verify the Client's identity; this amount is cancelled immediately and will never be charged. The trial provides full access to all features of the chosen solution.",
+      "p3": "At the end of the trial period, the account is suspended if the Client has not subscribed. No automatic charges are made. The Client may subscribe to a monthly or annual plan at any time. The subscription takes effect on the subscription date and renews automatically at each billing cycle, unless cancelled under the conditions set out in Section 6."
     },
     "freelance": {
       "title": "3. Freelance services",
@@ -676,7 +676,7 @@
     },
     "trial": {
       "title": "5. Free trial",
-      "p1": "The 30-day free trial provides access to all features of the chosen solution without any limitations. A valid credit card is required to start the trial; no charges are made during the trial period. Upon expiration of the trial period, the subscription is automatically activated at the current rate, unless cancelled before the end of the trial. The Client's data is retained in accordance with the data retention policy."
+      "p1": "The 30-day free trial provides access to all features of the chosen solution without any limitations. A bank imprint of €1 is requested to verify the Client's identity. This amount is cancelled immediately and will never be charged. Upon expiration of the trial period, the account is suspended. No automatic charges are made. The Client's data is retained for an additional 30 days, allowing time to subscribe or export data."
     },
     "duration": {
       "title": "6. Duration and cancellation",
