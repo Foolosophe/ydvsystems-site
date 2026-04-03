@@ -172,12 +172,54 @@
     },
     "story": {
       "tag": "Background",
-      "title": "From code to real-world impact",
-      "p1": "Full-stack developer for over 10 years, I've worked in various environments — startups, consulting firms, open source projects. But it's in the social services and training sector that I found my technical calling.",
-      "p2": "Working with social inclusion organizations, training centers and career coaches, I noticed a recurring problem: passionate professionals wasting time on inadequate tools — Excel, paper, generic software that doesn't understand their work.",
-      "p3": "That's why I created YdvSystems: 4 business applications designed by a developer who knows the field. Every feature solves a real problem, not an abstract specification.",
-      "p4": "In parallel, I continue helping companies across all sectors as a freelancer — custom development, AI integration, technical training. Each mission feeds the products, and vice versa."
+      "title": "Trajectory",
+      "p1": "It all started long before any formal training or certifications. In the late 2000s, I built a website for a clothing brand project, a professional Myspace with custom code integration — at a time when only major music groups were doing that. Then a site of over a hundred pages for an association dedicated to sharing knowledge: press articles, videos, collaborative files. Self-taught, curious, convinced that the web could serve projects that needed it.",
+      "p2": "In 2011, I took over the presidency of a failing sports club — martial arts, dance, weightlifting, 400m² that no longer worked. I didn't arrive as a manager. I arrived with a vision.",
+      "p3": "From the start, I structured it legally: an association for the activity, a limited company in parallel to handle purchases, communications, infrastructure. Two entities, two logics, one direction. Two and a half years running this dual architecture, then I simplified — the company disappeared, the association remained, but deeply transformed.",
+      "p4": "It was no longer a sports club. It was a cultural centre. Concerts, café-theatre, exhibitions, workshops. In the sixth year, I created the performance hall and expanded the space to 700m². What I had found failing became a living place, rooted in its neighbourhood — and still exists today.",
+      "p5": "Throughout all those years, in parallel and in silence, I kept coding. The Union des Arts website, digital communications, online tools. In 2021, a two-year web developer qualification. Not a new start — the validation of a journey that had begun long before. What leadership taught me added to the rest: understanding an organisation's challenges before opening an editor, knowing what a tool must solve to be actually used, not just delivered."
     },
+    "built": {
+      "tag": "Work",
+      "title": "What I've built",
+      "intro": "Since then, I've built very different projects — and that's intentional.",
+      "statusProd": "In production",
+      "statusConcept": "In design",
+      "projects": [
+        {
+          "title": "YDV Platform",
+          "status": "prod",
+          "description": "4 SaaS platforms for the social inclusion and training sector. Multi-tenant architecture, RBAC, multi-provider AI, +7,000 automated tests. 102 phases completed solo, from database schema to deployment on dedicated infrastructure. What others do as a team, I do alone — not to save money, but as an architectural choice."
+        },
+        {
+          "title": "Le Prompt Parfait",
+          "status": "prod",
+          "description": "A PWA available on web, desktop and mobile from a single codebase. A free tool to optimise AI prompts, designed to be accessible to everyone. A simple idea, careful execution, immediately usable result."
+        },
+        {
+          "title": "Pills Stadium",
+          "status": "prod",
+          "description": "A 3D kart game in the browser with AI opponent and real-time physics — pure WebGL, no third-party engine. The core technical challenge: a figure-eight circuit with elevation to form a coherent 3D loop. Playable with keyboard, controller and mobile, directly in a browser, no installation required."
+        },
+        {
+          "title": "Le Château de Dracula",
+          "status": "prod",
+          "description": "Over 40 distinct visual environments — icy crypts, gates of hell, celestial cathedrals, cursed chapels — each with its own light, palette, and ambient animations. Creeping fog, flames, lightning, smoke. Playable with keyboard, controller and mobile. Web Audio API soundtrack. The project that best illustrates my creative dimension — technique in service of emotion."
+        },
+        {
+          "title": "Plume",
+          "status": "concept",
+          "description": "My most architecturally ambitious project. Built around a conviction: blank page syndrome is a structure problem, not an ideas problem. 12 combinable thematic universes, 30 narrative schemas, a 5-axis voice engine, an AI co-pilot with 10 levels of progressive assistance. 100% local data, no cloud dependency. On the French-speaking market, nobody does this. I don't build features — I design systems."
+        }
+      ]
+    },
+    "approach": {
+      "tag": "Approach",
+      "title": "Approach",
+      "p1": "I think deeply before writing the first line of code. Understanding the real need, identifying what truly matters behind the specs, anticipating what will cause problems later — that's where a project's quality is determined, not in the speed of execution.",
+      "p2": "Clean code, scalable architecture, zero over-engineering. I work solo — responsive, focused on what matters, no unnecessary meetings. Creative when the project calls for it, methodical when production demands it. You're talking directly to the person who codes."
+    },
+    "conclusion": "What motivates me: solving a real problem for a real need — not delivering code for the sake of delivering code.",
     "values": {
       "tag": "Values",
       "title": "What guides my work",
@@ -196,7 +238,7 @@
         },
         {
           "title": "Responsiveness",
-          "description": "I work solo, which means fast turnaround and direct communication. No unnecessary meetings, no management layer between you and me."
+          "description": "I work solo, which allows me to be responsive and focused on what matters. No unnecessary meetings, no management layer between you and me."
         }
       ]
     },
@@ -924,27 +966,32 @@
       "integration-ia": {
         "title": "AI integration",
         "description": "Integrate Claude, GPT-4 or Gemini into your existing tools. Multi-provider architecture.",
-        "price": "From €500/day"
+        "price": "From €500/day",
+        "priceSub": "Day rate available: €500 excl. VAT — audit, prototyping or targeted integration"
       },
       "atelier-ia": {
         "title": "AI workshop / Training",
         "description": "Hands-on workshops for your team: prompt engineering, AI tools, business use cases.",
-        "price": "From €800/workshop"
+        "price": "From €800/workshop",
+        "priceSub": "Half-day available: €800 excl. VAT — focused workshop on a specific use case"
       },
       "audit-ia": {
         "title": "AI maturity audit",
         "description": "Assessment of your AI readiness, personalized recommendations, implementation roadmap.",
-        "price": "From €1,500"
+        "price": "From €1,500",
+        "priceSub": "Express audit available: €600 excl. VAT — quick assessment + priority recommendations"
       },
       "automatisation": {
         "title": "Workflow automation",
         "description": "Automate your processes with n8n, Supabase, Brevo, Stripe. Zero-code or low-code.",
-        "price": "From €400/day"
+        "price": "From €400/day",
+        "priceSub": "Day rate available: €400 excl. VAT — no commitment"
       },
       "retainer": {
         "title": "Monthly retainer",
         "description": "A developer available every month, without chasing. Reserved days, guaranteed priority.",
         "price": "From €800/month",
+        "priceSub": "Essential plan: 2 days/month — €800 excl. VAT",
         "badge": "New"
       },
       "cross-platform": {

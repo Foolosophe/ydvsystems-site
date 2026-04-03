@@ -163,7 +163,7 @@ export default async function PrestationsPage() {
                 <ServiceCard
                   id={id}
                   tSrv={(key) => tSrv(key)}
-                  priceSub={id === "dev-sur-mesure" ? tSrv("dev-sur-mesure.priceSub") : undefined}
+                  priceSub={EXPERTISE_IDS.includes(id as typeof EXPERTISE_IDS[number]) ? tSrv(`${id}.priceSub`) : undefined}
                   badge={id === "retainer" ? tSrv("retainer.badge") : undefined}
                   large
                 />

@@ -968,27 +968,32 @@
       "integration-ia": {
         "title": "Intégration IA",
         "description": "Intégrez Claude, GPT-4 ou Gemini dans vos outils existants. Architecture multi-provider.",
-        "price": "À partir de 500 €/jour"
+        "price": "À partir de 500 €/jour",
+        "priceSub": "Journée disponible : 500 € HT — audit, prototypage ou intégration ciblée"
       },
       "atelier-ia": {
         "title": "Atelier IA / Formation",
         "description": "Ateliers pratiques pour vos équipes : prompt engineering, outils IA, cas d'usage métier.",
-        "price": "À partir de 800 €/atelier"
+        "price": "À partir de 800 €/atelier",
+        "priceSub": "Demi-journée disponible : 800 € HT — atelier ciblé sur un cas d'usage précis"
       },
       "audit-ia": {
         "title": "Audit maturité IA",
         "description": "Évaluation de votre maturité IA, recommandations personnalisées, feuille de route.",
-        "price": "À partir de 1 500 €"
+        "price": "À partir de 1 500 €",
+        "priceSub": "Audit express disponible : 600 € HT — état des lieux + recommandations prioritaires"
       },
       "automatisation": {
         "title": "Automatisation de workflows",
         "description": "Automatisez vos processus avec n8n, Supabase, Brevo, Stripe. Zéro code ou low-code.",
-        "price": "À partir de 400 €/jour"
+        "price": "À partir de 400 €/jour",
+        "priceSub": "Journée disponible : 400 € HT — sans engagement"
       },
       "retainer": {
         "title": "Retainer mensuel",
         "description": "Un développeur disponible chaque mois, sans avoir à relancer. Jours réservés, priorité garantie.",
         "price": "À partir de 800 €/mois",
+        "priceSub": "Formule Essentiel : 2 jours/mois — 800 € HT",
         "badge": "Nouveau"
       },
       "cross-platform": {
