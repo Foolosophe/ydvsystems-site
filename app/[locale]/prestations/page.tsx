@@ -12,6 +12,7 @@ import {
   MonitorSmartphone,
   Gamepad2,
   Heart,
+  CalendarClock,
   ArrowRight,
 } from "lucide-react"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
@@ -32,23 +33,35 @@ const ICONS: Record<string, React.ReactNode> = {
   GraduationCap: <GraduationCap size={24} />,
   ClipboardCheck: <ClipboardCheck size={24} />,
   Workflow: <Workflow size={24} />,
+  CalendarClock: <CalendarClock size={24} />,
   MonitorSmartphone: <MonitorSmartphone size={24} />,
   Gamepad2: <Gamepad2 size={24} />,
   Heart: <Heart size={24} />,
 }
 
-const EXPERTISE_IDS = ["dev-sur-mesure", "integration-ia", "atelier-ia", "audit-ia", "automatisation"] as const
+const EXPERTISE_IDS = ["dev-sur-mesure", "integration-ia", "atelier-ia", "audit-ia", "automatisation", "retainer"] as const
 const OTHER_IDS = ["cross-platform", "jeux-narratifs", "accessibilite"] as const
 
 function ServiceCard({ id, tSrv, large }: { id: string; tSrv: (key: string) => string; large?: boolean }) {
+  const badgeKey = `${id}.badge`
+  const priceSubKey = `${id}.priceSub`
+  const rawBadge = tSrv(badgeKey) !== badgeKey ? tSrv(badgeKey) : null
+  const rawPriceSub = tSrv(priceSubKey) !== priceSubKey ? tSrv(priceSubKey) : null
   return (
     <Card
       className={`bg-white border-border overflow-hidden hover:border-primary/40 transition-all duration-200 hover:shadow-(--shadow-card-hover) hover:-translate-y-1 group h-full ${large ? "" : ""}`}
     >
       <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
       <CardHeader className="pb-3">
-        <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-colors solution-icon-box">
-          {ICONS[SERVICE_ICONS[id]]}
+        <div className="flex items-start justify-between gap-2 mb-3">
+          <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center group-hover:bg-primary/15 transition-colors solution-icon-box shrink-0">
+            {ICONS[SERVICE_ICONS[id]]}
+          </div>
+          {rawBadge && (
+            <Badge className="text-[10px] bg-primary/10 text-primary border-primary/20 shrink-0">
+              {rawBadge}
+            </Badge>
+          )}
         </div>
         <h3 className="font-semibold text-foreground text-base leading-snug">
           {tSrv(`${id}.title`)}
@@ -71,6 +84,9 @@ function ServiceCard({ id, tSrv, large }: { id: string; tSrv: (key: string) => s
         </div>
         <div className="pt-1">
           <span className="text-sm font-semibold text-primary">{tSrv(`${id}.price`)}</span>
+          {rawPriceSub && (
+            <p className="text-xs text-muted-foreground mt-1">{rawPriceSub}</p>
+          )}
         </div>
       </CardContent>
     </Card>
@@ -206,6 +222,12 @@ export default async function PrestationsPage() {
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll>
+            <Link
+              href="/prix"
+              className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-(--accent-hover) font-semibold transition-colors mb-10"
+            >
+              {t("cta.pricingLink")}
+            </Link>
             <h2 className="text-3xl font-bold text-foreground mb-4">
               {t("cta.title")}
             </h2>

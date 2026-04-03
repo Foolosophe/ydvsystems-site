@@ -120,7 +120,8 @@
       "title": "Prêt à démarrer ?",
       "description": "Décrivez votre projet et je vous réponds sous 24h avec une proposition concrète.",
       "button": "Me contacter",
-      "portfolioButton": "Voir mes réalisations"
+      "portfolioButton": "Voir mes réalisations",
+      "pricingLink": "→ Voir la grille tarifaire complète"
     }
   },
   "portfolio": {
@@ -961,7 +962,8 @@
       "dev-sur-mesure": {
         "title": "Développement sur mesure",
         "description": "Applications métier, SaaS, plateformes web. Du prototype à la production.",
-        "price": "À partir de 450 €/jour"
+        "price": "À partir de 450 €/jour",
+        "priceSub": "Forfait cadrage disponible : 400 € HT — session 2-3h + compte-rendu"
       },
       "integration-ia": {
         "title": "Intégration IA",
@@ -982,6 +984,12 @@
         "title": "Automatisation de workflows",
         "description": "Automatisez vos processus avec n8n, Supabase, Brevo, Stripe. Zéro code ou low-code.",
         "price": "À partir de 400 €/jour"
+      },
+      "retainer": {
+        "title": "Retainer mensuel",
+        "description": "Un développeur disponible chaque mois, sans avoir à relancer. Jours réservés, priorité garantie.",
+        "price": "À partir de 800 €/mois",
+        "badge": "Nouveau"
       },
       "cross-platform": {
         "title": "Applications cross-platform",

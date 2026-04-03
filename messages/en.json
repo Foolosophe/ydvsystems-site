@@ -917,7 +917,8 @@
       "dev-sur-mesure": {
         "title": "Custom development",
         "description": "Business applications, SaaS platforms, web apps. From prototype to production.",
-        "price": "From €450/day"
+        "price": "From €450/day",
+        "priceSub": "Scoping package available: €400 excl. VAT — 2-3h session + written summary"
       },
       "integration-ia": {
         "title": "AI integration",
@@ -938,6 +939,12 @@
         "title": "Workflow automation",
         "description": "Automate your processes with n8n, Supabase, Brevo, Stripe. Zero-code or low-code.",
         "price": "From €400/day"
+      },
+      "retainer": {
+        "title": "Monthly retainer",
+        "description": "A developer available every month, without chasing. Reserved days, guaranteed priority.",
+        "price": "From €800/month",
+        "badge": "New"
       },
       "cross-platform": {
         "title": "Cross-platform apps",
