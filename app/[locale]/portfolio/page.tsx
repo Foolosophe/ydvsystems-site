@@ -67,6 +67,14 @@ export default async function PortfolioPage() {
                   {t("about.bio2")}
                 </p>
 
+                <Link
+                  href="/a-propos"
+                  className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-(--accent-hover) font-semibold transition-colors"
+                >
+                  {t("about.viewMore")}
+                  <ArrowRight size={14} />
+                </Link>
+
                 <StatsGrid />
 
                 <a

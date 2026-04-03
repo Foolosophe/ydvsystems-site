@@ -62,6 +62,7 @@ export default function PrixPage() {
           </p>
 
           {/* Toggle mensuel / trimestriel / annuel */}
+          <div className="flex justify-center">
           <div className="inline-flex items-center gap-1 bg-secondary border border-border rounded-full p-1">
             {(["annual", "quarterly", "monthly"] as const).map((period) => {
               const isActive = billing === period
@@ -82,9 +83,11 @@ export default function PrixPage() {
               )
             })}
           </div>
+          </div>
 
           {/* Toggle taille de structure */}
-          <div className="mt-4 inline-flex items-center gap-1 bg-secondary border border-border rounded-full p-1">
+          <div className="mt-4 flex justify-center">
+          <div className="inline-flex items-center gap-1 bg-secondary border border-border rounded-full p-1">
             {TIERS.map((t_tier) => {
               const isActive = tier === t_tier
               return (
@@ -102,6 +105,7 @@ export default function PrixPage() {
                 </button>
               )
             })}
+          </div>
           </div>
         </div>
       </section>

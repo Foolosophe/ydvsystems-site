@@ -150,6 +150,7 @@
       "title": "Développeur full-stack & entrepreneur",
       "bio1": "Je suis Yohann, développeur full-stack basé en France, fondateur de YdvSystems. Je conçois des logiciels métier complets, des SaaS, des jeux et des outils IA.",
       "bio2": "Mon approche : code propre, architecture évolutive, zéro over-engineering. Je travaille seul, ce qui me permet d'être rapide, réactif et de livrer ce qui est demandé — sans réunion inutile.",
+      "viewMore": "En savoir plus sur mon parcours",
       "stackTitle": "Stack maîtrisée",
       "photoAlt": "Yohann Dandeville — Fondateur de YdvSystems"
     },
@@ -958,7 +959,7 @@
       "pills-stadium": {
         "type": "Jeu 3D",
         "title": "Pills Stadium",
-        "description": "Jeu de kart 3D en navigateur avec IA adversaire, power-ups et circuits dynamiques. Three.js, WebGL, physique temps réel."
+        "description": "Jeu de kart 3D en navigateur avec IA adversaire, power-ups et circuits dynamiques. Three.js, WebGL, physique temps réel. Jouable au clavier, à la manette et sur mobile."
       },
       "blog-parkinson": {
         "type": "Blog accessible",
