@@ -54,7 +54,7 @@ export function HeroDual() {
           {t("subtitle")}
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in-up delay-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 animate-fade-in-up delay-3">
           <Button
             asChild
             size="lg"
@@ -78,7 +78,11 @@ export function HeroDual() {
           </Button>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto animate-fade-in-up delay-4">
+        <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-8 animate-fade-in-up delay-4">
+          {t("humanLine")}
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto animate-fade-in-up delay-5">
           {STATS.map((stat, i) => (
             <div
               key={STAT_KEYS[i]}

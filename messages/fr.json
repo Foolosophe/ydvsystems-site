@@ -40,11 +40,12 @@
   "home": {
     "hero": {
       "tag": "Développement sur mesure · IA · Logiciels métier",
-      "title1": "Logiciels métier & ",
-      "titleHighlight1": "IA",
-      "title2": " pour le social, la formation et ",
-      "titleHighlight2": "l'accompagnement",
-      "subtitle": "4 solutions SaaS prêtes à l'emploi pour l'insertion, la formation, le coaching et la gestion. Des prestations freelance sur mesure pour tous vos projets. Une expertise IA native.",
+      "title1": "Logiciels métier, ",
+      "titleHighlight1": "intégrations IA",
+      "title2": " & développement ",
+      "titleHighlight2": "sur mesure",
+      "subtitle": "4 solutions SaaS pour le secteur social et la formation. Des missions freelance pour tous vos projets web, IA et applications métier.",
+      "humanLine": "Je suis Yohann Dandeville — développeur fullstack, fondateur de YdvSystems. Tu parles directement à celui qui code.",
       "ctaFreelance": "Besoin d'un développeur ?",
       "ctaSolutions": "Découvrir nos logiciels",
       "scrollHint": "Explorer"
@@ -73,7 +74,7 @@
     "cta": {
       "title": "Un projet ? Parlons-en.",
       "description": "Que ce soit pour une mission freelance, une démo de nos logiciels ou une simple question — je réponds sous 24h.",
-      "ctaContact": "Nous contacter",
+      "ctaContact": "Me contacter",
       "ctaServices": "Voir les prestations"
     },
     "portfolio": {
@@ -166,16 +167,58 @@
       "tag": "À propos",
       "title": "Yohann Dandeville",
       "role": "Développeur full-stack & fondateur de YdvSystems",
-      "intro": "Je conçois des logiciels métier pour le secteur social, la formation et l'accompagnement. Mon approche : code propre, architecture solide, et une obsession pour le produit fini."
+      "intro": "Je suis Yohann, développeur fullstack et fondateur de YdvSystems. Je conçois des logiciels métier, des SaaS, des intégrations IA et des expériences interactives — du brief à la mise en production, seul."
     },
     "story": {
       "tag": "Parcours",
-      "title": "Du code à l'impact terrain",
-      "p1": "Développeur full-stack depuis plus de 10 ans, j'ai travaillé dans des environnements variés — startups, ESN, projets open source. Mais c'est dans le secteur social et la formation que j'ai trouvé ma vocation technique.",
-      "p2": "En travaillant avec des structures d'insertion, des organismes de formation et des coachs en bilan de compétences, j'ai constaté un problème récurrent : des professionnels passionnés qui perdent un temps fou sur des outils inadaptés — Excel, papier, logiciels génériques qui ne comprennent pas leur métier.",
-      "p3": "C'est pour ça que j'ai créé YdvSystems : 4 logiciels métier pensés par un développeur qui connaît le terrain. Chaque fonctionnalité répond à un vrai problème, pas à une spécification abstraite.",
-      "p4": "En parallèle, je continue d'accompagner des entreprises de tous secteurs en tant que freelance — développement sur mesure, intégration IA, formation technique. Chaque mission nourrit les produits, et vice versa."
+      "title": "Trajectoire",
+      "p1": "Tout a commencé bien avant les formations et les certifications. À la fin des années 2000, je construis un site vitrine pour un projet de marque de vêtements, un Myspace professionnel avec intégration de code personnalisé — à une époque où seuls les grands groupes musicaux s'y risquaient. Puis un site de plus de cent pages pour une association dédiée au partage du savoir : articles de presse, vidéos, dossiers collaboratifs. Autodidacte, curieux, convaincu que le web pouvait servir des projets qui en avaient besoin.",
+      "p2": "En 2011, je reprends la présidence d'un club sportif à bout de souffle — arts martiaux, danse, musculation, 400m² qui ne fonctionnaient plus. Je n'arrive pas en gestionnaire. J'arrive avec une vision.",
+      "p3": "Dès le départ, je structure juridiquement : une association pour l'activité, une SARL en parallèle pour porter les achats, la communication, l'infrastructure. Deux entités, deux logiques, un seul cap. Deux ans et demi à tenir cette architecture duale, puis je simplifie — la SARL disparaît, l'association reste, mais profondément transformée.",
+      "p4": "Ce n'est plus un club sportif. C'est un centre culturel. Concerts, café-théâtre, expositions, ateliers. La sixième année, je crée la salle de spectacle et porte la surface à 700m². Ce que j'avais trouvé en échec est devenu un lieu vivant, ancré dans son quartier — et qui existe encore aujourd'hui.",
+      "p5": "Pendant toutes ces années, en parallèle et en silence, je continue de coder. Le site de l'Union des Arts, la communication digitale, les outils en ligne. En 2021, le Bac+2 développeur intégrateur web. Pas un départ — la validation d'un parcours qui avait commencé bien avant. Ce que la direction m'a appris s'est ajouté au reste : comprendre les enjeux d'une organisation avant d'ouvrir un éditeur, savoir ce qu'un outil doit résoudre pour être réellement utilisé, pas juste livré."
     },
+    "built": {
+      "tag": "Réalisations",
+      "title": "Ce que j'ai construit",
+      "intro": "Depuis, j'ai construit des projets très différents — et c'est volontaire.",
+      "statusProd": "En production",
+      "statusConcept": "En conception",
+      "projects": [
+        {
+          "title": "YDV Platform",
+          "status": "prod",
+          "description": "4 logiciels SaaS pour le secteur de l'insertion et de la formation. Architecture multi-tenant, RBAC, IA multi-provider, +7 000 tests automatisés. 102 phases menées seul, du schéma de base de données à l'hébergement sur infrastructure dédiée. Ce que d'autres font en équipe, je le fais seul — pas par économie, par choix architectural."
+        },
+        {
+          "title": "Le Prompt Parfait",
+          "status": "prod",
+          "description": "Une PWA disponible sur web, desktop et mobile depuis une seule codebase. Un outil gratuit pour optimiser ses prompts IA, pensé pour être accessible à tous. Une idée simple, une exécution soignée, un résultat utilisable immédiatement."
+        },
+        {
+          "title": "Pills Stadium",
+          "status": "prod",
+          "description": "Un kart 3D en navigateur avec IA adversaire et physique temps réel — WebGL pur, sans moteur tiers. La contrainte technique centrale : un circuit en huit avec surélévation pour former une vraie boucle cohérente en 3D. Jouable au clavier, à la manette et sur mobile, directement dans un navigateur, sans installation."
+        },
+        {
+          "title": "Le Château de Dracula",
+          "status": "prod",
+          "description": "Plus de 40 environnements visuels distincts — cryptes glaciales, portes de l'enfer, cathédrales célestes, chapelles maudites — chacun avec sa propre lumière, sa propre palette, ses animations ambiantes. Brouillard rampant, flammes, éclairs, fumée. Jouable au clavier, à la manette et sur mobile. Ambiance sonore en Web Audio API. Le projet qui illustre le mieux ma dimension créative — la technique au service de l'émotion."
+        },
+        {
+          "title": "Plume",
+          "status": "concept",
+          "description": "Mon projet le plus ambitieux architecturalement. Construit autour d'une conviction : le syndrome de la page blanche est un problème de structure, pas d'idées. 12 univers thématiques combinables, 30 schémas narratifs, un moteur de voix à 5 axes, un co-pilote IA à 10 niveaux d'assistance progressive. Données 100% locales, aucune dépendance cloud. Sur le marché francophone, personne ne fait ça. Je ne construis pas des fonctionnalités — je conçois des systèmes."
+        }
+      ]
+    },
+    "approach": {
+      "tag": "Approche",
+      "title": "Approche",
+      "p1": "Je réfléchis en profondeur avant d'écrire la première ligne de code. Comprendre le besoin réel, identifier ce qui compte vraiment derrière les specs, anticiper ce qui va poser problème plus tard — c'est là que se joue la qualité d'un projet, pas dans la vitesse d'exécution.",
+      "p2": "Code propre, architecture évolutive, zéro over-engineering. Je travaille seul — réactif, focus sur l'essentiel, sans réunion inutile. Créatif quand le projet le demande, méthodique quand la production l'exige. Tu parles directement à celui qui code."
+    },
+    "conclusion": "Ce qui me motive : résoudre un vrai problème pour un vrai besoin — pas livrer du code pour livrer du code.",
     "values": {
       "tag": "Valeurs",
       "title": "Ce qui guide mon travail",
@@ -194,7 +237,7 @@
         },
         {
           "title": "Réactivité",
-          "description": "Je travaille seul, ce qui me permet d'être rapide et réactif. Pas de réunion inutile, pas de couche de management entre vous et moi."
+          "description": "Je travaille seul, ce qui me permet d'être réactif et focus sur l'essentiel. Pas de réunion inutile, pas de couche de management entre vous et moi."
         }
       ]
     },
@@ -897,9 +940,9 @@
         "description": "Suite de 4 logiciels SaaS (Insertion, Formation, Coaching, Manager). Socle de 14 modules, IA multi-provider, +7 000 tests automatisés, RBAC multi-structures."
       },
       "moteur-jeu": {
-        "type": "Moteur de jeu",
-        "title": "Moteur de jeu narratif",
-        "description": "Moteur complet pour jeux textuels et fiction interactive. React, Tauri, Capacitor. Web Audio API pour l'ambiance sonore."
+        "type": "Jeu narratif",
+        "title": "Le Château de Dracula — Jeu narratif interactif",
+        "description": "Jeu narratif interactif — plus de 40 environnements visuels distincts, ambiance sonore Web Audio API. Jouable au clavier, à la manette et sur mobile."
       },
       "prompt-parfait": {
         "type": "Application",
