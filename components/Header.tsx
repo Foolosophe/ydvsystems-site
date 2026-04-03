@@ -51,6 +51,7 @@ export function Header() {
     { label: t("nav.pricing"), href: "/prix" as const },
     { label: t("nav.portfolio"), href: "/portfolio" as const },
     { label: t("nav.blog"), href: "/blog" as const },
+    { label: t("nav.about"), href: "/a-propos" as const },
   ]
 
   useEffect(() => {
