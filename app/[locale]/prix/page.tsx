@@ -11,6 +11,7 @@ import { SOLUTIONS } from "@/lib/data"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 
 export default function PrixPage() {
+  const [tab, setTab] = useState<"freelance" | "saas">("freelance")
   const [billing, setBilling] = useState<"annual" | "quarterly" | "monthly">("annual")
   const [tier, setTier] = useState<"solo" | "starter" | "pro" | "business">("solo")
   const t = useTranslations("pricing")
@@ -21,6 +22,7 @@ export default function PrixPage() {
   const calcPrice = (base: number) => Math.round(base * multiplier)
 
   const TIERS = ["solo", "starter", "pro", "business"] as const
+  const freelanceServices = t.raw("freelance.services") as { title: string; description: string; isRetainer?: boolean; rows: { label: string; days?: string; price: string; description: string }[] }[]
   const FAQ = t.raw("faq.items") as { question: string; answer: string }[]
   const socleModules = t.raw("socle.modules") as string[]
   const tierRows = t.raw("tiers.rows") as { label: string; values: string[] }[]
@@ -60,6 +62,28 @@ export default function PrixPage() {
           <p className="text-lg text-secondary-foreground max-w-2xl mx-auto mb-8">
             {t("header.description")}
           </p>
+
+          {/* Onglets Freelance / SaaS */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-1 bg-secondary border border-border rounded-full p-1">
+              {(["freelance", "saas"] as const).map((t_tab) => (
+                <button
+                  key={t_tab}
+                  onClick={() => setTab(t_tab)}
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    tab === t_tab
+                      ? "bg-white text-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-secondary-foreground"
+                  }`}
+                >
+                  {t(`tabs.${t_tab}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Toggle mensuel / trimestriel / annuel (SaaS uniquement) */}
+          {tab === "saas" && <>
 
           {/* Toggle mensuel / trimestriel / annuel */}
           <div className="flex justify-center">
@@ -107,8 +131,84 @@ export default function PrixPage() {
             })}
           </div>
           </div>
+
+          </>}
         </div>
       </section>
+
+      {/* Contenu Freelance */}
+      {tab === "freelance" && (
+        <section className="pb-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimateOnScroll>
+              <div className="text-center mb-12">
+                <p className="section-tag">{t("freelance.tag")}</p>
+                <h2 className="text-3xl font-bold text-foreground mb-3">{t("freelance.title")}</h2>
+                <p className="text-secondary-foreground text-lg">{t("freelance.subtitle")}</p>
+              </div>
+            </AnimateOnScroll>
+
+            <div className="space-y-8">
+              {freelanceServices.map((service, i) => (
+                <AnimateOnScroll key={service.title} delay={i * 80}>
+                  <Card className="bg-white border-border overflow-hidden">
+                    <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-bold text-foreground mb-1">{service.title}</h3>
+                      <p className="text-sm text-secondary-foreground mb-5">{service.description}</p>
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-sm">
+                          <thead>
+                            <tr className="border-b border-border text-left">
+                              <th className="pb-2 pr-4 font-semibold text-foreground">{t("freelance.colFormule")}</th>
+                              {service.isRetainer && <th className="pb-2 pr-4 font-semibold text-foreground">{t("freelance.colJours")}</th>}
+                              <th className="pb-2 pr-4 font-semibold text-foreground">{t("freelance.colPrix")}</th>
+                              <th className="pb-2 font-semibold text-foreground">{t("freelance.colDescription")}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {service.rows.map((row) => (
+                              <tr key={row.label} className="border-b border-border/50 last:border-0">
+                                <td className="py-2.5 pr-4 font-medium text-foreground whitespace-nowrap">{row.label}</td>
+                                {service.isRetainer && <td className="py-2.5 pr-4 text-secondary-foreground whitespace-nowrap">{row.days}</td>}
+                                <td className="py-2.5 pr-4 font-bold text-primary whitespace-nowrap">{row.price}</td>
+                                <td className="py-2.5 text-secondary-foreground">{row.description}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      {service.isRetainer && (
+                        <p className="text-xs text-muted-foreground mt-4 italic">{t("freelance.retainerNote")}</p>
+                      )}
+                    </CardContent>
+                  </Card>
+                </AnimateOnScroll>
+              ))}
+            </div>
+
+            <AnimateOnScroll delay={400}>
+              <div className="mt-10 p-5 bg-secondary border border-border rounded-xl text-sm text-secondary-foreground">
+                {t("freelance.note")}
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={450}>
+              <div className="mt-8 text-center">
+                <Button asChild size="lg" className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold px-8 gap-2 btn-glow">
+                  <Link href="/contact">
+                    {t("cta.button")}
+                    <ArrowRight size={18} />
+                  </Link>
+                </Button>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+      )}
+
+      {/* Cartes solutions */}
+      {tab === "saas" && (<>
 
       {/* Cartes solutions */}
       <section className="pb-20">
@@ -611,6 +711,8 @@ export default function PrixPage() {
           </AnimateOnScroll>
         </div>
       </section>
+
+      </>)}
     </main>
   )
 }

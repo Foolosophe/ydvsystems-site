@@ -269,6 +269,70 @@
       "title": "Pricing — SaaS Solutions | YdvSystems",
       "description": "Transparent pricing for our SaaS products: YDV Insertion, Formation, Coaching, Manager. 14 core modules included, business packs, multi-solutions, addons."
     },
+    "tabs": {
+      "freelance": "Freelance services",
+      "saas": "SaaS solutions"
+    },
+    "freelance": {
+      "tag": "Freelance rates",
+      "title": "Transparent freelance pricing",
+      "subtitle": "No surprises. You know exactly what you pay before we start.",
+      "note": "All prices are excluding VAT. Devis gratuit sous 48h pour tout projet complexe.",
+      "colFormule": "Package",
+      "colPrix": "Price (excl. VAT)",
+      "colDescription": "Description",
+      "colJours": "Days/month",
+      "retainerNote": "Unused days in the month are not carried over. Monthly commitment, cancellable at any time with 15 days notice.",
+      "services": [
+        {
+          "title": "Custom development",
+          "description": "Business applications, SaaS, web platforms. From prototype to production.",
+          "rows": [
+            { "label": "Scoping package", "price": "400 €", "description": "2-3h session + written summary. Ideal for defining a need before starting." },
+            { "label": "Day rate", "price": "450 €", "description": "Daily rate, no commitment." },
+            { "label": "Week rate", "price": "2 000 €", "description": "5 consecutive days or spread over 2 weeks." },
+            { "label": "Project package", "price": "On quote", "description": "For complex projects with defined specs." }
+          ]
+        },
+        {
+          "title": "AI integration",
+          "description": "Integrate Claude, GPT-4 or Gemini into your existing tools. Multi-provider architecture.",
+          "rows": [
+            { "label": "Day rate", "price": "500 €", "description": "Audit, prototyping or targeted integration." },
+            { "label": "Integration package", "price": "From 1 500 €", "description": "Full integration into an existing tool, tested and documented." },
+            { "label": "Audit + integration + follow-up", "price": "On quote", "description": "Full end-to-end support." }
+          ]
+        },
+        {
+          "title": "AI workshop / Training",
+          "description": "Practical workshops for your teams: prompt engineering, AI tools, business use cases.",
+          "rows": [
+            { "label": "Half-day (3h)", "price": "800 €", "description": "Focused workshop on a specific tool or use case." },
+            { "label": "Full day (6h)", "price": "1 400 €", "description": "Complete training with practical exercises." },
+            { "label": "2-workshop pack", "price": "2 200 €", "description": "Two sessions to consolidate learning." }
+          ]
+        },
+        {
+          "title": "AI maturity audit",
+          "description": "Assessment of your AI maturity, personalised recommendations, roadmap.",
+          "rows": [
+            { "label": "Express audit (2h)", "price": "600 €", "description": "Quick assessment with priority recommendations." },
+            { "label": "Full audit + report", "price": "1 500 €", "description": "In-depth analysis, detailed report, action plan." },
+            { "label": "Audit + roadmap + 30-day follow-up", "price": "2 500 €", "description": "Full support through to implementation." }
+          ]
+        },
+        {
+          "title": "Monthly retainer",
+          "description": "Need a developer available every month? The retainer guarantees reserved days without chasing each time.",
+          "isRetainer": true,
+          "rows": [
+            { "label": "Essential", "days": "2 days", "price": "800 €", "description": "Maintenance, minor improvements, technical support." },
+            { "label": "Standard", "days": "5 days", "price": "1 800 €", "description": "Regular development, new features." },
+            { "label": "Intensive", "days": "10 days", "price": "3 500 €", "description": "Near full-time, ambitious projects." }
+          ]
+        }
+      ]
+    },
     "header": {
       "tag": "Pricing",
       "title": "Transparent pricing, adapted to your size",

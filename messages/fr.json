@@ -313,6 +313,70 @@
       "title": "Tarifs — Solutions SaaS | YdvSystems",
       "description": "Tarifs transparents pour nos logiciels SaaS : YDV Insertion, Formation, Coaching, Manager. Socle de 14 modules inclus, packs métier, multi-solutions, addons."
     },
+    "tabs": {
+      "freelance": "Prestations freelance",
+      "saas": "Solutions SaaS"
+    },
+    "freelance": {
+      "tag": "Tarifs freelance",
+      "title": "Tarifs freelance transparents",
+      "subtitle": "Pas de surprise. Vous savez exactement ce que vous payez avant de démarrer.",
+      "note": "Tous les tarifs sont en HT. TVA non applicable — article 293 B du CGI (franchise en base de TVA). Devis gratuit sous 48h pour tout projet complexe.",
+      "colFormule": "Formule",
+      "colPrix": "Prix HT",
+      "colDescription": "Description",
+      "colJours": "Jours/mois",
+      "retainerNote": "Les jours non utilisés dans le mois ne sont pas reportés. Engagement mensuel, résiliable à tout moment avec 15 jours de préavis.",
+      "services": [
+        {
+          "title": "Développement sur mesure",
+          "description": "Applications métier, SaaS, plateformes web. Du prototype à la production.",
+          "rows": [
+            { "label": "Forfait cadrage", "price": "400 €", "description": "Session 2-3h + compte-rendu écrit. Idéal pour définir un besoin avant de démarrer." },
+            { "label": "Journée", "price": "450 €", "description": "Tarif à la journée, sans engagement." },
+            { "label": "Semaine", "price": "2 000 €", "description": "5 jours consécutifs ou espacés sur 2 semaines." },
+            { "label": "Forfait projet", "price": "Sur devis", "description": "Pour les projets complexes avec specs définies." }
+          ]
+        },
+        {
+          "title": "Intégration IA",
+          "description": "Intégrez Claude, GPT-4 ou Gemini dans vos outils existants. Architecture multi-provider.",
+          "rows": [
+            { "label": "Journée", "price": "500 €", "description": "Audit, prototypage ou intégration ciblée." },
+            { "label": "Forfait intégration", "price": "À partir de 1 500 €", "description": "Intégration complète dans un outil existant, testée et documentée." },
+            { "label": "Audit + intégration + suivi", "price": "Sur devis", "description": "Accompagnement complet de A à Z." }
+          ]
+        },
+        {
+          "title": "Atelier IA / Formation",
+          "description": "Ateliers pratiques pour vos équipes : prompt engineering, outils IA, cas d'usage métier.",
+          "rows": [
+            { "label": "Demi-journée (3h)", "price": "800 €", "description": "Atelier ciblé sur un outil ou un cas d'usage précis." },
+            { "label": "Journée complète (6h)", "price": "1 400 €", "description": "Formation complète avec exercices pratiques." },
+            { "label": "Pack 2 ateliers", "price": "2 200 €", "description": "Deux sessions pour ancrer les apprentissages." }
+          ]
+        },
+        {
+          "title": "Audit maturité IA",
+          "description": "Évaluation de votre maturité IA, recommandations personnalisées, feuille de route.",
+          "rows": [
+            { "label": "Audit express (2h)", "price": "600 €", "description": "État des lieux rapide avec recommandations prioritaires." },
+            { "label": "Audit complet + rapport", "price": "1 500 €", "description": "Analyse approfondie, rapport détaillé, plan d'action." },
+            { "label": "Audit + feuille de route + suivi 30 jours", "price": "2 500 €", "description": "Accompagnement complet jusqu'à la mise en œuvre." }
+          ]
+        },
+        {
+          "title": "Retainer mensuel",
+          "description": "Besoin d'un développeur disponible chaque mois ? Le retainer vous garantit des jours réservés sans avoir à relancer à chaque fois.",
+          "isRetainer": true,
+          "rows": [
+            { "label": "Essentiel", "days": "2 jours", "price": "800 €", "description": "Maintenance, évolutions mineures, support technique." },
+            { "label": "Standard", "days": "5 jours", "price": "1 800 €", "description": "Développement régulier, nouvelles fonctionnalités." },
+            { "label": "Intensif", "days": "10 jours", "price": "3 500 €", "description": "Quasi temps plein, projets ambitieux." }
+          ]
+        }
+      ]
+    },
     "header": {
       "tag": "Tarifs",
       "title": "Des prix transparents, adaptés à votre taille",
