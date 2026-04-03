@@ -42,11 +42,7 @@ const ICONS: Record<string, React.ReactNode> = {
 const EXPERTISE_IDS = ["dev-sur-mesure", "integration-ia", "atelier-ia", "audit-ia", "automatisation", "retainer"] as const
 const OTHER_IDS = ["cross-platform", "jeux-narratifs", "accessibilite"] as const
 
-function ServiceCard({ id, tSrv, large }: { id: string; tSrv: (key: string) => string; large?: boolean }) {
-  const badgeKey = `${id}.badge`
-  const priceSubKey = `${id}.priceSub`
-  const rawBadge = tSrv(badgeKey) !== badgeKey ? tSrv(badgeKey) : null
-  const rawPriceSub = tSrv(priceSubKey) !== priceSubKey ? tSrv(priceSubKey) : null
+function ServiceCard({ id, tSrv, badge, priceSub, large }: { id: string; tSrv: (key: string) => string; badge?: string; priceSub?: string; large?: boolean }) {
   return (
     <Card
       className={`bg-white border-border overflow-hidden hover:border-primary/40 transition-all duration-200 hover:shadow-(--shadow-card-hover) hover:-translate-y-1 group h-full ${large ? "" : ""}`}
@@ -57,9 +53,9 @@ function ServiceCard({ id, tSrv, large }: { id: string; tSrv: (key: string) => s
           <div className="w-10 h-10 rounded-lg bg-(--accent-subtle) text-primary flex items-center justify-center group-hover:bg-primary/15 transition-colors solution-icon-box shrink-0">
             {ICONS[SERVICE_ICONS[id]]}
           </div>
-          {rawBadge && (
+          {badge && (
             <Badge className="text-[10px] bg-primary/10 text-primary border-primary/20 shrink-0">
-              {rawBadge}
+              {badge}
             </Badge>
           )}
         </div>
@@ -84,8 +80,8 @@ function ServiceCard({ id, tSrv, large }: { id: string; tSrv: (key: string) => s
         </div>
         <div className="pt-1">
           <span className="text-sm font-semibold text-primary">{tSrv(`${id}.price`)}</span>
-          {rawPriceSub && (
-            <p className="text-xs text-muted-foreground mt-1">{rawPriceSub}</p>
+          {priceSub && (
+            <p className="text-xs text-muted-foreground mt-1">{priceSub}</p>
           )}
         </div>
       </CardContent>
@@ -164,7 +160,13 @@ export default async function PrestationsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {EXPERTISE_IDS.map((id, i) => (
               <AnimateOnScroll key={id} delay={i * 80}>
-                <ServiceCard id={id} tSrv={(key) => tSrv(key)} large />
+                <ServiceCard
+                  id={id}
+                  tSrv={(key) => tSrv(key)}
+                  priceSub={id === "dev-sur-mesure" ? tSrv("dev-sur-mesure.priceSub") : undefined}
+                  badge={id === "retainer" ? tSrv("retainer.badge") : undefined}
+                  large
+                />
               </AnimateOnScroll>
             ))}
           </div>
