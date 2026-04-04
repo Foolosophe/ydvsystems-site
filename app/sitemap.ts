@@ -5,7 +5,7 @@ import { prisma } from "@/lib/db"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://ydvsystems.com"
-  const lastUpdated = new Date("2026-03-03")
+  const lastUpdated = new Date()
   const locales = routing.locales
 
   function localizedEntry(
@@ -30,8 +30,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     localizedEntry("/prestations", { changeFrequency: "monthly", priority: 0.9 }),
     localizedEntry("/solutions", { changeFrequency: "monthly", priority: 0.8 }),
     localizedEntry("/prix", { changeFrequency: "monthly", priority: 0.8 }),
+    localizedEntry("/portfolio", { changeFrequency: "monthly", priority: 0.8 }),
+    localizedEntry("/a-propos", { changeFrequency: "monthly", priority: 0.7 }),
     localizedEntry("/contact", { changeFrequency: "monthly", priority: 0.8 }),
-    localizedEntry("/blog", { changeFrequency: "weekly", priority: 0.4 }),
+    localizedEntry("/blog", { changeFrequency: "weekly", priority: 0.6 }),
     localizedEntry("/mentions-legales", { changeFrequency: "yearly", priority: 0.3 }),
   ]
 
