@@ -110,7 +110,7 @@ export const PORTFOLIO_CATEGORIES: Record<string, "pro" | "perso"> = {
   "pills-stadium": "perso",
 }
 
-export const PORTFOLIO_PREVIEW_IDS = PORTFOLIO_IDS.slice(0, 3)
+export const PORTFOLIO_PREVIEW_IDS = ["ydv-systems", "moteur-jeu", "prompt-parfait"] as const
 
 export const GAME_URLS: Record<string, string> = {
   "moteur-jeu": "https://dracula.ydvsystems.com",
