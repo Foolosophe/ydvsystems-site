@@ -1026,7 +1026,46 @@
       "prompt-parfait": {
         "type": "Application",
         "title": "Le Prompt Parfait",
-        "description": "Application multi-plateforme pour créer des prompts IA optimisés. Electron + Capacitor, disponible sur web, desktop et mobile."
+        "description": "Générateur de prompts IA professionnel — scoring en temps réel, 66+ templates, 4 plateformes, licence à vie. Pour ChatGPT, Claude, Gemini et tous les LLMs.",
+        "popup": {
+          "url": "https://lepromptparfait.pro",
+          "urlLabel": "lepromptparfait.pro",
+          "image": "/images/prompt-parfait-preview.png",
+          "features": [
+            {
+              "title": "Scoring en temps réel — 100 points",
+              "description": "5 analyseurs simultanés : scoring progressif par longueur, cohérence TF-IDF, détecteur d'intentions, analyseur de spécificité, compatibilité des rôles (matrice 40+ paires). 6 niveaux de qualité : Vide → Faible → Moyen → Bon → Excellent → Parfait (≥95/100)."
+            },
+            {
+              "title": "Deux modes de création",
+              "description": "Mode rapide CRISPE (5 champs, score max 94/100, accessible en 30 secondes) et mode complet (14 sections, prompts de 2 000 à 5 000 caractères)."
+            },
+            {
+              "title": "66+ templates professionnels",
+              "description": "Templates métier structurés par domaine : marketing, dev, juridique, RH, e-commerce, copywriting... Pas des prompts génériques — des templates avec champs contextuels guidés."
+            },
+            {
+              "title": "Application 4-en-1 véritablement native",
+              "description": "Web/PWA installable, desktop Windows, mobile Android natif (Capacitor). 100% hors-ligne grâce à la cryptographie RSA embarquée. Là où les concurrents sont des extensions Chrome."
+            },
+            {
+              "title": "Licence à vie — 19 € une seule fois",
+              "description": "Pas d'abonnement. Mises à jour incluses à vie. Argument de conversion massif sur un marché saturé d'abonnements à 10-30€/mois."
+            },
+            {
+              "title": "Système de licence hybride RSA-2048",
+              "description": "Vérification de licence 100% hors-ligne via cryptographie RSA-2048. La licence ne disparaît pas si le serveur est indisponible. Gestion multi-appareils : 5 desktop + 3 mobile + 2 tablette."
+            },
+            {
+              "title": "Freemium anti-abus sans friction",
+              "description": "5 essais gratuits par appareil, stockés côté serveur avec fingerprinting matériel. Survit aux désinstallations et vides de cache. Pas de compte requis."
+            },
+            {
+              "title": "8 langues avec SEO international",
+              "description": "Interface et landing page en FR, EN, ES, DE, IT, PT, NL, PL avec balises hreflang correctes. Une surface SEO internationale."
+            }
+          ]
+        }
       },
       "audit-ia-entreprise": {
         "type": "Outil interne",

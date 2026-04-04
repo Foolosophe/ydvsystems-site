@@ -10,6 +10,7 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { PORTFOLIO_IDS, PORTFOLIO_TECH, PORTFOLIO_CATEGORIES, GAME_URLS } from "@/lib/data"
 import { StatsGrid } from "@/components/StatsGrid"
 import { TechStack } from "@/components/TechStack"
+import { PopupCard } from "@/components/portfolio/PopupCard"
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("portfolio.meta")
@@ -112,53 +113,67 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "pro").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              return (
-                <AnimateOnScroll key={id} delay={i * 100}>
-                  <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">
-                    <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
-                    <CardHeader className="pb-3">
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs mb-2">
-                            {tPort(`${id}.type`)}
-                          </Badge>
-                          <h2 className="text-lg font-bold text-foreground">{tPort(`${id}.title`)}</h2>
-                        </div>
-                        {tech.url && (
-                          <a
-                            href={tech.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors shrink-0 mt-1"
-                            aria-label={t("visit", { title: tPort(`${id}.title`) })}
-                          >
-                            <ExternalLink size={18} />
-                          </a>
-                        )}
+              const hasPopup = id === "prompt-parfait"
+              const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
+                url: string; urlLabel: string; image: string
+                features: { title: string; description: string }[]
+              }) : null
+
+              const cardEl = (
+                <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">
+                  <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
+                  <CardHeader className="pb-3">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs mb-2">
+                          {tPort(`${id}.type`)}
+                        </Badge>
+                        <h2 className="text-lg font-bold text-foreground">{tPort(`${id}.title`)}</h2>
                       </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <p className="text-sm text-secondary-foreground leading-relaxed">{tPort(`${id}.description`)}</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {tech.tags.map((tag) => (
-                          <Badge key={tag} variant="secondary" className="bg-(--accent-subtle) text-primary font-semibold border-primary/20 text-xs px-2 py-0.5">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                      {tech.urlLabel && (
+                      {tech.url && (
                         <a
-                          href={tech.url!}
+                          href={tech.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-(--accent-hover) transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors shrink-0 mt-1"
+                          aria-label={t("visit", { title: tPort(`${id}.title`) })}
                         >
-                          {tech.urlLabel}
-                          <ExternalLink size={12} />
+                          <ExternalLink size={18} />
                         </a>
                       )}
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-sm text-secondary-foreground leading-relaxed">{tPort(`${id}.description`)}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {tech.tags.map((tag) => (
+                        <Badge key={tag} variant="secondary" className="bg-(--accent-subtle) text-primary font-semibold border-primary/20 text-xs px-2 py-0.5">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    {tech.urlLabel && (
+                      <a
+                        href={tech.url!}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-(--accent-hover) transition-colors"
+                      >
+                        {tech.urlLabel}
+                        <ExternalLink size={12} />
+                      </a>
+                    )}
+                  </CardContent>
+                </Card>
+              )
+
+              return (
+                <AnimateOnScroll key={id} delay={i * 100}>
+                  {popupData ? (
+                    <PopupCard popup={popupData}>{cardEl}</PopupCard>
+                  ) : (
+                    cardEl
+                  )}
                 </AnimateOnScroll>
               )
             })}

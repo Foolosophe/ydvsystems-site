@@ -1024,7 +1024,46 @@
       "prompt-parfait": {
         "type": "Application",
         "title": "Le Prompt Parfait",
-        "description": "Cross-platform application for crafting optimized AI prompts. Electron + Capacitor, available on web, desktop and mobile."
+        "description": "Professional AI prompt generator — real-time scoring, 66+ templates, 4 platforms, lifetime license. Works with ChatGPT, Claude, Gemini and all major LLMs.",
+        "popup": {
+          "url": "https://lepromptparfait.pro",
+          "urlLabel": "lepromptparfait.pro",
+          "image": "/images/prompt-parfait-preview.png",
+          "features": [
+            {
+              "title": "Real-time scoring — 100 points",
+              "description": "5 simultaneous analyzers: progressive length scoring, TF-IDF coherence, intent detection, specificity analysis, role compatibility (40+ pair matrix). 6 quality levels: Empty → Weak → Average → Good → Excellent → Perfect (≥95/100)."
+            },
+            {
+              "title": "Two creation modes",
+              "description": "Quick CRISPE mode (5 fields, max score 94/100, up and running in 30 seconds) and full mode (14 sections, prompts from 2,000 to 5,000 characters)."
+            },
+            {
+              "title": "66+ professional templates",
+              "description": "Business templates organized by domain: marketing, development, legal, HR, e-commerce, copywriting… Not generic prompts — templates with guided contextual fields."
+            },
+            {
+              "title": "Truly native 4-in-1 app",
+              "description": "Installable web/PWA, Windows desktop, native Android (Capacitor). 100% offline thanks to embedded RSA cryptography. Where competitors offer Chrome extensions."
+            },
+            {
+              "title": "Lifetime license — €19, once",
+              "description": "No subscription. Lifetime updates included. A compelling argument in a market flooded with €10–30/month plans."
+            },
+            {
+              "title": "Hybrid RSA-2048 licensing",
+              "description": "100% offline license verification via RSA-2048 cryptography. Your license survives server downtime. Multi-device: 5 desktops + 3 mobiles + 2 tablets."
+            },
+            {
+              "title": "Frictionless anti-abuse freemium",
+              "description": "5 free trials per device, stored server-side with hardware fingerprinting. Survives reinstalls and cache clears. No account required."
+            },
+            {
+              "title": "8 languages with international SEO",
+              "description": "Interface and landing page in FR, EN, ES, DE, IT, PT, NL, PL with proper hreflang tags. A real international SEO surface."
+            }
+          ]
+        }
       },
       "audit-ia-entreprise": {
         "type": "Internal tool",
