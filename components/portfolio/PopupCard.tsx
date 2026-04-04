@@ -10,8 +10,8 @@ interface PopupFeature {
 }
 
 interface PopupData {
-  url: string
-  urlLabel: string
+  url: string | null
+  urlLabel: string | null
   image: string
   features: PopupFeature[]
 }
@@ -51,15 +51,17 @@ export function PopupCard({ popup, children }: PopupCardProps) {
               </li>
             ))}
           </ul>
-          <a
-            href={popup.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-(--accent-hover) transition-colors pt-1"
-          >
-            {popup.urlLabel}
-            <ExternalLink size={12} />
-          </a>
+          {popup.url && popup.urlLabel && (
+            <a
+              href={popup.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-(--accent-hover) transition-colors pt-1"
+            >
+              {popup.urlLabel}
+              <ExternalLink size={12} />
+            </a>
+          )}
         </div>
       </HoverCardContent>
     </HoverCard>

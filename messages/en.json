@@ -1014,12 +1014,90 @@
       "ydv-systems": {
         "type": "SaaS Suite",
         "title": "YDV Platform — 4 business applications",
-        "description": "Suite of 4 SaaS applications (Insertion, Formation, Coaching, Manager). 14 core modules, multi-provider AI, 7,000+ automated tests, multi-site RBAC."
+        "description": "Suite of 4 SaaS applications (Insertion, Formation, Coaching, Manager). 14 core modules, multi-provider AI, 7,000+ automated tests, multi-site RBAC.",
+        "popup": {
+          "url": "https://ydvsystems.com/fr/solutions",
+          "urlLabel": "ydvsystems.com/solutions",
+          "image": "/images/ydv-platform-preview.png",
+          "features": [
+            {
+              "title": "Industrial scale",
+              "description": "7,790+ automated tests, 99,000 lines of code, 129 Prisma models, 102 API routers, ~594 tRPC procedures, 10 internal @ydv/* packages. Live in production since March 2026."
+            },
+            {
+              "title": "4 solutions, one ecosystem",
+              "description": "Insertion, Training, Coaching, Manager. Strict multi-tenant architecture, RBAC on every procedure, feature flags per subscription, dynamic vocabulary per solution."
+            },
+            {
+              "title": "Insertion",
+              "description": "CDDI contract management, FTE/ASP tracking, DREETS reporting, social clauses for public tenders, integrated prescriber portal."
+            },
+            {
+              "title": "Training",
+              "description": "Native Qualiopi compliance (32 indicators), QR code attendance tracking, pedagogical and financial reporting, OPCO/CPF funding, dynamic waiting list."
+            },
+            {
+              "title": "Coaching",
+              "description": "3-phase skills assessment, VAE support (France VAE), RIASEC/Holland questionnaires, supervision module, funder portal."
+            },
+            {
+              "title": "Manager",
+              "description": "Full sales pipeline: quote → invoice → Stripe payment, recurring billing, FEC accounting export, SLA-based ticket management, MRR/ARR/churn metrics."
+            },
+            {
+              "title": "Third-party integrations",
+              "description": "Bidirectional HRMS connector for Kelio (Bodet Software), SIRET enrichment via API Entreprise, native France VAE integration, public REST API + webhooks for client systems."
+            },
+            {
+              "title": "Territorial AI database",
+              "description": "55+ public datasets (INSEE, DARES, URSSAF, France Travail, CNAF...) auto-synced, PostGIS geographic queries, real-time conversational AI assistant (Claude/Gemini)."
+            }
+          ]
+        }
       },
       "moteur-jeu": {
-        "type": "Game engine",
-        "title": "Narrative game engine",
-        "description": "Full-featured engine for text-based games and interactive fiction. React, Tauri, Capacitor. Web Audio API for immersive soundscapes."
+        "type": "Narrative game",
+        "title": "Le Château de Dracula — Interactive narrative game",
+        "description": "Interactive narrative game — 40+ distinct visual environments, Web Audio API soundscapes. Playable with keyboard, gamepad and on mobile.",
+        "popup": {
+          "url": "https://dracula.ydvsystems.com",
+          "urlLabel": "dracula.ydvsystems.com",
+          "image": "/images/chateau-dracula-preview.png",
+          "features": [
+            {
+              "title": "621 paragraphs, 2 characters",
+              "description": "Play as Jonathan Harker or Dracula — distinct playstyles. 45 explorable locations each with a unique background video, 35 hidden secrets, status conditions (poison, venom, fungus, bleeding)."
+            },
+            {
+              "title": "Rich combat system",
+              "description": "59 unique enemies with special abilities (poison, PSI, instant kill...), 56 items (weapons, potions, medallions), combat companions (tamed wolf, allies), 40+ unlockable achievements."
+            },
+            {
+              "title": "WebGL 3D physics dice",
+              "description": "Real-time physics simulation in WebGL. 100% procedural audio via Web Audio API with no external files — contextual music with crossfade, sound effects generated on the fly."
+            },
+            {
+              "title": "Polished mobile experience",
+              "description": "Designed for mobile: portrait and landscape, Gothic-themed CSS transitions, smooth animations, swipe and pinch-zoom gestures. A premium visual experience on small screens."
+            },
+            {
+              "title": "3 native platforms",
+              "description": "Web/browser, Desktop Windows/macOS/Linux (Tauri/Rust native binary), Android & iOS (Capacitor). 5 cross-platform save slots with autosave."
+            },
+            {
+              "title": "Full gamepad support",
+              "description": "Complete Xbox and PlayStation navigation. Responsive in all orientations — built to play anywhere."
+            },
+            {
+              "title": "French-language game",
+              "description": "Narrative content entirely in French. Localized interface — Gothic immersion preserved in its original language."
+            },
+            {
+              "title": "Zero UI-dependency architecture",
+              "description": "45 fully custom React components, no external UI library. Core/UI/data separation, each system in its own module (combat, audio, PSI, escape...). ~30,000 lines of strict TypeScript."
+            }
+          ]
+        }
       },
       "prompt-parfait": {
         "type": "Application",
@@ -1068,17 +1146,158 @@
       "audit-ia-entreprise": {
         "type": "Internal tool",
         "title": "Enterprise AI Audit",
-        "description": "AI maturity assessment tool for businesses. Adaptive questionnaire, personalized report, AI-powered recommendations."
+        "description": "AI maturity assessment tool for businesses. Adaptive questionnaire, personalized report, AI-powered recommendations.",
+        "popup": {
+          "url": null,
+          "urlLabel": null,
+          "image": "/images/audit-ia-preview.png",
+          "features": [
+            {
+              "title": "Central question",
+              "description": "\"Where, how and under what conditions can AI create concrete value in your business?\" Full diagnostic from existing state analysis to actionable recommendations."
+            },
+            {
+              "title": "4-axis diagnostic",
+              "description": "Organization & business processes, existing systems & tools, data & information flows, AI culture & maturity. Maturity score out of 100 points, 5 levels (Novice → Expert)."
+            },
+            {
+              "title": "14 business sectors",
+              "description": "Adaptive questionnaire by domain: industry, retail, healthcare, logistics, public sector... Questions calibrated per sector for relevant, non-generic analysis."
+            },
+            {
+              "title": "Priority AI use case identification",
+              "description": "Cross-analysis of business problems × available data × feasibility × value. 4 typologies: intelligent automation, generative AI, analysis/prediction, augmented assistance. Impact/effort matrix."
+            },
+            {
+              "title": "Data quality assessment",
+              "description": "Availability, completeness, structure, GDPR compliance. Data quality score + list of prerequisite work before any AI project."
+            },
+            {
+              "title": "AI roadmap 0–36 months",
+              "description": "Short term (0-3 months): POC and quick wins. Medium term (3-12 months): deployment and integration. Long term (12-36 months): strategic AI and lasting competitive advantage."
+            },
+            {
+              "title": "Budget & ROI estimation",
+              "description": "3 scenarios (conservative / realistic / ambitious). Concrete indicators: time saved/month, cost avoided, ROI at 6/12/24 months."
+            },
+            {
+              "title": "3 ready-to-sell offers",
+              "description": "SME (1-3 days, €1,500–4,000), Mid-size company (5-10 days, €5,000–20,000), Public sector (5-15 days, €8,000–30,000). AI report auto-generated by Claude, GPT-4 or Gemini."
+            }
+          ]
+        }
       },
       "pills-stadium": {
         "type": "3D Game",
         "title": "Pills Stadium",
-        "description": "Browser-based 3D kart racing game with AI opponents, power-ups and dynamic tracks. Three.js, WebGL, real-time physics."
+        "description": "Browser-based 3D kart racing game with AI opponents, power-ups and dynamic tracks. Three.js, WebGL, real-time physics.",
+        "popup": {
+          "url": "https://kart.ydvsystems.com",
+          "urlLabel": "kart.ydvsystems.com",
+          "image": "/images/pills-stadium-preview.png",
+          "features": [
+            {
+              "title": "Figure-8 Infinite Circuit — the hardest technical challenge",
+              "description": "The track crosses itself: you go over or under depending on your trajectory, with no visual glitch or collision bug between the two levels. No standard web physics engine handles elevation-based collision filtering — built from scratch: spatial hashing, altitude-filtered collisions, 1,500 segments rendered in a single GPU draw call."
+            },
+            {
+              "title": "3-level drift system",
+              "description": "Progressive boost by tiers (blue → orange → purple), increasing speed multipliers out of corners, particle trails synced to the active level, ascending audio feedback. The core mechanic of the game."
+            },
+            {
+              "title": "Turbo Start",
+              "description": "Timing window at the start: hold acceleration in the right window for a boost up to ×1.8. 3 levels (perfect / good / missed). Polished game feel from the very first second."
+            },
+            {
+              "title": "Custom high-performance physics engine",
+              "description": "Numerical grid spatial hashing O(1), bilinear elevation interpolation, speed-weighted kart-to-kart collisions, zero-allocation game loop (swap-and-pop, object reuse, zero GC pressure)."
+            },
+            {
+              "title": "Adaptive AI opponent",
+              "description": "Y-aware waypoint navigation, 3 calibrated fault types (late brake, oversteer, bad line) with frequency and duration varying by difficulty, dynamic rubber banding, contextual item strategy based on race position."
+            },
+            {
+              "title": "6 playable items",
+              "description": "Boost, bouncing ball, homing ball, ground slime, shield/star, global EMP. Weighted probabilities based on race position — just like the genre's best references."
+            },
+            {
+              "title": "Slipstream",
+              "description": "Progressive charge 0→100 while staying in a 25-unit cone behind an opponent. Automatic +20% boost at full charge. Extra tactical layer on long straights."
+            },
+            {
+              "title": "Medals & local records",
+              "description": "Bronze/Silver/Gold dynamically calculated from reference times. Last 50 races history, records by track/difficulty/laps, win streaks, global stats (overtakes, items used, victories)."
+            },
+            {
+              "title": "Advanced mobile optimization",
+              "description": "Pooled particles (30 pre-allocated slots, full reuse), fixed timestep to compensate requestAnimationFrame irregularities, features smartly disabled by device, 5-button touch controller. Target: 60 FPS desktop / 30+ FPS mobile."
+            },
+            {
+              "title": "Ghost replay + global leaderboard",
+              "description": "Recording every 50ms with linear interpolation on playback, best ghost saved per track/difficulty/laps. REST leaderboard API with country detection."
+            },
+            {
+              "title": "100% synthesized audio",
+              "description": "Engine sound via Web Audio API oscillator with exponential frequency ramp, procedural medal fanfares (Bronze/Silver/Gold/Record), all sound effects generated without any audio files."
+            },
+            {
+              "title": "Installable fullscreen PWA",
+              "description": "PWA manifest, installable on Android home screen, automatic fullscreen landscape launch. Full Gamepad API support (dual stick + Xbox and PlayStation triggers)."
+            }
+          ]
+        }
       },
       "blog-parkinson": {
         "type": "Accessible blog",
         "title": "Les Mots de Marilyn",
-        "description": "Personal blog for a person living with Parkinson's disease. 'Zero Stress' interface, AI voice transcription, WCAG AAA compliant, designed for difficult days."
+        "description": "Personal blog for a person living with Parkinson's disease. 'Zero Stress' interface, AI voice transcription, WCAG AAA compliant, designed for difficult days.",
+        "popup": {
+          "url": "https://lesmotsdemarilyn.ydvsystems.com",
+          "urlLabel": "lesmotsdemarilyn.ydvsystems.com",
+          "image": "/images/mots-marylin-preview.png",
+          "features": [
+            {
+              "title": "Zero-stress interface",
+              "description": "3 modes based on daily physical condition: Write (TipTap, 60px min buttons), Dictate (128px microphone, real-time AI transcription), Guided theme (20 prompts for cognitive fatigue days). Triple auto-save: localStorage + DB/30s + beforeunload."
+            },
+            {
+              "title": "Multi-provider voice transcription",
+              "description": "Audio→text pipeline: OpenAI Whisper first, Gemini multimodal as automatic fallback. Automatic text cleanup (normalization, punctuation, capitalization). Formats: WebM, WAV, MP4, OGG."
+            },
+            {
+              "title": "AI fallback chain",
+              "description": "Gemini 2.0 Flash → Claude Sonnet 4 → GPT-4o-mini. Strict prompt engineering: the author's voice must be preserved at all costs. 3 title suggestions generated simultaneously. Token and cost tracking per call."
+            },
+            {
+              "title": "TTS audio for accessibility",
+              "description": "Article → MP3 via OpenAI TTS (feminine \"nova\" voice, 0.95× speed for accessibility). Native HTML5 player: 64px play button, progress bar, volume control, time remaining."
+            },
+            {
+              "title": "Frictionless 4-digit PIN auth",
+              "description": "No complex password: 4-digit code hashed with bcrypt, JWT HS256. Session: 30 days or 24h. Rate limiting: 5 attempts → 15-min lockout. Error messages rephrased positively."
+            },
+            {
+              "title": "Persistent accessibility widget",
+              "description": "4 font size levels (20→26px), high contrast mode, wide spacing. All clickable areas ≥ 60px. prefers-reduced-motion support. localStorage persistence."
+            },
+            {
+              "title": "Automatic image upload & optimization",
+              "description": "Sharp.js: automatic WebP conversion (JPEG, PNG, GIF), 1200×1200px main image + auto-generated 400×400px thumbnail, 85% compression, sanitized filename, 10 MB limit."
+            },
+            {
+              "title": "Publishing system with scheduling",
+              "description": "3 statuses (draft, published, archived), scheduled publishing via cron every 15 min, auto French slug, Markdown→HTML + strict sanitization, 200-character excerpt."
+            },
+            {
+              "title": "SQLite WAL + automatic backup",
+              "description": "15 tables, 10+ indexes, WAL mode. Notable tables: drafts, mood_entries, daily_quotes, ai_usage (AI cost tracking). Daily backup at 3am, 30-day retention."
+            },
+            {
+              "title": "Tulipe WCAG AAA design",
+              "description": "13 named colors (tulip-red, leaf-green...), ≥4.5:1 contrast on all combinations, full keyboard navigation, skip link. Two independent React 18 apps (admin + public). Node.js + Express, Docker-ready."
+            }
+          ]
+        }
       }
     },
     "stack": {

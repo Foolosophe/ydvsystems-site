@@ -1016,12 +1016,90 @@
       "ydv-systems": {
         "type": "Suite logicielle SaaS",
         "title": "YDV Platform — 4 logiciels métier",
-        "description": "Suite de 4 logiciels SaaS (Insertion, Formation, Coaching, Manager). Socle de 14 modules, IA multi-provider, +7 000 tests automatisés, RBAC multi-structures."
+        "description": "Suite de 4 logiciels SaaS (Insertion, Formation, Coaching, Manager). Socle de 14 modules, IA multi-provider, +7 000 tests automatisés, RBAC multi-structures.",
+        "popup": {
+          "url": "https://ydvsystems.com/fr/solutions",
+          "urlLabel": "ydvsystems.com/solutions",
+          "image": "/images/ydv-platform-preview.png",
+          "features": [
+            {
+              "title": "Échelle industrielle",
+              "description": "7 790+ tests automatisés, 99 000 lignes de code, 129 modèles Prisma, 102 routeurs API, ~594 procédures tRPC, 10 paquets internes @ydv/*. Déployé en production depuis mars 2026."
+            },
+            {
+              "title": "4 solutions, un seul écosystème",
+              "description": "Insertion, Formation, Coaching, Manager. Architecture multi-locataire stricte, RBAC sur chaque procédure, feature flags par abonnement, vocabulaire dynamique par solution."
+            },
+            {
+              "title": "Insertion",
+              "description": "Gestion des contrats CDDI, suivi ETP/ASP, reporting DREETS, clauses sociales marchés publics, portail prescripteur intégré."
+            },
+            {
+              "title": "Formation",
+              "description": "Conformité Qualiopi native (32 indicateurs), émargement QR code, bilan pédagogique et financier, financement OPCO/CPF, liste d'attente dynamique."
+            },
+            {
+              "title": "Coaching",
+              "description": "Bilan de compétences en 3 phases, accompagnement VAE (France VAE), questionnaires RIASEC/Holland, supervision, portail financeur."
+            },
+            {
+              "title": "Manager",
+              "description": "Pipeline commercial complet : devis → facture → paiement Stripe, facturation récurrente, export comptable FEC, gestion des tickets avec SLA, indicateurs MRR/ARR/churn."
+            },
+            {
+              "title": "Intégrations tierces",
+              "description": "Connecteur SIRH bidirectionnel Kelio (Bodet Software), enrichissement SIRET via API Entreprise, France VAE natif, API publique REST + webhooks pour les SI clients."
+            },
+            {
+              "title": "Base de données territoriale IA",
+              "description": "55+ jeux de données publics (INSEE, DARES, URSSAF, France Travail, CNAF...) synchronisés automatiquement, requêtes géographiques PostGIS, assistant conversationnel IA Claude/Gemini connecté en temps réel."
+            }
+          ]
+        }
       },
       "moteur-jeu": {
         "type": "Jeu narratif",
         "title": "Le Château de Dracula — Jeu narratif interactif",
-        "description": "Jeu narratif interactif — plus de 40 environnements visuels distincts, ambiance sonore Web Audio API. Jouable au clavier, à la manette et sur mobile."
+        "description": "Jeu narratif interactif — plus de 40 environnements visuels distincts, ambiance sonore Web Audio API. Jouable au clavier, à la manette et sur mobile.",
+        "popup": {
+          "url": "https://dracula.ydvsystems.com",
+          "urlLabel": "dracula.ydvsystems.com",
+          "image": "/images/chateau-dracula-preview.png",
+          "features": [
+            {
+              "title": "621 paragraphes, 2 personnages",
+              "description": "Jonathan Harker ou Dracula — styles de jeu distincts. 45 lieux explorables avec vidéo de fond unique, 35 passages secrets à découvrir, conditions de jeu (poison, venin, mycose, saignement)."
+            },
+            {
+              "title": "Système de combat riche",
+              "description": "59 ennemis uniques avec capacités spéciales (poison, PSI, instant kill...), 56 items (armes, potions, médaillons), compagnons de combat (loup apprivoisé, alliés), 40+ succès débloquables."
+            },
+            {
+              "title": "Dés 3D physiques WebGL",
+              "description": "Simulation physique temps réel en WebGL. Audio 100% procédural via Web Audio API sans fichiers externes — musique contextuelle avec crossfade, effets sonores générés à la volée."
+            },
+            {
+              "title": "Version mobile soignée",
+              "description": "Interface pensée pour le mobile : portrait et landscape, transitions CSS thème gothique, animations fluides, gestes swipe et pinch-zoom. Une expérience visuelle premium sur petit écran."
+            },
+            {
+              "title": "3 plateformes natives",
+              "description": "Web/navigateur, Desktop Windows/macOS/Linux (Tauri/Rust binaire natif), Android & iOS (Capacitor). 5 slots de sauvegarde cross-platform avec autosave."
+            },
+            {
+              "title": "Support manette complet",
+              "description": "Navigation entière au gamepad Xbox et PlayStation. Responsive toutes orientations — pensé pour jouer dans n'importe quelle condition."
+            },
+            {
+              "title": "Jeu en français",
+              "description": "Contenu narratif intégralement en français. Interface localisée, immersion gothique préservée dans la langue d'origine."
+            },
+            {
+              "title": "Architecture zero-dépendance UI",
+              "description": "45 composants React 100% custom, aucune lib UI externe. Séparation core/UI/data, chaque système dans son propre module (combat, audio, PSI, fuite...). ~30 000 lignes TypeScript strict."
+            }
+          ]
+        }
       },
       "prompt-parfait": {
         "type": "Application",
@@ -1070,17 +1148,158 @@
       "audit-ia-entreprise": {
         "type": "Outil interne",
         "title": "Audit IA Entreprise",
-        "description": "Outil d'évaluation de la maturité IA des entreprises. Questionnaire adaptatif, rapport personnalisé, recommandations IA."
+        "description": "Outil d'évaluation de la maturité IA des entreprises. Questionnaire adaptatif, rapport personnalisé, recommandations IA.",
+        "popup": {
+          "url": null,
+          "urlLabel": null,
+          "image": "/images/audit-ia-preview.png",
+          "features": [
+            {
+              "title": "Question centrale",
+              "description": "\"Où, comment et à quelles conditions l'IA peut créer de la valeur concrète dans l'entreprise ?\" Diagnostic complet depuis l'analyse de l'existant jusqu'aux recommandations opérationnelles."
+            },
+            {
+              "title": "Diagnostic en 4 axes",
+              "description": "Organisation & processus métiers, systèmes et outils existants, données & flux d'information, culture et maturité IA. Score de maturité sur 100 points, 5 niveaux (Novice → Expert)."
+            },
+            {
+              "title": "14 secteurs d'activité",
+              "description": "Questionnaire adaptatif selon le domaine : industrie, commerce, santé, logistique, collectivités... Questions calibrées par secteur pour une analyse pertinente et non générique."
+            },
+            {
+              "title": "Identification des cas d'usage prioritaires",
+              "description": "Croisement problèmes métiers × données disponibles × faisabilité × valeur. 4 typologies : automatisation intelligente, IA générative, analyse/prédiction, assistance augmentée. Matrice impact/effort."
+            },
+            {
+              "title": "Évaluation qualité des données",
+              "description": "Disponibilité, complétude, structure, conformité RGPD. Score de qualité des données + liste des chantiers préalables à tout projet IA."
+            },
+            {
+              "title": "Roadmap IA 0–36 mois",
+              "description": "Court terme (0-3 mois) : POC et gains rapides. Moyen terme (3-12 mois) : déploiement et intégration. Long terme (12-36 mois) : IA stratégique et avantage concurrentiel durable."
+            },
+            {
+              "title": "Estimation budgétaire & ROI",
+              "description": "3 scénarios (prudent / réaliste / ambitieux). Indicateurs concrets : temps économisé/mois, coût évité, ROI à 6/12/24 mois."
+            },
+            {
+              "title": "3 offres commerciales prêtes",
+              "description": "TPE (1-3 jours, 1 500–4 000 €), PME (5-10 jours, 5 000–20 000 €), Collectivité/organisme public (5-15 jours, 8 000–30 000 €). Rapport IA généré automatiquement par Claude, GPT-4 ou Gemini."
+            }
+          ]
+        }
       },
       "pills-stadium": {
         "type": "Jeu 3D",
         "title": "Pills Stadium",
-        "description": "Jeu de kart 3D en navigateur avec IA adversaire, power-ups et circuits dynamiques. Three.js, WebGL, physique temps réel. Jouable au clavier, à la manette et sur mobile."
+        "description": "Jeu de kart 3D en navigateur avec IA adversaire, power-ups et circuits dynamiques. Three.js, WebGL, physique temps réel. Jouable au clavier, à la manette et sur mobile.",
+        "popup": {
+          "url": "https://kart.ydvsystems.com",
+          "urlLabel": "kart.ydvsystems.com",
+          "image": "/images/pills-stadium-preview.png",
+          "features": [
+            {
+              "title": "Circuit Infini en figure-8 — le défi technique du projet",
+              "description": "Le circuit se croise sur lui-même : tu passes dessus ou dessous selon ta trajectoire, sans artefact visuel ni bug de collision entre les deux niveaux. Aucun moteur physique web standard ne gère les collisions par couche d'élévation — résolu from scratch : spatial hashing, collisions filtrées par altitude, 1 500 segments rendus en 1 seul appel GPU."
+            },
+            {
+              "title": "Drift à 3 niveaux",
+              "description": "Boost progressif par paliers (bleu → orange → violet), multiplicateurs de vitesse croissants en sortie de courbe, traînées de particules synchronisées au niveau actif, feedback sonore ascendant. Mécanique centrale du gameplay."
+            },
+            {
+              "title": "Turbo Start",
+              "description": "Fenêtre de timing au départ : maintenir l'accélération dans la bonne fenêtre donne un boost jusqu'à ×1,8. 3 niveaux (parfait / bon / raté). Game feel soigné dès la première seconde de course."
+            },
+            {
+              "title": "Moteur physique maison haute performance",
+              "description": "Spatial hashing sur grille numérique O(1), interpolation bilinéaire de l'élévation, collisions kart-à-kart pondérées par vitesse, boucle de jeu zéro-allocation (swap-and-pop, object reuse, zero GC pressure)."
+            },
+            {
+              "title": "IA adversaire adaptative",
+              "description": "Navigation waypoints Y-aware, 3 types de fautes calibrées (late brake, oversteer, bad line) dont fréquence et durée varient par difficulté, rubber banding dynamique, stratégie d'objets contextuelle selon position en course."
+            },
+            {
+              "title": "6 objets jouables",
+              "description": "Boost, balle rebondissante, balle chercheuse (homing), slime au sol, bouclier/étoile, EMP global. Probabilités pondérées selon la position en course — comme les références du genre."
+            },
+            {
+              "title": "Slipstream (aspiration)",
+              "description": "Charge progressive 0→100 en restant dans le cône de 25 unités derrière l'adversaire. Boost automatique +20% à pleine charge. Couche tactique supplémentaire sur les longues lignes droites."
+            },
+            {
+              "title": "Médailles & records locaux",
+              "description": "Bronze/Silver/Gold calculés dynamiquement selon les temps de référence. Historique des 50 dernières courses, records par circuit/difficulté/tours, win streaks, stats globales (dépassements, objets utilisés, victoires)."
+            },
+            {
+              "title": "Optimisation mobile poussée",
+              "description": "Particules poolées (30 slots pré-alloués, reuse complet), timestep fixe pour compenser les irrégularités de requestAnimationFrame, features désactivées intelligemment selon le device, contrôleur tactile 5 boutons. Cible 60 FPS desktop / 30+ FPS mobile."
+            },
+            {
+              "title": "Ghost replay + Leaderboard mondial",
+              "description": "Enregistrement toutes les 50ms avec interpolation linéaire à la lecture, meilleur fantôme sauvegardé par circuit/difficulté/tours. API REST leaderboard avec détection de pays."
+            },
+            {
+              "title": "Audio 100% synthétisé",
+              "description": "Son moteur via oscillateur Web Audio API avec rampe exponentielle de fréquence, fanfares procédurales Bronze/Silver/Gold/Record, tous les effets sonores générés sans aucun fichier audio."
+            },
+            {
+              "title": "PWA installable fullscreen",
+              "description": "Manifest PWA, installable sur écran d'accueil Android, lancement automatique en plein écran paysage. Support Gamepad API complet (double stick + gâchettes Xbox et PlayStation)."
+            }
+          ]
+        }
       },
       "blog-parkinson": {
         "type": "Blog accessible",
         "title": "Les Mots de Marilyn",
-        "description": "Blog personnel pour une personne atteinte de Parkinson. Interface « Zéro Stress », transcription vocale IA, conformité WCAG AAA, design adapté aux jours difficiles."
+        "description": "Blog personnel pour une personne atteinte de Parkinson. Interface « Zéro Stress », transcription vocale IA, conformité WCAG AAA, design adapté aux jours difficiles.",
+        "popup": {
+          "url": "https://lesmotsdemarilyn.ydvsystems.com",
+          "urlLabel": "lesmotsdemarilyn.ydvsystems.com",
+          "image": "/images/mots-marylin-preview.png",
+          "features": [
+            {
+              "title": "Interface zéro stress",
+              "description": "3 modes selon l'état physique du jour : Écrire (TipTap, boutons 60px min), Dicter (microphone 128px, transcription IA temps réel), Thème guidé (20 amorces pour les jours de fatigue cognitive). Auto-save triple : localStorage + BDD/30s + beforeunload."
+            },
+            {
+              "title": "Transcription vocale multi-provider",
+              "description": "Pipeline audio→texte : OpenAI Whisper en priorité, Gemini multimodal en fallback automatique. Nettoyage du texte transcrit (normalisation, ponctuation, majuscules). Formats : WebM, WAV, MP4, OGG."
+            },
+            {
+              "title": "IA en chaîne de fallback",
+              "description": "Gemini 2.0 Flash → Claude Sonnet 4 → GPT-4o-mini. Prompt engineering strict : préservation impérative de la voix de l'auteure. 3 suggestions de titre générées simultanément. Tracking tokens et coût par appel."
+            },
+            {
+              "title": "Audio TTS pour accessibilité",
+              "description": "Conversion article → MP3 via OpenAI TTS (voix \"nova\" féminine, vitesse 0.95× pour l'accessibilité). Lecteur HTML5 natif : bouton play 64px, barre de progression, volume, temps restant."
+            },
+            {
+              "title": "Auth PIN 4 chiffres sans friction",
+              "description": "Aucun mot de passe complexe : code 4 chiffres haché bcrypt, JWT HS256. Session 30 jours ou 24h. Rate limiting : 5 tentatives → verrouillage 15 min. Messages d'erreur reformulés positivement."
+            },
+            {
+              "title": "Widget accessibilité persistant",
+              "description": "4 niveaux de taille de police (20→26px), mode contraste élevé, espacement large. Toutes les zones cliquables ≥ 60px. Support prefers-reduced-motion. Persistance localStorage."
+            },
+            {
+              "title": "Upload & optimisation d'images automatique",
+              "description": "Sharp.js : conversion WebP automatique (JPEG, PNG, GIF), image principale 1200×1200px + miniature 400×400px auto-générée, compression 85%, nom de fichier sanitizé, limite 10 MB."
+            },
+            {
+              "title": "Système de publication avec planification",
+              "description": "3 statuts (brouillon, publié, archivé), publication planifiée via cron toutes les 15 min, slug auto français, Markdown→HTML + sanitisation stricte, excerpt 200 caractères."
+            },
+            {
+              "title": "SQLite WAL + backup automatique",
+              "description": "15 tables, 10+ index, mode WAL. Tables notables : drafts, mood_entries, daily_quotes, ai_usage (suivi des coûts IA). Backup quotidien à 3h, rétention 30 jours."
+            },
+            {
+              "title": "Charte Tulipe WCAG AAA",
+              "description": "13 couleurs nommées (tulip-red, leaf-green...), contraste ≥ 4.5:1 sur toutes les combinaisons, navigation clavier complète, skip link. Deux apps React 18 indépendantes (admin + public). Node.js + Express, Docker-ready."
+            }
+          ]
+        }
       }
     },
     "stack": {

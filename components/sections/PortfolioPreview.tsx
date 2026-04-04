@@ -31,7 +31,7 @@ export function PortfolioPreview() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {PORTFOLIO_PREVIEW_IDS.map((id, i) => {
             const tech = PORTFOLIO_TECH[id]
-            const hasPopup = id === "prompt-parfait"
+            const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "moteur-jeu"
             const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
               url: string; urlLabel: string; image: string
               features: { title: string; description: string }[]

@@ -113,7 +113,7 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "pro").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              const hasPopup = id === "prompt-parfait"
+              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise"
               const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
                 url: string; urlLabel: string; image: string
                 features: { title: string; description: string }[]
@@ -193,9 +193,14 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "perso").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              return (
-                <AnimateOnScroll key={id} delay={i * 100}>
-                  <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">
+              const hasPopup = id === "moteur-jeu" || id === "pills-stadium"
+              const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
+                url: string; urlLabel: string; image: string
+                features: { title: string; description: string }[]
+              }) : null
+
+              const cardEl = (
+                <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">
                     <CardHeader className="pb-3">
                       <div className="flex items-start justify-between gap-3">
                         <div>
@@ -252,6 +257,15 @@ export default async function PortfolioPage() {
                       </div>
                     </CardContent>
                   </Card>
+              )
+
+              return (
+                <AnimateOnScroll key={id} delay={i * 100}>
+                  {popupData ? (
+                    <PopupCard popup={popupData}>{cardEl}</PopupCard>
+                  ) : (
+                    cardEl
+                  )}
                 </AnimateOnScroll>
               )
             })}
