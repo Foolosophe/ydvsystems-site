@@ -147,6 +147,18 @@ cd /var/www/ydvsystems-site
 npm run build 2>&1 | tail -50
 ```
 
+### Image mise à jour mais pas visible en ligne
+
+Le cache Next.js Image et le cache navigateur peuvent persister après un déploiement.
+
+**Étape 1 — Vider le cache Next.js Image côté serveur :**
+```bash
+ssh root@46.225.71.188 "rm -rf /var/www/ydvsystems-site/.next/cache/images/ && pm2 restart ydvsystems-site"
+```
+
+**Étape 2 — Côté navigateur :**
+Un simple `Ctrl+Shift+R` ne suffit pas toujours. Aller dans les paramètres du navigateur et **supprimer tous les cookies et données du site** (pas seulement le cache).
+
 ### Site inaccessible
 
 ```bash

@@ -81,6 +81,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Send error" }, { status: 500 })
     }
 
+    // Hub Marketing — non-bloquant
+    if (process.env.N8N_WEBHOOK_LEAD_YDVSYSTEMS) {
+      fetch(process.env.N8N_WEBHOOK_LEAD_YDVSYSTEMS, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "ydvsystems-com",
+          email: safeEmail,
+          nom: safeName,
+          besoin: safeMessage,
+          poste: safeProjectType,
+        }),
+      }).catch((err) => console.error("[HubMarketing] Erreur:", err))
+    }
+
     return NextResponse.json({ success: true })
   } catch (err) {
     console.error("Contact API error:", err)

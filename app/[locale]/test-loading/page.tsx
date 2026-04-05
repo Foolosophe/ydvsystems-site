@@ -172,7 +172,7 @@ export default function TestLoadingPage() {
       duration: 2.8,
       ease: "power2.out",
       transformOrigin: "center center",
-    }, 4.7)
+    }, 5.1)
 
     // t=4.75s : choc — cadre explose, Ydv blanc, tampon propulsé vers sa place finale
     tl.add(() => {
@@ -203,7 +203,8 @@ export default function TestLoadingPage() {
         gsap.set(ystemLetters, { opacity: 0 })
       }
       const finalLogoW      = ydvW + s1W + ystemW + s2W
-      const finalYdvCenterX = window.innerWidth / 2 - finalLogoW / 2 + ydvW / 2
+      const vw = document.documentElement.clientWidth
+      const finalYdvCenterX = vw / 2 - finalLogoW / 2 + ydvW / 2
       const dx              = finalYdvCenterX - stampCenterX
 
       // Cadre explose instantanément + Ydv vire au blanc
@@ -257,7 +258,7 @@ export default function TestLoadingPage() {
       const morphProgress = { v: 0 }
       gsap.to(morphProgress, {
         v: 1,
-        duration: 1.3,
+        duration: 2.0,
         ease: "sine.inOut",
         onUpdate() {
           const p = morphProgress.v
@@ -271,11 +272,12 @@ export default function TestLoadingPage() {
           t8.style.filter  = `blur(${blur8}px)`
           t8.style.opacity = String(Math.pow(1 - p, 0.4))
 
-          // S1 émerge et reste visible, centré
+          // S1 émerge et reste visible, centré — scale punch 1.15→1
           const blurS = Math.min(8 / (p + 0.001) - 8, 100)
+          const punchScale = 1 + 0.15 * Math.pow(1 - p, 2)
           s1.style.filter    = `blur(${blurS}px)`
           s1.style.opacity   = String(Math.pow(p, 0.4))
-          s1.style.transform = `translate(-50%, -50%)`
+          s1.style.transform = `translate(-50%, -50%) scale(${punchScale})`
 
           // S2 : phase A (0→0.4) → blur in + légère séparation (pleine taille)
           //      phase B (0.4→1) → continue vers s2Ref + rétrécit
@@ -285,8 +287,9 @@ export default function TestLoadingPage() {
           let s2Sep: number
           let s2Scale: number
           if (p <= 0.4) {
-            // Phase A : S2 s'écarte d'une largeur de S1 pour rendre le split visible
-            s2Sep   = (p / 0.4) * sWidth
+            // Phase A : S2 s'écarte
+            const pA = p / 0.4
+            s2Sep   = pA * sWidth
             s2Scale = 1
           } else {
             // Phase B : S2 voyage vers sa destination + rétrécit vers taille lowercase
@@ -294,7 +297,7 @@ export default function TestLoadingPage() {
             s2Sep   = sWidth + bP * (maxSepS2 - sWidth)
             s2Scale = 1 - bP * (1 - 1 / S_SCALE)
           }
-          s2.style.transform = `translate(calc(-50% + ${s2Sep}px), -50%) scale(${s2Scale})`
+          s2.style.transform = `translate(calc(-50% + ${s2Sep}px), calc(-50% + 0.12em)) scale(${s2Scale})`
 
           // ystem s'écrit pendant la phase B seulement
           if (wrap) {
@@ -319,10 +322,10 @@ export default function TestLoadingPage() {
           // ydvTextRef reste opacity:0 (spacer flex uniquement)
         },
       })
-    }, 6.5)
+    }, 6.9)
 
     // logo complet "YdvSystems" — pause — fade-out
-    tl.to(overlayRef.current, { opacity: 0, duration: 0.6, ease: "power2.in" }, 9.4)
+    tl.to(overlayRef.current, { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 9.4)
 
   }, [resetAll])
 
@@ -338,6 +341,7 @@ export default function TestLoadingPage() {
   // ─── JSX ───────────────────────────────────────────────────────────────────
   const gradientText: React.CSSProperties = {
     display: "inline-block",
+    lineHeight: 1,
     background: `linear-gradient(90deg, ${CYAN}, #4dd0e1)`,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
@@ -457,10 +461,10 @@ export default function TestLoadingPage() {
               {/* SVG paysage (∞ horizontal) à 0° → tourne à 90° → figure-8 vertical */}
               <svg
                 viewBox="0 0 48 26"
-                style={{ width: "0.85em", height: "0.6em", display: "block" }}
+                style={{ width: "0.95em", height: "0.67em", display: "block" }}
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="7"
+                strokeWidth="8"
                 strokeLinecap="round"
               >
                 <circle cx="13" cy="13" r="10" />
