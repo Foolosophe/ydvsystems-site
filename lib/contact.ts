@@ -5,7 +5,7 @@ export const contactSchema = z.object({
   name: z.string().min(2).max(100),
   email: z.string().email(),
   projectType: z.string().max(50).optional().default(""),
-  message: z.string().min(10).max(5000),
+  message: z.string().min(2).max(5000),
   website: z.string().max(0).optional(), // honeypot — must be empty
 })
 
