@@ -5,6 +5,7 @@ import { ArrowLeft, Gamepad2, Maximize } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { GAME_URLS, PORTFOLIO_TECH } from "@/lib/data"
 import { Badge } from "@/components/ui/badge"
+import { getPageAlternates } from "@/lib/metadata"
 
 const GAME_SLUGS: Record<string, string> = {
   dracula: "moteur-jeu",
@@ -14,9 +15,9 @@ const GAME_SLUGS: Record<string, string> = {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { slug, locale } = await params
   const portfolioId = GAME_SLUGS[slug]
   if (!portfolioId) return { title: "Not found" }
 
@@ -27,6 +28,7 @@ export async function generateMetadata({
   return {
     title: t("metaTitle", { title }),
     description: t("metaDescription", { title }),
+    alternates: getPageAlternates(locale, `portfolio/play/${slug}`),
   }
 }
 

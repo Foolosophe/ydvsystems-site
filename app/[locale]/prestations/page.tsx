@@ -18,12 +18,19 @@ import {
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { SERVICE_IDS, SERVICE_ICONS, SERVICE_TECH_TAGS } from "@/lib/data"
 import { getTranslations } from "next-intl/server"
+import { getPageAlternates } from "@/lib/metadata"
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
   const t = await getTranslations("prestations.meta")
   return {
     title: t("title"),
     description: t("description"),
+    alternates: getPageAlternates(locale, "prestations"),
   }
 }
 

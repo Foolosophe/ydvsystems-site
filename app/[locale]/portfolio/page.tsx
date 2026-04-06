@@ -11,12 +11,19 @@ import { PORTFOLIO_IDS, PORTFOLIO_TECH, PORTFOLIO_CATEGORIES, GAME_URLS } from "
 import { StatsGrid } from "@/components/StatsGrid"
 import { TechStack } from "@/components/TechStack"
 import { PopupCard } from "@/components/portfolio/PopupCard"
+import { getPageAlternates } from "@/lib/metadata"
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
   const t = await getTranslations("portfolio.meta")
   return {
     title: t("title"),
     description: t("description"),
+    alternates: getPageAlternates(locale, "portfolio"),
   }
 }
 

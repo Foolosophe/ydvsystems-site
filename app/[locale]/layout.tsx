@@ -59,7 +59,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description: ogDescription,
-      url: "https://ydvsystems.com",
+      url: `https://ydvsystems.com/${locale}`,
       siteName: "YdvSystems",
       images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "YdvSystems" }],
       locale: isFr ? "fr_FR" : "en_GB",
@@ -74,11 +74,6 @@ export async function generateMetadata({
     metadataBase: new URL("https://ydvsystems.com"),
     robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://ydvsystems.com/${locale}`,
-      languages: {
-        fr: "https://ydvsystems.com/fr",
-        en: "https://ydvsystems.com/en",
-      },
       types: {
         "application/rss+xml": "https://ydvsystems.com/feed.xml",
       },

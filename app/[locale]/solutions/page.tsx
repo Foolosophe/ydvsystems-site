@@ -7,12 +7,19 @@ import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { SOLUTIONS } from "@/lib/data"
+import { getPageAlternates } from "@/lib/metadata"
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
   const t = await getTranslations("solutionsIndex.meta")
   return {
     title: t("title"),
     description: t("description"),
+    alternates: getPageAlternates(locale, "solutions"),
   }
 }
 

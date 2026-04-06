@@ -6,16 +6,23 @@ import { prisma } from "@/lib/db"
 import { calculateReadTime } from "@/lib/blog/readTime"
 import NewsletterForm from "@/components/NewsletterForm"
 import BlogFilters from "@/components/blog/BlogFilters"
+import { getPageAlternates } from "@/lib/metadata"
 
 export const dynamic = "force-dynamic"
 
 const ARTICLES_PER_PAGE = 6
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
   const t = await getTranslations("blog.meta")
   return {
     title: t("title"),
     description: t("description"),
+    alternates: getPageAlternates(locale, "blog"),
   }
 }
 

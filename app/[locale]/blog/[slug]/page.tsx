@@ -16,6 +16,7 @@ import { TableOfContents, addHeadingIds } from "@/components/blog/TableOfContent
 import CodeHighlight from "@/components/blog/CodeHighlight"
 import NewsletterForm from "@/components/NewsletterForm"
 import "./prism-theme.css"
+import { getPageAlternates } from "@/lib/metadata"
 
 export const dynamic = "force-dynamic"
 
@@ -42,6 +43,7 @@ export async function generateMetadata({
     title: `${article.title} — Blog YdvSystems`,
     description,
     keywords: article.keywords || undefined,
+    alternates: getPageAlternates(locale, `blog/${slug}`),
     openGraph: {
       title: article.title,
       description,

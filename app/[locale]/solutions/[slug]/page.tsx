@@ -41,6 +41,7 @@ import {
 import { getTranslations } from "next-intl/server"
 import { SOLUTION_FEATURE_ICONS, SOLUTION_SLUGS, SOLUTIONS_WITH_TESTIMONIAL } from "../data"
 import { SOLUTIONS } from "@/lib/data"
+import { getPageAlternates } from "@/lib/metadata"
 
 const ICONS: Record<string, React.ReactNode> = {
   Users: <Users size={24} />,
@@ -79,9 +80,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { slug, locale } = await params
   const solution = SOLUTIONS.find((s) => s.slug === slug)
   const t = await getTranslations("solutions.common")
   if (!solution) return { title: t("notFound") }
@@ -93,10 +94,11 @@ export async function generateMetadata({
   return {
     title: `${solution.name} — ${tagline}`,
     description: heroSubtitle,
+    alternates: getPageAlternates(locale, `solutions/${slug}`),
     openGraph: {
       title: `${solution.name} — ${tagline}`,
       description: heroSubtitle,
-      url: `https://ydvsystems.com/solutions/${slug}`,
+      url: `https://ydvsystems.com/${locale}/solutions/${slug}`,
       siteName: "YdvSystems",
     },
   }
