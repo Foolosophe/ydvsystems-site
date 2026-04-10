@@ -36,6 +36,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     localizedEntry("/contact", { changeFrequency: "monthly", priority: 0.8 }),
     localizedEntry("/blog", { changeFrequency: "weekly", priority: 0.6 }),
     localizedEntry("/mentions-legales", { changeFrequency: "yearly", priority: 0.3 }),
+    localizedEntry("/cgv", { changeFrequency: "yearly", priority: 0.2 }),
+    localizedEntry("/cgu", { changeFrequency: "yearly", priority: 0.2 }),
+    localizedEntry("/confidentialite", { changeFrequency: "yearly", priority: 0.2 }),
   ]
 
   const solutionPages: MetadataRoute.Sitemap = SOLUTION_SLUGS.map((slug) =>
@@ -51,5 +54,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     localizedEntry(`/blog/${a.slug}`, { changeFrequency: "monthly", priority: 0.5 }),
   )
 
-  return [...staticPages, ...solutionPages, ...blogPages]
+  const gamePages: MetadataRoute.Sitemap = ["dracula", "kart"].map((slug) =>
+    localizedEntry(`/portfolio/play/${slug}`, { changeFrequency: "monthly", priority: 0.5 }),
+  )
+
+  return [...staticPages, ...solutionPages, ...gamePages, ...blogPages]
 }

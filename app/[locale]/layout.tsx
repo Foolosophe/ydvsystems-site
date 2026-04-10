@@ -152,6 +152,40 @@ export default async function LocaleLayout({
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "YdvSystems",
+            url: "https://ydvsystems.com",
+            inLanguage: [isFr ? "fr-FR" : "en-GB"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SiteNavigationElement",
+            name: isFr
+              ? ["Accueil", "Prestations", "Solutions", "Prix", "Portfolio", "Blog", "À propos", "Contact"]
+              : ["Home", "Services", "Solutions", "Pricing", "Portfolio", "Blog", "About", "Contact"],
+            url: [
+              `https://ydvsystems.com/${locale}`,
+              `https://ydvsystems.com/${locale}/prestations`,
+              `https://ydvsystems.com/${locale}/solutions`,
+              `https://ydvsystems.com/${locale}/prix`,
+              `https://ydvsystems.com/${locale}/portfolio`,
+              `https://ydvsystems.com/${locale}/blog`,
+              `https://ydvsystems.com/${locale}/a-propos`,
+              `https://ydvsystems.com/${locale}/contact`,
+            ],
+          }),
+        }}
+      />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:bg-primary focus:text-foreground focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:shadow-lg"
