@@ -187,10 +187,10 @@ export default async function SolutionPage({
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="text-foreground font-bold px-8 gap-2" style={{ backgroundColor: solution.color }}>
-              <a href={solution.url!} target="_blank" rel="noopener noreferrer">
+              <Link href="/contact">
                 {t("freeTrial")}
                 <ArrowRight size={18} />
-              </a>
+              </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-bold px-8 gap-2">
               <Link href="/contact">
@@ -270,10 +270,10 @@ export default async function SolutionPage({
             )}
             <div className="flex flex-col gap-3">
               <Button asChild className="w-full text-foreground font-bold gap-2" style={{ backgroundColor: solution.color }}>
-                <a href={solution.url!} target="_blank" rel="noopener noreferrer">
+                <Link href="/contact">
                   {t("freeTrial")}
                   <ArrowRight size={16} />
-                </a>
+                </Link>
               </Button>
               <Button asChild variant="outline" className="w-full font-bold gap-2">
                 <Link href="/contact">

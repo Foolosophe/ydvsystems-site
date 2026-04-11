@@ -240,7 +240,7 @@ export default function PrixPage() {
                               borderColor: `${solution.color}30`,
                             }}
                           >
-                            <CheckCircle2 size={10} className="mr-0.5" /> {t("packs.freeTrial")}
+                            <CheckCircle2 size={10} className="mr-0.5" /> {t("packs.statusBadge")}
                           </Badge>
                         </div>
                         <p className="text-xs text-muted-foreground">{td(`${solution.slug}.subtitle`)}</p>
@@ -273,10 +273,10 @@ export default function PrixPage() {
                           className="w-full text-foreground font-bold gap-2"
                           style={{ backgroundColor: solution.color }}
                         >
-                          <a href={solution.url!} target="_blank" rel="noopener noreferrer">
+                          <Link href="/contact">
                             {t("packs.freeTrial")}
                             <ArrowRight size={14} />
-                          </a>
+                          </Link>
                         </Button>
                         <Button asChild variant="outline" size="sm" className="w-full gap-1">
                           <Link href={`/solutions/${solution.slug}`}>
@@ -663,7 +663,7 @@ export default function PrixPage() {
                 <p className="text-sm text-primary font-semibold mb-6">{t("trial.earlyAdopter")}</p>
 
                 <Button asChild size="lg" className="bg-primary hover:bg-(--accent-hover) text-foreground font-bold px-8 gap-2">
-                  <Link href="/solutions">
+                  <Link href="/contact">
                     {t("trial.cta")}
                     <ArrowRight size={18} />
                   </Link>

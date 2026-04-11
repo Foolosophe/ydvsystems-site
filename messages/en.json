@@ -61,9 +61,9 @@
       "tag": "Our products",
       "title": "Business software for the social sector",
       "description": "Each product is standalone, fully featured and independently deployable. 14 core modules included in every subscription.",
-      "statusProd": "Live",
+      "statusProd": "Coming soon",
       "learnMore": "Learn more",
-      "freeTrial": "Free trial",
+      "freeTrial": "Get notified at launch",
       "allPricing": "View all pricing"
     },
     "freelance": {
@@ -184,11 +184,12 @@
       "title": "What I've built",
       "intro": "Since then, I've built very different projects — and that's intentional.",
       "statusProd": "In production",
+      "statusComingSoon": "Coming soon",
       "statusConcept": "In design",
       "projects": [
         {
           "title": "YDV Platform",
-          "status": "prod",
+          "status": "comingSoon",
           "description": "4 SaaS platforms for the social inclusion and training sector. Multi-tenant architecture, RBAC, multi-provider AI, +7,000 automated tests. 102 phases completed solo, from database schema to deployment on dedicated infrastructure. What others do as a team, I do alone — not to save money, but as an architectural choice."
         },
         {
@@ -263,7 +264,7 @@
       "freelanceTitle": "Freelance mission",
       "freelanceDescription": "Web development, AI integration, corporate training workshops, workflow automation, AI maturity audits.",
       "demoTitle": "Product demo",
-      "demoDescription": "Discover YDV Insertion, Formation, Coaching or Manager. 30-day free trial, no commitment.",
+      "demoDescription": "Discover YDV Insertion, Formation, Coaching or Manager. Launching soon — sign up to be notified.",
       "meetingHighlight": "Let's take 30 minutes",
       "meetingText": " to discuss your project. I'll ask a few questions to fully understand your needs, then propose a concrete approach."
     },
@@ -419,7 +420,8 @@
       "description": "Each pack adds specific modules to the core.",
       "modules": "modules",
       "perMonth": "/mo",
-      "freeTrial": "30-day free trial",
+      "freeTrial": "Get notified at launch",
+      "statusBadge": "Coming soon",
       "learnMore": "Learn more",
       "insertion": {
         "name": "YDV Insertion",
@@ -459,7 +461,7 @@
       "pro": "199",
       "business": "349",
       "perMonth": "/mo",
-      "freeTrial": "30-day free trial",
+      "freeTrial": "Get notified at launch",
       "learnMore": "Learn more"
     },
     "multiSolutions": {
@@ -586,19 +588,19 @@
       ]
     },
     "trial": {
-      "tag": "Free trial",
-      "title": "30 days, full access",
-      "description": "Test all features without restrictions for 30 days.",
+      "tag": "Launching soon",
+      "title": "Be notified at launch",
+      "description": "YDV Platform solutions are coming. Sign up to be notified at launch and lock in early adopter pricing.",
       "features": [
-        "Full access to all modules",
-        "20 AI credits included",
-        "1 GB storage",
-        "10 beneficiaries",
-        "Card required, no charges during trial",
-        "Cancel anytime"
+        "Priority access at launch",
+        "30-day free trial at launch",
+        "Personalized onboarding support",
+        "Early adopter pricing locked for life",
+        "No commitment when signing up",
+        "Direct support from the creator"
       ],
       "earlyAdopter": "Early adopter: -30% for life for the first 50 clients per solution",
-      "cta": "Start free trial"
+      "cta": "Get notified at launch"
     },
     "faq": {
       "tag": "FAQ",
@@ -648,9 +650,9 @@
       "title": "Business software for the social sector",
       "description": "Each product is standalone, fully featured and independently deployable. Built for professionals in social integration, training and coaching."
     },
-    "statusProd": "Live",
+    "statusProd": "Coming soon",
     "learnMore": "Learn more",
-    "freeTrial": "30-day free trial",
+    "freeTrial": "Get notified at launch",
     "cta": {
       "title": "Questions about our products?",
       "description": "Request a free demo or contact us to learn more.",
@@ -660,8 +662,8 @@
   },
   "solutions": {
     "common": {
-      "inProduction": "In production",
-      "freeTrial": "30-day free trial",
+      "inProduction": "Coming soon",
+      "freeTrial": "Get notified at launch",
       "requestDemo": "Request a demo",
       "painPointsTag": "Your daily challenges",
       "painPointsTitle": "Sound familiar?",
@@ -1367,7 +1369,7 @@
         ],
         "pricingPrice": "From €79",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, card required",
+        "pricingTrial": "Launching soon — sign up to be notified",
         "testimonialQuote": "YDV Insertion allowed us to centralize all our beneficiary tracking in a single tool. The AI saves us considerable time on reports.",
         "testimonialAuthor": "Structure IDEAL",
         "testimonialRole": "First pilot user"
@@ -1395,7 +1397,7 @@
         ],
         "pricingPrice": "From €69",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, card required"
+        "pricingTrial": "Launching soon — sign up to be notified"
       },
       "coaching": {
         "tagline": "Skills assessment, RPL and individual coaching",
@@ -1419,7 +1421,7 @@
         ],
         "pricingPrice": "From €59",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, card required"
+        "pricingTrial": "Launching soon — sign up to be notified"
       },
       "manager": {
         "tagline": "CRM, billing and business management all-in-one",
@@ -1443,7 +1445,7 @@
         ],
         "pricingPrice": "From €49",
         "pricingUnit": "/mo",
-        "pricingTrial": "30-day free trial, card required"
+        "pricingTrial": "Launching soon — sign up to be notified"
       }
     },
     "blogArticles": {

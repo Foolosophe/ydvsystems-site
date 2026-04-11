@@ -95,7 +95,11 @@ export default async function AboutPage() {
                 <div className="border border-border rounded-xl p-5 bg-white">
                   <div className="flex items-center gap-3 mb-2">
                     <Badge variant={project.status === "prod" ? "default" : "secondary"}>
-                      {project.status === "prod" ? t("built.statusProd") : t("built.statusConcept")}
+                      {project.status === "prod"
+                        ? t("built.statusProd")
+                        : project.status === "comingSoon"
+                          ? t("built.statusComingSoon")
+                          : t("built.statusConcept")}
                     </Badge>
                     <h3 className="font-semibold text-foreground">{project.title}</h3>
                   </div>

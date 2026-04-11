@@ -61,9 +61,9 @@
       "tag": "Nos solutions",
       "title": "Logiciels métier pour le secteur social",
       "description": "Chaque logiciel est autonome, complet et vendable seul. Socle de 14 modules inclus dans tout abonnement.",
-      "statusProd": "En prod",
+      "statusProd": "Bientôt disponible",
       "learnMore": "En savoir plus",
-      "freeTrial": "Essai gratuit",
+      "freeTrial": "Être prévenu du lancement",
       "allPricing": "Voir tous les tarifs"
     },
     "freelance": {
@@ -186,11 +186,12 @@
       "title": "Ce que j'ai construit",
       "intro": "Depuis, j'ai construit des projets très différents — et c'est volontaire.",
       "statusProd": "En production",
+      "statusComingSoon": "Bientôt disponible",
       "statusConcept": "En conception",
       "projects": [
         {
           "title": "YDV Platform",
-          "status": "prod",
+          "status": "comingSoon",
           "description": "4 logiciels SaaS pour le secteur de l'insertion et de la formation. Architecture multi-tenant, RBAC, IA multi-provider, +7 000 tests automatisés. 102 phases menées seul, du schéma de base de données à l'hébergement sur infrastructure dédiée. Ce que d'autres font en équipe, je le fais seul — pas par économie, par choix architectural."
         },
         {
@@ -265,7 +266,7 @@
       "freelanceTitle": "Mission freelance",
       "freelanceDescription": "Développement web, intégration IA, atelier formation, automatisation de workflows, audit maturité IA.",
       "demoTitle": "Démo logiciel",
-      "demoDescription": "Découvrez YDV Insertion, Formation, Coaching ou Manager. Essai gratuit 30 jours, sans engagement.",
+      "demoDescription": "Découvrez YDV Insertion, Formation, Coaching ou Manager. Lancement prochain — inscrivez-vous pour être prévenu.",
       "meetingHighlight": "Prenons 30 min",
       "meetingText": " pour parler de votre projet. Je vous pose quelques questions pour bien comprendre votre besoin, et je vous propose une approche concrète."
     },
@@ -421,7 +422,8 @@
       "description": "Chaque pack ajoute des modules spécifiques au socle commun.",
       "modules": "modules",
       "perMonth": "/mois",
-      "freeTrial": "Essai gratuit 30 jours",
+      "freeTrial": "Être prévenu du lancement",
+      "statusBadge": "Bientôt disponible",
       "learnMore": "En savoir plus",
       "insertion": {
         "name": "YDV Insertion",
@@ -461,7 +463,7 @@
       "pro": "199",
       "business": "349",
       "perMonth": "/mois",
-      "freeTrial": "Essai gratuit 30 jours",
+      "freeTrial": "Être prévenu du lancement",
       "learnMore": "En savoir plus"
     },
     "multiSolutions": {
@@ -588,19 +590,19 @@
       ]
     },
     "trial": {
-      "tag": "Essai gratuit",
-      "title": "30 jours, accès complet",
-      "description": "Testez toutes les fonctionnalités sans restriction pendant 30 jours.",
+      "tag": "Lancement prochain",
+      "title": "Soyez prévenu dès l'ouverture",
+      "description": "Les solutions YDV Platform arrivent. Inscrivez-vous pour être informé du lancement et bénéficier des conditions early adopter.",
       "features": [
-        "Accès complet à tous les modules",
-        "20 crédits IA inclus",
-        "1 Go de stockage",
-        "10 bénéficiaires",
-        "CB requise, aucun prélèvement pendant l'essai",
-        "Résiliation possible à tout moment"
+        "Accès prioritaire dès l'ouverture",
+        "Essai gratuit 30 jours au lancement",
+        "Accompagnement personnalisé au démarrage",
+        "Tarif early adopter garanti à vie",
+        "Aucun engagement à l'inscription",
+        "Support direct par le créateur"
       ],
       "earlyAdopter": "Early adopter : -30% à vie pour les 50 premiers clients par solution",
-      "cta": "Démarrer l'essai gratuit"
+      "cta": "Être prévenu du lancement"
     },
     "faq": {
       "tag": "Questions fréquentes",
@@ -650,9 +652,9 @@
       "title": "Logiciels métier pour le secteur social",
       "description": "Chaque logiciel est autonome, complet et vendable seul. Conçus pour les professionnels de l'insertion, de la formation et du coaching."
     },
-    "statusProd": "En prod",
+    "statusProd": "Bientôt disponible",
     "learnMore": "En savoir plus",
-    "freeTrial": "Essai gratuit 30 jours",
+    "freeTrial": "Être prévenu du lancement",
     "cta": {
       "title": "Des questions sur nos solutions ?",
       "description": "Demandez une démo gratuite ou contactez-nous pour en savoir plus.",
@@ -662,8 +664,8 @@
   },
   "solutions": {
     "common": {
-      "inProduction": "En production",
-      "freeTrial": "Essai gratuit 30 jours",
+      "inProduction": "Bientôt disponible",
+      "freeTrial": "Être prévenu du lancement",
       "requestDemo": "Demander une démo",
       "painPointsTag": "Vos defis au quotidien",
       "painPointsTitle": "Vous vous reconnaissez ?",
@@ -1369,7 +1371,7 @@
         ],
         "pricingPrice": "À partir de 79 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, CB requise",
+        "pricingTrial": "Lancement prochain — inscrivez-vous pour être prévenu",
         "testimonialQuote": "YDV Insertion nous a permis de centraliser tout le suivi de nos bénéficiaires en un seul outil. L'IA nous fait gagner un temps considérable sur les bilans.",
         "testimonialAuthor": "Structure IDEAL",
         "testimonialRole": "Premier utilisateur pilote"
@@ -1397,7 +1399,7 @@
         ],
         "pricingPrice": "À partir de 69 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, CB requise"
+        "pricingTrial": "Lancement prochain — inscrivez-vous pour être prévenu"
       },
       "coaching": {
         "tagline": "Bilan de compétences, VAE et accompagnement individuel",
@@ -1421,7 +1423,7 @@
         ],
         "pricingPrice": "À partir de 59 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, CB requise"
+        "pricingTrial": "Lancement prochain — inscrivez-vous pour être prévenu"
       },
       "manager": {
         "tagline": "CRM, facturation et gestion commerciale tout-en-un",
@@ -1445,7 +1447,7 @@
         ],
         "pricingPrice": "À partir de 49 €",
         "pricingUnit": "/mois",
-        "pricingTrial": "Essai 30 jours gratuit, CB requise"
+        "pricingTrial": "Lancement prochain — inscrivez-vous pour être prévenu"
       }
     },
     "blogArticles": {
