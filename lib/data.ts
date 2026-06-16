@@ -170,13 +170,13 @@ export const STACK_CATEGORY_KEYS = [
 ] as const
 
 export const STACK_TECHS: Record<string, string[]> = {
-  frontend: ["HTML", "CSS", "React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Three.js", "GSAP"],
-  backend: ["Node.js", "tRPC", "Prisma", "REST API", "Express"],
+  frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Astro", "Tailwind CSS", "shadcn/ui", "Three.js", "WebGL", "Web Audio API", "GSAP"],
+  backend: ["Node.js", "tRPC", "Prisma", "Drizzle", "Zod", "bcrypt", "JWT", "REST API", "Express"],
   databases: ["PostgreSQL", "SQLite", "Redis"],
-  ai: ["Claude (Anthropic)", "GPT-4", "Gemini", "Multi-provider"],
-  devops: ["Docker", "Hetzner", "GitHub Actions", "PM2"],
-  crossPlatform: ["Electron", "Tauri", "Capacitor (iOS/Android)"],
-  tools: ["n8n", "Supabase", "Brevo", "Stripe"],
+  ai: ["Claude (Anthropic)", "GPT-4", "Gemini", "Whisper", "Multi-provider"],
+  devops: ["Docker", "Coolify", "Nginx", "Let's Encrypt", "Hetzner", "GitHub Actions", "PM2", "Sentry", "Borgbackup"],
+  crossPlatform: ["Electron", "Tauri", "Capacitor (iOS/Android)", "PWA"],
+  tools: ["n8n", "Supabase", "Brevo", "Stripe", "Cal.com", "Umami", "Cloudflare Turnstile", "Meta WhatsApp API", "pnpm", "Turborepo", "Vitest", "Playwright"],
 }
 
 // --- STATS ---
