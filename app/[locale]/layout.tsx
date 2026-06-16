@@ -171,12 +171,13 @@ export default async function LocaleLayout({
             "@context": "https://schema.org",
             "@type": "SiteNavigationElement",
             name: isFr
-              ? ["Accueil", "Prestations", "Solutions", "Prix", "Portfolio", "Blog", "À propos", "Contact"]
-              : ["Home", "Services", "Solutions", "Pricing", "Portfolio", "Blog", "About", "Contact"],
+              ? ["Accueil", "Prestations", "Solutions", "Vitrine & E-commerce", "Prix", "Portfolio", "Blog", "À propos", "Contact"]
+              : ["Home", "Services", "Solutions", "Showcase & E-commerce", "Pricing", "Portfolio", "Blog", "About", "Contact"],
             url: [
               `https://ydvsystems.com/${locale}`,
               `https://ydvsystems.com/${locale}/prestations`,
               `https://ydvsystems.com/${locale}/solutions`,
+              `https://ydvsystems.com/${locale}/vitrine-ecommerce`,
               `https://ydvsystems.com/${locale}/prix`,
               `https://ydvsystems.com/${locale}/portfolio`,
               `https://ydvsystems.com/${locale}/blog`,

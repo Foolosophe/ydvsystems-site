@@ -3,6 +3,7 @@
     "nav": {
       "prestations": "Services",
       "solutions": "Products",
+      "vitrine": "Showcase",
       "pricing": "Pricing",
       "portfolio": "Portfolio",
       "blog": "Blog",
@@ -14,6 +15,7 @@
       "solutions": "Products",
       "prestations": "Services",
       "ressources": "Resources",
+      "vitrine": "Showcase & E-commerce",
       "customDev": "Custom development",
       "iaIntegration": "AI integration",
       "workshops": "Workshops & training",
@@ -120,7 +122,8 @@
       "title": "Ready to get started?",
       "description": "Describe your project and I'll get back to you within 24 hours with a concrete proposal.",
       "button": "Contact me",
-      "portfolioButton": "View my work"
+      "portfolioButton": "View my work",
+      "pricingLink": "→ View the full pricing grid"
     }
   },
   "portfolio": {
@@ -150,6 +153,7 @@
       "title": "Full-stack developer & entrepreneur",
       "bio1": "I'm Yohann, a full-stack developer based in France, founder of YdvSystems. I build complete business applications, SaaS platforms, games and AI-powered tools.",
       "bio2": "My approach: clean code, scalable architecture, zero over-engineering. I work solo, which means I'm fast, responsive and deliver exactly what's needed — no unnecessary meetings.",
+      "viewMore": "Learn more about my journey",
       "stackTitle": "Tech stack",
       "photoAlt": "Yohann Dandeville — Founder of YdvSystems"
     },
@@ -658,6 +662,37 @@
       "description": "Request a free demo or contact us to learn more.",
       "contact": "Get in touch",
       "pricing": "View all pricing"
+    }
+  },
+  "vitrineEcommerce": {
+    "meta": {
+      "title": "Showcase & E-commerce — Turnkey websites | YdvSystems",
+      "description": "Turnkey showcase websites and online stores for craftspeople, shops and freelancers. Designed, hosted and maintained by YdvSystems."
+    },
+    "hero": {
+      "tag": "Turnkey websites",
+      "title": "Showcase & E-commerce",
+      "description": "Professional, ready-to-use websites for craftspeople, shops and freelancers — designed, deployed and maintained end to end."
+    },
+    "cards": {
+      "vitrine": {
+        "badge": "Live",
+        "title": "Turnkey showcase websites",
+        "subtitle": "For craftspeople, shops & freelancers",
+        "description": "A complete professional website: custom design, Q&A assistant, online booking, contact forms. Hosted and maintained — nothing for you to manage. 3 plans to choose from.",
+        "cta": "Discover Présence Pro"
+      },
+      "shop": {
+        "badge": "Coming soon",
+        "title": "Online store — YDVshop",
+        "subtitle": "Turnkey e-commerce",
+        "description": "The same approach, for selling online: catalog, payment, order tracking. Coming soon."
+      }
+    },
+    "cta": {
+      "title": "A website or store project?",
+      "description": "Let's talk — I respond within 24 hours.",
+      "contact": "Contact me"
     }
   },
   "solutions": {

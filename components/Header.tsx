@@ -48,6 +48,7 @@ export function Header() {
   const NAV_LINKS = [
     { label: t("nav.prestations"), href: "/prestations" as const },
     { label: t("nav.solutions"), href: "/solutions" as const },
+    { label: t("nav.vitrine"), href: "/vitrine-ecommerce" as const },
     { label: t("nav.pricing"), href: "/prix" as const },
     { label: t("nav.portfolio"), href: "/portfolio" as const },
     { label: t("nav.blog"), href: "/blog" as const },
@@ -122,7 +123,7 @@ export function Header() {
               </span>
             </Link>
 
-            <nav className="hidden md:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-6">
               {NAV_LINKS.map((link) => {
                 const isActive = link.href.split("/")[1] === pathWithoutLocale.split("/")[1]
                 return (
@@ -149,7 +150,7 @@ export function Header() {
               })}
             </nav>
 
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               {/* Language selector dropdown */}
               <div className="relative" ref={langRef}>
                 <button
@@ -208,7 +209,7 @@ export function Header() {
 
             <button
               ref={menuButtonRef}
-              className="md:hidden text-(--text-tertiary) hover:text-foreground transition-colors"
+              className="lg:hidden text-(--text-tertiary) hover:text-foreground transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? t("accessibility.closeMenu") : t("accessibility.openMenu")}
               aria-expanded={menuOpen}
@@ -218,8 +219,8 @@ export function Header() {
           </div>
 
           <div
-            className={`md:hidden overflow-hidden transition-all duration-300 ${
-              menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            className={`lg:hidden overflow-hidden transition-all duration-300 ${
+              menuOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="border-t border-border py-4 space-y-3">

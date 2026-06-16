@@ -30,6 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     localizedEntry("", { changeFrequency: "weekly", priority: 1.0 }),
     localizedEntry("/prestations", { changeFrequency: "monthly", priority: 0.9 }),
     localizedEntry("/solutions", { changeFrequency: "monthly", priority: 0.8 }),
+    localizedEntry("/vitrine-ecommerce", { changeFrequency: "monthly", priority: 0.8 }),
     localizedEntry("/prix", { changeFrequency: "monthly", priority: 0.8 }),
     localizedEntry("/portfolio", { changeFrequency: "monthly", priority: 0.8 }),
     localizedEntry("/a-propos", { changeFrequency: "monthly", priority: 0.7 }),

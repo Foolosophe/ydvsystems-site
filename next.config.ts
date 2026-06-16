@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
     ]
   },
   async redirects() {
-    const paths = ["prestations", "solutions", "prix", "portfolio", "a-propos", "contact", "blog"]
+    const paths = ["prestations", "solutions", "vitrine-ecommerce", "prix", "portfolio", "a-propos", "contact", "blog"]
     return paths.map((p) => ({
       source: `/${p}`,
       destination: `/fr/${p}`,

@@ -30,6 +30,7 @@ export function Footer() {
       { label: "YDV Manager", href: "/solutions/manager" as const },
     ],
     [t("ressources")]: [
+      { label: t("vitrine"), href: "/vitrine-ecommerce" as const },
       { label: t("pricing"), href: "/prix" as const },
       { label: t("blog"), href: "/blog" as const },
       { label: t("portfolio"), href: "/portfolio" as const },

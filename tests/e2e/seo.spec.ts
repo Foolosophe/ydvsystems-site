@@ -8,7 +8,7 @@ const PAGES_WITH_JSONLD = [
 
 test.describe("SEO", () => {
   test("each page has a <title>", async ({ page }) => {
-    const pages = ["/fr", "/fr/prestations", "/fr/solutions", "/fr/portfolio", "/fr/blog", "/fr/prix", "/fr/contact"]
+    const pages = ["/fr", "/fr/prestations", "/fr/solutions", "/fr/vitrine-ecommerce", "/fr/portfolio", "/fr/blog", "/fr/prix", "/fr/contact"]
 
     for (const url of pages) {
       await page.goto(url)
@@ -19,7 +19,7 @@ test.describe("SEO", () => {
   })
 
   test("each page has a meta description", async ({ page }) => {
-    const pages = ["/fr", "/fr/prestations", "/fr/solutions", "/fr/portfolio", "/fr/blog", "/fr/prix", "/fr/contact"]
+    const pages = ["/fr", "/fr/prestations", "/fr/solutions", "/fr/vitrine-ecommerce", "/fr/portfolio", "/fr/blog", "/fr/prix", "/fr/contact"]
 
     for (const url of pages) {
       await page.goto(url)

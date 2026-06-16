@@ -3,6 +3,7 @@
     "nav": {
       "prestations": "Prestations",
       "solutions": "Solutions",
+      "vitrine": "Vitrine",
       "pricing": "Prix",
       "portfolio": "Portfolio",
       "blog": "Blog",
@@ -14,6 +15,7 @@
       "solutions": "Solutions",
       "prestations": "Prestations",
       "ressources": "Ressources",
+      "vitrine": "Vitrine & E-commerce",
       "customDev": "Développement sur mesure",
       "iaIntegration": "Intégration IA",
       "workshops": "Ateliers & formation",
@@ -660,6 +662,37 @@
       "description": "Demandez une démo gratuite ou contactez-nous pour en savoir plus.",
       "contact": "Nous contacter",
       "pricing": "Voir tous les tarifs"
+    }
+  },
+  "vitrineEcommerce": {
+    "meta": {
+      "title": "Vitrine & E-commerce — Sites clé-en-main | YdvSystems",
+      "description": "Sites vitrine et boutiques en ligne clé en main pour artisans, commerçants et indépendants. Conçus, hébergés et maintenus par YdvSystems."
+    },
+    "hero": {
+      "tag": "Sites web clé-en-main",
+      "title": "Vitrine & E-commerce",
+      "description": "Des sites professionnels prêts à l'emploi pour artisans, commerçants et indépendants — conçus, déployés et maintenus de A à Z."
+    },
+    "cards": {
+      "vitrine": {
+        "badge": "En ligne",
+        "title": "Sites vitrine clé-en-main",
+        "subtitle": "Pour artisans, commerçants & indépendants",
+        "description": "Un site pro complet : design sur mesure, assistant de questions-réponses, prise de rendez-vous, formulaires de contact. Hébergé et maintenu — vous n'avez rien à gérer. 3 formules au choix.",
+        "cta": "Découvrir Présence Pro"
+      },
+      "shop": {
+        "badge": "Bientôt",
+        "title": "Boutique en ligne — YDVshop",
+        "subtitle": "E-commerce clé en main",
+        "description": "La même approche, pour vendre en ligne : catalogue, paiement, suivi des commandes. Bientôt disponible."
+      }
+    },
+    "cta": {
+      "title": "Un projet de site ou de boutique ?",
+      "description": "Parlons-en — je réponds sous 24 h.",
+      "contact": "Me contacter"
     }
   },
   "solutions": {

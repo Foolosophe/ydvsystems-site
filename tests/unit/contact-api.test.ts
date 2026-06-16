@@ -25,8 +25,8 @@ describe("contactSchema", () => {
     expect(result.success).toBe(false)
   })
 
-  it("rejects short message (< 10 chars)", () => {
-    const result = contactSchema.safeParse({ ...validData, message: "Hi" })
+  it("rejects short message (< 2 chars)", () => {
+    const result = contactSchema.safeParse({ ...validData, message: "H" })
     expect(result.success).toBe(false)
   })
 

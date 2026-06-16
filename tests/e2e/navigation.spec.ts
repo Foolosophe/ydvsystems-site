@@ -4,6 +4,7 @@ const FR_PAGES = [
   "/fr",
   "/fr/prestations",
   "/fr/solutions",
+  "/fr/vitrine-ecommerce",
   "/fr/portfolio",
   "/fr/blog",
   "/fr/prix",
