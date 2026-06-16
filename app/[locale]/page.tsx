@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { HeroDual } from "@/components/sections/HeroDual"
 import { SolutionsGrid } from "@/components/sections/SolutionsGrid"
 import { FreelancePreview } from "@/components/sections/FreelancePreview"
+import { VitrinePreview } from "@/components/sections/VitrinePreview"
 import { PortfolioPreview } from "@/components/sections/PortfolioPreview"
 import { CTASection } from "@/components/sections/CTASection"
 import { getPageAlternates } from "@/lib/metadata"
@@ -20,6 +21,7 @@ export default function HomePage() {
     <main>
       <HeroDual />
       <FreelancePreview />
+      <VitrinePreview />
       <SolutionsGrid />
       <PortfolioPreview />
       <CTASection />

@@ -15,7 +15,7 @@
       "solutions": "Solutions",
       "prestations": "Prestations",
       "ressources": "Ressources",
-      "vitrine": "Vitrine & E-commerce",
+      "vitrine": "Site vitrine",
       "customDev": "Développement sur mesure",
       "iaIntegration": "Intégration IA",
       "workshops": "Ateliers & formation",
@@ -73,6 +73,15 @@
       "title": "Développement web & conseil technique",
       "description": "Missions ponctuelles ou projets longs — du développement sur mesure à la formation IA, tout secteur.",
       "allServices": "Voir toutes les prestations"
+    },
+    "vitrine": {
+      "badge": "En ligne",
+      "title": "Votre site vitrine, clé en main",
+      "description": "Un site web professionnel pour artisans, commerçants et indépendants — conçu, hébergé et maintenu de A à Z. Vous n'avez rien à gérer.",
+      "feature1": "Design sur mesure, à votre image",
+      "feature2": "Prise de rendez-vous & formulaires de contact",
+      "feature3": "Hébergé et maintenu — rien à gérer",
+      "cta": "Découvrir Présence Pro"
     },
     "cta": {
       "title": "Un projet ? Parlons-en.",
@@ -666,13 +675,13 @@
   },
   "vitrineEcommerce": {
     "meta": {
-      "title": "Vitrine & E-commerce — Sites clé-en-main | YdvSystems",
+      "title": "Vitrine & E-commerce — Sites web professionnels | YdvSystems",
       "description": "Sites vitrine clé en main pour artisans et commerçants — conçus, hébergés et maintenus par YdvSystems — et boutiques en ligne sur-mesure, à votre nom."
     },
     "hero": {
-      "tag": "Sites web clé-en-main",
+      "tag": "Sites web professionnels",
       "title": "Vitrine & E-commerce",
-      "description": "Des sites professionnels prêts à l'emploi pour artisans, commerçants et indépendants — conçus, déployés et maintenus de A à Z."
+      "description": "Deux façons d'être présent en ligne : un site vitrine clé en main, ou une boutique e-commerce sur mesure — conçus et développés par YdvSystems."
     },
     "cards": {
       "vitrine": {

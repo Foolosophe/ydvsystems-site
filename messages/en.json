@@ -15,7 +15,7 @@
       "solutions": "Products",
       "prestations": "Services",
       "ressources": "Resources",
-      "vitrine": "Showcase & E-commerce",
+      "vitrine": "Showcase site",
       "customDev": "Custom development",
       "iaIntegration": "AI integration",
       "workshops": "Workshops & training",
@@ -73,6 +73,15 @@
       "title": "Web development & technical consulting",
       "description": "Short-term missions or long-term projects — from custom development to AI workshops, across all industries.",
       "allServices": "View all services"
+    },
+    "vitrine": {
+      "badge": "Live",
+      "title": "Your showcase website, turnkey",
+      "description": "A professional website for craftspeople, shops and freelancers — designed, hosted and maintained end to end. Nothing for you to manage.",
+      "feature1": "Custom design, true to your brand",
+      "feature2": "Online booking & contact forms",
+      "feature3": "Hosted and maintained — nothing to manage",
+      "cta": "Discover Présence Pro"
     },
     "cta": {
       "title": "Have a project? Let's talk.",
@@ -666,13 +675,13 @@
   },
   "vitrineEcommerce": {
     "meta": {
-      "title": "Showcase & E-commerce — Turnkey websites | YdvSystems",
+      "title": "Showcase & E-commerce — Professional websites | YdvSystems",
       "description": "Turnkey showcase websites for craftspeople and shops — designed, hosted and maintained by YdvSystems — and bespoke online stores, under your own name."
     },
     "hero": {
-      "tag": "Turnkey websites",
+      "tag": "Professional websites",
       "title": "Showcase & E-commerce",
-      "description": "Professional, ready-to-use websites for craftspeople, shops and freelancers — designed, deployed and maintained end to end."
+      "description": "Two ways to be present online: a turnkey showcase website, or a bespoke e-commerce store — designed and built by YdvSystems."
     },
     "cards": {
       "vitrine": {
