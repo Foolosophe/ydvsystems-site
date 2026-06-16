@@ -3,7 +3,7 @@
     "nav": {
       "prestations": "Services",
       "solutions": "Products",
-      "vitrine": "Showcase",
+      "vitrine": "Showcase site",
       "pricing": "Pricing",
       "portfolio": "Portfolio",
       "blog": "Blog",
@@ -667,7 +667,7 @@
   "vitrineEcommerce": {
     "meta": {
       "title": "Showcase & E-commerce — Turnkey websites | YdvSystems",
-      "description": "Turnkey showcase websites and online stores for craftspeople, shops and freelancers. Designed, hosted and maintained by YdvSystems."
+      "description": "Turnkey showcase websites for craftspeople and shops — designed, hosted and maintained by YdvSystems — and bespoke online stores, under your own name."
     },
     "hero": {
       "tag": "Turnkey websites",
@@ -684,9 +684,9 @@
       },
       "shop": {
         "badge": "Coming soon",
-        "title": "Online store — YDVshop",
-        "subtitle": "Turnkey e-commerce",
-        "description": "The same approach, for selling online: catalog, payment, order tracking. Coming soon."
+        "title": "Online store — YdvShop",
+        "subtitle": "Bespoke e-commerce",
+        "description": "A bespoke online store, under your own name and domain — designed and built by YdvSystems. To sell online with genuine quality, not a template to assemble yourself. Maintenance optional."
       }
     },
     "cta": {

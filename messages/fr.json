@@ -3,7 +3,7 @@
     "nav": {
       "prestations": "Prestations",
       "solutions": "Solutions",
-      "vitrine": "Vitrine",
+      "vitrine": "Site vitrine",
       "pricing": "Prix",
       "portfolio": "Portfolio",
       "blog": "Blog",
@@ -667,7 +667,7 @@
   "vitrineEcommerce": {
     "meta": {
       "title": "Vitrine & E-commerce — Sites clé-en-main | YdvSystems",
-      "description": "Sites vitrine et boutiques en ligne clé en main pour artisans, commerçants et indépendants. Conçus, hébergés et maintenus par YdvSystems."
+      "description": "Sites vitrine clé en main pour artisans et commerçants — conçus, hébergés et maintenus par YdvSystems — et boutiques en ligne sur-mesure, à votre nom."
     },
     "hero": {
       "tag": "Sites web clé-en-main",
@@ -684,9 +684,9 @@
       },
       "shop": {
         "badge": "Bientôt",
-        "title": "Boutique en ligne — YDVshop",
-        "subtitle": "E-commerce clé en main",
-        "description": "La même approche, pour vendre en ligne : catalogue, paiement, suivi des commandes. Bientôt disponible."
+        "title": "Boutique en ligne — YdvShop",
+        "subtitle": "Boutique e-commerce sur-mesure",
+        "description": "Une boutique en ligne sur-mesure, à votre nom et sur votre propre domaine — conçue et développée par YdvSystems. Pour vendre en ligne avec une vraie exigence de qualité, pas un template à assembler soi-même. Maintenance en option."
       }
     },
     "cta": {
