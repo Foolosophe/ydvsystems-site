@@ -1222,8 +1222,8 @@
         "title": "Audit IA Entreprise",
         "description": "Outil d'évaluation de la maturité IA des entreprises. Questionnaire adaptatif, rapport personnalisé, recommandations IA.",
         "popup": {
-          "url": null,
-          "urlLabel": null,
+          "url": "https://diagnosticia.ydvsystems.com",
+          "urlLabel": "diagnosticia.ydvsystems.com",
           "image": "/images/audit-ia-preview.png",
           "features": [
             {

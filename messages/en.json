@@ -1222,8 +1222,8 @@
         "title": "Enterprise AI Audit",
         "description": "AI maturity assessment tool for businesses. Adaptive questionnaire, personalized report, AI-powered recommendations.",
         "popup": {
-          "url": null,
-          "urlLabel": null,
+          "url": "https://diagnosticia.ydvsystems.com",
+          "urlLabel": "diagnosticia.ydvsystems.com",
           "image": "/images/audit-ia-preview.png",
           "features": [
             {

@@ -147,8 +147,8 @@ export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null
   },
   "audit-ia-entreprise": {
     tags: ["React", "Express", "SQLite", "Claude", "GPT-4", "Gemini"],
-    url: null,
-    urlLabel: null,
+    url: "https://diagnosticia.ydvsystems.com",
+    urlLabel: "diagnosticia.ydvsystems.com",
   },
   "blog-parkinson": {
     tags: ["Next.js", "Express", "SQLite", "Claude", "Whisper"],
