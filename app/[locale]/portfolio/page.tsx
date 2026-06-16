@@ -120,7 +120,7 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "pro").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise"
+              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise" || id === "presence-pro"
               const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
                 url: string; urlLabel: string; image: string
                 features: { title: string; description: string }[]

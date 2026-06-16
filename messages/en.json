@@ -1189,6 +1189,34 @@
           ]
         }
       },
+      "presence-pro": {
+        "type": "Turnkey websites",
+        "title": "Présence Pro — turnkey showcase websites",
+        "description": "Turnkey showcase websites for craftspeople & shops: custom design, online booking, forms, hosted and maintained. 6 live industry demos.",
+        "popup": {
+          "url": "https://presence-pro.ydvsystems.com",
+          "urlLabel": "presence-pro.ydvsystems.com",
+          "image": "/images/presence-pro-preview.png",
+          "features": [
+            {
+              "title": "3 turnkey plans",
+              "description": "Professional websites for craftspeople, shops & freelancers — from a simple showcase site to the Premium pack (Q&A assistant, contacts dashboard, WhatsApp). Designed, deployed and maintained end to end."
+            },
+            {
+              "title": "6 live industry demos",
+              "description": "Plumber, electrician, hairdresser, hypnotherapist, plasterer, coach — all live, deployed on a VPS (PM2 + Nginx + Let's Encrypt HTTPS). Each trade has its own design, content and photos."
+            },
+            {
+              "title": "All included, nothing to manage",
+              "description": "Custom design, online booking (Cal.com), anti-spam forms (n8n + Brevo + Turnstile), cookieless analytics (Umami), hosting and maintenance. Nothing for the client to install."
+            },
+            {
+              "title": "Built to last",
+              "description": "Astro + React, Lighthouse score near 100, European hosting (GDPR-native), zero tracking cookies. Bespoke online store (YdvShop) coming soon."
+            }
+          ]
+        }
+      },
       "audit-ia-entreprise": {
         "type": "Internal tool",
         "title": "Enterprise AI Audit",

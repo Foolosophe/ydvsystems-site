@@ -1189,6 +1189,34 @@
           ]
         }
       },
+      "presence-pro": {
+        "type": "Sites web clé en main",
+        "title": "Présence Pro — sites vitrine clé en main",
+        "description": "Sites vitrine clé en main pour artisans & commerçants : design sur mesure, prise de rendez-vous, formulaires, hébergés et maintenus. 6 démos métier en ligne.",
+        "popup": {
+          "url": "https://presence-pro.ydvsystems.com",
+          "urlLabel": "presence-pro.ydvsystems.com",
+          "image": "/images/presence-pro-preview.png",
+          "features": [
+            {
+              "title": "3 formules clé en main",
+              "description": "Sites professionnels pour artisans, commerçants & indépendants — du site vitrine simple au pack Premium (assistant de questions-réponses, tableau de bord des contacts, WhatsApp). Conçus, déployés et maintenus de A à Z."
+            },
+            {
+              "title": "6 démos métier en ligne",
+              "description": "Plombier, électricien, coiffeur, hypnothérapeute, plâtrier, coach — toutes en ligne, déployées sur VPS (PM2 + Nginx + HTTPS Let's Encrypt). Chaque métier a son design, son contenu et ses photos."
+            },
+            {
+              "title": "Tout inclus, rien à gérer",
+              "description": "Design sur mesure, prise de rendez-vous (Cal.com), formulaires anti-spam (n8n + Brevo + Turnstile), statistiques sans cookie (Umami), hébergement et maintenance. Le client n'a rien à installer."
+            },
+            {
+              "title": "Conçu pour durer",
+              "description": "Astro + React, score Lighthouse proche de 100, hébergement européen (RGPD natif), zéro cookie de pistage. Boutique en ligne sur-mesure (YdvShop) à venir."
+            }
+          ]
+        }
+      },
       "audit-ia-entreprise": {
         "type": "Outil interne",
         "title": "Audit IA Entreprise",
