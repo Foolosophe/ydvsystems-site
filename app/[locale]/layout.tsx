@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl"
 import { setRequestLocale, getTranslations } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
+import { localeUrl } from "@/lib/metadata"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
@@ -59,7 +60,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description: ogDescription,
-      url: `https://ydvsystems.com/${locale}`,
+      url: localeUrl(locale),
       siteName: "YdvSystems",
       images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "YdvSystems" }],
       locale: isFr ? "fr_FR" : "en_GB",
@@ -109,7 +110,7 @@ export default async function LocaleLayout({
 
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: `(function(){document.documentElement.lang="${locale}";var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e);setTimeout(function(){var s=document.getElementById("__splash");if(s)s.remove()},5000)})()` }} />
+      <script dangerouslySetInnerHTML={{ __html: `(function(){var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e);setTimeout(function(){var s=document.getElementById("__splash");if(s)s.remove()},5000)})()` }} />
       <LoadingScreenWrapper />
       {process.env.NEXT_PUBLIC_UMAMI_ID && (
         <script
@@ -174,15 +175,15 @@ export default async function LocaleLayout({
               ? ["Accueil", "Prestations", "Solutions", "Vitrine & E-commerce", "Prix", "Portfolio", "Blog", "À propos", "Contact"]
               : ["Home", "Services", "Solutions", "Showcase & E-commerce", "Pricing", "Portfolio", "Blog", "About", "Contact"],
             url: [
-              `https://ydvsystems.com/${locale}`,
-              `https://ydvsystems.com/${locale}/prestations`,
-              `https://ydvsystems.com/${locale}/solutions`,
-              `https://ydvsystems.com/${locale}/vitrine-ecommerce`,
-              `https://ydvsystems.com/${locale}/prix`,
-              `https://ydvsystems.com/${locale}/portfolio`,
-              `https://ydvsystems.com/${locale}/blog`,
-              `https://ydvsystems.com/${locale}/a-propos`,
-              `https://ydvsystems.com/${locale}/contact`,
+              localeUrl(locale),
+              localeUrl(locale, "/prestations"),
+              localeUrl(locale, "/solutions"),
+              localeUrl(locale, "/vitrine-ecommerce"),
+              localeUrl(locale, "/prix"),
+              localeUrl(locale, "/portfolio"),
+              localeUrl(locale, "/blog"),
+              localeUrl(locale, "/a-propos"),
+              localeUrl(locale, "/contact"),
             ],
           }),
         }}

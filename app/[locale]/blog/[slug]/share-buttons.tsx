@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useLocale } from "next-intl"
+import { localeUrl } from "@/lib/metadata"
 import { Linkedin, Twitter, Facebook, LinkIcon, Check, Share2 } from "lucide-react"
 
 interface ShareButtonsProps {
@@ -14,7 +15,7 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
   const [canNativeShare, setCanNativeShare] = useState(false)
   const locale = useLocale()
 
-  const url = `https://ydvsystems.com/${locale}/blog/${slug}`
+  const url = localeUrl(locale, `/blog/${slug}`)
   const encodedUrl = encodeURIComponent(url)
   const encodedTitle = encodeURIComponent(title)
 

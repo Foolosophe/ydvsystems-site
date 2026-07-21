@@ -1062,7 +1062,7 @@
         "title": "YDV Platform — 4 business applications",
         "description": "Suite of 4 SaaS applications (Insertion, Formation, Coaching, Manager). 14 core modules, multi-provider AI, 7,000+ automated tests, multi-site RBAC.",
         "popup": {
-          "url": "https://ydvsystems.com/fr/solutions",
+          "url": "https://ydvsystems.com/en/solutions",
           "urlLabel": "ydvsystems.com/solutions",
           "image": "/images/ydv-platform-preview.png",
           "features": [

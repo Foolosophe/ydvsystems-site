@@ -19,8 +19,8 @@ export async function GET() {
     .map(
       (a) => `    <item>
       <title><![CDATA[${a.title}]]></title>
-      <link>${siteUrl}/fr/blog/${a.slug}</link>
-      <guid isPermaLink="true">${siteUrl}/fr/blog/${a.slug}</guid>
+      <link>${siteUrl}/blog/${a.slug}</link>
+      <guid isPermaLink="true">${siteUrl}/blog/${a.slug}</guid>
       <description><![CDATA[${a.excerpt}]]></description>
       <category>${a.category}</category>
       ${a.publishedAt ? `<pubDate>${new Date(a.publishedAt).toUTCString()}</pubDate>` : ""}
@@ -32,7 +32,7 @@ export async function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YdvSystems Blog</title>
-    <link>${siteUrl}/fr/blog</link>
+    <link>${siteUrl}/blog</link>
     <description>Articles sur le developpement web, l'IA, le secteur social et la gestion d'organismes de formation.</description>
     <language>fr</language>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml"/>

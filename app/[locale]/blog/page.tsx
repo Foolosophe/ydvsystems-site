@@ -6,7 +6,7 @@ import { prisma } from "@/lib/db"
 import { calculateReadTime } from "@/lib/blog/readTime"
 import NewsletterForm from "@/components/NewsletterForm"
 import BlogFilters from "@/components/blog/BlogFilters"
-import { getPageAlternates } from "@/lib/metadata"
+import { getPageAlternates, localeUrl } from "@/lib/metadata"
 
 export const dynamic = "force-dynamic"
 
@@ -74,13 +74,13 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
             "@type": "CollectionPage",
             name: t("header.title"),
             description: t("header.description"),
-            url: `https://ydvsystems.com/${locale}/blog`,
+            url: localeUrl(locale, "/blog"),
             mainEntity: {
               "@type": "ItemList",
               itemListElement: articles.map((article, i) => ({
                 "@type": "ListItem",
                 position: i + 1,
-                url: `https://ydvsystems.com/${locale}/blog/${article.slug}`,
+                url: localeUrl(locale, `/blog/${article.slug}`),
                 name: article.title,
               })),
             },

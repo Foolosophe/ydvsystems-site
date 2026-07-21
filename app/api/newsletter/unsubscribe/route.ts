@@ -37,5 +37,5 @@ function page(title: string, message: string) {
 <style>body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#f8fafc;color:#1e293b}
 .card{text-align:center;max-width:400px;padding:40px;background:white;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
 h1{color:#00bcd4;font-size:1.5rem}a{color:#00bcd4}</style></head>
-<body><div class="card"><h1>${title}</h1><p>${message}</p><a href="https://ydvsystems.com/fr/blog">Retour au blog</a></div></body></html>`
+<body><div class="card"><h1>${title}</h1><p>${message}</p><a href="https://ydvsystems.com/blog">Retour au blog</a></div></body></html>`
 }

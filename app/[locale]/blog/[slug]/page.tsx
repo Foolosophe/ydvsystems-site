@@ -16,7 +16,7 @@ import { TableOfContents, addHeadingIds } from "@/components/blog/TableOfContent
 import CodeHighlight from "@/components/blog/CodeHighlight"
 import NewsletterForm from "@/components/NewsletterForm"
 import "./prism-theme.css"
-import { getPageAlternates } from "@/lib/metadata"
+import { getPageAlternates, localeUrl } from "@/lib/metadata"
 
 export const dynamic = "force-dynamic"
 
@@ -49,7 +49,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime: article.publishedAt?.toISOString(),
-      url: `https://ydvsystems.com/${locale}/blog/${slug}`,
+      url: localeUrl(locale, `/blog/${slug}`),
       siteName: "YdvSystems",
       ...(article.coverImage ? { images: [{ url: article.coverImage }] } : {}),
     },
@@ -116,8 +116,8 @@ export default async function BlogArticlePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://ydvsystems.com" },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbBlog"), item: `https://ydvsystems.com/${locale}/blog` },
-      { "@type": "ListItem", position: 3, name: article.title, item: `https://ydvsystems.com/${locale}/blog/${slug}` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbBlog"), item: localeUrl(locale, "/blog") },
+      { "@type": "ListItem", position: 3, name: article.title, item: localeUrl(locale, `/blog/${slug}`) },
     ],
   }
 

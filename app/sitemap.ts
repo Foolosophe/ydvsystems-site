@@ -1,26 +1,25 @@
 import type { MetadataRoute } from "next"
 import { SOLUTION_SLUGS } from "./[locale]/solutions/data"
-import { routing } from "@/i18n/routing"
+import { localeUrl } from "@/lib/metadata"
 import { prisma } from "@/lib/db"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://ydvsystems.com"
   const lastUpdated = new Date()
-  const locales = routing.locales
 
   function localizedEntry(
     path: string,
     options: { changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number },
   ): MetadataRoute.Sitemap[number] {
     return {
-      url: `${baseUrl}/fr${path}`,
+      url: localeUrl("fr", path),
       lastModified: lastUpdated,
       changeFrequency: options.changeFrequency,
       priority: options.priority,
       alternates: {
         languages: {
-          ...Object.fromEntries(locales.map((locale) => [locale, `${baseUrl}/${locale}${path}`])),
-          "x-default": `${baseUrl}/fr${path}`,
+          fr: localeUrl("fr", path),
+          en: localeUrl("en", path),
+          "x-default": localeUrl("fr", path),
         },
       },
     }

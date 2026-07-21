@@ -41,7 +41,7 @@ import {
 import { getTranslations } from "next-intl/server"
 import { SOLUTION_FEATURE_ICONS, SOLUTION_SLUGS, SOLUTIONS_WITH_TESTIMONIAL } from "../data"
 import { SOLUTIONS } from "@/lib/data"
-import { getPageAlternates } from "@/lib/metadata"
+import { getPageAlternates, localeUrl } from "@/lib/metadata"
 
 const ICONS: Record<string, React.ReactNode> = {
   Users: <Users size={24} />,
@@ -98,7 +98,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${solution.name} — ${tagline}`,
       description: heroSubtitle,
-      url: `https://ydvsystems.com/${locale}/solutions/${slug}`,
+      url: localeUrl(locale, `/solutions/${slug}`),
       siteName: "YdvSystems",
     },
   }
@@ -107,9 +107,9 @@ export async function generateMetadata({
 export default async function SolutionPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string; slug: string }>
 }) {
-  const { slug } = await params
+  const { locale, slug } = await params
   const solution = SOLUTIONS.find((s) => s.slug === slug)
   if (!solution) notFound()
 
@@ -153,7 +153,7 @@ export default async function SolutionPage({
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "YdvSystems", item: "https://ydvsystems.com" },
       { "@type": "ListItem", position: 2, name: "Solutions", item: "https://ydvsystems.com/#solutions" },
-      { "@type": "ListItem", position: 3, name: solution.name, item: `https://ydvsystems.com/solutions/${slug}` },
+      { "@type": "ListItem", position: 3, name: solution.name, item: localeUrl(locale, `/solutions/${slug}`) },
     ],
   }
 

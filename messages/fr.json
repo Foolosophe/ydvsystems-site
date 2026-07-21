@@ -1062,7 +1062,7 @@
         "title": "YDV Platform — 4 logiciels métier",
         "description": "Suite de 4 logiciels SaaS (Insertion, Formation, Coaching, Manager). Socle de 14 modules, IA multi-provider, +7 000 tests automatisés, RBAC multi-structures.",
         "popup": {
-          "url": "https://ydvsystems.com/fr/solutions",
+          "url": "https://ydvsystems.com/solutions",
           "urlLabel": "ydvsystems.com/solutions",
           "image": "/images/ydv-platform-preview.png",
           "features": [
