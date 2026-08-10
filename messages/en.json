@@ -809,10 +809,10 @@
   "cgv": {
     "meta": {
       "title": "Terms of Sale — YdvSystems",
-      "description": "General terms of sale for YdvSystems — SaaS solutions and freelance services. Pricing, free trial, cancellation, intellectual property."
+      "description": "General terms of sale for YdvSystems — SaaS solutions, turnkey showcase websites and freelance services. Pricing, delivery times, hosting, intellectual property, right of withdrawal."
     },
     "title": "Terms of Sale",
-    "lastUpdate": "Last updated: March 23, 2026",
+    "lastUpdate": "Last updated: August 10, 2026",
     "scope": {
       "title": "1. Purpose and scope",
       "p1": "These Terms of Sale govern all commercial relationships between YdvSystems, a sole proprietorship operated by Yohann Dandeville (French business registration SIRET 534 080 783 00028), hereinafter referred to as \"the Provider\", and any individual or legal entity subscribing to its services, hereinafter referred to as \"the Client\".",
@@ -822,45 +822,67 @@
       "title": "2. SaaS solutions",
       "p1": "YdvSystems offers four SaaS solutions: YDV Insertion (management for work integration organizations), YDV Formation (training organization management with Qualiopi compliance), YDV Bilan (skills assessment management) and YDV Manager (business management and invoicing for freelancers and small businesses).",
       "p2": "Each solution is accessible via a web browser after creating an account. A 30-day free trial is offered. A bank imprint of €1 is requested to verify the Client's identity; this amount is cancelled immediately and will never be charged. The trial provides full access to all features of the chosen solution.",
-      "p3": "At the end of the trial period, the account is suspended if the Client has not subscribed. No automatic charges are made. The Client may subscribe to a monthly or annual plan at any time. The subscription takes effect on the subscription date and renews automatically at each billing cycle, unless cancelled under the conditions set out in Section 6."
+      "p3": "At the end of the trial period, the account is suspended if the Client has not subscribed. No automatic charges are made. The Client may subscribe to a monthly or annual plan at any time. The subscription takes effect on the subscription date and renews automatically at each billing cycle, unless cancelled under the conditions set out in Section 7."
     },
     "freelance": {
       "title": "3. Freelance services",
       "p1": "Custom development, AI integration and consulting services are subject to a prior quotation detailing the scope, deliverables, timeline and amount. Quotations are valid for 30 days from the date of issue.",
       "p2": "Unless otherwise agreed, a deposit of 30% of the total amount is required upon signing the quotation. The balance is invoiced upon delivery of the deliverables defined in the quotation. For long-term projects, an intermediate payment schedule may be agreed upon."
     },
+    "vitrine": {
+      "title": "4. Turnkey showcase websites (Présence Pro)",
+      "offerTitle": "Offering and pricing",
+      "offerP1": "Under the name \"Présence Pro\", YdvSystems offers turnkey showcase websites for tradespeople, retailers and very small businesses. The offering comes in three fixed-price packages, payable in a single instalment: Starter (€790), Pro (€1,490) and Premium (€2,490). The services included in each package are detailed at presence-pro.ydvsystems.com and form an integral part of the contract.",
+      "offerP2": "Unlike the custom development services covered by Section 3, these packages are offered at a list price and are not subject to a custom quotation. The order is formalised by a written confirmation stating the chosen package, its price, the website's domain name and, where applicable, the maintenance plan subscribed to.",
+      "deliveryTitle": "Ordering, payment and delivery times",
+      "deliveryP1": "A deposit of 30% of the package price is required upon ordering. The balance is invoiced when the website goes live. Payment is made in accordance with the terms set out in Section 5.",
+      "deliveryP2": "The stated delivery times — 5 working days for the Starter package, 7 working days for the Pro package and 10 working days for the Premium package — start from the date the Provider receives all materials required to build the website: text, photographs, logo, contact details, opening hours and, where applicable, technical access to the domain name. Any delay in providing these materials postpones the delivery date accordingly.",
+      "contentTitle": "Materials supplied by the Client",
+      "contentP1": "The Client warrants that they hold the rights to all materials they supply — text, photographs, logo, customer reviews — and are authorised to publish them on their website. In particular, the Client warrants the authenticity of any published reviews, in accordance with French consumer law provisions on misleading commercial practices. The Provider shall not be held liable for any infringement of third-party rights arising from material supplied by the Client, who bears sole responsibility for it.",
+      "domainTitle": "Domain name",
+      "domainP1": "The website is delivered on a domain name held by the Client. Where the Provider registers the domain on the Client's behalf, it is registered in the Client's name, who holds it from registration onwards and retains it after the contract ends; registration and renewal costs are passed on at cost price.",
+      "hostingTitle": "Hosting and maintenance",
+      "hostingP1": "Hosting is provided on servers located in France. Each package includes three months of hosting from the date the website goes live. Beyond that period, keeping the website online requires a maintenance plan: €30/month with the Starter package, €60/month with the Pro package and €90/month with the Premium package.",
+      "hostingP2": "Maintenance covers website hosting, updates to the website and the assistant, uptime monitoring and a monthly report of enquiries received. It is optional, taken out with no minimum term and cancellable at any time by written request; cancellation takes effect at the end of the current month, which has already been invoiced.",
+      "hostingP3": "If no maintenance plan is taken out once the three included months have elapsed, or if maintenance is cancelled, the website is removed from the Provider's hosting at the end of the current month. The Client retains their domain name and may request, within thirty days, a complete archive of their website — content, images and the code of their own site — enabling them to have it hosted by the provider of their choice. This archive is supplied once, free of charge, and is subject to the licence to use defined in this Section: it does not transfer ownership of the software foundation. The Provider assumes no obligation to keep the website online beyond the included hosting period or the maintenance period paid for.",
+      "ipTitle": "Intellectual property and licence to use",
+      "ipP1": "The Client owns the content of their website — text, images, collected data — as well as their domain name. Présence Pro websites are built on a proprietary software foundation developed and shared across clients by the Provider: component library, rendering engine, conversational assistant and automations. This foundation is not transferred under any circumstances. From full payment onwards, the Client is granted a non-exclusive, non-transferable licence of unlimited duration, strictly limited to operating their own website. By way of exception to Section 8, delivery of a Présence Pro website does not transfer ownership of the source code of the software foundation.",
+      "withdrawalTitle": "Right of withdrawal",
+      "withdrawalP1": "Where the contract is concluded at a distance or away from business premises and the Client is a professional employing no more than five people, for a purpose falling outside the scope of their main activity, the Client has fourteen days from the conclusion of the contract to exercise their right of withdrawal, in accordance with Article L221-3 of the French Consumer Code. This right is exercised in writing, without having to give reasons and without penalty, at the contact address given in the legal notice.",
+      "withdrawalP2": "A Client who expressly requests that the service begin before that period expires remains liable, in the event of withdrawal, for the amount corresponding to the work actually completed on the date they notify the Provider of their decision."
+    },
     "pricing": {
-      "title": "4. Pricing and payment",
+      "title": "5. Pricing and payment",
       "p1": "Prices are quoted in euros, exclusive of tax (HT). In accordance with French micro-enterprise regulations, YdvSystems is not subject to VAT (Article 293 B of the French General Tax Code). The statement \"VAT not applicable, Article 293 B of the CGI\" appears on every invoice.",
       "p2": "Payment is made by credit card or bank transfer. SaaS subscriptions are billed on a recurring basis according to the chosen frequency (monthly, quarterly or annual). Invoices are sent electronically to the Client's email address."
     },
     "trial": {
-      "title": "5. Free trial",
+      "title": "6. Free trial",
       "p1": "The 30-day free trial provides access to all features of the chosen solution without any limitations. A bank imprint of €1 is requested to verify the Client's identity. This amount is cancelled immediately and will never be charged. Upon expiration of the trial period, the account is suspended. No automatic charges are made. The Client's data is retained for an additional 30 days, allowing time to subscribe or export data."
     },
     "duration": {
-      "title": "6. Duration and cancellation",
+      "title": "7. Duration and cancellation",
       "p1": "The subscription is taken out for the duration chosen by the Client (monthly, quarterly or annual). The Client may cancel the subscription at any time from their account dashboard, with 30 days' notice. Cancellation takes effect at the end of the current billing period already invoiced. No pro-rata refund is provided.",
       "p2": "After cancellation, the Client has 30 days to export all data from their account dashboard. After this period, data is permanently deleted from the servers."
     },
     "ip": {
-      "title": "7. Intellectual property",
+      "title": "8. Intellectual property",
       "saasTitle": "SaaS solutions",
       "saasContent": "The Client retains ownership of all data entered and stored on YdvSystems platforms. The source code, design, architecture and algorithms of the SaaS solutions remain the exclusive property of YdvSystems. A subscription grants only a non-exclusive, non-transferable right of use for the duration of the subscription.",
       "freelanceTitle": "Freelance services",
       "freelanceContent": "For custom development services, the Client receives the delivered source code and becomes its owner upon full payment. Internal tools, libraries, frameworks and reusable components developed by YdvSystems remain the property of the Provider, who grants the Client a license to use them within the scope of the delivered project."
     },
     "liability": {
-      "title": "8. Liability",
+      "title": "9. Liability",
       "p1": "YdvSystems commits to providing 99.5% uptime on its SaaS platforms, excluding planned maintenance. Scheduled maintenance is communicated at least 48 hours in advance by email or in-app notification.",
       "p2": "YdvSystems shall not be held liable for indirect damages, such as loss of revenue, data or profits, resulting from the use or inability to use the services. In any event, YdvSystems' total liability is limited to the amounts paid by the Client during the preceding 12 months."
     },
     "force": {
-      "title": "9. Force majeure",
+      "title": "10. Force majeure",
       "p1": "Neither party shall be held liable for failure to fulfill its contractual obligations if such failure results from a force majeure event as defined under Article 1218 of the French Civil Code, including but not limited to: natural disasters, fire, internet network failures, cyberattacks, government decisions or any other unforeseeable, irresistible and external circumstances."
     },
     "law": {
-      "title": "10. Governing law and jurisdiction",
+      "title": "11. Governing law and jurisdiction",
       "p1": "These Terms of Sale are governed by French law. In the event of a dispute, the parties agree to seek an amicable resolution. Failing amicable agreement within 30 days, the dispute shall be brought before the competent court of Narbonne, France."
     },
     "backHome": "Back to homepage"

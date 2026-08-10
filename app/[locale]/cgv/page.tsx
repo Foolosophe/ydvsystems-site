@@ -48,6 +48,44 @@ export default async function CGVPage() {
           </section>
 
           <section>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("vitrine.title")}</h2>
+
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">{t("vitrine.offerTitle")}</h3>
+            <p>{t("vitrine.offerP1")}</p>
+            <p className="mt-3">{t("vitrine.offerP2")}</p>
+
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">
+              {t("vitrine.deliveryTitle")}
+            </h3>
+            <p>{t("vitrine.deliveryP1")}</p>
+            <p className="mt-3">{t("vitrine.deliveryP2")}</p>
+
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">
+              {t("vitrine.contentTitle")}
+            </h3>
+            <p>{t("vitrine.contentP1")}</p>
+
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">{t("vitrine.domainTitle")}</h3>
+            <p>{t("vitrine.domainP1")}</p>
+
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">
+              {t("vitrine.hostingTitle")}
+            </h3>
+            <p>{t("vitrine.hostingP1")}</p>
+            <p className="mt-3">{t("vitrine.hostingP2")}</p>
+            <p className="mt-3">{t("vitrine.hostingP3")}</p>
+
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">{t("vitrine.ipTitle")}</h3>
+            <p>{t("vitrine.ipP1")}</p>
+
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">
+              {t("vitrine.withdrawalTitle")}
+            </h3>
+            <p>{t("vitrine.withdrawalP1")}</p>
+            <p className="mt-3">{t("vitrine.withdrawalP2")}</p>
+          </section>
+
+          <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">{t("pricing.title")}</h2>
             <p>{t("pricing.p1")}</p>
             <p className="mt-3">{t("pricing.p2")}</p>

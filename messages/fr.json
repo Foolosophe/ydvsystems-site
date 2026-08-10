@@ -809,10 +809,10 @@
   "cgv": {
     "meta": {
       "title": "Conditions Générales de Vente — YdvSystems",
-      "description": "Conditions générales de vente de YdvSystems — solutions SaaS et prestations freelance. Tarifs, essai gratuit, résiliation, propriété intellectuelle."
+      "description": "Conditions générales de vente de YdvSystems — solutions SaaS, sites vitrines clé en main et prestations freelance. Tarifs, délais, hébergement, propriété intellectuelle, rétractation."
     },
     "title": "Conditions Générales de Vente",
-    "lastUpdate": "Dernière mise à jour : 23 mars 2026",
+    "lastUpdate": "Dernière mise à jour : 10 août 2026",
     "scope": {
       "title": "1. Objet et champ d'application",
       "p1": "Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble des relations commerciales entre YdvSystems, entreprise individuelle exploitée par Yohann Dandeville (SIRET 534 080 783 00028), ci-après « le Prestataire », et toute personne physique ou morale souscrivant à ses services, ci-après « le Client ».",
@@ -822,45 +822,67 @@
       "title": "2. Solutions SaaS",
       "p1": "YdvSystems propose quatre solutions logicielles en mode SaaS : YDV Insertion (gestion des structures d'insertion par l'activité économique), YDV Formation (gestion des organismes de formation, conformité Qualiopi), YDV Bilan (gestion des bilans de compétences) et YDV Manager (gestion commerciale et facturation pour indépendants et TPE).",
       "p2": "Chaque solution est accessible via un navigateur web après création d'un compte. Un essai gratuit de 30 jours est proposé. Une empreinte bancaire de 1 € est demandée pour valider l'identité du Client ; ce montant est annulé immédiatement et ne sera jamais débité. L'essai donne accès à l'intégralité des fonctionnalités de la solution choisie.",
-      "p3": "À l'issue de la période d'essai, le compte est suspendu si le Client n'a pas souscrit d'abonnement. Aucun prélèvement automatique n'est effectué. Le Client peut souscrire un abonnement mensuel ou annuel à tout moment. L'abonnement prend effet à la date de souscription et se renouvelle automatiquement à chaque échéance, sauf résiliation dans les conditions prévues à l'article 6."
+      "p3": "À l'issue de la période d'essai, le compte est suspendu si le Client n'a pas souscrit d'abonnement. Aucun prélèvement automatique n'est effectué. Le Client peut souscrire un abonnement mensuel ou annuel à tout moment. L'abonnement prend effet à la date de souscription et se renouvelle automatiquement à chaque échéance, sauf résiliation dans les conditions prévues à l'article 7."
     },
     "freelance": {
       "title": "3. Prestations freelance",
       "p1": "Les prestations de développement sur mesure, d'intégration IA et de conseil font l'objet d'un devis préalable détaillant le périmètre, les livrables, le calendrier et le montant. Le devis est valable 30 jours à compter de sa date d'émission.",
       "p2": "Sauf accord contraire, un acompte de 30 % du montant total est exigé à la signature du devis. Le solde est facturé à la livraison des livrables définis dans le devis. Pour les projets de longue durée, un échéancier de paiement intermédiaire peut être convenu."
     },
+    "vitrine": {
+      "title": "4. Sites vitrines clé en main (Présence Pro)",
+      "offerTitle": "Offre et tarifs",
+      "offerP1": "YdvSystems propose, sous la dénomination « Présence Pro », des sites vitrines clé en main destinés aux artisans, commerçants et très petites entreprises. L'offre est déclinée en trois formules à prix fixe, payables en une seule fois : Starter (790 €), Pro (1 490 €) et Premium (2 490 €). Le détail des prestations incluses dans chaque formule est présenté sur presence-pro.ydvsystems.com et fait partie intégrante du contrat.",
+      "offerP2": "À la différence des prestations de développement sur mesure visées à l'article 3, ces formules sont proposées à un tarif catalogue et ne donnent pas lieu à un devis sur mesure. La commande est formalisée par une confirmation écrite reprenant la formule retenue, son prix, le nom de domaine du site et, le cas échéant, la formule de maintenance souscrite.",
+      "deliveryTitle": "Commande, paiement et délais de livraison",
+      "deliveryP1": "Un acompte de 30 % du montant de la formule est exigé à la commande. Le solde est facturé à la mise en ligne du site. Le paiement s'effectue selon les modalités prévues à l'article 5.",
+      "deliveryP2": "Les délais de livraison annoncés — 5 jours ouvrés pour la formule Starter, 7 jours ouvrés pour la formule Pro et 10 jours ouvrés pour la formule Premium — courent à compter de la réception par le Prestataire de l'ensemble des éléments nécessaires à la réalisation du site : textes, photographies, logo, coordonnées, horaires et, le cas échéant, les accès techniques au nom de domaine. Tout retard dans la transmission de ces éléments décale la date de livraison d'autant.",
+      "contentTitle": "Contenus fournis par le Client",
+      "contentP1": "Le Client garantit détenir les droits sur l'ensemble des contenus qu'il transmet — textes, photographies, logo, avis de clients — et être autorisé à les publier sur son site. Il garantit en particulier l'authenticité des avis publiés, conformément aux dispositions du Code de la consommation relatives aux pratiques commerciales trompeuses. Le Prestataire ne saurait être tenu responsable d'une atteinte aux droits de tiers résultant d'un contenu fourni par le Client, qui en assume seul la responsabilité.",
+      "domainTitle": "Nom de domaine",
+      "domainP1": "Le site est livré sur un nom de domaine dont le Client est titulaire. Lorsque le Prestataire procède à l'enregistrement pour le compte du Client, le domaine est enregistré au nom de ce dernier, qui en est titulaire dès l'enregistrement et le demeure après le terme du contrat ; le coût de l'enregistrement et des renouvellements lui est refacturé au prix coûtant.",
+      "hostingTitle": "Hébergement et maintenance",
+      "hostingP1": "L'hébergement est assuré sur des serveurs situés en France. Chaque formule comprend trois mois d'hébergement à compter de la mise en ligne du site. Au-delà de cette période, le maintien en ligne suppose la souscription d'une formule de maintenance : 30 €/mois avec la formule Starter, 60 €/mois avec la formule Pro et 90 €/mois avec la formule Premium.",
+      "hostingP2": "La maintenance comprend l'hébergement du site, les mises à jour du site et de l'assistant, la surveillance de disponibilité et un rapport mensuel des demandes reçues. Elle est optionnelle, souscrite sans engagement de durée et résiliable à tout moment par simple demande écrite ; la résiliation prend effet à la fin du mois en cours, déjà facturé.",
+      "hostingP3": "En l'absence de souscription à l'issue des trois mois inclus, ou en cas de résiliation de la maintenance, le site est retiré de l'hébergement du Prestataire à la fin du mois en cours. Le Client conserve son nom de domaine et peut demander, dans un délai de trente jours, la remise d'une archive complète de son site — contenus, images et code de son site — lui permettant de le faire héberger par le prestataire de son choix. Cette remise est effectuée une fois, sans frais, et s'entend dans les limites de la licence d'utilisation définie au présent article : elle n'emporte aucune cession du socle logiciel. Le Prestataire n'assume aucune obligation de maintien en ligne au-delà de la période d'hébergement incluse ou de la période de maintenance réglée.",
+      "ipTitle": "Propriété intellectuelle et licence d'utilisation",
+      "ipP1": "Le Client est propriétaire des contenus de son site — textes, images, données collectées — ainsi que de son nom de domaine. Les sites Présence Pro sont construits à partir d'un socle logiciel propriétaire, développé et mutualisé par le Prestataire : bibliothèque de composants, moteur de rendu, assistant conversationnel et automatisations. Ce socle ne fait l'objet d'aucune cession. Le Client bénéficie, à compter du paiement intégral, d'une licence d'utilisation non exclusive, non cessible et sans limitation de durée, strictement limitée à l'exploitation de son propre site. Par dérogation à l'article 8, la livraison d'un site Présence Pro n'emporte pas cession du code source du socle logiciel.",
+      "withdrawalTitle": "Droit de rétractation",
+      "withdrawalP1": "Lorsque le contrat est conclu à distance ou hors établissement et que le Client est un professionnel employant cinq salariés au plus, pour un objet n'entrant pas dans le champ de son activité principale, celui-ci dispose d'un délai de quatorze jours à compter de la conclusion du contrat pour exercer son droit de rétractation, conformément à l'article L221-3 du Code de la consommation. Ce droit s'exerce sans motif ni pénalité, par écrit, à l'adresse de contact figurant aux mentions légales.",
+      "withdrawalP2": "Le Client qui demande expressément l'exécution de la prestation avant l'expiration de ce délai reste redevable, en cas de rétractation, du montant correspondant au travail effectivement réalisé à la date à laquelle il informe le Prestataire de sa décision."
+    },
     "pricing": {
-      "title": "4. Tarifs et paiement",
+      "title": "5. Tarifs et paiement",
       "p1": "Les prix sont indiqués en euros hors taxes (HT). Conformément aux dispositions relatives à la micro-entreprise, YdvSystems n'est pas assujetti à la TVA (article 293 B du Code Général des Impôts). La mention « TVA non applicable, article 293 B du CGI » figure sur chaque facture.",
       "p2": "Le paiement s'effectue par carte bancaire ou par virement bancaire. Les abonnements SaaS sont facturés de manière récurrente selon la périodicité choisie (mensuelle, trimestrielle ou annuelle). Les factures sont transmises par voie électronique à l'adresse email du Client."
     },
     "trial": {
-      "title": "5. Essai gratuit",
+      "title": "6. Essai gratuit",
       "p1": "L'essai gratuit de 30 jours donne accès à l'ensemble des fonctionnalités de la solution choisie, sans limitation. Une empreinte bancaire de 1 € est demandée pour valider l'identité du Client. Ce montant est annulé immédiatement et ne sera jamais débité. À l'expiration de la période d'essai, le compte est suspendu. Aucun prélèvement automatique n'est effectué. Les données du Client sont conservées pendant 30 jours supplémentaires, lui laissant le temps de souscrire un abonnement ou d'exporter ses données."
     },
     "duration": {
-      "title": "6. Durée et résiliation",
+      "title": "7. Durée et résiliation",
       "p1": "L'abonnement est souscrit pour la durée choisie par le Client (mensuelle, trimestrielle ou annuelle). Le Client peut résilier son abonnement à tout moment depuis son espace client, avec un préavis de 30 jours. La résiliation prend effet à la fin de la période en cours déjà facturée. Aucun remboursement au prorata n'est effectué.",
       "p2": "Après résiliation, le Client dispose de 30 jours pour exporter l'ensemble de ses données depuis son espace client. Passé ce délai, les données sont supprimées définitivement des serveurs."
     },
     "ip": {
-      "title": "7. Propriété intellectuelle",
+      "title": "8. Propriété intellectuelle",
       "saasTitle": "Solutions SaaS",
       "saasContent": "Le Client reste propriétaire de l'ensemble des données qu'il saisit et stocke sur les plateformes YdvSystems. Le code source, le design, l'architecture et les algorithmes des solutions SaaS demeurent la propriété exclusive de YdvSystems. La souscription à un abonnement confère uniquement un droit d'utilisation non exclusif et non cessible pour la durée de l'abonnement.",
       "freelanceTitle": "Prestations freelance",
       "freelanceContent": "Pour les prestations de développement sur mesure, le Client reçoit le code source livré et en devient propriétaire après paiement intégral. Les outils, bibliothèques internes, frameworks et composants réutilisables développés par YdvSystems restent la propriété du Prestataire, qui accorde au Client une licence d'utilisation dans le cadre du projet livré."
     },
     "liability": {
-      "title": "8. Responsabilité",
+      "title": "9. Responsabilité",
       "p1": "YdvSystems s'engage à fournir un taux de disponibilité de 99,5 % sur ses plateformes SaaS, hors opérations de maintenance planifiée. Les maintenances programmées sont communiquées au moins 48 heures à l'avance par email ou notification dans l'application.",
       "p2": "La responsabilité de YdvSystems ne saurait être engagée pour les dommages indirects, tels que les pertes de chiffre d'affaires, de données ou de bénéfices, résultant de l'utilisation ou de l'impossibilité d'utilisation des services. En tout état de cause, la responsabilité totale de YdvSystems est limitée au montant des sommes versées par le Client au cours des 12 derniers mois."
     },
     "force": {
-      "title": "9. Force majeure",
+      "title": "10. Force majeure",
       "p1": "Aucune des parties ne pourra être tenue responsable d'un manquement à ses obligations contractuelles si ce manquement résulte d'un événement de force majeure au sens de l'article 1218 du Code civil, notamment : catastrophe naturelle, incendie, panne de réseau internet, cyberattaque, décision gouvernementale ou toute autre circonstance imprévisible, irrésistible et extérieure aux parties."
     },
     "law": {
-      "title": "10. Droit applicable et juridiction compétente",
+      "title": "11. Droit applicable et juridiction compétente",
       "p1": "Les présentes CGV sont soumises au droit français. En cas de litige, les parties s'engagent à rechercher une solution amiable. À défaut d'accord amiable dans un délai de 30 jours, le litige sera porté devant le tribunal compétent de Narbonne."
     },
     "backHome": "Retour à l'accueil"
