@@ -41,6 +41,12 @@ export default async function ConfidentialitePage() {
             <p>{t("collected.saasContent")}</p>
             <h3 className="text-base font-medium text-foreground mt-4 mb-2">{t("collected.analyticsTitle")}</h3>
             <p>{t("collected.analyticsContent")}</p>
+            {/* Information au sens de l'article 14 du RGPD, pour les donnees
+                collectees indirectement dans le cadre de la prospection de
+                proximite. C'est le canal qui vaut pour toute personne
+                demarchee, avec ou sans document laisse sur place. */}
+            <h3 className="text-base font-medium text-foreground mt-4 mb-2">{t("collected.prospectionTitle")}</h3>
+            <p className="whitespace-pre-line">{t("collected.prospectionContent")}</p>
           </section>
 
           <section>
