@@ -45,7 +45,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const handleAnimationComplete = useCallback(() => {
     if (isCompleting.current) return
     isCompleting.current = true
-    localStorage.setItem(STORAGE_KEY, "1")
+    try { sessionStorage.setItem(STORAGE_KEY, "1") } catch {}
     setVisible(false)
     window.dispatchEvent(new Event("loaderDone"))
     onComplete?.()

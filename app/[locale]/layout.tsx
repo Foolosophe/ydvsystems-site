@@ -110,7 +110,7 @@ export default async function LocaleLayout({
 
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: `(function(){var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e);setTimeout(function(){var s=document.getElementById("__splash");if(s)s.remove()},5000)})()` }} />
+      <script dangerouslySetInnerHTML={{ __html: `(function(){try{if(sessionStorage.getItem("ydv_loaded")==="1")return}catch(_){}var e=document.createElement("div");e.id="__splash";e.style.cssText="position:fixed;inset:0;z-index:9998;background:#060608";document.body.appendChild(e);setTimeout(function(){var s=document.getElementById("__splash");if(s)s.remove()},5000)})()` }} />
       <LoadingScreenWrapper />
       {process.env.NEXT_PUBLIC_UMAMI_ID && (
         <script
