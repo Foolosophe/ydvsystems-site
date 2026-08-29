@@ -756,7 +756,8 @@
       "tag": "Real example",
       "title": "Plume — launch film",
       "meta": "48 s · 16:9 · made from a simple pitch",
-      "iframeTitle": "Plume animated ad film — YdvSystems showreel example"
+      "videoTitle": "Plume animated ad film — YdvSystems showreel example",
+      "fallback": "Your browser cannot play this video. Download the film (MP4)"
     },
     "stats": [
       { "value": "€4,000+", "label": "the usual agency price for an equivalent film" },

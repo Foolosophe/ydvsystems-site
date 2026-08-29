@@ -756,7 +756,8 @@
       "tag": "Exemple réel",
       "title": "Plume — film de lancement",
       "meta": "48 s · 16:9 · à partir d'un simple pitch",
-      "iframeTitle": "Film publicitaire animé Plume — exemple de réalisation YdvSystems"
+      "videoTitle": "Film publicitaire animé Plume — exemple de réalisation YdvSystems",
+      "fallback": "Votre navigateur ne peut pas lire cette vidéo. Télécharger le film (MP4)"
     },
     "stats": [
       { "value": "4 000 €+", "label": "le tarif agence habituel pour un film équivalent" },

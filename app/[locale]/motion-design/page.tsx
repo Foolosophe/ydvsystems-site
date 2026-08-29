@@ -88,6 +88,15 @@ export default async function MotionDesignPage({
               url: localeUrl(locale),
             },
             areaServed: "FR",
+            hasPart: {
+              "@type": "VideoObject",
+              name: t("example.title"),
+              description: t("example.meta"),
+              thumbnailUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/plume-poster.jpg`,
+              contentUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/plume-teaser.mp4`,
+              uploadDate: "2026-06-22",
+              duration: "PT48S",
+            },
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: t("pricing.title"),
@@ -180,12 +189,17 @@ export default async function MotionDesignPage({
 
             <div className="relative rounded-2xl overflow-hidden border border-border shadow-(--shadow-card-hover) bg-black">
               <div className="relative w-full pt-[56.25%]">
-                <iframe
-                  src="/motion-design/plume-film.html"
-                  title={t("example.iframeTitle")}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+                <video
+                  controls
+                  playsInline
+                  preload="none"
+                  poster="/motion-design/plume-poster.jpg"
+                  aria-label={t("example.videoTitle")}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <source src="/motion-design/plume-teaser.mp4" type="video/mp4" />
+                  <a href="/motion-design/plume-teaser.mp4">{t("example.fallback")}</a>
+                </video>
               </div>
             </div>
           </AnimateOnScroll>
