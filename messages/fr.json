@@ -222,6 +222,16 @@
       "statusConcept": "En conception",
       "projects": [
         {
+          "title": "Films publicitaires animés",
+          "status": "prod",
+          "description": "Une offre de motion design clé en main : brief, script, animation, sound design, livraison en 5 jours. Le premier film — le teaser de Plume, 48 secondes — est écrit en React sur un moteur de timeline déterministe : les diagrammes sont des SVG calculés, les effets sonores synthétisés en Web Audio et accordés à la musique, le rendu exporté image par image puis assemblé en H.264. Pas de logiciel de montage : du code."
+        },
+        {
+          "title": "Présence Pro",
+          "status": "prod",
+          "description": "Des sites vitrine clé en main pour artisans, commerçants et indépendants — conçus, déployés et maintenus de A à Z. Six démos métier en ligne, chacune avec son design, son contenu et ses photos : plombier, électricien, coiffeur, hypnothérapeute, plâtrier, coach. Astro + React, score Lighthouse proche de 100, hébergement européen, zéro cookie de pistage. Prise de rendez-vous, formulaires anti-spam, statistiques : le client n'a rien à installer et rien à gérer."
+        },
+        {
           "title": "YDV Platform",
           "status": "comingSoon",
           "description": "4 logiciels SaaS pour le secteur de l'insertion et de la formation. Architecture multi-tenant, RBAC, IA multi-provider, +8 000 tests automatisés. 102 phases menées seul, du schéma de base de données à l'hébergement sur infrastructure dédiée. Ce que d'autres font en équipe, je le fais seul — pas par économie, par choix architectural."
@@ -237,14 +247,19 @@
           "description": "Un assistant vocal français, construit à la vue de tous : le vrai code et le journal de sa construction, décision après décision, commit après commit. Pipeline vocal local de bout en bout — capture, détection de parole, transcription, reconnaissance du locuteur, synthèse. Et une mémoire qui tient : à la 88ᵉ conversation, elle se souvient encore de la première, et elle dit d'où elle tient ce qu'elle avance. Chaque travail passe par deux relectures adverses avant d'être figé. Ce projet démontre autant une méthode qu'un produit."
         },
         {
-          "title": "Films publicitaires animés",
+          "title": "Audit IA Entreprise",
           "status": "prod",
-          "description": "Une offre de motion design clé en main : brief, script, animation, sound design, livraison en 5 jours. Le premier film — le teaser de Plume, 48 secondes — est écrit en React sur un moteur de timeline déterministe : les diagrammes sont des SVG calculés, les effets sonores synthétisés en Web Audio et accordés à la musique, le rendu exporté image par image puis assemblé en H.264. Pas de logiciel de montage : du code."
+          "description": "Un outil de diagnostic qui répond à une seule question : où, comment et à quelles conditions l'IA peut créer de la valeur concrète dans une entreprise. Questionnaire adaptatif calibré sur 14 secteurs, diagnostic en 4 axes — organisation, systèmes, données, culture —, score de maturité sur 100 points et identification des cas d'usage prioritaires en croisant problèmes métiers, données disponibles, faisabilité et valeur. Un rapport, pas une promesse."
         },
         {
           "title": "Le Prompt Parfait",
           "status": "prod",
           "description": "Une PWA disponible sur web, desktop et mobile depuis une seule codebase. Un outil gratuit pour optimiser ses prompts IA, pensé pour être accessible à tous. Une idée simple, une exécution soignée, un résultat utilisable immédiatement."
+        },
+        {
+          "title": "Les Mots de Marilyn",
+          "status": "prod",
+          "description": "Un blog conçu pour une personne atteinte de Parkinson. Trois modes d'écriture selon l'état physique du jour — taper, dicter, ou se laisser guider par une amorce les jours de fatigue cognitive. Transcription vocale avec chaîne de repli entre fournisseurs, lecture audio des articles, conformité WCAG AAA, zones cliquables de 60 px minimum. Le projet où l'accessibilité n'est pas une case à cocher mais la contrainte de départ."
         },
         {
           "title": "Pills Stadium",

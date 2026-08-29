@@ -222,6 +222,16 @@
       "statusConcept": "In design",
       "projects": [
         {
+          "title": "Animated video ads",
+          "status": "prod",
+          "description": "A turnkey motion design offering: brief, script, animation, sound design, delivery in 5 days. The first film — the 48-second Plume teaser — is written in React on a deterministic timeline engine: the diagrams are computed SVG, the sound effects synthesised with the Web Audio API and tuned to the music, the render exported frame by frame then muxed to H.264. No editing suite: code."
+        },
+        {
+          "title": "Présence Pro",
+          "status": "prod",
+          "description": "Turnkey showcase websites for craftspeople, shops and freelancers — designed, deployed and maintained end to end. Six trade demos online, each with its own design, content and photography: plumber, electrician, hairdresser, hypnotherapist, plasterer, coach. Astro + React, a Lighthouse score close to 100, European hosting, zero tracking cookies. Online booking, spam-proof forms, analytics: the client has nothing to install and nothing to manage."
+        },
+        {
           "title": "YDV Platform",
           "status": "comingSoon",
           "description": "4 SaaS platforms for the social inclusion and training sector. Multi-tenant architecture, RBAC, multi-provider AI, +8,000 automated tests. 102 phases carried out alone, from the database schema to hosting on dedicated infrastructure. What others do as a team, I do alone — not to save money, but as an architectural choice."
@@ -237,14 +247,19 @@
           "description": "A French voice assistant, built in the open: the real code and the logbook of its construction, decision after decision, commit after commit. A local end-to-end voice pipeline — capture, speech detection, transcription, speaker recognition, synthesis. And a memory that holds: by the 88th conversation she still remembers the first, and she says where she gets what she asserts. Every piece of work goes through two adversarial reviews before it is locked. This project demonstrates a method as much as a product."
         },
         {
-          "title": "Animated video ads",
+          "title": "Enterprise AI Audit",
           "status": "prod",
-          "description": "A turnkey motion design offering: brief, script, animation, sound design, delivery in 5 days. The first film — the 48-second Plume teaser — is written in React on a deterministic timeline engine: the diagrams are computed SVG, the sound effects synthesised with the Web Audio API and tuned to the music, the render exported frame by frame then muxed to H.264. No editing suite: code."
+          "description": "A diagnostic tool answering a single question: where, how and under what conditions AI can create concrete value in a company. An adaptive questionnaire calibrated for 14 sectors, a diagnosis along 4 axes — organisation, systems, data, culture — a maturity score out of 100, and the identification of priority use cases by crossing business problems, available data, feasibility and value. A report, not a promise."
         },
         {
           "title": "Le Prompt Parfait",
           "status": "prod",
           "description": "A PWA available on web, desktop and mobile from a single codebase. A free tool to optimise AI prompts, designed to be accessible to everyone. A simple idea, careful execution, a result that is immediately usable."
+        },
+        {
+          "title": "Les Mots de Marilyn",
+          "status": "prod",
+          "description": "A blog designed for a person living with Parkinson's. Three writing modes depending on how the day is going — type, dictate, or be guided by a prompt on days of cognitive fatigue. Voice transcription with a provider fallback chain, audio playback of articles, WCAG AAA compliance, click targets of at least 60px. The project where accessibility was not a checkbox but the starting constraint."
         },
         {
           "title": "Pills Stadium",
