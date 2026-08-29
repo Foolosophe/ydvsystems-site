@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { ArrowRight, ExternalLink, Gamepad2 } from "lucide-react"
+import { ArrowRight, ExternalLink, Gamepad2, Clock } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { PORTFOLIO_IDS, PORTFOLIO_TECH, PORTFOLIO_CATEGORIES, GAME_URLS } from "@/lib/data"
@@ -120,21 +120,37 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "pro").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise" || id === "presence-pro"
+              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise" || id === "presence-pro" || id === "motion-design" || id === "plume"
+              // Projet sans URL publique = pas encore sorti (meme traitement que la carte YdvShop)
+              const comingSoon = !tech.url
               const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
-                url: string; urlLabel: string; image: string
+                url: string | null; urlLabel: string | null; image: string
                 features: { title: string; description: string }[]
               }) : null
 
               const cardEl = (
                 <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">
-                  <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
+                  {comingSoon ? (
+                    <div className="h-1 w-full" style={{ backgroundColor: "#cbd5e1" }} />
+                  ) : (
+                    <div className="h-1 w-full solution-brand-underline" style={{ "--solution-color": "#00bcd4" } as React.CSSProperties} />
+                  )}
                   <CardHeader className="pb-3">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs mb-2">
-                          {tPort(`${id}.type`)}
-                        </Badge>
+                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                          <Badge variant="secondary" className="bg-secondary text-muted-foreground border-0 text-xs">
+                            {tPort(`${id}.type`)}
+                          </Badge>
+                          {comingSoon && (
+                            <Badge className="bg-amber-50 text-amber-700 border-amber-200 text-xs">
+                              <span className="flex items-center gap-1">
+                                <Clock size={12} />
+                                {t("comingSoon")}
+                              </span>
+                            </Badge>
+                          )}
+                        </div>
                         <h2 className="text-lg font-bold text-foreground">{tPort(`${id}.title`)}</h2>
                       </div>
                       {tech.url && (
@@ -202,7 +218,7 @@ export default async function PortfolioPage() {
               const tech = PORTFOLIO_TECH[id]
               const hasPopup = id === "moteur-jeu" || id === "pills-stadium"
               const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
-                url: string; urlLabel: string; image: string
+                url: string | null; urlLabel: string | null; image: string
                 features: { title: string; description: string }[]
               }) : null
 

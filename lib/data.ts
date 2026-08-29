@@ -95,6 +95,8 @@ export const SERVICE_PREVIEW_IDS = SERVICE_IDS.slice(0, 4)
 export const PORTFOLIO_IDS = [
   "ydv-systems",
   "presence-pro",
+  "motion-design",
+  "plume",
   "moteur-jeu",
   "pills-stadium",
   "prompt-parfait",
@@ -105,6 +107,8 @@ export const PORTFOLIO_IDS = [
 export const PORTFOLIO_CATEGORIES: Record<string, "pro" | "perso"> = {
   "ydv-systems": "pro",
   "presence-pro": "pro",
+  "motion-design": "pro",
+  "plume": "pro",
   "prompt-parfait": "pro",
   "audit-ia-entreprise": "pro",
   "blog-parkinson": "pro",
@@ -129,6 +133,16 @@ export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null
     tags: ["Astro", "React", "TypeScript", "Tailwind", "Drizzle", "PostgreSQL"],
     url: "https://presence-pro.ydvsystems.com",
     urlLabel: "presence-pro.ydvsystems.com",
+  },
+  "motion-design": {
+    tags: ["React", "SVG", "Web Audio API", "Playwright", "FFmpeg"],
+    url: "https://ydvsystems.com/motion-design",
+    urlLabel: "ydvsystems.com/motion-design",
+  },
+  "plume": {
+    tags: ["Electron", "TypeScript", "React", "Tiptap", "SQLite", "Drizzle"],
+    url: null,
+    urlLabel: null,
   },
   "moteur-jeu": {
     tags: ["React", "TypeScript", "Tauri", "Capacitor", "Web Audio API"],

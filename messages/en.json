@@ -166,6 +166,7 @@
     "proTitle": "Products & client projects",
     "persoTitle": "Personal projects & R&D",
     "visit": "Visit {title}",
+    "comingSoon": "Coming soon",
     "playOnline": "Play online",
     "play": {
       "launchGame": "Launch game",
@@ -1427,6 +1428,70 @@
             {
               "title": "Built to last",
               "description": "Astro + React, Lighthouse score near 100, European hosting (GDPR-native), zero tracking cookies. Bespoke online store (YdvShop) coming soon."
+            }
+          ]
+        }
+      },
+      "motion-design": {
+        "type": "Motion design",
+        "title": "Animated video ads",
+        "description": "Turnkey animated ad films: brief, script, animation, sound design and Full HD MP4 delivery in 5 days. First film delivered: the 48-second Plume teaser.",
+        "popup": {
+          "url": "https://ydvsystems.com/en/motion-design",
+          "urlLabel": "ydvsystems.com/motion-design",
+          "image": "/motion-design/plume-poster.jpg",
+          "features": [
+            {
+              "title": "In-house animation engine",
+              "description": "A deterministic timeline written in React (Stage, Sprite, easings, useTimeline/useSprite). Every scene is code, not a layer: 9 scenes plus a brand card, kinetic type, overshoot reveals, a drop-to-splatter match cut and ink-sweep linked transitions."
+            },
+            {
+              "title": "Diagrams computed in SVG",
+              "description": "Faders, narrative arc, radar, gauge and pipeline are drawn by calculation and animated frame by frame — no imported artwork. Any diagram can be replayed, retimed or repurposed without going back through an editing suite."
+            },
+            {
+              "title": "Synthesised sound design",
+              "description": "Effects generated with the Web Audio API and tuned to the music (F major / D minor), a shared convolution reverb (~1.1 s, 20% wet) and automatic ducking. Final mix exported as a 48-second WAV locked to the timeline."
+            },
+            {
+              "title": "Deterministic render, not a screen capture",
+              "description": "Frame-by-frame export through headless Chromium at 1920×1080 (driven time seek, 2 rAF per frame), then an FFmpeg mux to H.264 CRF 17 + AAC 256 kbps at 60 fps. Identical output on every render, with no screen-compression artefacts."
+            },
+            {
+              "title": "3 plans, delivered in 5 days",
+              "description": "Essential (€990 excl. VAT, ~30 s, 16:9), Pro (€1,690 excl. VAT, 45–60 s, 16:9 + vertical 9:16) and bespoke. Brief and script included, full ownership of the film transferred once the balance is paid."
+            }
+          ]
+        }
+      },
+      "plume": {
+        "type": "Desktop software",
+        "title": "Plume — AI writing studio",
+        "description": "A desktop application for fiction writers: editor, structured narratology engine and a dial-able AI co-pilot. V1.0 in its final stages (packaging and QA), internal pre-release.",
+        "popup": {
+          "url": null,
+          "urlLabel": null,
+          "image": "/images/plume-preview.png",
+          "features": [
+            {
+              "title": "Structured narratology",
+              "description": "30 classified narrative structures, 17 native stackable thematic universes (12 active per project at most) with a 3-step blending dial, and a narrative voice adjustable along 5 axes. This is the heart of the product: no other tool offers this combination."
+            },
+            {
+              "title": "AI co-pilot with 10 intensity levels",
+              "description": "Involvement dials from light proofreading up to full co-writing. Multi-provider (Anthropic, OpenAI, Google, OpenRouter) and BYOK: the author pays their provider directly, with no Plume subscription. Keys encrypted through safeStorage (OS keychain)."
+            },
+            {
+              "title": "Block editor with version history",
+              "description": "Tiptap / ProseMirror with autosave and version history, 6 writing phases (ideation, universe & voice, characters, structure, drafting, review), plus world bible, thread notebook and established-facts tools."
+            },
+            {
+              "title": "An open, durable project format",
+              "description": "One project is one .plume file: a SQLite database in WAL mode with a versioned _meta table for migrations. Manuscript export to PDF, DOCX and EPUB, and import of existing documents."
+            },
+            {
+              "title": "Hardened, well-tested Electron",
+              "description": "Electron + strict TypeScript + React + Drizzle ORM. Security: nodeIntegration disabled, contextIsolation and sandbox enabled. Around 1,370 unit and integration tests (Vitest) and 16 end-to-end scenarios (Playwright)."
             }
           ]
         }
