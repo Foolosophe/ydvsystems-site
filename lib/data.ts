@@ -211,7 +211,7 @@ export const STACK_TECHS: Record<string, string[]> = {
 
 export const STATS = [
   { value: "10+" },
-  { value: "7 225" },
+  { value: "8 000+" },
   { value: "9" },
   { value: "4" },
 ]
