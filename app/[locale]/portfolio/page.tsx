@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { ArrowRight, ExternalLink, Gamepad2, Clock, Play } from "lucide-react"
+import { ArrowRight, ExternalLink, Gamepad2, Clock, Play, Github } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { PORTFOLIO_IDS, PORTFOLIO_TECH, PORTFOLIO_CATEGORIES, GAME_URLS } from "@/lib/data"
@@ -120,9 +120,10 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "pro").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise" || id === "presence-pro" || id === "motion-design" || id === "plume"
-              // Projet sans URL publique = pas encore sorti (meme traitement que la carte YdvShop)
-              const comingSoon = !tech.url
+              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise" || id === "presence-pro" || id === "motion-design" || id === "plume" || id === "sophia"
+              // Statut explicite : une carte peut n'avoir aucune URL publique sans etre
+              // "a venir" — Sophia est active, seul son depot n'est pas encore ouvert.
+              const comingSoon = tech.comingSoon === true
               const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
                 url: string | null; urlLabel: string | null; image: string
                 features: { title: string; description: string }[]
@@ -185,6 +186,12 @@ export default async function PortfolioPage() {
                         {tech.urlLabel}
                         <ExternalLink size={12} />
                       </a>
+                    )}
+                    {tech.repoSoon && (
+                      <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <Github size={12} />
+                        {t("repoSoon")}
+                      </p>
                     )}
                     {tech.film && (
                       <Link

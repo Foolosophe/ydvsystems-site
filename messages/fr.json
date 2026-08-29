@@ -168,6 +168,7 @@
     "visit": "Visiter {title}",
     "comingSoon": "Bientôt",
     "watchFilm": "Voir le film de présentation",
+    "repoSoon": "Repo GitHub public — bientôt disponible",
     "playOnline": "Jouer en ligne",
     "play": {
       "launchGame": "Lancer le jeu",
@@ -1550,6 +1551,38 @@
             {
               "title": "Electron durci et testé",
               "description": "Electron + TypeScript strict + React + Drizzle ORM. Sécurité : nodeIntegration désactivé, contextIsolation et sandbox actifs. Environ 1 370 tests unitaires et d'intégration (Vitest) et 16 scénarios end-to-end (Playwright)."
+            }
+          ]
+        }
+      },
+      "sophia": {
+        "type": "Assistant vocal",
+        "title": "Sophia — assistant vocal français",
+        "description": "Un assistant vocal français à qui l'on parle et qui répond de vive voix, construit à la vue de tous : le vrai code et le journal de sa construction, décision après décision, commit après commit.",
+        "popup": {
+          "url": null,
+          "urlLabel": null,
+          "image": "/images/sophia-card.jpg",
+          "features": [
+            {
+              "title": "Pipeline vocal complet",
+              "description": "Capture audio WASAPI, détection de parole Silero, transcription faster-whisper, reconnaissance du locuteur ECAPA/SpeechBrain et synthèse Piper à la prononciation française travaillée. Toute la chaîne tient sur un seul interpréteur Python 3.13, sans conflit de dépendances."
+            },
+            {
+              "title": "Deux relectures adverses avant de figer",
+              "description": "Chaque travail passe par deux audits indépendants qui cherchent activement la faille, avant d'être validé. 18 audits croisés consécutifs à ce jour, zéro faux positif — et tout est vérifiable dans l'historique git."
+            },
+            {
+              "title": "Un défaut rattrapé en conditions réelles",
+              "description": "Le 15 juillet 2026, un audit a intercepté une perte de données que l'IA venait d'introduire dans sa propre correction : un piège Windows méconnu, le file tunneling NTFS, qui aurait détruit le journal du programme. Le commit et son correctif sont publics."
+            },
+            {
+              "title": "Architecture en deux étages",
+              "description": "Un orchestrateur Electron + TypeScript porte le socle, le journal et les garde-fous ; un sidecar Python porte l'audio et les modèles. Les deux dialoguent par WebSocket sur un port unique. Mémoire vectorielle en SQLite via sqlite-vec."
+            },
+            {
+              "title": "Un état assumé publiquement",
+              "description": "Fondations bâties et testées, voix prouvée en conversation réelle ; la mémoire longue et la personnalité ne sont pas encore branchées — et le dépôt le dit noir sur blanc plutôt que de survendre. Ce qui se prouve ici, c'est la méthode."
             }
           ]
         }

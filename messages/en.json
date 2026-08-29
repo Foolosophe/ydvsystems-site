@@ -168,6 +168,7 @@
     "visit": "Visit {title}",
     "comingSoon": "Coming soon",
     "watchFilm": "Watch the presentation film",
+    "repoSoon": "Public GitHub repo — coming soon",
     "playOnline": "Play online",
     "play": {
       "launchGame": "Launch game",
@@ -1550,6 +1551,38 @@
             {
               "title": "Hardened, well-tested Electron",
               "description": "Electron + strict TypeScript + React + Drizzle ORM. Security: nodeIntegration disabled, contextIsolation and sandbox enabled. Around 1,370 unit and integration tests (Vitest) and 16 end-to-end scenarios (Playwright)."
+            }
+          ]
+        }
+      },
+      "sophia": {
+        "type": "Voice assistant",
+        "title": "Sophia — French voice assistant",
+        "description": "A French voice assistant you speak to and that answers out loud, built in the open: the real code and the logbook of its construction, decision after decision, commit after commit.",
+        "popup": {
+          "url": null,
+          "urlLabel": null,
+          "image": "/images/sophia-card.jpg",
+          "features": [
+            {
+              "title": "A complete voice pipeline",
+              "description": "WASAPI audio capture, Silero speech detection, faster-whisper transcription, ECAPA/SpeechBrain speaker recognition and Piper synthesis with carefully tuned French pronunciation. The whole chain runs on a single Python 3.13 interpreter, with no dependency conflicts."
+            },
+            {
+              "title": "Two adversarial reviews before anything is locked",
+              "description": "Every piece of work goes through two independent audits that actively hunt for the flaw before it is approved. 18 consecutive cross-audits so far, zero false positives — all verifiable in the git history."
+            },
+            {
+              "title": "A real defect caught in the act",
+              "description": "On 15 July 2026, an audit intercepted data loss the AI had just introduced into its own fix: an obscure Windows pitfall, NTFS file tunneling, which would have destroyed the program's journal. The commit and its fix are public."
+            },
+            {
+              "title": "A two-tier architecture",
+              "description": "An Electron + TypeScript orchestrator carries the core, the journal and the safeguards; a Python sidecar carries the audio and the models. The two talk over WebSocket on a single port. Vector memory in SQLite through sqlite-vec."
+            },
+            {
+              "title": "A status stated openly",
+              "description": "Foundations built and tested, the voice proven in real conversation; long-term memory and personality are not wired up yet — and the repo says so plainly rather than overselling. What is being proven here is the method."
             }
           ]
         }

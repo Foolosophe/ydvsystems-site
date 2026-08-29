@@ -97,6 +97,7 @@ export const PORTFOLIO_IDS = [
   "presence-pro",
   "motion-design",
   "plume",
+  "sophia",
   "moteur-jeu",
   "pills-stadium",
   "prompt-parfait",
@@ -109,6 +110,7 @@ export const PORTFOLIO_CATEGORIES: Record<string, "pro" | "perso"> = {
   "presence-pro": "pro",
   "motion-design": "pro",
   "plume": "pro",
+  "sophia": "pro",
   "prompt-parfait": "pro",
   "audit-ia-entreprise": "pro",
   "blog-parkinson": "pro",
@@ -123,7 +125,7 @@ export const GAME_URLS: Record<string, string> = {
   "pills-stadium": "https://kart.ydvsystems.com",
 }
 
-export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null; urlLabel: string | null; film?: string }> = {
+export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null; urlLabel: string | null; film?: string; comingSoon?: boolean; repoSoon?: boolean }> = {
   "ydv-systems": {
     tags: ["Next.js", "tRPC", "Prisma", "PostgreSQL", "IA", "RBAC"],
     url: "https://ydvsystems.com/solutions",
@@ -145,6 +147,16 @@ export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null
     urlLabel: null,
     // Pas de site public (logiciel desktop) : on renvoie vers son film de lancement.
     film: "/motion-design/plume",
+    comingSoon: true,
+  },
+  "sophia": {
+    tags: ["Electron", "TypeScript", "Python", "faster-whisper", "Piper TTS", "sqlite-vec"],
+    // Depot bientot rendu public. Le jour J : url + urlLabel ci-dessous, et retirer repoSoon.
+    // url: "https://github.com/YdvSystems/YdvVoice",
+    // urlLabel: "github.com/YdvSystems/YdvVoice",
+    url: null,
+    urlLabel: null,
+    repoSoon: true,
   },
   "moteur-jeu": {
     tags: ["React", "TypeScript", "Tauri", "Capacitor", "Web Audio API"],
