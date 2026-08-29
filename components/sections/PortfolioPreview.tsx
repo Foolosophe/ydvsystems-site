@@ -32,11 +32,10 @@ export function PortfolioPreview() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {PORTFOLIO_PREVIEW_IDS.map((id, i) => {
             const tech = PORTFOLIO_TECH[id]
-            const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "moteur-jeu"
-            const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
+            const popupData = tPort.raw(`${id}.popup`) as {
               url: string | null; urlLabel: string | null; image: string
               features: { title: string; description: string }[]
-            }) : null
+            }
 
             const cardEl = (
               <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">

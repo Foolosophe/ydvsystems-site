@@ -93,16 +93,18 @@ export const SERVICE_PREVIEW_IDS = SERVICE_IDS.slice(0, 4)
 // --- PORTFOLIO ---
 
 export const PORTFOLIO_IDS = [
+  // Produits & projets clients
   "ydv-systems",
   "presence-pro",
   "motion-design",
   "plume",
+  "prompt-parfait",
+  "blog-parkinson",
+  // Projets personnels & R&D
   "sophia",
+  "audit-ia-entreprise",
   "moteur-jeu",
   "pills-stadium",
-  "prompt-parfait",
-  "audit-ia-entreprise",
-  "blog-parkinson",
 ] as const
 
 export const PORTFOLIO_CATEGORIES: Record<string, "pro" | "perso"> = {
@@ -110,10 +112,12 @@ export const PORTFOLIO_CATEGORIES: Record<string, "pro" | "perso"> = {
   "presence-pro": "pro",
   "motion-design": "pro",
   "plume": "pro",
-  "sophia": "pro",
   "prompt-parfait": "pro",
-  "audit-ia-entreprise": "pro",
   "blog-parkinson": "pro",
+  // Sophia est presentee comme un projet personnel dans son propre depot, et
+  // l'audit IA est un outil interne : leur place est en R&D.
+  "sophia": "perso",
+  "audit-ia-entreprise": "perso",
   "moteur-jeu": "perso",
   "pills-stadium": "perso",
 }
