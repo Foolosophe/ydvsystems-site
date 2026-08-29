@@ -198,13 +198,13 @@ export const STACK_CATEGORY_KEYS = [
 ] as const
 
 export const STACK_TECHS: Record<string, string[]> = {
-  frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Astro", "Tailwind CSS", "shadcn/ui", "Three.js", "WebGL", "Web Audio API", "GSAP"],
-  backend: ["Node.js", "tRPC", "Prisma", "Drizzle", "Zod", "bcrypt", "JWT", "REST API", "Express"],
-  databases: ["PostgreSQL", "SQLite", "Redis"],
-  ai: ["Claude (Anthropic)", "GPT-4", "Gemini", "Whisper", "Multi-provider"],
+  frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Astro", "Tailwind CSS", "shadcn/ui", "Tiptap", "Three.js", "WebGL", "Web Audio API", "GSAP"],
+  backend: ["Node.js", "Python", "tRPC", "Prisma", "Drizzle", "Zod", "bcrypt", "JWT", "REST API", "WebSocket", "Express"],
+  databases: ["PostgreSQL", "SQLite", "sqlite-vec", "Redis"],
+  ai: ["Claude (Anthropic)", "GPT-4", "Gemini", "OpenRouter", "Multi-provider", "Whisper", "faster-whisper", "Piper TTS", "Silero VAD", "SpeechBrain", "PyTorch"],
   devops: ["Docker", "Coolify", "Nginx", "Let's Encrypt", "Hetzner", "GitHub Actions", "PM2", "Sentry", "Borgbackup"],
   crossPlatform: ["Electron", "Tauri", "Capacitor (iOS/Android)", "PWA"],
-  tools: ["n8n", "Supabase", "Brevo", "Stripe", "Cal.com", "Umami", "Cloudflare Turnstile", "Meta WhatsApp API", "pnpm", "Turborepo", "Vitest", "Playwright"],
+  tools: ["n8n", "FFmpeg", "Supabase", "Brevo", "Stripe", "Cal.com", "Umami", "Cloudflare Turnstile", "Meta WhatsApp API", "pnpm", "Turborepo", "Vitest", "Playwright"],
 }
 
 // --- STATS ---

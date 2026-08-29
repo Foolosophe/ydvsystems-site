@@ -1581,8 +1581,8 @@
               "description": "Un orchestrateur Electron + TypeScript porte le socle, le journal et les garde-fous ; un sidecar Python porte l'audio et les modèles. Les deux dialoguent par WebSocket sur un port unique."
             },
             {
-              "title": "Une mémoire éprouvée en usage réel",
-              "description": "Elle se souvient d'une conversation à l'autre depuis le 31 juillet 2026 — et elle dit d'où elle tient ce qu'elle avance : mémoire vectorielle par thème, carnet, portrait de son interlocuteur, effacement souverain à la demande. Sa personnalité se charge depuis son propre dossier. Près de 90 conversations réelles enchaînées, presque chaque jour — c'est l'usage quotidien qui débusque les défauts."
+              "title": "Une mémoire qui remonte à la première conversation",
+              "description": "Quatre-vingt-huit conversations plus tard, elle se souvient encore de la première — et elle dit d'où elle tient ce qu'elle avance. Ce n'est pas le simple report du dernier échange : mémoire vectorielle organisée par thème, carnet, portrait de son interlocuteur, effacement souverain à la demande. En place depuis le 31 juillet 2026, sa personnalité se charge depuis son propre dossier, et l'ensemble tourne presque chaque jour — c'est l'usage quotidien qui débusque les défauts."
             }
           ]
         }
@@ -1773,6 +1773,17 @@
         "Claude (Anthropic)": "Modèle d'IA conversationnelle avancé d'Anthropic.",
         "GPT-4": "Modèle de langage d'OpenAI pour la génération de texte et le raisonnement.",
         "Gemini": "Modèle d'IA multimodal de Google DeepMind.",
+        "Tiptap": "Éditeur de texte riche « headless », bâti sur ProseMirror.",
+        "Python": "Langage de référence pour l'IA, l'audio et le traitement de données.",
+        "WebSocket": "Canal bidirectionnel temps réel entre un client et un serveur.",
+        "sqlite-vec": "Extension SQLite pour la recherche vectorielle et les plongements.",
+        "OpenRouter": "Passerelle unique vers des dizaines de modèles de langage.",
+        "faster-whisper": "Transcription audio locale — réimplémentation optimisée de Whisper.",
+        "Piper TTS": "Synthèse vocale locale et rapide, avec des voix françaises de qualité.",
+        "Silero VAD": "Détection de la parole dans un flux audio, en temps réel.",
+        "SpeechBrain": "Boîte à outils PyTorch pour la parole, dont la reconnaissance du locuteur.",
+        "PyTorch": "Framework d'apprentissage profond — exécution des modèles en local, sur GPU.",
+        "FFmpeg": "La référence pour l'encodage, le montage et la conversion audio et vidéo.",
         "Multi-provider": "Architecture permettant de basculer entre plusieurs fournisseurs d'IA.",
         "Docker": "Conteneurisation d'applications pour un déploiement reproductible.",
         "Hetzner": "Hébergeur cloud européen performant et abordable.",
