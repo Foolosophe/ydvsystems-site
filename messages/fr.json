@@ -196,13 +196,13 @@
   "about": {
     "meta": {
       "title": "À propos — YdvSystems | Yohann Dandeville, développeur full-stack & fondateur",
-      "description": "Découvrez le parcours de Yohann Dandeville, développeur full-stack freelance et fondateur de YdvSystems. Logiciels métier, IA et développement sur mesure pour le secteur social et la formation."
+      "description": "Découvrez le parcours de Yohann Dandeville, développeur full-stack freelance et fondateur de YdvSystems. Logiciels métier, intégrations IA, assistant vocal, films publicitaires animés et développement sur mesure."
     },
     "hero": {
       "tag": "À propos",
       "title": "Yohann Dandeville",
       "role": "Développeur full-stack & fondateur de YdvSystems",
-      "intro": "Je suis Yohann, développeur fullstack et fondateur de YdvSystems. Je conçois des logiciels métier, des SaaS, des intégrations IA et des expériences interactives — du brief à la mise en production, seul."
+      "intro": "Je suis Yohann, développeur fullstack et fondateur de YdvSystems. Je conçois des logiciels métier, des SaaS, des intégrations IA, des assistants vocaux, des films publicitaires animés et des expériences interactives — du brief à la mise en production, seul."
     },
     "story": {
       "tag": "Parcours",
@@ -224,7 +224,22 @@
         {
           "title": "YDV Platform",
           "status": "comingSoon",
-          "description": "4 logiciels SaaS pour le secteur de l'insertion et de la formation. Architecture multi-tenant, RBAC, IA multi-provider, +7 000 tests automatisés. 102 phases menées seul, du schéma de base de données à l'hébergement sur infrastructure dédiée. Ce que d'autres font en équipe, je le fais seul — pas par économie, par choix architectural."
+          "description": "4 logiciels SaaS pour le secteur de l'insertion et de la formation. Architecture multi-tenant, RBAC, IA multi-provider, +8 000 tests automatisés. 102 phases menées seul, du schéma de base de données à l'hébergement sur infrastructure dédiée. Ce que d'autres font en équipe, je le fais seul — pas par économie, par choix architectural."
+        },
+        {
+          "title": "Plume",
+          "status": "comingSoon",
+          "description": "Mon projet le plus ambitieux architecturalement. Construit autour d'une conviction : le syndrome de la page blanche est un problème de structure, pas d'idées. 17 univers thématiques dont 12 combinables par projet, 30 schémas narratifs classés, un moteur de voix à 5 axes, un co-pilote IA à 10 niveaux d'assistance progressive. Le manuscrit reste sur la machine — un fichier SQLite, jamais dans le cloud — et l'IA fonctionne en BYOK : l'auteur paie directement son fournisseur, sans abonnement. V1.0 en finalisation, environ 1 370 tests. Sur le marché francophone, personne ne fait ça."
+        },
+        {
+          "title": "Sophia",
+          "status": "comingSoon",
+          "description": "Un assistant vocal français, construit à la vue de tous : le vrai code et le journal de sa construction, décision après décision, commit après commit. Pipeline vocal local de bout en bout — capture, détection de parole, transcription, reconnaissance du locuteur, synthèse. Et une mémoire qui tient : à la 88ᵉ conversation, elle se souvient encore de la première, et elle dit d'où elle tient ce qu'elle avance. Chaque travail passe par deux relectures adverses avant d'être figé. Ce projet démontre autant une méthode qu'un produit."
+        },
+        {
+          "title": "Films publicitaires animés",
+          "status": "prod",
+          "description": "Une offre de motion design clé en main : brief, script, animation, sound design, livraison en 5 jours. Le premier film — le teaser de Plume, 48 secondes — est écrit en React sur un moteur de timeline déterministe : les diagrammes sont des SVG calculés, les effets sonores synthétisés en Web Audio et accordés à la musique, le rendu exporté image par image puis assemblé en H.264. Pas de logiciel de montage : du code."
         },
         {
           "title": "Le Prompt Parfait",
@@ -240,11 +255,6 @@
           "title": "Le Château de Dracula",
           "status": "prod",
           "description": "Plus de 40 environnements visuels distincts — cryptes glaciales, portes de l'enfer, cathédrales célestes, chapelles maudites — chacun avec sa propre lumière, sa propre palette, ses animations ambiantes. Brouillard rampant, flammes, éclairs, fumée. Jouable au clavier, à la manette et sur mobile. Ambiance sonore en Web Audio API. Le projet qui illustre le mieux ma dimension créative — la technique au service de l'émotion."
-        },
-        {
-          "title": "Plume",
-          "status": "concept",
-          "description": "Mon projet le plus ambitieux architecturalement. Construit autour d'une conviction : le syndrome de la page blanche est un problème de structure, pas d'idées. 12 univers thématiques combinables, 30 schémas narratifs, un moteur de voix à 5 axes, un co-pilote IA à 10 niveaux d'assistance progressive. Données 100% locales, aucune dépendance cloud. Sur le marché francophone, personne ne fait ça. Je ne construis pas des fonctionnalités — je conçois des systèmes."
         }
       ]
     },
@@ -1335,7 +1345,7 @@
       "ydv-systems": {
         "type": "Suite logicielle SaaS",
         "title": "YDV Platform — 4 logiciels métier",
-        "description": "Suite de 4 logiciels SaaS (Insertion, Formation, Coaching, Manager). Socle de 14 modules, IA multi-provider, +7 000 tests automatisés, RBAC multi-structures.",
+        "description": "Suite de 4 logiciels SaaS (Insertion, Formation, Coaching, Manager). Socle de 14 modules, IA multi-provider, +8 000 tests automatisés, RBAC multi-structures.",
         "popup": {
           "url": "https://ydvsystems.com/solutions",
           "urlLabel": "ydvsystems.com/solutions",

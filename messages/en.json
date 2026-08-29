@@ -196,13 +196,13 @@
   "about": {
     "meta": {
       "title": "About — YdvSystems | Yohann Dandeville, full-stack developer & founder",
-      "description": "Discover the journey of Yohann Dandeville, full-stack freelance developer and founder of YdvSystems. Business software, AI and custom development for the social services and training sector."
+      "description": "Discover the journey of Yohann Dandeville, full-stack freelance developer and founder of YdvSystems. Business software, AI integrations, a voice assistant, animated video ads and custom development."
     },
     "hero": {
       "tag": "About",
       "title": "Yohann Dandeville",
       "role": "Full-stack developer & founder of YdvSystems",
-      "intro": "I build business software for social services, training and coaching. My approach: clean code, solid architecture, and an obsession with the finished product."
+      "intro": "I build business software, SaaS platforms, AI integrations, voice assistants and animated video ads. My approach: clean code, solid architecture, and an obsession with the finished product."
     },
     "story": {
       "tag": "Background",
@@ -224,27 +224,37 @@
         {
           "title": "YDV Platform",
           "status": "comingSoon",
-          "description": "4 SaaS platforms for the social inclusion and training sector. Multi-tenant architecture, RBAC, multi-provider AI, +7,000 automated tests. 102 phases completed solo, from database schema to deployment on dedicated infrastructure. What others do as a team, I do alone — not to save money, but as an architectural choice."
+          "description": "4 SaaS platforms for the social inclusion and training sector. Multi-tenant architecture, RBAC, multi-provider AI, +8,000 automated tests. 102 phases carried out alone, from the database schema to hosting on dedicated infrastructure. What others do as a team, I do alone — not to save money, but as an architectural choice."
+        },
+        {
+          "title": "Plume",
+          "status": "comingSoon",
+          "description": "My most architecturally ambitious project. Built on one conviction: writer's block is a structural problem, not a shortage of ideas. 17 thematic universes, 12 of which can be combined per project, 30 classified narrative structures, a five-axis voice engine, and an AI co-pilot with 10 levels of progressive assistance. The manuscript stays on the machine — a SQLite file, never in the cloud — and the AI runs BYOK: the author pays their provider directly, with no subscription. V1.0 in its final stages, around 1,370 tests. Nobody else does this in the French-speaking market."
+        },
+        {
+          "title": "Sophia",
+          "status": "comingSoon",
+          "description": "A French voice assistant, built in the open: the real code and the logbook of its construction, decision after decision, commit after commit. A local end-to-end voice pipeline — capture, speech detection, transcription, speaker recognition, synthesis. And a memory that holds: by the 88th conversation she still remembers the first, and she says where she gets what she asserts. Every piece of work goes through two adversarial reviews before it is locked. This project demonstrates a method as much as a product."
+        },
+        {
+          "title": "Animated video ads",
+          "status": "prod",
+          "description": "A turnkey motion design offering: brief, script, animation, sound design, delivery in 5 days. The first film — the 48-second Plume teaser — is written in React on a deterministic timeline engine: the diagrams are computed SVG, the sound effects synthesised with the Web Audio API and tuned to the music, the render exported frame by frame then muxed to H.264. No editing suite: code."
         },
         {
           "title": "Le Prompt Parfait",
           "status": "prod",
-          "description": "A PWA available on web, desktop and mobile from a single codebase. A free tool to optimise AI prompts, designed to be accessible to everyone. A simple idea, careful execution, immediately usable result."
+          "description": "A PWA available on web, desktop and mobile from a single codebase. A free tool to optimise AI prompts, designed to be accessible to everyone. A simple idea, careful execution, a result that is immediately usable."
         },
         {
           "title": "Pills Stadium",
           "status": "prod",
-          "description": "A 3D kart game in the browser with AI opponent and real-time physics — pure WebGL, no third-party engine. The core technical challenge: a figure-eight circuit with elevation to form a coherent 3D loop. Playable with keyboard, controller and mobile, directly in a browser, no installation required."
+          "description": "A 3D kart racer in the browser with AI opponents and real-time physics — pure WebGL, no third-party engine. The central technical constraint: a figure-of-eight circuit with elevation to form a genuinely coherent 3D loop. Playable with keyboard, gamepad and on mobile, straight in a browser, with no installation."
         },
         {
           "title": "Le Château de Dracula",
           "status": "prod",
-          "description": "Over 40 distinct visual environments — icy crypts, gates of hell, celestial cathedrals, cursed chapels — each with its own light, palette, and ambient animations. Creeping fog, flames, lightning, smoke. Playable with keyboard, controller and mobile. Web Audio API soundtrack. The project that best illustrates my creative dimension — technique in service of emotion."
-        },
-        {
-          "title": "Plume",
-          "status": "concept",
-          "description": "My most architecturally ambitious project. Built around a conviction: blank page syndrome is a structure problem, not an ideas problem. 12 combinable thematic universes, 30 narrative schemas, a 5-axis voice engine, an AI co-pilot with 10 levels of progressive assistance. 100% local data, no cloud dependency. On the French-speaking market, nobody does this. I don't build features — I design systems."
+          "description": "Over 40 distinct visual environments — freezing crypts, gates of hell, celestial cathedrals, cursed chapels — each with its own lighting, palette and ambient animations. Creeping fog, flames, lightning, smoke. Playable with keyboard, gamepad and on mobile. Sound design with the Web Audio API. The project that best illustrates my creative side — technique in the service of emotion."
         }
       ]
     },
@@ -1335,7 +1345,7 @@
       "ydv-systems": {
         "type": "SaaS Suite",
         "title": "YDV Platform — 4 business applications",
-        "description": "Suite of 4 SaaS applications (Insertion, Formation, Coaching, Manager). 14 core modules, multi-provider AI, 7,000+ automated tests, multi-site RBAC.",
+        "description": "Suite of 4 SaaS applications (Insertion, Formation, Coaching, Manager). 14 core modules, multi-provider AI, 8,000+ automated tests, multi-site RBAC.",
         "popup": {
           "url": "https://ydvsystems.com/en/solutions",
           "urlLabel": "ydvsystems.com/solutions",
