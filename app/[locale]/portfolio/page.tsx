@@ -11,6 +11,7 @@ import { PORTFOLIO_IDS, PORTFOLIO_TECH, PORTFOLIO_CATEGORIES, GAME_URLS } from "
 import { StatsGrid } from "@/components/StatsGrid"
 import { TechStack } from "@/components/TechStack"
 import { PopupCard } from "@/components/portfolio/PopupCard"
+import { internalPath } from "@/lib/links"
 import { getPageAlternates } from "@/lib/metadata"
 
 export async function generateMetadata({
@@ -120,14 +121,16 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "pro").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "blog-parkinson" || id === "audit-ia-entreprise" || id === "presence-pro" || id === "motion-design" || id === "plume" || id === "sophia"
+              // Un lien vers le site reste dans l'onglet : sinon nouvel onglet,
+              // nouvelle session, et l'ecran de chargement rejouait.
+              const interne = internalPath(tech.url)
               // Statut explicite : une carte peut n'avoir aucune URL publique sans etre
               // "a venir" — Sophia est active, seul son depot n'est pas encore ouvert.
               const comingSoon = tech.comingSoon === true
-              const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
+              const popupData = tPort.raw(`${id}.popup`) as {
                 url: string | null; urlLabel: string | null; image: string
                 features: { title: string; description: string }[]
-              }) : null
+              }
 
               const cardEl = (
                 <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">
@@ -155,15 +158,25 @@ export default async function PortfolioPage() {
                         <h2 className="text-lg font-bold text-foreground">{tPort(`${id}.title`)}</h2>
                       </div>
                       {tech.url && (
-                        <a
-                          href={tech.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors shrink-0 mt-1"
-                          aria-label={t("visit", { title: tPort(`${id}.title`) })}
-                        >
-                          <ExternalLink size={18} />
-                        </a>
+                        interne ? (
+                          <Link
+                            href={interne}
+                            className="text-muted-foreground hover:text-primary transition-colors shrink-0 mt-1"
+                            aria-label={t("visit", { title: tPort(`${id}.title`) })}
+                          >
+                            <ArrowRight size={18} />
+                          </Link>
+                        ) : (
+                          <a
+                            href={tech.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors shrink-0 mt-1"
+                            aria-label={t("visit", { title: tPort(`${id}.title`) })}
+                          >
+                            <ExternalLink size={18} />
+                          </a>
+                        )
                       )}
                     </div>
                   </CardHeader>
@@ -177,15 +190,25 @@ export default async function PortfolioPage() {
                       ))}
                     </div>
                     {tech.urlLabel && (
-                      <a
-                        href={tech.url!}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-(--accent-hover) transition-colors"
-                      >
-                        {tech.urlLabel}
-                        <ExternalLink size={12} />
-                      </a>
+                      interne ? (
+                        <Link
+                          href={interne}
+                          className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-(--accent-hover) transition-colors"
+                        >
+                          {tech.urlLabel}
+                          <ArrowRight size={12} />
+                        </Link>
+                      ) : (
+                        <a
+                          href={tech.url!}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-(--accent-hover) transition-colors"
+                        >
+                          {tech.urlLabel}
+                          <ExternalLink size={12} />
+                        </a>
+                      )
                     )}
                     {tech.repoSoon && (
                       <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
@@ -233,11 +256,13 @@ export default async function PortfolioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {PORTFOLIO_IDS.filter((id) => PORTFOLIO_CATEGORIES[id] === "perso").map((id, i) => {
               const tech = PORTFOLIO_TECH[id]
-              const hasPopup = id === "moteur-jeu" || id === "pills-stadium"
-              const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
+              // Un lien vers le site reste dans l'onglet : sinon nouvel onglet,
+              // nouvelle session, et l'ecran de chargement rejouait.
+              const interne = internalPath(tech.url)
+              const popupData = tPort.raw(`${id}.popup`) as {
                 url: string | null; urlLabel: string | null; image: string
                 features: { title: string; description: string }[]
-              }) : null
+              }
 
               const cardEl = (
                 <Card className="bg-white border-border overflow-hidden hover:border-primary/30 transition-all duration-200 hover:shadow-(--shadow-card-hover) card-tilt group h-full">
@@ -271,6 +296,12 @@ export default async function PortfolioPage() {
                           </Badge>
                         ))}
                       </div>
+                      {tech.repoSoon && (
+                        <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                          <Github size={12} />
+                          {t("repoSoon")}
+                        </p>
+                      )}
                       <div className="flex flex-wrap items-center gap-3">
                         {tech.urlLabel && (
                           <a
