@@ -202,17 +202,18 @@ export default async function PortfolioPage() {
                         {t("watchFilm")}
                       </Link>
                     )}
+                    {popupData && (
+                      <div className="pt-1">
+                        <PopupCard popup={popupData} label={t("viewSpecs")} />
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               )
 
               return (
                 <AnimateOnScroll key={id} delay={i * 100}>
-                  {popupData ? (
-                    <PopupCard popup={popupData}>{cardEl}</PopupCard>
-                  ) : (
-                    cardEl
-                  )}
+                  {cardEl}
                 </AnimateOnScroll>
               )
             })}
@@ -293,6 +294,9 @@ export default async function PortfolioPage() {
                             {t("playOnline")}
                           </a>
                         )}
+                        {popupData && (
+                          <PopupCard popup={popupData} label={t("viewSpecs")} />
+                        )}
                       </div>
                     </CardContent>
                   </Card>
@@ -300,11 +304,7 @@ export default async function PortfolioPage() {
 
               return (
                 <AnimateOnScroll key={id} delay={i * 100}>
-                  {popupData ? (
-                    <PopupCard popup={popupData}>{cardEl}</PopupCard>
-                  ) : (
-                    cardEl
-                  )}
+                  {cardEl}
                 </AnimateOnScroll>
               )
             })}

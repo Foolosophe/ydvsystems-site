@@ -12,6 +12,7 @@ import { PopupCard } from "@/components/portfolio/PopupCard"
 export function PortfolioPreview() {
   const t = useTranslations("home.portfolio")
   const tPort = useTranslations("data.portfolio")
+  const tCommon = useTranslations("portfolio")
 
   return (
     <section className="py-20 sm:py-28 bg-secondary">
@@ -33,7 +34,7 @@ export function PortfolioPreview() {
             const tech = PORTFOLIO_TECH[id]
             const hasPopup = id === "prompt-parfait" || id === "ydv-systems" || id === "moteur-jeu"
             const popupData = hasPopup ? (tPort.raw(`${id}.popup`) as {
-              url: string; urlLabel: string; image: string
+              url: string | null; urlLabel: string | null; image: string
               features: { title: string; description: string }[]
             }) : null
 
@@ -55,17 +56,18 @@ export function PortfolioPreview() {
                       </Badge>
                     ))}
                   </div>
+                  {popupData && (
+                    <div className="pt-1">
+                      <PopupCard popup={popupData} label={tCommon("viewSpecs")} />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             )
 
             return (
               <AnimateOnScroll key={id} delay={i * 100}>
-                {popupData ? (
-                  <PopupCard popup={popupData}>{cardEl}</PopupCard>
-                ) : (
-                  cardEl
-                )}
+                {cardEl}
               </AnimateOnScroll>
             )
           })}

@@ -1,8 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { ExternalLink } from "lucide-react"
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
+import { ExternalLink, ListTree } from "lucide-react"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
 interface PopupFeature {
   title: string
@@ -18,19 +18,28 @@ interface PopupData {
 
 interface PopupCardProps {
   popup: PopupData
-  children: React.ReactNode
+  label: string
 }
 
-export function PopupCard({ popup, children }: PopupCardProps) {
+// Ouverture au clic, et non au survol : le survol laissait ce contenu
+// totalement hors d'atteinte sur mobile et sur tablette, et rien n'indiquait
+// qu'il existait.
+export function PopupCard({ popup, label }: PopupCardProps) {
   return (
-    <HoverCard openDelay={200} closeDelay={100}>
-      <HoverCardTrigger asChild>
-        <div className="h-full cursor-default">{children}</div>
-      </HoverCardTrigger>
-      <HoverCardContent
-        side="right"
+    <Popover>
+      <PopoverTrigger asChild>
+        <button
+          type="button"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-(--accent-hover) transition-colors cursor-pointer"
+        >
+          <ListTree size={13} />
+          {label}
+        </button>
+      </PopoverTrigger>
+      <PopoverContent
+        side="bottom"
         align="start"
-        className="w-[440px] p-0 overflow-hidden"
+        className="w-[min(440px,calc(100vw-2rem))] p-0 overflow-hidden"
         sideOffset={12}
       >
         <div className="relative w-full h-44 bg-secondary shrink-0">
@@ -63,7 +72,7 @@ export function PopupCard({ popup, children }: PopupCardProps) {
             </a>
           )}
         </div>
-      </HoverCardContent>
-    </HoverCard>
+      </PopoverContent>
+    </Popover>
   )
 }
