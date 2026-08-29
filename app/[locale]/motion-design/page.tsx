@@ -174,35 +174,36 @@ export default async function MotionDesignPage({
       {/* Exemple reel — le film Plume */}
       <section id="exemple" className="py-20 bg-secondary scroll-mt-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll>
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-              <div>
-                <p className="section-tag">{t("example.tag")}</p>
-                <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-                  {t("example.title")}
-                </h2>
-              </div>
-              <p className="text-sm font-medium text-muted-foreground sm:text-right">
-                {t("example.meta")}
-              </p>
+          {/* Pas de revelation au scroll ici : sur un ecran court (portable
+              1366x768) le bloc restait invisible alors qu'il etait deja a
+              l'ecran — une bande blanche au lieu du film. */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <p className="section-tag">{t("example.tag")}</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+                {t("example.title")}
+              </h2>
             </div>
+            <p className="text-sm font-medium text-muted-foreground sm:text-right">
+              {t("example.meta")}
+            </p>
+          </div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-border shadow-(--shadow-card-hover) bg-black">
-              <div className="relative w-full pt-[56.25%]">
-                <video
-                  controls
-                  playsInline
-                  preload="none"
-                  poster="/motion-design/plume-poster.jpg"
-                  aria-label={t("example.videoTitle")}
-                  className="absolute inset-0 w-full h-full"
-                >
-                  <source src="/motion-design/plume-teaser.mp4" type="video/mp4" />
-                  <a href="/motion-design/plume-teaser.mp4">{t("example.fallback")}</a>
-                </video>
-              </div>
+          <div className="relative rounded-2xl overflow-hidden border border-border shadow-(--shadow-card-hover) bg-black">
+            <div className="relative w-full pt-[56.25%]">
+              <video
+                controls
+                playsInline
+                preload="none"
+                poster="/motion-design/plume-poster.jpg"
+                aria-label={t("example.videoTitle")}
+                className="absolute inset-0 w-full h-full"
+              >
+                <source src="/motion-design/plume-teaser.mp4" type="video/mp4" />
+                <a href="/motion-design/plume-teaser.mp4">{t("example.fallback")}</a>
+              </video>
             </div>
-          </AnimateOnScroll>
+          </div>
         </div>
       </section>
 
