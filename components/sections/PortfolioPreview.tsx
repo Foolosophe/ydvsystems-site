@@ -47,7 +47,7 @@ export function PortfolioPreview() {
                   </Badge>
                   <h3 className="text-lg font-bold text-foreground">{tPort(`${id}.title`)}</h3>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="flex flex-1 flex-col gap-3">
                   <p className="text-sm text-secondary-foreground leading-relaxed">{tPort(`${id}.description`)}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {tech.tags.map((tag) => (
@@ -57,7 +57,7 @@ export function PortfolioPreview() {
                     ))}
                   </div>
                   {popupData && (
-                    <div className="pt-1">
+                    <div className="mt-auto pt-1">
                       <PopupCard popup={popupData} label={tCommon("viewSpecs")} />
                     </div>
                   )}

@@ -167,7 +167,7 @@ export default async function PortfolioPage() {
                       )}
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="flex flex-1 flex-col gap-4">
                     <p className="text-sm text-secondary-foreground leading-relaxed">{tPort(`${id}.description`)}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {tech.tags.map((tag) => (
@@ -203,7 +203,7 @@ export default async function PortfolioPage() {
                       </Link>
                     )}
                     {popupData && (
-                      <div className="pt-1">
+                      <div className="mt-auto pt-1">
                         <PopupCard popup={popupData} label={t("viewSpecs")} />
                       </div>
                     )}
@@ -262,7 +262,7 @@ export default async function PortfolioPage() {
                         )}
                       </div>
                     </CardHeader>
-                    <CardContent className="space-y-4">
+                    <CardContent className="flex flex-1 flex-col gap-4">
                       <p className="text-sm text-secondary-foreground leading-relaxed">{tPort(`${id}.description`)}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {tech.tags.map((tag) => (
@@ -294,10 +294,12 @@ export default async function PortfolioPage() {
                             {t("playOnline")}
                           </a>
                         )}
-                        {popupData && (
-                          <PopupCard popup={popupData} label={t("viewSpecs")} />
-                        )}
                       </div>
+                      {popupData && (
+                        <div className="mt-auto pt-1">
+                          <PopupCard popup={popupData} label={t("viewSpecs")} />
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
               )
