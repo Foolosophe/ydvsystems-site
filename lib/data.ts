@@ -123,7 +123,7 @@ export const GAME_URLS: Record<string, string> = {
   "pills-stadium": "https://kart.ydvsystems.com",
 }
 
-export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null; urlLabel: string | null }> = {
+export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null; urlLabel: string | null; film?: string }> = {
   "ydv-systems": {
     tags: ["Next.js", "tRPC", "Prisma", "PostgreSQL", "IA", "RBAC"],
     url: "https://ydvsystems.com/solutions",
@@ -143,6 +143,8 @@ export const PORTFOLIO_TECH: Record<string, { tags: string[]; url: string | null
     tags: ["Electron", "TypeScript", "React", "Tiptap", "SQLite", "Drizzle"],
     url: null,
     urlLabel: null,
+    // Pas de site public (logiciel desktop) : on renvoie vers son film de lancement.
+    film: "/motion-design/plume",
   },
   "moteur-jeu": {
     tags: ["React", "TypeScript", "Tauri", "Capacitor", "Web Audio API"],

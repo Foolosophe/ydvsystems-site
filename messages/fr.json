@@ -167,6 +167,7 @@
     "persoTitle": "Projets personnels & R&D",
     "visit": "Visiter {title}",
     "comingSoon": "Bientôt",
+    "watchFilm": "Voir le film de présentation",
     "playOnline": "Jouer en ligne",
     "play": {
       "launchGame": "Lancer le jeu",
@@ -761,7 +762,7 @@
       "fallback": "Votre navigateur ne peut pas lire cette vidéo. Télécharger le film (MP4)"
     },
     "stats": [
-      { "value": "4 000 €+", "label": "le tarif agence habituel pour un film équivalent" },
+      { "value": "−65 %", "label": "en moyenne par rapport à une agence, qui facture 4 000 € et plus pour un film équivalent" },
       { "value": "5 jours", "label": "de la validation du brief à la livraison finale" },
       { "value": "100 %", "label": "propriété du film à vous, à réception du solde" }
     ],
@@ -893,6 +894,63 @@
       "button": "Demander un devis gratuit",
       "emailLabel": "Ou écrivez-moi directement :",
       "response": "Réponse sous 24 h · Devis gratuit et sans engagement"
+    }
+  },
+  "plumeFilm": {
+    "meta": {
+      "title": "Plume — film de lancement | Films publicitaires animés YdvSystems",
+      "description": "Le film publicitaire animé de Plume : 48 secondes, Full HD, conçu et produit par YdvSystems à partir d'un simple pitch. Regardez-le et découvrez l'offre."
+    },
+    "hero": {
+      "tag": "Film de lancement",
+      "title": "Plume — film de lancement",
+      "meta": "48 s · 16:9 · Full HD 1920×1080"
+    },
+    "player": {
+      "label": "Film publicitaire animé Plume — réalisation YdvSystems",
+      "play": "Lancer le film",
+      "fallback": "Votre navigateur ne peut pas lire cette vidéo. Télécharger le film (MP4)",
+      "soundHint": "48 secondes, avec le son — la musique et les effets sont synchronisés à l'image."
+    },
+    "facts": [
+      {
+        "value": "48 s",
+        "label": "Durée"
+      },
+      {
+        "value": "10",
+        "label": "Scènes animées"
+      },
+      {
+        "value": "60 fps",
+        "label": "Full HD 1920×1080"
+      },
+      {
+        "value": "5 jours",
+        "label": "Du brief à la livraison"
+      }
+    ],
+    "brief": {
+      "tag": "Le projet",
+      "title": "D'un simple pitch à un film complet",
+      "paragraph1": "Plume est un atelier d'écriture desktop pour romanciers. Le point de départ tenait en quelques phrases : un logiciel qui aide à structurer un roman, et pas seulement à taper du texte. Aucun visuel existant, aucune charte, aucune image de marque à réutiliser.",
+      "paragraph2": "Le film construit tout : une identité à l'encre et à la plume, une narration en dix scènes qui part du syndrome de la page blanche pour arriver au manuscrit fini, et des diagrammes animés qui montrent les fonctions clés du logiciel plutôt que de les énumérer."
+    },
+    "madeWith": {
+      "title": "Comment il a été fait",
+      "items": [
+        "Chaque scène est écrite en React sur un moteur de timeline déterministe — pas de calques dans un logiciel de montage.",
+        "Les diagrammes (mélangeur, arc narratif, radar, jauge, phases) sont des SVG calculés puis animés image par image.",
+        "Le sound design est synthétisé en Web Audio et accordé à la musique (fa majeur / ré mineur), avec une réverb commune.",
+        "Le rendu final est déterministe : export image par image en 1920×1080, puis assemblage FFmpeg en H.264 à 60 fps."
+      ]
+    },
+    "cta": {
+      "title": "Un film comme celui-ci pour votre projet ?",
+      "description": "Même méthode, même exigence — à partir de 990 € HT, livré en 5 jours.",
+      "offer": "Voir l'offre complète",
+      "quote": "Demander un devis",
+      "back": "Retour au portfolio"
     }
   },
   "solutions": {

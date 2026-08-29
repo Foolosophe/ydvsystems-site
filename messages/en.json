@@ -167,6 +167,7 @@
     "persoTitle": "Personal projects & R&D",
     "visit": "Visit {title}",
     "comingSoon": "Coming soon",
+    "watchFilm": "Watch the presentation film",
     "playOnline": "Play online",
     "play": {
       "launchGame": "Launch game",
@@ -761,7 +762,7 @@
       "fallback": "Your browser cannot play this video. Download the film (MP4)"
     },
     "stats": [
-      { "value": "€4,000+", "label": "the usual agency price for an equivalent film" },
+      { "value": "−65%", "label": "on average versus an agency, which charges €4,000 and up for a comparable film" },
       { "value": "5 days", "label": "from approved brief to final delivery" },
       { "value": "100%", "label": "ownership of the film is yours once the balance is paid" }
     ],
@@ -893,6 +894,63 @@
       "button": "Get a free quote",
       "emailLabel": "Or email me directly:",
       "response": "Reply within 24 hours · Free quote, no commitment"
+    }
+  },
+  "plumeFilm": {
+    "meta": {
+      "title": "Plume — launch film | YdvSystems animated video ads",
+      "description": "The animated ad film for Plume: 48 seconds, Full HD, designed and produced by YdvSystems from a simple pitch. Watch it, then discover the offer."
+    },
+    "hero": {
+      "tag": "Launch film",
+      "title": "Plume — launch film",
+      "meta": "48 s · 16:9 · Full HD 1920×1080"
+    },
+    "player": {
+      "label": "Plume animated ad film — produced by YdvSystems",
+      "play": "Play the film",
+      "fallback": "Your browser cannot play this video. Download the film (MP4)",
+      "soundHint": "48 seconds, with sound — the music and effects are synced to the picture."
+    },
+    "facts": [
+      {
+        "value": "48 s",
+        "label": "Runtime"
+      },
+      {
+        "value": "10",
+        "label": "Animated scenes"
+      },
+      {
+        "value": "60 fps",
+        "label": "Full HD 1920×1080"
+      },
+      {
+        "value": "5 days",
+        "label": "Brief to delivery"
+      }
+    ],
+    "brief": {
+      "tag": "The project",
+      "title": "From a simple pitch to a finished film",
+      "paragraph1": "Plume is a desktop writing studio for novelists. The starting point was a few sentences: software that helps structure a novel, not just type text into it. No existing visuals, no brand guidelines, no artwork to reuse.",
+      "paragraph2": "The film builds all of it: an identity built on ink and a quill, a ten-scene narrative running from the blank-page problem through to a finished manuscript, and animated diagrams that show the software's key ideas rather than listing them."
+    },
+    "madeWith": {
+      "title": "How it was made",
+      "items": [
+        "Every scene is written in React on a deterministic timeline engine — no layers in an editing suite.",
+        "The diagrams (blender, narrative arc, radar, gauge, phases) are computed SVG, animated frame by frame.",
+        "The sound design is synthesised with the Web Audio API and tuned to the music (F major / D minor), with a shared reverb.",
+        "The final render is deterministic: frame-by-frame export at 1920×1080, then an FFmpeg mux to H.264 at 60 fps."
+      ]
+    },
+    "cta": {
+      "title": "Want a film like this for your project?",
+      "description": "Same method, same standard — from €990 excl. VAT, delivered in 5 days.",
+      "offer": "See the full offer",
+      "quote": "Request a quote",
+      "back": "Back to the portfolio"
     }
   },
   "solutions": {

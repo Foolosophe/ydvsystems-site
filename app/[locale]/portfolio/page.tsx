@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { ArrowRight, ExternalLink, Gamepad2, Clock } from "lucide-react"
+import { ArrowRight, ExternalLink, Gamepad2, Clock, Play } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
 import { PORTFOLIO_IDS, PORTFOLIO_TECH, PORTFOLIO_CATEGORIES, GAME_URLS } from "@/lib/data"
@@ -185,6 +185,15 @@ export default async function PortfolioPage() {
                         {tech.urlLabel}
                         <ExternalLink size={12} />
                       </a>
+                    )}
+                    {tech.film && (
+                      <Link
+                        href={tech.film}
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-(--accent-hover) transition-colors"
+                      >
+                        <Play size={12} className="fill-current" />
+                        {t("watchFilm")}
+                      </Link>
                     )}
                   </CardContent>
                 </Card>
