@@ -4,6 +4,7 @@
       "prestations": "Services",
       "solutions": "Products",
       "vitrine": "Showcase site",
+      "motionDesign": "Video ads",
       "pricing": "Pricing",
       "portfolio": "Portfolio",
       "blog": "Blog",
@@ -16,6 +17,7 @@
       "prestations": "Services",
       "ressources": "Resources",
       "vitrine": "Showcase site",
+      "motionDesign": "Video ads",
       "customDev": "Custom development",
       "iaIntegration": "AI integration",
       "workshops": "Workshops & training",
@@ -83,6 +85,15 @@
       "feature3": "Hosted and maintained — nothing to manage",
       "cta": "Discover Présence Pro"
     },
+    "motionDesign": {
+      "badge": "New",
+      "title": "Animated video ads, delivered in 5 days",
+      "description": "A ~45-second film to showcase your product, service or project — agency quality, without the agency budget or timeline.",
+      "feature1": "Brief, script and animation included",
+      "feature2": "Full HD 1920×1080, MP4 ready to publish",
+      "feature3": "From €990 excl. VAT",
+      "cta": "Watch an example"
+    },
     "cta": {
       "title": "Have a project? Let's talk.",
       "description": "Whether it's a freelance mission, a product demo or a quick question — I respond within 24 hours.",
@@ -115,6 +126,12 @@
       "description": "From custom development to AI integration, including training and audits."
     },
     "expertiseTitle": "Core expertise",
+    "motionDesignBanner": {
+      "title": "Animated video ads",
+      "description": "A ~45-second motion design film to showcase your product, your service or your project. Brief, script, animation, audio and Full HD MP4 delivery — all within 5 days.",
+      "price": "From €990 excl. VAT",
+      "cta": "See the offer"
+    },
     "otherTitle": "Other skills",
     "process": {
       "tag": "Process",
@@ -309,6 +326,7 @@
       "atelier-ia": "AI workshop / Training",
       "audit-ia": "AI maturity audit",
       "automatisation": "Workflow automation (N8N)",
+      "film-publicitaire": "Animated video ad",
       "demo-insertion": "Demo YDV Insertion",
       "demo-formation": "Demo YDV Formation",
       "demo-autre": "Demo other product",
@@ -340,6 +358,7 @@
       "colDescription": "Description",
       "colJours": "Days/month",
       "retainerNote": "Unused days in the month are not carried over. Monthly commitment, cancellable at any time with 15 days notice.",
+      "seeExamples": "Watch an example film and see the full offer",
       "services": [
         {
           "title": "Custom development",
@@ -376,6 +395,16 @@
             { "label": "Express audit (2h)", "price": "600 €", "description": "Quick assessment with priority recommendations." },
             { "label": "Full audit + report", "price": "1 500 €", "description": "In-depth analysis, detailed report, action plan." },
             { "label": "Audit + roadmap + 30-day follow-up", "price": "2 500 €", "description": "Full support through to implementation." }
+          ]
+        },
+        {
+          "title": "Animated video ads",
+          "description": "Turnkey motion design: brief, script, animation, audio and Full HD MP4 delivery. Delivered in 5 days.",
+          "link": "/motion-design",
+          "rows": [
+            { "label": "Essential", "price": "990 €", "description": "~30 s · 16:9 Full HD · logo + 1 visual · royalty-free music · 2 rounds of revisions." },
+            { "label": "Pro", "price": "1 690 €", "description": "45–60 s · 16:9 + vertical 9:16 · full brand guidelines · synced music · 3 rounds of revisions." },
+            { "label": "Bespoke", "price": "On quote", "description": "Series of films, any format, subtitling, campaign variations, express delivery." }
           ]
         },
         {
@@ -702,6 +731,166 @@
       "title": "A website or store project?",
       "description": "Let's talk — I respond within 24 hours.",
       "contact": "Contact me"
+    }
+  },
+  "motionDesign": {
+    "meta": {
+      "title": "Animated video ads — Motion design delivered in 5 days | YdvSystems",
+      "description": "A ~45-second animated ad film, fully turnkey: brief, script, animation, audio and Full HD MP4 delivery. From €990 excl. VAT, delivered in 5 days."
+    },
+    "hero": {
+      "tag": "Motion design · Delivered in 5 days",
+      "title1": "Animated ad films at ",
+      "titleHighlight": "agency level",
+      "title2": ".",
+      "subtitle": "A ~45-second turnkey film to showcase your product, your service or your project — without the budget or the timeline of an agency.",
+      "ctaPrimary": "Get a free quote",
+      "ctaSecondary": "Watch an example",
+      "reassurance": [
+        "Brief & script included",
+        "Full HD 1920×1080",
+        "MP4 ready to publish"
+      ]
+    },
+    "example": {
+      "tag": "Real example",
+      "title": "Plume — launch film",
+      "meta": "48 s · 16:9 · made from a simple pitch",
+      "iframeTitle": "Plume animated ad film — YdvSystems showreel example"
+    },
+    "stats": [
+      { "value": "€4,000+", "label": "the usual agency price for an equivalent film" },
+      { "value": "5 days", "label": "from approved brief to final delivery" },
+      { "value": "100%", "label": "ownership of the film is yours once the balance is paid" }
+    ],
+    "included": {
+      "tag": "What's included",
+      "title": "Everything included, end to end",
+      "subtitle": "You provide your key messages and your logo. I handle the rest.",
+      "items": [
+        {
+          "title": "Brief & narrative structure",
+          "description": "An analysis of your business and your audience, then a scene-by-scene structure (hook, problem, solution, proof, call to action) — approved before production starts."
+        },
+        {
+          "title": "Visual production",
+          "description": "A consistent identity (palette, typography, style), smooth animation of text, shapes and diagrams, and integration of your existing visuals. Full HD 1920×1080."
+        },
+        {
+          "title": "Synchronised audio",
+          "description": "Background music (yours, or a royalty-free selection), timed to the rhythm of the animation, with an automatic outro fade."
+        },
+        {
+          "title": "Turnkey delivery",
+          "description": "An HD MP4 file ready to publish (Facebook, Instagram, YouTube, LinkedIn, your website). Revisions included before the final export."
+        }
+      ]
+    },
+    "pricing": {
+      "tag": "Pricing",
+      "title": "Clear pricing",
+      "subtitle": "No surprises. 50% deposit on order, the balance on delivery.",
+      "recommended": "★ Recommended",
+      "note": "Prices excluding tax. VAT not applicable — article 293 B of the French tax code. Something specific in mind (rush job, unusual format)? Ask for a tailored quote.",
+      "plans": [
+        {
+          "name": "Essential",
+          "price": "€990",
+          "priceSuffix": "excl. VAT",
+          "tagline": "A short, sharp spot to get started.",
+          "features": [
+            "~30-second animated film",
+            "16:9 format (Full HD)",
+            "Logo + 1 visual integrated",
+            "Royalty-free music",
+            "2 rounds of revisions",
+            "Delivered within 5 days"
+          ],
+          "cta": "Choose Essential"
+        },
+        {
+          "name": "Pro",
+          "price": "€1,690",
+          "priceSuffix": "excl. VAT",
+          "tagline": "The complete film, for every platform.",
+          "features": [
+            "45–60 second animated film",
+            "16:9 + vertical 9:16 (Reels/TikTok)",
+            "Full brand guidelines applied",
+            "Music synced to the edit",
+            "3 rounds of revisions",
+            "Delivered within 5–7 days"
+          ],
+          "cta": "Choose Pro"
+        },
+        {
+          "name": "Bespoke",
+          "price": "On quote",
+          "priceSuffix": "",
+          "tagline": "For more ambitious needs.",
+          "features": [
+            "A consistent series of films",
+            "Any length & format",
+            "Subtitling / language versions",
+            "Campaign variations",
+            "Express delivery option",
+            "Dedicated support"
+          ],
+          "cta": "Get in touch"
+        }
+      ]
+    },
+    "process": {
+      "tag": "How it works",
+      "title": "5 days, 5 steps",
+      "subtitle": "A simple, transparent process from brief to delivery.",
+      "steps": [
+        {
+          "day": "Brief — Day 1",
+          "title": "Brief",
+          "description": "We discuss your business, your audience, your messages. You send your logo & music."
+        },
+        {
+          "day": "Script — Days 1–2",
+          "title": "Script",
+          "description": "A scene-by-scene narrative structure, approved before any production begins."
+        },
+        {
+          "day": "Production — Days 2–4",
+          "title": "Production",
+          "description": "Scene animation, audio integration, assembly of the film."
+        },
+        {
+          "day": "Delivery — Day 4",
+          "title": "Delivery",
+          "description": "You receive the MP4 to review and share your feedback."
+        },
+        {
+          "day": "Final — Day 5",
+          "title": "Final cut",
+          "description": "Changes based on your feedback, then the final export."
+        }
+      ]
+    },
+    "useCases": {
+      "tag": "Use cases",
+      "title": "Who is it for?",
+      "subtitle": "Small businesses, SMEs, freelancers and project founders.",
+      "items": [
+        "SaaS product or mobile app",
+        "Local craftspeople or shops",
+        "Book or course launch",
+        "Coaches, consultants, therapists",
+        "Recruitment & employer branding",
+        "Investor presentations"
+      ]
+    },
+    "cta": {
+      "title": "Let's talk about your project",
+      "description": "Describe what you need in a few words — I'll get back to you within 24 hours with a clear proposal.",
+      "button": "Get a free quote",
+      "emailLabel": "Or email me directly:",
+      "response": "Reply within 24 hours · Free quote, no commitment"
     }
   },
   "solutions": {

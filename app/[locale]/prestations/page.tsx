@@ -13,6 +13,7 @@ import {
   Gamepad2,
   Heart,
   CalendarClock,
+  Clapperboard,
   ArrowRight,
 } from "lucide-react"
 import { AnimateOnScroll } from "@/components/AnimateOnScroll"
@@ -177,6 +178,41 @@ export default async function PrestationsPage() {
               </AnimateOnScroll>
             ))}
           </div>
+
+          {/* Bandeau Films publicitaires animes */}
+          <AnimateOnScroll delay={480}>
+            <div className="mt-10 relative rounded-2xl border border-primary/20 bg-white overflow-hidden shadow-(--shadow-glow)">
+              <div
+                className="h-1 w-full solution-brand-underline"
+                style={{ "--solution-color": "#00bcd4" } as React.CSSProperties}
+              />
+              <div className="flex flex-col sm:flex-row sm:items-center gap-6 p-6 sm:p-8 group">
+                <div className="w-12 h-12 rounded-xl bg-(--accent-subtle) text-primary flex items-center justify-center shrink-0 solution-icon-box">
+                  <Clapperboard size={26} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-foreground mb-1.5">
+                    {t("motionDesignBanner.title")}
+                  </h3>
+                  <p className="text-sm text-secondary-foreground leading-relaxed">
+                    {t("motionDesignBanner.description")}
+                  </p>
+                  <p className="text-sm font-semibold text-primary mt-2">
+                    {t("motionDesignBanner.price")}
+                  </p>
+                </div>
+                <Button
+                  asChild
+                  className="bg-primary hover:bg-(--accent-hover) text-foreground font-semibold gap-2 shrink-0 btn-glow"
+                >
+                  <Link href="/motion-design">
+                    {t("motionDesignBanner.cta")}
+                    <ArrowRight size={16} />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 

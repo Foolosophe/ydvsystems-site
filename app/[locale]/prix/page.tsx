@@ -22,7 +22,7 @@ export default function PrixPage() {
   const calcPrice = (base: number) => Math.round(base * multiplier)
 
   const TIERS = ["solo", "starter", "pro", "business"] as const
-  const freelanceServices = t.raw("freelance.services") as { title: string; description: string; isRetainer?: boolean; rows: { label: string; days?: string; price: string; description: string }[] }[]
+  const freelanceServices = t.raw("freelance.services") as { title: string; description: string; isRetainer?: boolean; link?: string; rows: { label: string; days?: string; price: string; description: string }[] }[]
   const FAQ = t.raw("faq.items") as { question: string; answer: string }[]
   const socleModules = t.raw("socle.modules") as string[]
   const tierRows = t.raw("tiers.rows") as { label: string; values: string[] }[]
@@ -180,6 +180,15 @@ export default function PrixPage() {
                       </div>
                       {service.isRetainer && (
                         <p className="text-xs text-muted-foreground mt-4 italic">{t("freelance.retainerNote")}</p>
+                      )}
+                      {service.link && (
+                        <Link
+                          href={service.link}
+                          className="inline-flex items-center gap-1.5 mt-4 text-sm text-primary hover:text-(--accent-hover) font-semibold transition-colors"
+                        >
+                          {t("freelance.seeExamples")}
+                          <ArrowRight size={14} />
+                        </Link>
                       )}
                     </CardContent>
                   </Card>

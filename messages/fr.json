@@ -4,6 +4,7 @@
       "prestations": "Prestations",
       "solutions": "Solutions",
       "vitrine": "Site vitrine",
+      "motionDesign": "Films publicitaires",
       "pricing": "Prix",
       "portfolio": "Portfolio",
       "blog": "Blog",
@@ -16,6 +17,7 @@
       "prestations": "Prestations",
       "ressources": "Ressources",
       "vitrine": "Site vitrine",
+      "motionDesign": "Films publicitaires",
       "customDev": "Développement sur mesure",
       "iaIntegration": "Intégration IA",
       "workshops": "Ateliers & formation",
@@ -83,6 +85,15 @@
       "feature3": "Hébergé et maintenu — rien à gérer",
       "cta": "Découvrir Présence Pro"
     },
+    "motionDesign": {
+      "badge": "Nouveau",
+      "title": "Des films publicitaires animés, livrés en 5 jours",
+      "description": "Un film de ~45 secondes pour présenter votre produit, votre service ou votre projet — au niveau d'une agence, sans le budget ni les délais d'une agence.",
+      "feature1": "Brief, script et animation inclus",
+      "feature2": "Full HD 1920×1080, MP4 prêt à publier",
+      "feature3": "À partir de 990 € HT",
+      "cta": "Voir un exemple de film"
+    },
     "cta": {
       "title": "Un projet ? Parlons-en.",
       "description": "Que ce soit pour une mission freelance, une démo de nos logiciels ou une simple question — je réponds sous 24h.",
@@ -115,6 +126,12 @@
       "description": "Du développement sur mesure à l'intégration IA, en passant par la formation et l'audit."
     },
     "expertiseTitle": "Expertise metier",
+    "motionDesignBanner": {
+      "title": "Films publicitaires animés",
+      "description": "Un film de motion design de ~45 secondes pour présenter votre produit, votre service ou votre projet. Brief, script, animation, audio et livraison MP4 Full HD — le tout en 5 jours.",
+      "price": "À partir de 990 € HT",
+      "cta": "Découvrir l'offre"
+    },
     "otherTitle": "Autres competences",
     "process": {
       "tag": "Processus",
@@ -309,6 +326,7 @@
       "atelier-ia": "Atelier IA / Formation",
       "audit-ia": "Audit maturité IA",
       "automatisation": "Automatisation N8N",
+      "film-publicitaire": "Film publicitaire animé",
       "demo-insertion": "Démo YDV Insertion",
       "demo-formation": "Démo YDV Formation",
       "demo-autre": "Démo autre solution",
@@ -340,6 +358,7 @@
       "colDescription": "Description",
       "colJours": "Jours/mois",
       "retainerNote": "Les jours non utilisés dans le mois ne sont pas reportés. Engagement mensuel, résiliable à tout moment avec 15 jours de préavis.",
+      "seeExamples": "Voir un exemple de film et le détail de l'offre",
       "services": [
         {
           "title": "Développement sur mesure",
@@ -376,6 +395,16 @@
             { "label": "Audit express (2h)", "price": "600 €", "description": "État des lieux rapide avec recommandations prioritaires." },
             { "label": "Audit complet + rapport", "price": "1 500 €", "description": "Analyse approfondie, rapport détaillé, plan d'action." },
             { "label": "Audit + feuille de route + suivi 30 jours", "price": "2 500 €", "description": "Accompagnement complet jusqu'à la mise en œuvre." }
+          ]
+        },
+        {
+          "title": "Films publicitaires animés",
+          "description": "Motion design clé en main : brief, script, animation, audio et livraison MP4 Full HD. Livré en 5 jours.",
+          "link": "/motion-design",
+          "rows": [
+            { "label": "Essentiel", "price": "990 €", "description": "~30 s · 16:9 Full HD · logo + 1 visuel · musique libre de droits · 2 retouches." },
+            { "label": "Pro", "price": "1 690 €", "description": "45–60 s · 16:9 + vertical 9:16 · charte complète · musique synchronisée · 3 retouches." },
+            { "label": "Sur-mesure", "price": "Sur devis", "description": "Série de films, formats libres, sous-titrage, déclinaisons campagne, livraison express." }
           ]
         },
         {
@@ -702,6 +731,166 @@
       "title": "Un projet de site ou de boutique ?",
       "description": "Parlons-en — je réponds sous 24 h.",
       "contact": "Me contacter"
+    }
+  },
+  "motionDesign": {
+    "meta": {
+      "title": "Films publicitaires animés — Motion design livré en 5 jours | YdvSystems",
+      "description": "Un film publicitaire animé de ~45 secondes, clé en main : brief, script, animation, audio et livraison MP4 Full HD. À partir de 990 € HT, livré en 5 jours."
+    },
+    "hero": {
+      "tag": "Motion design · Livré en 5 jours",
+      "title1": "Des films publicitaires animés ",
+      "titleHighlight": "au niveau d'une agence",
+      "title2": ".",
+      "subtitle": "Un film de ~45 secondes, clé en main, pour présenter votre produit, votre service ou votre projet — sans le budget ni les délais d'une agence.",
+      "ctaPrimary": "Demander un devis gratuit",
+      "ctaSecondary": "Voir un exemple",
+      "reassurance": [
+        "Brief & script inclus",
+        "Format Full HD 1920×1080",
+        "MP4 prêt à publier"
+      ]
+    },
+    "example": {
+      "tag": "Exemple réel",
+      "title": "Plume — film de lancement",
+      "meta": "48 s · 16:9 · à partir d'un simple pitch",
+      "iframeTitle": "Film publicitaire animé Plume — exemple de réalisation YdvSystems"
+    },
+    "stats": [
+      { "value": "4 000 €+", "label": "le tarif agence habituel pour un film équivalent" },
+      { "value": "5 jours", "label": "de la validation du brief à la livraison finale" },
+      { "value": "100 %", "label": "propriété du film à vous, à réception du solde" }
+    ],
+    "included": {
+      "tag": "Ce qui est inclus",
+      "title": "Tout est inclus, de A à Z",
+      "subtitle": "Vous fournissez vos messages clés et votre logo. On s'occupe du reste.",
+      "items": [
+        {
+          "title": "Brief & structure narrative",
+          "description": "Analyse de votre activité et de vos cibles, puis une structure scène par scène (accroche, problème, solution, preuves, appel à l'action) — validée avant production."
+        },
+        {
+          "title": "Production visuelle",
+          "description": "Identité cohérente (palette, typo, style), animations fluides de textes, formes et diagrammes, intégration de vos visuels existants. Full HD 1920×1080."
+        },
+        {
+          "title": "Audio synchronisé",
+          "description": "Musique de fond (la vôtre ou une sélection libre de droits), calée sur le rythme des animations, avec fondu de sortie automatique."
+        },
+        {
+          "title": "Livraison clé en main",
+          "description": "Fichier MP4 HD prêt à publier (Facebook, Instagram, YouTube, LinkedIn, site web). Retouches incluses avant l'export définitif."
+        }
+      ]
+    },
+    "pricing": {
+      "tag": "Tarifs",
+      "title": "Des tarifs clairs",
+      "subtitle": "Pas de surprise. Acompte de 50 % à la commande, le solde à la livraison.",
+      "recommended": "★ Recommandé",
+      "note": "Tarifs hors taxes. TVA non applicable — article 293 B du CGI. Un besoin spécifique (urgence, format particulier) ? Demandez un devis sur mesure.",
+      "plans": [
+        {
+          "name": "Essentiel",
+          "price": "990 €",
+          "priceSuffix": "HT",
+          "tagline": "Un spot court et net pour démarrer.",
+          "features": [
+            "Film animé ~30 secondes",
+            "Format 16:9 (Full HD)",
+            "Intégration logo + 1 visuel",
+            "Musique libre de droits",
+            "2 rounds de retouches",
+            "Livraison sous 5 jours"
+          ],
+          "cta": "Choisir Essentiel"
+        },
+        {
+          "name": "Pro",
+          "price": "1 690 €",
+          "priceSuffix": "HT",
+          "tagline": "Le film complet, multi-plateformes.",
+          "features": [
+            "Film animé 45–60 secondes",
+            "16:9 + vertical 9:16 (Reels/TikTok)",
+            "Intégration charte complète",
+            "Musique synchronisée au montage",
+            "3 rounds de retouches",
+            "Livraison sous 5–7 jours"
+          ],
+          "cta": "Choisir Pro"
+        },
+        {
+          "name": "Sur-mesure",
+          "price": "Sur devis",
+          "priceSuffix": "",
+          "tagline": "Pour les besoins ambitieux.",
+          "features": [
+            "Série de films cohérents",
+            "Durée & formats libres",
+            "Sous-titrage / versions langues",
+            "Déclinaisons campagne",
+            "Option livraison express",
+            "Accompagnement dédié"
+          ],
+          "cta": "Nous contacter"
+        }
+      ]
+    },
+    "process": {
+      "tag": "Déroulé",
+      "title": "5 jours, 5 étapes",
+      "subtitle": "Un déroulé simple et transparent, du brief à la livraison.",
+      "steps": [
+        {
+          "day": "Brief — J1",
+          "title": "Brief",
+          "description": "Échange sur votre activité, vos cibles, vos messages. Vous envoyez logo & musique."
+        },
+        {
+          "day": "Script — J1–J2",
+          "title": "Script",
+          "description": "Structure narrative scène par scène, validée avant toute production."
+        },
+        {
+          "day": "Production — J2–J4",
+          "title": "Production",
+          "description": "Animation des scènes, intégration audio, assemblage du film."
+        },
+        {
+          "day": "Livraison — J4",
+          "title": "Livraison",
+          "description": "Vous recevez le MP4 pour visionner et donner vos retours."
+        },
+        {
+          "day": "Final — J5",
+          "title": "Final",
+          "description": "Corrections selon vos retours, puis export définitif."
+        }
+      ]
+    },
+    "useCases": {
+      "tag": "Cas d'usage",
+      "title": "Pour qui ?",
+      "subtitle": "TPE, PME, indépendants et porteurs de projets.",
+      "items": [
+        "Produit SaaS ou app mobile",
+        "Artisan ou commerce local",
+        "Lancement de livre ou formation",
+        "Coach, consultant, thérapeute",
+        "Recrutement & marque employeur",
+        "Présentation investisseurs"
+      ]
+    },
+    "cta": {
+      "title": "Parlons de votre projet",
+      "description": "Décrivez votre besoin en quelques mots — je vous réponds sous 24 h avec une proposition claire.",
+      "button": "Demander un devis gratuit",
+      "emailLabel": "Ou écrivez-moi directement :",
+      "response": "Réponse sous 24 h · Devis gratuit et sans engagement"
     }
   },
   "solutions": {

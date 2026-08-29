@@ -24,6 +24,7 @@ const PROJECT_TYPE_KEYS = [
   "atelier-ia",
   "audit-ia",
   "automatisation",
+  "film-publicitaire",
   "demo-insertion",
   "demo-formation",
   "demo-autre",

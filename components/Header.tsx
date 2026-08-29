@@ -49,6 +49,7 @@ export function Header() {
     { label: t("nav.prestations"), href: "/prestations" as const },
     { label: t("nav.solutions"), href: "/solutions" as const },
     { label: t("nav.vitrine"), href: "/vitrine-ecommerce" as const },
+    { label: t("nav.motionDesign"), href: "/motion-design" as const },
     { label: t("nav.pricing"), href: "/prix" as const },
     { label: t("nav.portfolio"), href: "/portfolio" as const },
     { label: t("nav.blog"), href: "/blog" as const },
@@ -123,7 +124,7 @@ export function Header() {
               </span>
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
               {NAV_LINKS.map((link) => {
                 const isActive = link.href.split("/")[1] === pathWithoutLocale.split("/")[1]
                 return (

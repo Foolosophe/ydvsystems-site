@@ -19,6 +19,7 @@ export function Footer() {
   const FOOTER_SECTIONS = {
     [t("prestations")]: [
       { label: t("vitrine"), href: "/vitrine-ecommerce" as const },
+      { label: t("motionDesign"), href: "/motion-design" as const },
       { label: t("customDev"), href: "/prestations" as const },
       { label: t("iaIntegration"), href: "/prestations" as const },
       { label: t("workshops"), href: "/prestations" as const },

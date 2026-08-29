@@ -9,6 +9,11 @@ const withSerwist = withSerwistInit({
   swSrc: "app/sw.ts",
   swDest: "public/sw.js",
   disable: process.env.NODE_ENV === "development",
+  // Les fichiers de public/ sont ajoutes au precache SANS passer par la limite de
+  // taille (maximumFileSizeToCacheInBytes ne filtre que les assets webpack).
+  // On exclut donc explicitement public/motion-design/, qui contient le film Plume
+  // (7,5 Mo) : il doit rester en chargement paresseux dans son iframe.
+  globPublicPatterns: ["*", "!(motion-design)/**/*"],
 })
 
 const withAnalyzer = withBundleAnalyzer({
