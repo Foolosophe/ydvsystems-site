@@ -1578,11 +1578,11 @@
             },
             {
               "title": "A two-tier architecture",
-              "description": "An Electron + TypeScript orchestrator carries the core, the journal and the safeguards; a Python sidecar carries the audio and the models. The two talk over WebSocket on a single port. Vector memory in SQLite through sqlite-vec."
+              "description": "An Electron + TypeScript orchestrator carries the core, the journal and the safeguards; a Python sidecar carries the audio and the models. The two talk over WebSocket on a single port."
             },
             {
-              "title": "A status stated openly",
-              "description": "Foundations built and tested, the voice proven in real conversation; long-term memory and personality are not wired up yet — and the repo says so plainly rather than overselling. What is being proven here is the method."
+              "title": "Memory proven in daily use",
+              "description": "She has remembered from one conversation to the next since 31 July 2026 — and she says where she gets what she asserts: vector memory organised by theme, a notebook, a portrait of the person she talks to, and sovereign erasure on request. Her personality loads from her own folder. Close to 90 real conversations run back to back, almost every day — daily use is what flushes out the defects."
             }
           ]
         }

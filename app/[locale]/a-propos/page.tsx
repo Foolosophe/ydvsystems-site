@@ -40,7 +40,7 @@ export default async function AboutPage() {
           <AnimateOnScroll>
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
               <Image
-                src="/images/yohann.jpg"
+                src="/images/yohann-profil.jpg"
                 alt="Yohann Dandeville"
                 width={160}
                 height={160}

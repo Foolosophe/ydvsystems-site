@@ -58,7 +58,7 @@ export default async function PortfolioPage() {
                 <p className="section-tag">{t("about.tag")}</p>
                 <div className="flex items-center gap-5 mb-2">
                   <Image
-                    src="/images/yohann.jpg"
+                    src="/images/yohann-profil.jpg"
                     alt={t("about.photoAlt")}
                     width={80}
                     height={80}

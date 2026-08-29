@@ -1578,11 +1578,11 @@
             },
             {
               "title": "Architecture en deux étages",
-              "description": "Un orchestrateur Electron + TypeScript porte le socle, le journal et les garde-fous ; un sidecar Python porte l'audio et les modèles. Les deux dialoguent par WebSocket sur un port unique. Mémoire vectorielle en SQLite via sqlite-vec."
+              "description": "Un orchestrateur Electron + TypeScript porte le socle, le journal et les garde-fous ; un sidecar Python porte l'audio et les modèles. Les deux dialoguent par WebSocket sur un port unique."
             },
             {
-              "title": "Un état assumé publiquement",
-              "description": "Fondations bâties et testées, voix prouvée en conversation réelle ; la mémoire longue et la personnalité ne sont pas encore branchées — et le dépôt le dit noir sur blanc plutôt que de survendre. Ce qui se prouve ici, c'est la méthode."
+              "title": "Une mémoire éprouvée en usage réel",
+              "description": "Elle se souvient d'une conversation à l'autre depuis le 31 juillet 2026 — et elle dit d'où elle tient ce qu'elle avance : mémoire vectorielle par thème, carnet, portrait de son interlocuteur, effacement souverain à la demande. Sa personnalité se charge depuis son propre dossier. Près de 90 conversations réelles enchaînées, presque chaque jour — c'est l'usage quotidien qui débusque les défauts."
             }
           ]
         }
