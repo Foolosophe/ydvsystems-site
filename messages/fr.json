@@ -793,8 +793,16 @@
       "meta": "19 s · 16:9 · animation 3D",
       "videoTitle": "Générique animé de la chaîne YouTube SophIA – Tire le fil — réalisation YdvSystems",
       "fallback": "Votre navigateur ne peut pas lire cette vidéo. Télécharger le générique (MP4)",
-      "text": "Ce générique ouvre les vidéos de ma chaîne YouTube, SophIA – Tire le fil.",
+      "text": "Ce générique ouvre les vidéos de la chaîne YouTube SophIA – Tire le fil.",
       "cta": "Voir la chaîne sur YouTube"
+    },
+    "example3": {
+      "title": "Sommes-nous de la poussière d'étoiles ? — extrait de l'émission",
+      "meta": "1 min 27 · 16:9 · montage et habillage",
+      "videoTitle": "Extrait de l'émission « Sommes-nous de la poussière d'étoiles ? », chaîne YouTube SophIA – Tire le fil — réalisation YdvSystems",
+      "fallback": "Votre navigateur ne peut pas lire cette vidéo. Télécharger l'extrait (MP4)",
+      "text": "Extrait d'un épisode de 15 minutes de la chaîne YouTube SophIA – Tire le fil.",
+      "cta": "Voir la vidéo complète sur YouTube"
     },
     "stats": [
       { "value": "−65 %", "label": "en moyenne par rapport à une agence, qui facture 4 000 € et plus pour un film équivalent" },

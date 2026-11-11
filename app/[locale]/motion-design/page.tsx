@@ -108,6 +108,15 @@ export default async function MotionDesignPage({
                 uploadDate: "2026-10-13",
                 duration: "PT19S",
               },
+              {
+                "@type": "VideoObject",
+                name: t("example3.title"),
+                description: t("example3.meta"),
+                thumbnailUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/sophia-extrait-poster.jpg`,
+                contentUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/sophia-extrait.mp4`,
+                uploadDate: "2026-11-08",
+                duration: "PT1M27S",
+              },
             ],
             hasOfferCatalog: {
               "@type": "OfferCatalog",
@@ -253,6 +262,46 @@ export default async function MotionDesignPage({
               className="inline-flex items-center gap-1 text-sm text-primary hover:text-(--accent-hover) font-semibold transition-colors shrink-0"
             >
               {t("example2.cta")}
+              <ExternalLink size={14} />
+            </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-16 mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+              {t("example3.title")}
+            </h3>
+            <p className="text-sm font-medium text-muted-foreground sm:text-right">
+              {t("example3.meta")}
+            </p>
+          </div>
+
+          <div className="relative rounded-2xl overflow-hidden border border-border shadow-(--shadow-card-hover) bg-black">
+            <div className="relative w-full pt-[56.25%]">
+              <video
+                controls
+                playsInline
+                preload="none"
+                poster="/motion-design/sophia-extrait-poster.jpg"
+                aria-label={t("example3.videoTitle")}
+                className="absolute inset-0 w-full h-full"
+              >
+                <source src="/motion-design/sophia-extrait.mp4" type="video/mp4" />
+                <a href="/motion-design/sophia-extrait.mp4">{t("example3.fallback")}</a>
+              </video>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-6">
+            <p className="text-secondary-foreground leading-relaxed">
+              {t("example3.text")}
+            </p>
+            <a
+              href="https://www.youtube.com/watch?v=637QA_1mS9Q"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-primary hover:text-(--accent-hover) font-semibold transition-colors shrink-0"
+            >
+              {t("example3.cta")}
               <ExternalLink size={14} />
             </a>
           </div>

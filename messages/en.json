@@ -793,8 +793,16 @@
       "meta": "19 s · 16:9 · 3D animation",
       "videoTitle": "Animated intro of the SophIA – Tire le fil YouTube channel — made by YdvSystems",
       "fallback": "Your browser cannot play this video. Download the intro (MP4)",
-      "text": "This intro opens the videos on my YouTube channel, SophIA – Tire le fil.",
+      "text": "This intro opens the videos of the SophIA – Tire le fil YouTube channel.",
       "cta": "Visit the channel on YouTube"
+    },
+    "example3": {
+      "title": "Are we made of stardust? — show excerpt",
+      "meta": "1 min 27 · 16:9 · editing and motion graphics",
+      "videoTitle": "Excerpt from the show “Are we made of stardust?”, SophIA – Tire le fil YouTube channel — made by YdvSystems",
+      "fallback": "Your browser cannot play this video. Download the excerpt (MP4)",
+      "text": "Excerpt from a 15-minute episode of the SophIA – Tire le fil YouTube channel.",
+      "cta": "Watch the full video on YouTube"
     },
     "stats": [
       { "value": "−65%", "label": "on average versus an agency, which charges €4,000 and up for a comparable film" },
