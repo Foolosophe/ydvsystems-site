@@ -782,11 +782,19 @@
       ]
     },
     "example": {
-      "tag": "Exemple réel",
+      "tag": "Exemples réels",
       "title": "Plume — film de lancement",
       "meta": "48 s · 16:9 · à partir d'un simple pitch",
       "videoTitle": "Film publicitaire animé Plume — exemple de réalisation YdvSystems",
       "fallback": "Votre navigateur ne peut pas lire cette vidéo. Télécharger le film (MP4)"
+    },
+    "example2": {
+      "title": "SophIA – Tire le fil — générique de chaîne YouTube",
+      "meta": "19 s · 16:9 · animation 3D",
+      "videoTitle": "Générique animé de la chaîne YouTube SophIA – Tire le fil — réalisation YdvSystems",
+      "fallback": "Votre navigateur ne peut pas lire cette vidéo. Télécharger le générique (MP4)",
+      "text": "Ce générique ouvre les vidéos de ma chaîne YouTube, SophIA – Tire le fil.",
+      "cta": "Voir la chaîne sur YouTube"
     },
     "stats": [
       { "value": "−65 %", "label": "en moyenne par rapport à une agence, qui facture 4 000 € et plus pour un film équivalent" },

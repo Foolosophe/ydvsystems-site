@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   ArrowRight,
+  ExternalLink,
   Play,
   Check,
   CheckCircle2,
@@ -88,15 +89,26 @@ export default async function MotionDesignPage({
               url: localeUrl(locale),
             },
             areaServed: "FR",
-            hasPart: {
-              "@type": "VideoObject",
-              name: t("example.title"),
-              description: t("example.meta"),
-              thumbnailUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/plume-poster.jpg`,
-              contentUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/plume-teaser.mp4`,
-              uploadDate: "2026-06-22",
-              duration: "PT48S",
-            },
+            hasPart: [
+              {
+                "@type": "VideoObject",
+                name: t("example.title"),
+                description: t("example.meta"),
+                thumbnailUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/plume-poster.jpg`,
+                contentUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/plume-teaser.mp4`,
+                uploadDate: "2026-06-22",
+                duration: "PT48S",
+              },
+              {
+                "@type": "VideoObject",
+                name: t("example2.title"),
+                description: t("example2.meta"),
+                thumbnailUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/sophia-generique-poster.jpg`,
+                contentUrl: `${localeUrl("fr").replace(/\/$/, "")}/motion-design/sophia-generique.mp4`,
+                uploadDate: "2026-10-13",
+                duration: "PT19S",
+              },
+            ],
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: t("pricing.title"),
@@ -203,6 +215,46 @@ export default async function MotionDesignPage({
                 <a href="/motion-design/plume-teaser.mp4">{t("example.fallback")}</a>
               </video>
             </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-16 mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+              {t("example2.title")}
+            </h3>
+            <p className="text-sm font-medium text-muted-foreground sm:text-right">
+              {t("example2.meta")}
+            </p>
+          </div>
+
+          <div className="relative rounded-2xl overflow-hidden border border-border shadow-(--shadow-card-hover) bg-black">
+            <div className="relative w-full pt-[56.25%]">
+              <video
+                controls
+                playsInline
+                preload="none"
+                poster="/motion-design/sophia-generique-poster.jpg"
+                aria-label={t("example2.videoTitle")}
+                className="absolute inset-0 w-full h-full"
+              >
+                <source src="/motion-design/sophia-generique.mp4" type="video/mp4" />
+                <a href="/motion-design/sophia-generique.mp4">{t("example2.fallback")}</a>
+              </video>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-6">
+            <p className="text-secondary-foreground leading-relaxed">
+              {t("example2.text")}
+            </p>
+            <a
+              href="https://www.youtube.com/@SophIA_Tirelefil"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-primary hover:text-(--accent-hover) font-semibold transition-colors shrink-0"
+            >
+              {t("example2.cta")}
+              <ExternalLink size={14} />
+            </a>
           </div>
         </div>
       </section>

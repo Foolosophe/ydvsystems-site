@@ -782,11 +782,19 @@
       ]
     },
     "example": {
-      "tag": "Real example",
+      "tag": "Real examples",
       "title": "Plume — launch film",
       "meta": "48 s · 16:9 · made from a simple pitch",
       "videoTitle": "Plume animated ad film — YdvSystems showreel example",
       "fallback": "Your browser cannot play this video. Download the film (MP4)"
+    },
+    "example2": {
+      "title": "SophIA – Tire le fil — YouTube channel intro",
+      "meta": "19 s · 16:9 · 3D animation",
+      "videoTitle": "Animated intro of the SophIA – Tire le fil YouTube channel — made by YdvSystems",
+      "fallback": "Your browser cannot play this video. Download the intro (MP4)",
+      "text": "This intro opens the videos on my YouTube channel, SophIA – Tire le fil.",
+      "cta": "Visit the channel on YouTube"
     },
     "stats": [
       { "value": "−65%", "label": "on average versus an agency, which charges €4,000 and up for a comparable film" },
